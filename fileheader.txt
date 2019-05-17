@@ -1,5 +1,10 @@
-SmartCredentials-SDK-ios :- a library for managing access on ios
+This file is part of the project 'SmartCredentials-SDK-ios'
+- a library which assists applications with retrieving and 
+storing user related data
+
 Copyright (c) Axel Nennker, Karsten Reincke Deutsche Telekom AG
+
 contact: opensource@telekom.de
+
 This files is distributed under the terms of the Apapche 2.0 license.
 For details see the file LICENSE on the toplevel.

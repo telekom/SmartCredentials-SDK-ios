@@ -1,4 +1,6 @@
-SmartCredentials-SDK-ios
+SmartCredentials-SDK-ios :- a library which assists applications 
+with retrieving and storing user related data
+
 (c) 2019 Karsten Reincke, Deutsche Telekom AG
 
 By default all the files of the project 'SmartCredentials-SDK-ios'
