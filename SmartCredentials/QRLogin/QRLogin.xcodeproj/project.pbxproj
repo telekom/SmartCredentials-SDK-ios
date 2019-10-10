@@ -1,0 +1,473 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D91418BA234E16FA008863D9 /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D91418B8234E16F2008863D9 /* Starscream.framework */; };
+		D9474DE822FDB49500D64D9D /* QRLogin.h in Headers */ = {isa = PBXBuildFile; fileRef = D9474DE622FDB49500D64D9D /* QRLogin.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D9474E0B22FDB7BD00D64D9D /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9474E0A22FDB7BD00D64D9D /* Core.framework */; };
+		D9C65808231D30630077C441 /* QRLoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C65807231D30630077C441 /* QRLoginController.swift */; };
+		D9C6580A231D30C80077C441 /* Authorization.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9C65809231D30C80077C441 /* Authorization.framework */; };
+		D9C6580D231D33050077C441 /* QRLoginKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C6580C231D33050077C441 /* QRLoginKeys.swift */; };
+		D9C6580F231D33CC0077C441 /* QRLoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C6580E231D33CC0077C441 /* QRLoginService.swift */; };
+		D9C65819231D35030077C441 /* QRSocketData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C65817231D35030077C441 /* QRSocketData.swift */; };
+		D9C6581A231D35030077C441 /* WebSocketMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C65818231D35030077C441 /* WebSocketMessage.swift */; };
+		D9C6581E231D355E0077C441 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C6581D231D355E0077C441 /* StringExtension.swift */; };
+		D9C65821231D35A70077C441 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C65820231D35A70077C441 /* Constants.swift */; };
+		D9C65846231D5B1A0077C441 /* QRLoginAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C65845231D5B1A0077C441 /* QRLoginAction.swift */; };
+		D9F4F3D0232BF5EF00D18C53 /* SmartCredentialsQRLoginFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F4F3CF232BF5EF00D18C53 /* SmartCredentialsQRLoginFactory.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D91418B8234E16F2008863D9 /* Starscream.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Starscream.framework; sourceTree = "<group>"; };
+		D9474DE322FDB49500D64D9D /* QRLogin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = QRLogin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9474DE622FDB49500D64D9D /* QRLogin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QRLogin.h; sourceTree = "<group>"; };
+		D9474DE722FDB49500D64D9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D9474E0A22FDB7BD00D64D9D /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9C65807231D30630077C441 /* QRLoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRLoginController.swift; sourceTree = "<group>"; };
+		D9C65809231D30C80077C441 /* Authorization.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Authorization.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9C6580C231D33050077C441 /* QRLoginKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRLoginKeys.swift; sourceTree = "<group>"; };
+		D9C6580E231D33CC0077C441 /* QRLoginService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRLoginService.swift; sourceTree = "<group>"; };
+		D9C65817231D35030077C441 /* QRSocketData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRSocketData.swift; sourceTree = "<group>"; };
+		D9C65818231D35030077C441 /* WebSocketMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebSocketMessage.swift; sourceTree = "<group>"; };
+		D9C6581D231D355E0077C441 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		D9C65820231D35A70077C441 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		D9C65845231D5B1A0077C441 /* QRLoginAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRLoginAction.swift; sourceTree = "<group>"; };
+		D9F4F3CF232BF5EF00D18C53 /* SmartCredentialsQRLoginFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartCredentialsQRLoginFactory.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D9474DE022FDB49500D64D9D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9C6580A231D30C80077C441 /* Authorization.framework in Frameworks */,
+				D91418BA234E16FA008863D9 /* Starscream.framework in Frameworks */,
+				D9474E0B22FDB7BD00D64D9D /* Core.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D9474DD922FDB49500D64D9D = {
+			isa = PBXGroup;
+			children = (
+				D9474DE522FDB49500D64D9D /* QRLogin */,
+				D9474DE422FDB49500D64D9D /* Products */,
+				D9474E0922FDB7BD00D64D9D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D9474DE422FDB49500D64D9D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D9474DE322FDB49500D64D9D /* QRLogin.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D9474DE522FDB49500D64D9D /* QRLogin */ = {
+			isa = PBXGroup;
+			children = (
+				D9C65806231D2FAE0077C441 /* Controllers */,
+				D9C65844231D5AC30077C441 /* Actions */,
+				D9C6580B231D32EB0077C441 /* Models */,
+				D9C6581B231D353A0077C441 /* Utils */,
+				D9474DE622FDB49500D64D9D /* QRLogin.h */,
+				D9474DE722FDB49500D64D9D /* Info.plist */,
+			);
+			path = QRLogin;
+			sourceTree = "<group>";
+		};
+		D9474E0922FDB7BD00D64D9D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D91418B8234E16F2008863D9 /* Starscream.framework */,
+				D9C65809231D30C80077C441 /* Authorization.framework */,
+				D9474E0A22FDB7BD00D64D9D /* Core.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D9C65806231D2FAE0077C441 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D9C6580E231D33CC0077C441 /* QRLoginService.swift */,
+				D9C65807231D30630077C441 /* QRLoginController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D9C6580B231D32EB0077C441 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D9C65816231D35030077C441 /* WebSocketMessage */,
+				D9C6580C231D33050077C441 /* QRLoginKeys.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D9C65816231D35030077C441 /* WebSocketMessage */ = {
+			isa = PBXGroup;
+			children = (
+				D9C65817231D35030077C441 /* QRSocketData.swift */,
+				D9C65818231D35030077C441 /* WebSocketMessage.swift */,
+			);
+			path = WebSocketMessage;
+			sourceTree = "<group>";
+		};
+		D9C6581B231D353A0077C441 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				D9F4F3CE232BF5DB00D18C53 /* Factory */,
+				D9C6581F231D35700077C441 /* Constants */,
+				D9C6581C231D35420077C441 /* Extensions */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		D9C6581C231D35420077C441 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D9C6581D231D355E0077C441 /* StringExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D9C6581F231D35700077C441 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				D9C65820231D35A70077C441 /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		D9C65844231D5AC30077C441 /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				D9C65845231D5B1A0077C441 /* QRLoginAction.swift */,
+			);
+			path = Actions;
+			sourceTree = "<group>";
+		};
+		D9F4F3CE232BF5DB00D18C53 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				D9F4F3CF232BF5EF00D18C53 /* SmartCredentialsQRLoginFactory.swift */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D9474DDE22FDB49500D64D9D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9474DE822FDB49500D64D9D /* QRLogin.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		D9474DE222FDB49500D64D9D /* QRLogin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D9474DEB22FDB49500D64D9D /* Build configuration list for PBXNativeTarget "QRLogin" */;
+			buildPhases = (
+				D9474DDE22FDB49500D64D9D /* Headers */,
+				D9474DDF22FDB49500D64D9D /* Sources */,
+				D9474DE022FDB49500D64D9D /* Frameworks */,
+				D9474DE122FDB49500D64D9D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QRLogin;
+			productName = QRLogin;
+			productReference = D9474DE322FDB49500D64D9D /* QRLogin.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D9474DDA22FDB49500D64D9D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1030;
+				ORGANIZATIONNAME = "Deutsche Telekom";
+				TargetAttributes = {
+					D9474DE222FDB49500D64D9D = {
+						CreatedOnToolsVersion = 10.3;
+						LastSwiftMigration = 1030;
+					};
+				};
+			};
+			buildConfigurationList = D9474DDD22FDB49500D64D9D /* Build configuration list for PBXProject "QRLogin" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D9474DD922FDB49500D64D9D;
+			productRefGroup = D9474DE422FDB49500D64D9D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D9474DE222FDB49500D64D9D /* QRLogin */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D9474DE122FDB49500D64D9D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D9474DDF22FDB49500D64D9D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9C65846231D5B1A0077C441 /* QRLoginAction.swift in Sources */,
+				D9C6580F231D33CC0077C441 /* QRLoginService.swift in Sources */,
+				D9C6581E231D355E0077C441 /* StringExtension.swift in Sources */,
+				D9C65808231D30630077C441 /* QRLoginController.swift in Sources */,
+				D9C6580D231D33050077C441 /* QRLoginKeys.swift in Sources */,
+				D9C65819231D35030077C441 /* QRSocketData.swift in Sources */,
+				D9C6581A231D35030077C441 /* WebSocketMessage.swift in Sources */,
+				D9C65821231D35A70077C441 /* Constants.swift in Sources */,
+				D9F4F3D0232BF5EF00D18C53 /* SmartCredentialsQRLoginFactory.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		D9474DE922FDB49500D64D9D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D9474DEA22FDB49500D64D9D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D9474DEC22FDB49500D64D9D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = LUZ9KLPXF2;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/QRLogin",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = QRLogin/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.telekom.smartcredentials.QRLogin;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_INCLUDE_PATHS = "\"$(SRCROOT)/../OTP/OTP/zlib\"";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D9474DED22FDB49500D64D9D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = LUZ9KLPXF2;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/QRLogin",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = QRLogin/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.telekom.smartcredentials.QRLogin;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_INCLUDE_PATHS = "\"$(SRCROOT)/../OTP/OTP/zlib\"";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D9474DDD22FDB49500D64D9D /* Build configuration list for PBXProject "QRLogin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D9474DE922FDB49500D64D9D /* Debug */,
+				D9474DEA22FDB49500D64D9D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D9474DEB22FDB49500D64D9D /* Build configuration list for PBXNativeTarget "QRLogin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D9474DEC22FDB49500D64D9D /* Debug */,
+				D9474DED22FDB49500D64D9D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D9474DDA22FDB49500D64D9D /* Project object */;
+}

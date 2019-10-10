@@ -1,0 +1,500 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D9F4F3C4232BECD300D18C53 /* SmartCredentialsStorageFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F4F3C3232BECD300D18C53 /* SmartCredentialsStorageFactory.swift */; };
+		D9F8015322F06C1600B17E2B /* Storage.h in Headers */ = {isa = PBXBuildFile; fileRef = D9F8015122F06C1600B17E2B /* Storage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D9F8015F22F06C6900B17E2B /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9F8015E22F06C6900B17E2B /* Core.framework */; };
+		D9F8018122F06DBF00B17E2B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F8018022F06DBF00B17E2B /* Constants.swift */; };
+		D9F8019622F06FC300B17E2B /* NonSensitiveStorageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F8018322F06FC200B17E2B /* NonSensitiveStorageController.swift */; };
+		D9F8019722F06FC300B17E2B /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F8018422F06FC200B17E2B /* CoreDataHelper.swift */; };
+		D9F8019822F06FC300B17E2B /* CredentialsModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D9F8018522F06FC200B17E2B /* CredentialsModel.xcdatamodeld */; };
+		D9F8019922F06FC300B17E2B /* CoreDataItemSummaryExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F8018A22F06FC200B17E2B /* CoreDataItemSummaryExtension.swift */; };
+		D9F8019B22F06FC300B17E2B /* KeychainHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F8018D22F06FC200B17E2B /* KeychainHelper.swift */; };
+		D9F8019C22F06FC300B17E2B /* KeychainItemSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F8018F22F06FC200B17E2B /* KeychainItemSummary.swift */; };
+		D9F8019D22F06FC300B17E2B /* KeychainItemDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F8019022F06FC200B17E2B /* KeychainItemDetails.swift */; };
+		D9F8019E22F06FC300B17E2B /* SensitiveStorageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F8019122F06FC200B17E2B /* SensitiveStorageController.swift */; };
+		D9F801A022F06FC300B17E2B /* KeychainItemAccessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F8019322F06FC200B17E2B /* KeychainItemAccessibility.swift */; };
+		D9F801A122F06FC300B17E2B /* MockStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F8019522F06FC200B17E2B /* MockStorage.swift */; };
+		D9F801A322F0725400B17E2B /* StorageProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F801A222F0725400B17E2B /* StorageProtocol.swift */; };
+		D9F801A522F072DF00B17E2B /* DefaultStorageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F801A422F072DF00B17E2B /* DefaultStorageController.swift */; };
+		D9F801A822F073FE00B17E2B /* StorageControllerProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F801A722F073FE00B17E2B /* StorageControllerProvider.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D9F4F3C3232BECD300D18C53 /* SmartCredentialsStorageFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartCredentialsStorageFactory.swift; sourceTree = "<group>"; };
+		D9F8014E22F06C1600B17E2B /* Storage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Storage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9F8015122F06C1600B17E2B /* Storage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Storage.h; sourceTree = "<group>"; };
+		D9F8015222F06C1600B17E2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D9F8015E22F06C6900B17E2B /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9F8018022F06DBF00B17E2B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		D9F8018322F06FC200B17E2B /* NonSensitiveStorageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NonSensitiveStorageController.swift; sourceTree = "<group>"; };
+		D9F8018422F06FC200B17E2B /* CoreDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
+		D9F8018622F06FC200B17E2B /* CredentialsModel 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "CredentialsModel 2.xcdatamodel"; sourceTree = "<group>"; };
+		D9F8018722F06FC200B17E2B /* CredentialsModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CredentialsModel.xcdatamodel; sourceTree = "<group>"; };
+		D9F8018822F06FC200B17E2B /* CredentialsModel 3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "CredentialsModel 3.xcdatamodel"; sourceTree = "<group>"; };
+		D9F8018A22F06FC200B17E2B /* CoreDataItemSummaryExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataItemSummaryExtension.swift; sourceTree = "<group>"; };
+		D9F8018D22F06FC200B17E2B /* KeychainHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainHelper.swift; sourceTree = "<group>"; };
+		D9F8018F22F06FC200B17E2B /* KeychainItemSummary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainItemSummary.swift; sourceTree = "<group>"; };
+		D9F8019022F06FC200B17E2B /* KeychainItemDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainItemDetails.swift; sourceTree = "<group>"; };
+		D9F8019122F06FC200B17E2B /* SensitiveStorageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SensitiveStorageController.swift; sourceTree = "<group>"; };
+		D9F8019322F06FC200B17E2B /* KeychainItemAccessibility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainItemAccessibility.swift; sourceTree = "<group>"; };
+		D9F8019522F06FC200B17E2B /* MockStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockStorage.swift; sourceTree = "<group>"; };
+		D9F801A222F0725400B17E2B /* StorageProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageProtocol.swift; sourceTree = "<group>"; };
+		D9F801A422F072DF00B17E2B /* DefaultStorageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultStorageController.swift; sourceTree = "<group>"; };
+		D9F801A722F073FE00B17E2B /* StorageControllerProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageControllerProvider.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D9F8014B22F06C1600B17E2B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9F8015F22F06C6900B17E2B /* Core.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D9F8014422F06C1600B17E2B = {
+			isa = PBXGroup;
+			children = (
+				D9F8015022F06C1600B17E2B /* Storage */,
+				D9F8014F22F06C1600B17E2B /* Products */,
+				D9F8015D22F06C6900B17E2B /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D9F8014F22F06C1600B17E2B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D9F8014E22F06C1600B17E2B /* Storage.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D9F8015022F06C1600B17E2B /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				D9F8016022F06C8E00B17E2B /* Controllers */,
+				D9F8017E22F06DB100B17E2B /* Utils */,
+				D9F8015122F06C1600B17E2B /* Storage.h */,
+				D9F8015222F06C1600B17E2B /* Info.plist */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		D9F8015D22F06C6900B17E2B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D9F8015E22F06C6900B17E2B /* Core.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D9F8016022F06C8E00B17E2B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D9F801A422F072DF00B17E2B /* DefaultStorageController.swift */,
+				D9F801A222F0725400B17E2B /* StorageProtocol.swift */,
+				D9F8018222F06FC200B17E2B /* NonSensitiveStorageController */,
+				D9F8018C22F06FC200B17E2B /* SensitiveStorageController */,
+				D9F8019422F06FC200B17E2B /* MockStorageController */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D9F8017E22F06DB100B17E2B /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				D9F801A622F073EF00B17E2B /* Factories */,
+				D9F8017F22F06DB500B17E2B /* Constants */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		D9F8017F22F06DB500B17E2B /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				D9F8018022F06DBF00B17E2B /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		D9F8018222F06FC200B17E2B /* NonSensitiveStorageController */ = {
+			isa = PBXGroup;
+			children = (
+				D9F8018322F06FC200B17E2B /* NonSensitiveStorageController.swift */,
+				D9F8018422F06FC200B17E2B /* CoreDataHelper.swift */,
+				D9F8018522F06FC200B17E2B /* CredentialsModel.xcdatamodeld */,
+				D9F8018922F06FC200B17E2B /* CoreDataItem */,
+			);
+			path = NonSensitiveStorageController;
+			sourceTree = "<group>";
+		};
+		D9F8018922F06FC200B17E2B /* CoreDataItem */ = {
+			isa = PBXGroup;
+			children = (
+				D9F8018A22F06FC200B17E2B /* CoreDataItemSummaryExtension.swift */,
+			);
+			path = CoreDataItem;
+			sourceTree = "<group>";
+		};
+		D9F8018C22F06FC200B17E2B /* SensitiveStorageController */ = {
+			isa = PBXGroup;
+			children = (
+				D9F8019122F06FC200B17E2B /* SensitiveStorageController.swift */,
+				D9F8018D22F06FC200B17E2B /* KeychainHelper.swift */,
+				D9F8018E22F06FC200B17E2B /* KeychainItem */,
+				D9F8019322F06FC200B17E2B /* KeychainItemAccessibility.swift */,
+			);
+			path = SensitiveStorageController;
+			sourceTree = "<group>";
+		};
+		D9F8018E22F06FC200B17E2B /* KeychainItem */ = {
+			isa = PBXGroup;
+			children = (
+				D9F8018F22F06FC200B17E2B /* KeychainItemSummary.swift */,
+				D9F8019022F06FC200B17E2B /* KeychainItemDetails.swift */,
+			);
+			path = KeychainItem;
+			sourceTree = "<group>";
+		};
+		D9F8019422F06FC200B17E2B /* MockStorageController */ = {
+			isa = PBXGroup;
+			children = (
+				D9F8019522F06FC200B17E2B /* MockStorage.swift */,
+			);
+			path = MockStorageController;
+			sourceTree = "<group>";
+		};
+		D9F801A622F073EF00B17E2B /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				D9F801A722F073FE00B17E2B /* StorageControllerProvider.swift */,
+				D9F4F3C3232BECD300D18C53 /* SmartCredentialsStorageFactory.swift */,
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D9F8014922F06C1600B17E2B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9F8015322F06C1600B17E2B /* Storage.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		D9F8014D22F06C1600B17E2B /* Storage */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D9F8015622F06C1600B17E2B /* Build configuration list for PBXNativeTarget "Storage" */;
+			buildPhases = (
+				D9F8014922F06C1600B17E2B /* Headers */,
+				D9F8014A22F06C1600B17E2B /* Sources */,
+				D9F8014B22F06C1600B17E2B /* Frameworks */,
+				D9F8014C22F06C1600B17E2B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Storage;
+			productName = Storage;
+			productReference = D9F8014E22F06C1600B17E2B /* Storage.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D9F8014522F06C1600B17E2B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1030;
+				ORGANIZATIONNAME = "Deutsche Telekom";
+				TargetAttributes = {
+					D9F8014D22F06C1600B17E2B = {
+						CreatedOnToolsVersion = 10.3;
+						LastSwiftMigration = 1030;
+					};
+				};
+			};
+			buildConfigurationList = D9F8014822F06C1600B17E2B /* Build configuration list for PBXProject "Storage" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D9F8014422F06C1600B17E2B;
+			productRefGroup = D9F8014F22F06C1600B17E2B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D9F8014D22F06C1600B17E2B /* Storage */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D9F8014C22F06C1600B17E2B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D9F8014A22F06C1600B17E2B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9F8019C22F06FC300B17E2B /* KeychainItemSummary.swift in Sources */,
+				D9F801A822F073FE00B17E2B /* StorageControllerProvider.swift in Sources */,
+				D9F801A122F06FC300B17E2B /* MockStorage.swift in Sources */,
+				D9F8019E22F06FC300B17E2B /* SensitiveStorageController.swift in Sources */,
+				D9F801A322F0725400B17E2B /* StorageProtocol.swift in Sources */,
+				D9F4F3C4232BECD300D18C53 /* SmartCredentialsStorageFactory.swift in Sources */,
+				D9F8018122F06DBF00B17E2B /* Constants.swift in Sources */,
+				D9F8019822F06FC300B17E2B /* CredentialsModel.xcdatamodeld in Sources */,
+				D9F801A522F072DF00B17E2B /* DefaultStorageController.swift in Sources */,
+				D9F8019B22F06FC300B17E2B /* KeychainHelper.swift in Sources */,
+				D9F8019D22F06FC300B17E2B /* KeychainItemDetails.swift in Sources */,
+				D9F8019722F06FC300B17E2B /* CoreDataHelper.swift in Sources */,
+				D9F8019922F06FC300B17E2B /* CoreDataItemSummaryExtension.swift in Sources */,
+				D9F801A022F06FC300B17E2B /* KeychainItemAccessibility.swift in Sources */,
+				D9F8019622F06FC300B17E2B /* NonSensitiveStorageController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		D9F8015422F06C1600B17E2B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D9F8015522F06C1600B17E2B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D9F8015722F06C1600B17E2B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = LUZ9KLPXF2;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Storage/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.telekom.smartcredentials.Storage;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D9F8015822F06C1600B17E2B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = LUZ9KLPXF2;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Storage/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.telekom.smartcredentials.Storage;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D9F8014822F06C1600B17E2B /* Build configuration list for PBXProject "Storage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D9F8015422F06C1600B17E2B /* Debug */,
+				D9F8015522F06C1600B17E2B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D9F8015622F06C1600B17E2B /* Build configuration list for PBXNativeTarget "Storage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D9F8015722F06C1600B17E2B /* Debug */,
+				D9F8015822F06C1600B17E2B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D9F8018522F06FC200B17E2B /* CredentialsModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D9F8018622F06FC200B17E2B /* CredentialsModel 2.xcdatamodel */,
+				D9F8018722F06FC200B17E2B /* CredentialsModel.xcdatamodel */,
+				D9F8018822F06FC200B17E2B /* CredentialsModel 3.xcdatamodel */,
+			);
+			currentVersion = D9F8018822F06FC200B17E2B /* CredentialsModel 3.xcdatamodel */;
+			path = CredentialsModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = D9F8014522F06C1600B17E2B /* Project object */;
+}
