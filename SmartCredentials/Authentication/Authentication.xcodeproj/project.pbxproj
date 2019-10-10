@@ -1,0 +1,701 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D9474BB922FDA54A00D64D9D /* Authentication.h in Headers */ = {isa = PBXBuildFile; fileRef = D9474BB722FDA54A00D64D9D /* Authentication.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D9474BC422FDA5DE00D64D9D /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9474BC322FDA5DE00D64D9D /* Core.framework */; };
+		D9474BC822FDA75F00D64D9D /* AuthenticationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9474BC722FDA75F00D64D9D /* AuthenticationController.swift */; };
+		D9474BCC22FDA7C300D64D9D /* AuthenticationControllerProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9474BCB22FDA7C300D64D9D /* AuthenticationControllerProvider.swift */; };
+		D9474BD122FDA82C00D64D9D /* AuthServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9474BCD22FDA82C00D64D9D /* AuthServiceProtocol.swift */; };
+		D9474BD222FDA82C00D64D9D /* AuthServiceConfigurationKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9474BCE22FDA82C00D64D9D /* AuthServiceConfigurationKeys.swift */; };
+		D9474BD322FDA82C00D64D9D /* AuthStateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9474BCF22FDA82C00D64D9D /* AuthStateProtocol.swift */; };
+		D9474BD422FDA82C00D64D9D /* OIDScopeKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9474BD022FDA82C00D64D9D /* OIDScopeKeys.swift */; };
+		D9474BD822FDA8FB00D64D9D /* DefaultAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9474BD622FDA8FB00D64D9D /* DefaultAuthService.swift */; };
+		D9474BD922FDA8FB00D64D9D /* DefaultAuthState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9474BD722FDA8FB00D64D9D /* DefaultAuthState.swift */; };
+		D9474BDC22FDA92E00D64D9D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9474BDB22FDA92E00D64D9D /* Constants.swift */; };
+		D9474DD722FDB23A00D64D9D /* libAppAuth-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D9474DB822FDB22300D64D9D /* libAppAuth-iOS.a */; };
+		D9474DD822FDB28F00D64D9D /* AppAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9474DC622FDB22300D64D9D /* AppAuth.framework */; };
+		D9F4F3CD232BF43000D18C53 /* SmartCredentialsAuthenticationFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F4F3CC232BF43000D18C53 /* SmartCredentialsAuthenticationFactory.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D9474DB722FDB22300D64D9D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D9474DA422FDB22300D64D9D /* AppAuth.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 340E737C1C5D819B0076B1F6;
+			remoteInfo = "AppAuth-iOS";
+		};
+		D9474DB922FDB22300D64D9D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D9474DA422FDB22300D64D9D /* AppAuth.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 341741F01C5D8283000EF209;
+			remoteInfo = "AppAuth-iOSTests";
+		};
+		D9474DBB22FDB22300D64D9D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D9474DA422FDB22300D64D9D /* AppAuth.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 340DAE4E1D58216A00EC285B;
+			remoteInfo = "AppAuth-macOS";
+		};
+		D9474DBD22FDB22300D64D9D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D9474DA422FDB22300D64D9D /* AppAuth.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 341AA4CE1E7F392C00FCA5C6;
+			remoteInfo = "AppAuth-macOSTests";
+		};
+		D9474DBF22FDB22300D64D9D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D9474DA422FDB22300D64D9D /* AppAuth.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 341E707E1DE18744004353C1;
+			remoteInfo = "AppAuth-tvOS";
+		};
+		D9474DC122FDB22300D64D9D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D9474DA422FDB22300D64D9D /* AppAuth.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 341AA4ED1E7F39F100FCA5C6;
+			remoteInfo = "AppAuth-tvOSTests";
+		};
+		D9474DC322FDB22300D64D9D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D9474DA422FDB22300D64D9D /* AppAuth.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 347423F61E7F4B5600D3E6D6;
+			remoteInfo = "AppAuth-watchOS";
+		};
+		D9474DC522FDB22300D64D9D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D9474DA422FDB22300D64D9D /* AppAuth.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 343AAA541E83463400F9D36E;
+			remoteInfo = AppAuth_iOS;
+		};
+		D9474DC722FDB22300D64D9D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D9474DA422FDB22300D64D9D /* AppAuth.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 343AAA5C1E83463400F9D36E;
+			remoteInfo = AppAuth_iOSTests;
+		};
+		D9474DC922FDB22300D64D9D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D9474DA422FDB22300D64D9D /* AppAuth.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 343AAA991E83487200F9D36E;
+			remoteInfo = AppAuth_watchOS;
+		};
+		D9474DCB22FDB22300D64D9D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D9474DA422FDB22300D64D9D /* AppAuth.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 343AAAA61E83489A00F9D36E;
+			remoteInfo = AppAuth_tvOS;
+		};
+		D9474DCD22FDB22300D64D9D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D9474DA422FDB22300D64D9D /* AppAuth.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 343AAAAE1E83489A00F9D36E;
+			remoteInfo = AppAuth_tvOSTests;
+		};
+		D9474DCF22FDB22300D64D9D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D9474DA422FDB22300D64D9D /* AppAuth.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 343AAAC21E8348A900F9D36E;
+			remoteInfo = AppAuth_macOS;
+		};
+		D9474DD122FDB22300D64D9D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D9474DA422FDB22300D64D9D /* AppAuth.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 343AAACA1E8348AA00F9D36E;
+			remoteInfo = AppAuth_macOSTests;
+		};
+		D9474DD322FDB22300D64D9D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D9474DA422FDB22300D64D9D /* AppAuth.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 342F42C32177B1FC00574F24;
+			remoteInfo = AppAuthCore;
+		};
+		D9474DD522FDB22300D64D9D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D9474DA422FDB22300D64D9D /* AppAuth.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 348970972177B3B000ABEED4;
+			remoteInfo = AppAuthCoreTests;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D9474BB422FDA54A00D64D9D /* Authentication.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Authentication.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9474BB722FDA54A00D64D9D /* Authentication.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Authentication.h; sourceTree = "<group>"; };
+		D9474BB822FDA54A00D64D9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D9474BC322FDA5DE00D64D9D /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9474BC722FDA75F00D64D9D /* AuthenticationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationController.swift; sourceTree = "<group>"; };
+		D9474BCB22FDA7C300D64D9D /* AuthenticationControllerProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationControllerProvider.swift; sourceTree = "<group>"; };
+		D9474BCD22FDA82C00D64D9D /* AuthServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthServiceProtocol.swift; sourceTree = "<group>"; };
+		D9474BCE22FDA82C00D64D9D /* AuthServiceConfigurationKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthServiceConfigurationKeys.swift; sourceTree = "<group>"; };
+		D9474BCF22FDA82C00D64D9D /* AuthStateProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthStateProtocol.swift; sourceTree = "<group>"; };
+		D9474BD022FDA82C00D64D9D /* OIDScopeKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OIDScopeKeys.swift; sourceTree = "<group>"; };
+		D9474BD622FDA8FB00D64D9D /* DefaultAuthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultAuthService.swift; sourceTree = "<group>"; };
+		D9474BD722FDA8FB00D64D9D /* DefaultAuthState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultAuthState.swift; sourceTree = "<group>"; };
+		D9474BDB22FDA92E00D64D9D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		D9474DA422FDB22300D64D9D /* AppAuth.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AppAuth.xcodeproj; path = AppAuth/AppAuth.xcodeproj; sourceTree = "<group>"; };
+		D9F4F3CC232BF43000D18C53 /* SmartCredentialsAuthenticationFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartCredentialsAuthenticationFactory.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D9474BB122FDA54A00D64D9D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9474DD822FDB28F00D64D9D /* AppAuth.framework in Frameworks */,
+				D9474DD722FDB23A00D64D9D /* libAppAuth-iOS.a in Frameworks */,
+				D9474BC422FDA5DE00D64D9D /* Core.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D9474BAA22FDA54A00D64D9D = {
+			isa = PBXGroup;
+			children = (
+				D9474BB622FDA54A00D64D9D /* Authentication */,
+				D9474BB522FDA54A00D64D9D /* Products */,
+				D9474BC222FDA5DE00D64D9D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D9474BB522FDA54A00D64D9D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D9474BB422FDA54A00D64D9D /* Authentication.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D9474BB622FDA54A00D64D9D /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				D9474BC522FDA73500D64D9D /* Controllers */,
+				D9474BC922FDA79700D64D9D /* Utils */,
+				D9474BB722FDA54A00D64D9D /* Authentication.h */,
+				D9474BB822FDA54A00D64D9D /* Info.plist */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		D9474BC222FDA5DE00D64D9D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D9474DA422FDB22300D64D9D /* AppAuth.xcodeproj */,
+				D9474BC322FDA5DE00D64D9D /* Core.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D9474BC522FDA73500D64D9D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D9474BD622FDA8FB00D64D9D /* DefaultAuthService.swift */,
+				D9474BD722FDA8FB00D64D9D /* DefaultAuthState.swift */,
+				D9474BC722FDA75F00D64D9D /* AuthenticationController.swift */,
+				D9474BCD22FDA82C00D64D9D /* AuthServiceProtocol.swift */,
+				D9474BCF22FDA82C00D64D9D /* AuthStateProtocol.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D9474BC922FDA79700D64D9D /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				D9474BDA22FDA91600D64D9D /* Constants */,
+				D9474BD522FDA8A900D64D9D /* Keys */,
+				D9474BCA22FDA79B00D64D9D /* Factories */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		D9474BCA22FDA79B00D64D9D /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				D9474BCB22FDA7C300D64D9D /* AuthenticationControllerProvider.swift */,
+				D9F4F3CC232BF43000D18C53 /* SmartCredentialsAuthenticationFactory.swift */,
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
+		D9474BD522FDA8A900D64D9D /* Keys */ = {
+			isa = PBXGroup;
+			children = (
+				D9474BCE22FDA82C00D64D9D /* AuthServiceConfigurationKeys.swift */,
+				D9474BD022FDA82C00D64D9D /* OIDScopeKeys.swift */,
+			);
+			path = Keys;
+			sourceTree = "<group>";
+		};
+		D9474BDA22FDA91600D64D9D /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				D9474BDB22FDA92E00D64D9D /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		D9474DA522FDB22300D64D9D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D9474DB822FDB22300D64D9D /* libAppAuth-iOS.a */,
+				D9474DBA22FDB22300D64D9D /* AppAuth-iOSTests.xctest */,
+				D9474DBC22FDB22300D64D9D /* libAppAuth-macOS.a */,
+				D9474DBE22FDB22300D64D9D /* AppAuth-macOSTests.xctest */,
+				D9474DC022FDB22300D64D9D /* libAppAuth-tvOS.a */,
+				D9474DC222FDB22300D64D9D /* AppAuth-tvOSTests.xctest */,
+				D9474DC422FDB22300D64D9D /* libAppAuth-watchOS.a */,
+				D9474DC622FDB22300D64D9D /* AppAuth.framework */,
+				D9474DC822FDB22300D64D9D /* AppAuth_iOSTests.xctest */,
+				D9474DCA22FDB22300D64D9D /* AppAuth.framework */,
+				D9474DCC22FDB22300D64D9D /* AppAUth.framework */,
+				D9474DCE22FDB22300D64D9D /* AppAuth_tvOSTests.xctest */,
+				D9474DD022FDB22300D64D9D /* AppAuth.framework */,
+				D9474DD222FDB22300D64D9D /* AppAuth_macOSTests.xctest */,
+				D9474DD422FDB22300D64D9D /* AppAuthCore.framework */,
+				D9474DD622FDB22300D64D9D /* AppAuthCoreTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D9474BAF22FDA54A00D64D9D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9474BB922FDA54A00D64D9D /* Authentication.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		D9474BB322FDA54A00D64D9D /* Authentication */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D9474BBC22FDA54A00D64D9D /* Build configuration list for PBXNativeTarget "Authentication" */;
+			buildPhases = (
+				D9474BAF22FDA54A00D64D9D /* Headers */,
+				D9474BB022FDA54A00D64D9D /* Sources */,
+				D9474BB122FDA54A00D64D9D /* Frameworks */,
+				D9474BB222FDA54A00D64D9D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Authentication;
+			productName = Authentication;
+			productReference = D9474BB422FDA54A00D64D9D /* Authentication.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D9474BAB22FDA54A00D64D9D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1030;
+				ORGANIZATIONNAME = "Deutsche Telekom";
+				TargetAttributes = {
+					D9474BB322FDA54A00D64D9D = {
+						CreatedOnToolsVersion = 10.3;
+						LastSwiftMigration = 1030;
+					};
+				};
+			};
+			buildConfigurationList = D9474BAE22FDA54A00D64D9D /* Build configuration list for PBXProject "Authentication" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D9474BAA22FDA54A00D64D9D;
+			productRefGroup = D9474BB522FDA54A00D64D9D /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = D9474DA522FDB22300D64D9D /* Products */;
+					ProjectRef = D9474DA422FDB22300D64D9D /* AppAuth.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				D9474BB322FDA54A00D64D9D /* Authentication */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		D9474DB822FDB22300D64D9D /* libAppAuth-iOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libAppAuth-iOS.a";
+			remoteRef = D9474DB722FDB22300D64D9D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D9474DBA22FDB22300D64D9D /* AppAuth-iOSTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "AppAuth-iOSTests.xctest";
+			remoteRef = D9474DB922FDB22300D64D9D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D9474DBC22FDB22300D64D9D /* libAppAuth-macOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libAppAuth-macOS.a";
+			remoteRef = D9474DBB22FDB22300D64D9D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D9474DBE22FDB22300D64D9D /* AppAuth-macOSTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "AppAuth-macOSTests.xctest";
+			remoteRef = D9474DBD22FDB22300D64D9D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D9474DC022FDB22300D64D9D /* libAppAuth-tvOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libAppAuth-tvOS.a";
+			remoteRef = D9474DBF22FDB22300D64D9D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D9474DC222FDB22300D64D9D /* AppAuth-tvOSTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "AppAuth-tvOSTests.xctest";
+			remoteRef = D9474DC122FDB22300D64D9D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D9474DC422FDB22300D64D9D /* libAppAuth-watchOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libAppAuth-watchOS.a";
+			remoteRef = D9474DC322FDB22300D64D9D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D9474DC622FDB22300D64D9D /* AppAuth.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = AppAuth.framework;
+			remoteRef = D9474DC522FDB22300D64D9D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D9474DC822FDB22300D64D9D /* AppAuth_iOSTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = AppAuth_iOSTests.xctest;
+			remoteRef = D9474DC722FDB22300D64D9D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D9474DCA22FDB22300D64D9D /* AppAuth.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = AppAuth.framework;
+			remoteRef = D9474DC922FDB22300D64D9D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D9474DCC22FDB22300D64D9D /* AppAUth.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = AppAUth.framework;
+			remoteRef = D9474DCB22FDB22300D64D9D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D9474DCE22FDB22300D64D9D /* AppAuth_tvOSTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = AppAuth_tvOSTests.xctest;
+			remoteRef = D9474DCD22FDB22300D64D9D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D9474DD022FDB22300D64D9D /* AppAuth.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = AppAuth.framework;
+			remoteRef = D9474DCF22FDB22300D64D9D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D9474DD222FDB22300D64D9D /* AppAuth_macOSTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = AppAuth_macOSTests.xctest;
+			remoteRef = D9474DD122FDB22300D64D9D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D9474DD422FDB22300D64D9D /* AppAuthCore.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = AppAuthCore.framework;
+			remoteRef = D9474DD322FDB22300D64D9D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D9474DD622FDB22300D64D9D /* AppAuthCoreTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = AppAuthCoreTests.xctest;
+			remoteRef = D9474DD522FDB22300D64D9D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D9474BB222FDA54A00D64D9D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D9474BB022FDA54A00D64D9D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9474BCC22FDA7C300D64D9D /* AuthenticationControllerProvider.swift in Sources */,
+				D9474BD322FDA82C00D64D9D /* AuthStateProtocol.swift in Sources */,
+				D9474BD122FDA82C00D64D9D /* AuthServiceProtocol.swift in Sources */,
+				D9474BD822FDA8FB00D64D9D /* DefaultAuthService.swift in Sources */,
+				D9474BD222FDA82C00D64D9D /* AuthServiceConfigurationKeys.swift in Sources */,
+				D9474BDC22FDA92E00D64D9D /* Constants.swift in Sources */,
+				D9474BD922FDA8FB00D64D9D /* DefaultAuthState.swift in Sources */,
+				D9474BC822FDA75F00D64D9D /* AuthenticationController.swift in Sources */,
+				D9474BD422FDA82C00D64D9D /* OIDScopeKeys.swift in Sources */,
+				D9F4F3CD232BF43000D18C53 /* SmartCredentialsAuthenticationFactory.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		D9474BBA22FDA54A00D64D9D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D9474BBB22FDA54A00D64D9D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D9474BBD22FDA54A00D64D9D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = LUZ9KLPXF2;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/AppAuth/Source\"";
+				INFOPLIST_FILE = Authentication/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.telekom.smartcredentials.Authentication;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D9474BBE22FDA54A00D64D9D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = LUZ9KLPXF2;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/AppAuth/Source\"";
+				INFOPLIST_FILE = Authentication/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.telekom.smartcredentials.Authentication;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D9474BAE22FDA54A00D64D9D /* Build configuration list for PBXProject "Authentication" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D9474BBA22FDA54A00D64D9D /* Debug */,
+				D9474BBB22FDA54A00D64D9D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D9474BBC22FDA54A00D64D9D /* Build configuration list for PBXNativeTarget "Authentication" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D9474BBD22FDA54A00D64D9D /* Debug */,
+				D9474BBE22FDA54A00D64D9D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D9474BAB22FDA54A00D64D9D /* Project object */;
+}

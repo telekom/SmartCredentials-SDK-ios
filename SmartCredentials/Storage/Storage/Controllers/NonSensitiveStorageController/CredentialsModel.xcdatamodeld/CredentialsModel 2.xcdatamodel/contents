@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14490.99" systemVersion="18E226" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="CoreDataItemDetails" representedClassName="CoreDataItemDetails" syncable="YES" codeGenerationType="class">
+        <attribute name="itemPrivateData" optional="YES" attributeType="Binary" syncable="YES"/>
+        <relationship name="summary" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="CoreDataItemSummary" inverseName="itemDetails" inverseEntity="CoreDataItemSummary" syncable="YES"/>
+    </entity>
+    <entity name="CoreDataItemSummary" representedClassName="CoreDataItemSummary" syncable="YES" codeGenerationType="class">
+        <attribute name="actionList" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="channel" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="itemId" attributeType="String" syncable="YES"/>
+        <attribute name="itemIdentifier" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="itemType" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="itemDetails" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="CoreDataItemDetails" inverseName="summary" inverseEntity="CoreDataItemDetails" syncable="YES"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="itemId"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <elements>
+        <element name="CoreDataItemDetails" positionX="250" positionY="54" width="128" height="75"/>
+        <element name="CoreDataItemSummary" positionX="124" positionY="-141" width="128" height="135"/>
+    </elements>
+</model>

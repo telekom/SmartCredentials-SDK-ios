@@ -1,0 +1,12 @@
+{
+    "metadata": {
+        "actions": [],
+        "privateData": {
+            "key": "value"
+        }
+    },
+    "id": "123",
+    "type": "token",
+    "identifier": {
+    }
+}

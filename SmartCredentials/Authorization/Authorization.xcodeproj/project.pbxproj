@@ -1,0 +1,433 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D9F4F3C2232BDF5E00D18C53 /* SmartCredentialsAuthorizationFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F4F3C1232BDF5E00D18C53 /* SmartCredentialsAuthorizationFactory.swift */; };
+		D9F8012022F058E300B17E2B /* Authorization.h in Headers */ = {isa = PBXBuildFile; fileRef = D9F8011E22F058E300B17E2B /* Authorization.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D9F8012B22F0592000B17E2B /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9F8012A22F0592000B17E2B /* Core.framework */; };
+		D9F8013122F059EE00B17E2B /* AuthorizationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F8012E22F059EE00B17E2B /* AuthorizationController.swift */; };
+		D9F8013222F059EE00B17E2B /* MockAuthorizationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F8013022F059EE00B17E2B /* MockAuthorizationController.swift */; };
+		D9F8013622F05A4100B17E2B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F8013522F05A4100B17E2B /* Constants.swift */; };
+		D9F8013E22F05FE400B17E2B /* ConfirmationAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F8013D22F05FE400B17E2B /* ConfirmationAction.swift */; };
+		D9F8014022F060D400B17E2B /* UserConfirmationKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F8013F22F060D400B17E2B /* UserConfirmationKeys.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D9F4F3C1232BDF5E00D18C53 /* SmartCredentialsAuthorizationFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartCredentialsAuthorizationFactory.swift; sourceTree = "<group>"; };
+		D9F8011B22F058E300B17E2B /* Authorization.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Authorization.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9F8011E22F058E300B17E2B /* Authorization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Authorization.h; sourceTree = "<group>"; };
+		D9F8011F22F058E300B17E2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D9F8012A22F0592000B17E2B /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9F8012E22F059EE00B17E2B /* AuthorizationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizationController.swift; sourceTree = "<group>"; };
+		D9F8013022F059EE00B17E2B /* MockAuthorizationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockAuthorizationController.swift; sourceTree = "<group>"; };
+		D9F8013522F05A4100B17E2B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		D9F8013D22F05FE400B17E2B /* ConfirmationAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmationAction.swift; sourceTree = "<group>"; };
+		D9F8013F22F060D400B17E2B /* UserConfirmationKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserConfirmationKeys.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D9F8011822F058E300B17E2B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9F8012B22F0592000B17E2B /* Core.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D9F4F3C0232BDF4800D18C53 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				D9F4F3C1232BDF5E00D18C53 /* SmartCredentialsAuthorizationFactory.swift */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		D9F8011122F058E300B17E2B = {
+			isa = PBXGroup;
+			children = (
+				D9F8011D22F058E300B17E2B /* Authorization */,
+				D9F8011C22F058E300B17E2B /* Products */,
+				D9F8012922F0592000B17E2B /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D9F8011C22F058E300B17E2B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D9F8011B22F058E300B17E2B /* Authorization.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D9F8011D22F058E300B17E2B /* Authorization */ = {
+			isa = PBXGroup;
+			children = (
+				D9F8012C22F0596000B17E2B /* Controllers */,
+				D9F8013C22F05FD300B17E2B /* Actions */,
+				D9F8013322F05A3100B17E2B /* Utils */,
+				D9F8011E22F058E300B17E2B /* Authorization.h */,
+				D9F8011F22F058E300B17E2B /* Info.plist */,
+			);
+			path = Authorization;
+			sourceTree = "<group>";
+		};
+		D9F8012922F0592000B17E2B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D9F8012A22F0592000B17E2B /* Core.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D9F8012C22F0596000B17E2B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D9F8012D22F059EE00B17E2B /* AuthorizationController */,
+				D9F8012F22F059EE00B17E2B /* MockAuthorizationController */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D9F8012D22F059EE00B17E2B /* AuthorizationController */ = {
+			isa = PBXGroup;
+			children = (
+				D9F8012E22F059EE00B17E2B /* AuthorizationController.swift */,
+			);
+			path = AuthorizationController;
+			sourceTree = "<group>";
+		};
+		D9F8012F22F059EE00B17E2B /* MockAuthorizationController */ = {
+			isa = PBXGroup;
+			children = (
+				D9F8013022F059EE00B17E2B /* MockAuthorizationController.swift */,
+			);
+			path = MockAuthorizationController;
+			sourceTree = "<group>";
+		};
+		D9F8013322F05A3100B17E2B /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				D9F4F3C0232BDF4800D18C53 /* Factory */,
+				D9F8013422F05A3700B17E2B /* Constants */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		D9F8013422F05A3700B17E2B /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				D9F8013522F05A4100B17E2B /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		D9F8013C22F05FD300B17E2B /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				D9F8013F22F060D400B17E2B /* UserConfirmationKeys.swift */,
+				D9F8013D22F05FE400B17E2B /* ConfirmationAction.swift */,
+			);
+			path = Actions;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D9F8011622F058E300B17E2B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9F8012022F058E300B17E2B /* Authorization.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		D9F8011A22F058E300B17E2B /* Authorization */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D9F8012322F058E300B17E2B /* Build configuration list for PBXNativeTarget "Authorization" */;
+			buildPhases = (
+				D9F8011622F058E300B17E2B /* Headers */,
+				D9F8011722F058E300B17E2B /* Sources */,
+				D9F8011822F058E300B17E2B /* Frameworks */,
+				D9F8011922F058E300B17E2B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Authorization;
+			productName = Authorization;
+			productReference = D9F8011B22F058E300B17E2B /* Authorization.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D9F8011222F058E300B17E2B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1030;
+				ORGANIZATIONNAME = "Deutsche Telekom";
+				TargetAttributes = {
+					D9F8011A22F058E300B17E2B = {
+						CreatedOnToolsVersion = 10.3;
+						LastSwiftMigration = 1030;
+					};
+				};
+			};
+			buildConfigurationList = D9F8011522F058E300B17E2B /* Build configuration list for PBXProject "Authorization" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D9F8011122F058E300B17E2B;
+			productRefGroup = D9F8011C22F058E300B17E2B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D9F8011A22F058E300B17E2B /* Authorization */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D9F8011922F058E300B17E2B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D9F8011722F058E300B17E2B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9F8013122F059EE00B17E2B /* AuthorizationController.swift in Sources */,
+				D9F8013222F059EE00B17E2B /* MockAuthorizationController.swift in Sources */,
+				D9F8014022F060D400B17E2B /* UserConfirmationKeys.swift in Sources */,
+				D9F8013E22F05FE400B17E2B /* ConfirmationAction.swift in Sources */,
+				D9F8013622F05A4100B17E2B /* Constants.swift in Sources */,
+				D9F4F3C2232BDF5E00D18C53 /* SmartCredentialsAuthorizationFactory.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		D9F8012122F058E300B17E2B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D9F8012222F058E300B17E2B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D9F8012422F058E300B17E2B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = LUZ9KLPXF2;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Authorization/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.telekom.smartcredentials.Authorization;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D9F8012522F058E300B17E2B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = LUZ9KLPXF2;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Authorization/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.telekom.smartcredentials.Authorization;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D9F8011522F058E300B17E2B /* Build configuration list for PBXProject "Authorization" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D9F8012122F058E300B17E2B /* Debug */,
+				D9F8012222F058E300B17E2B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D9F8012322F058E300B17E2B /* Build configuration list for PBXNativeTarget "Authorization" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D9F8012422F058E300B17E2B /* Debug */,
+				D9F8012522F058E300B17E2B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D9F8011222F058E300B17E2B /* Project object */;
+}

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:OTP/OTP.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:QRLogin/QRLogin.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Authentication/Authentication.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:CameraScanner/CameraScanner.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:DocumentScanner/DocumentScanner.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Storage/Storage.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Networking/Networking.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Authorization/Authorization.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Encryption/Encryption.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Core/Core.xcodeproj">
+   </FileRef>
+</Workspace>
