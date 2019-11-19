@@ -16,7 +16,10 @@
 
 import Foundation
 import CoreData
+
+#if canImport(Core)
 import Core
+#endif
 
 struct CoreDataHelper {
     // MARK: - Singleton

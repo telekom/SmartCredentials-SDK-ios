@@ -14,7 +14,9 @@
 * limitations under the License.
 */
 
+#if canImport(Core)
 import Core
+#endif
 
 private let SecMatchLimit: String! = kSecMatchLimit as String
 private let SecReturnData: String! = kSecReturnData as String

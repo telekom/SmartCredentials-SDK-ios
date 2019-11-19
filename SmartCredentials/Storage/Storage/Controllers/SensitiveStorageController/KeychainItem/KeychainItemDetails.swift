@@ -14,7 +14,9 @@
 * limitations under the License.
 */
 
+#if canImport(Core)
 import Core
+#endif
 
 @objc class KeychainItemDetails: NSObject, NSCoding {
     

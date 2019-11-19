@@ -15,7 +15,10 @@
 */
 
 import CoreData
+
+#if canImport(Core)
 import Core
+#endif
 
 struct NonSensitiveStorageController: StorageProtocol {
     

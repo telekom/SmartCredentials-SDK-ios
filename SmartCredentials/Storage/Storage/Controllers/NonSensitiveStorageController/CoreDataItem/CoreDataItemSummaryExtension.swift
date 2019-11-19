@@ -14,8 +14,11 @@
 * limitations under the License.
 */
 
-import Core
 import CoreData
+
+#if canImport(Core)
+import Core
+#endif
 
 extension CoreDataItemSummary {
     

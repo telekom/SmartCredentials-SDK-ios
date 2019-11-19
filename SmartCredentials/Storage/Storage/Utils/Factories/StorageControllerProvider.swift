@@ -14,7 +14,9 @@
 * limitations under the License.
 */
 
+#if canImport(Core)
 import Core
+#endif
 
 /// Responsible for creating StorageController depending on item's content type
 struct StorageControllerProvider {
