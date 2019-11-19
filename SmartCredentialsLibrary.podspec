@@ -5,7 +5,7 @@
 Pod::Spec.new do |s|
 
   s.name         = 'SmartCredentialsLibrary'
-  s.version      = "5.3.1"
+  s.version      = "5.3.2"
   s.summary      = "Smart Credentials is a library with multiple generic functionalities, like secure storage, authorization, camera scanners and more."
 
   s.description  = <<-DESC
@@ -24,9 +24,7 @@ Other features include QR-based login, barcode reader, OCR reader/parser, OTP ge
   s.swift_version = "5.0"
 
   s.source       = { :git => "https://github.com/kreincke/SmartCredentials-SDK-ios.git", :tag => "#{s.version}" }
-
-  # s.source_files  = "SmartCredentials/**/*.{swift,h,m}"
-  # s.exclude_files = "SmartCredentials/**/*.plist"
+  s.resources = 'SmartCredentials/**/*.xcdatamodeld'
 
   # Core
   s.subspec 'Core' do |sp|
@@ -84,10 +82,10 @@ Other features include QR-based login, barcode reader, OCR reader/parser, OTP ge
   #   sp.framework = 'Starscream.framework'
   # end
 
-  # # Storage
-  # s.subspec 'Storage' do |sp|
-  #   sp.source_files  = 'SmartCredentials/Storage/**/*.swift'
-  #   sp.dependency 'SmartCredentialsLibrary/Core'
-  # end
+  # Storage
+  s.subspec 'Storage' do |sp|
+    sp.source_files  = 'SmartCredentials/Storage/Storage/**/*.{h,swift,xcdatamodeld}'
+    sp.dependency 'SmartCredentialsLibrary/Core'
+  end
 
 end
