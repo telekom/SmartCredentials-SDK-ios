@@ -22,7 +22,7 @@ import Core
 
 extension Constants {
     
-    enum Logger {
+    enum StorageLogger {
         // Error messages
         static let itemFilterError = "Invalid item filter"
         static let saveError = "Save Error"

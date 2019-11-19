@@ -5,7 +5,7 @@
 Pod::Spec.new do |s|
 
   s.name         = 'SmartCredentialsLibrary'
-  s.version      = "5.3.2"
+  s.version      = "5.3.3"
   s.summary      = "Smart Credentials is a library with multiple generic functionalities, like secure storage, authorization, camera scanners and more."
 
   s.description  = <<-DESC
@@ -14,7 +14,7 @@ The main feature of the library is the secure storage. The library itself is dat
 Other features include QR-based login, barcode reader, OCR reader/parser, OTP generator, fingerprint/pin/pattern/faceId authorization.
                    DESC
 
-  s.homepage     = "https://github.com/kreincke/SmartCredentials-SDK-ios"
+  s.homepage     = "https://github.com/telekom/SmartCredentials-SDK-ios.git"
   s.license      = { :type => "Apache License, Version 2.0", :file => "LICENSE" }
 
   s.author             = "Deutsche Telekom AG"
@@ -24,7 +24,6 @@ Other features include QR-based login, barcode reader, OCR reader/parser, OTP ge
   s.swift_version = "5.0"
 
   s.source       = { :git => "https://github.com/kreincke/SmartCredentials-SDK-ios.git", :tag => "#{s.version}" }
-  s.resources = 'SmartCredentials/**/*.xcdatamodeld'
 
   # Core
   s.subspec 'Core' do |sp|
@@ -86,6 +85,9 @@ Other features include QR-based login, barcode reader, OCR reader/parser, OTP ge
   s.subspec 'Storage' do |sp|
     sp.source_files  = 'SmartCredentials/Storage/Storage/**/*.{h,swift,xcdatamodeld}'
     sp.dependency 'SmartCredentialsLibrary/Core'
+    
+    sp.resource_bundles = {'CredentialsModel' => ['SmartCredentials/**/*.xcdatamodeld']}
+  	sp.resources = 'SmartCredentials/**/*.xcdatamodeld'
   end
 
 end

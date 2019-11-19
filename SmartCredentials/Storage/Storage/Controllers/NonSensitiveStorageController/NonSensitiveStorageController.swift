@@ -35,7 +35,7 @@ struct NonSensitiveStorageController: StorageProtocol {
         let id = "\(userId)_\(itemFilter.itemId!)"
         
         guard let coreDataItemSummary = CoreDataItemSummary.find(by: id) else {
-            logger?.log(.error, message: Constants.Logger.itemNotFound, className: className)
+            logger?.log(.error, message: Constants.StorageLogger.itemNotFound, className: className)
             return .failure(error: .itemNotFound)
         }
         
@@ -49,7 +49,7 @@ struct NonSensitiveStorageController: StorageProtocol {
         let id = "\(userId)_\(itemFilter.itemId!)"
         
         guard let coreDataItemSummary = CoreDataItemSummary.find(by: id) else {
-            logger?.log(.error, message: Constants.Logger.itemNotFound, className: className)
+            logger?.log(.error, message: Constants.StorageLogger.itemNotFound, className: className)
             return .failure(error: .itemNotFound)
         }
         
@@ -99,7 +99,7 @@ struct NonSensitiveStorageController: StorageProtocol {
         } catch {
             print(error)
             context.rollback()
-            logger?.log(.error, message: Constants.Logger.saveError, className: className)
+            logger?.log(.error, message: Constants.StorageLogger.saveError, className: className)
             return .failure(error: .saveError)
         }
 
@@ -137,7 +137,7 @@ struct NonSensitiveStorageController: StorageProtocol {
         
         let context = CoreDataHelper.sharedInstance.managedObjectContext
         guard let coreDataItemSummary = CoreDataItemSummary.find(by: id) else {
-            logger?.log(.error, message: Constants.Logger.itemNotFound, className: className)
+            logger?.log(.error, message: Constants.StorageLogger.itemNotFound, className: className)
             return .failure(error: .itemNotFound)
         }
 
@@ -147,7 +147,7 @@ struct NonSensitiveStorageController: StorageProtocol {
             try context.save()
         } catch {
             context.rollback()
-            logger?.log(.error, message: Constants.Logger.saveError, className: className)
+            logger?.log(.error, message: Constants.StorageLogger.saveError, className: className)
             return .failure(error: .saveError)
         }
         
@@ -168,7 +168,7 @@ struct NonSensitiveStorageController: StorageProtocol {
             try context.save()
         } catch {
             context.rollback()
-            logger?.log(.error, message: Constants.Logger.saveError, className: className)
+            logger?.log(.error, message: Constants.StorageLogger.saveError, className: className)
             return .failure(error: .saveError)
         }
         

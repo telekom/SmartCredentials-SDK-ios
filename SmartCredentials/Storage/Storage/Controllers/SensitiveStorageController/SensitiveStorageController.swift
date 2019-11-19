@@ -38,7 +38,7 @@ struct SensitiveStorageController: StorageProtocol {
             return .success
         }
         
-        logger?.log(.error, message: Constants.Logger.saveError, className: className)
+        logger?.log(.error, message: Constants.StorageLogger.saveError, className: className)
         return .failure(error: .saveError)
     }
     
@@ -49,7 +49,7 @@ struct SensitiveStorageController: StorageProtocol {
             return .success
         }
 
-        logger?.log(.error, message: Constants.Logger.saveError, className: className)
+        logger?.log(.error, message: Constants.StorageLogger.saveError, className: className)
         return .failure(error: .saveError)
     }
     
@@ -73,7 +73,7 @@ struct SensitiveStorageController: StorageProtocol {
         let id = "\(userId)_\(itemFilter.itemId!)"
 
         guard let keychainItemSummary = KeychainHelper.standard.object(forKey: id, withAccessibility: .whenUnlockedThisDeviceOnly) as? KeychainItemSummary else {
-            logger?.log(.error, message: Constants.Logger.itemNotFound, className: className)
+            logger?.log(.error, message: Constants.StorageLogger.itemNotFound, className: className)
             return .failure(error: .itemNotFound)
         }
         
@@ -87,7 +87,7 @@ struct SensitiveStorageController: StorageProtocol {
         let id = "\(userId)_\(itemFilter.itemId!)"
 
         guard let keychainItemSummary = KeychainHelper.standard.object(forKey: id, withAccessibility: .whenUnlockedThisDeviceOnly) as? KeychainItemSummary else {
-            logger?.log(.error, message: Constants.Logger.itemNotFound, className: className)
+            logger?.log(.error, message: Constants.StorageLogger.itemNotFound, className: className)
             return .failure(error: .itemNotFound)
         }
 
@@ -126,7 +126,7 @@ struct SensitiveStorageController: StorageProtocol {
         let id = "\(userId)_\(itemFilter.itemId!)"
         
         guard let referenceData = KeychainHelper.standard.dataRef(forKey: id, withAccessibility: .whenUnlockedThisDeviceOnly) else {
-            logger?.log(.error, message: Constants.Logger.itemNotFound, className: className)
+            logger?.log(.error, message: Constants.StorageLogger.itemNotFound, className: className)
             return .failure(error: .itemNotFound)
         }
         
@@ -140,7 +140,7 @@ struct SensitiveStorageController: StorageProtocol {
         let password = KeychainHelper.standard.string(forKey: id, withAccessibility: .whenUnlockedThisDeviceOnly)
         
         if item == nil && password == nil {
-            logger?.log(.error, message: Constants.Logger.itemNotFound, className: className)
+            logger?.log(.error, message: Constants.StorageLogger.itemNotFound, className: className)
             return .failure(error: .itemNotFound)
         }
 
@@ -148,7 +148,7 @@ struct SensitiveStorageController: StorageProtocol {
             return .success
         }
         
-        logger?.log(.error, message: Constants.Logger.saveError, className: className)
+        logger?.log(.error, message: Constants.StorageLogger.saveError, className: className)
         return .failure(error: .saveError)
     }
     

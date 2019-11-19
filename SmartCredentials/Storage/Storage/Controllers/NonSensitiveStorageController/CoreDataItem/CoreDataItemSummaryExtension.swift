@@ -20,6 +20,7 @@ import CoreData
 import Core
 #endif
 
+
 extension CoreDataItemSummary {
     
     func toItemEnvelope() -> ItemEnvelope {

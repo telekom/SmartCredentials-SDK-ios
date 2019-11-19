@@ -50,7 +50,7 @@ extension DefaultStorageController: StorageAPI {
         }
         
         guard let _ = itemFilter.itemId else {
-            logger?.log(.error, message: Constants.Logger.itemFilterError, className: className)
+            logger?.log(.error, message: Constants.StorageLogger.itemFilterError, className: className)
             return .failure(error: .invalidItemFilter)
         }
         
@@ -67,7 +67,7 @@ extension DefaultStorageController: StorageAPI {
         }
         
         guard let _ = itemFilter.itemId else {
-            logger?.log(.error, message: Constants.Logger.itemFilterError, className: className)
+            logger?.log(.error, message: Constants.StorageLogger.itemFilterError, className: className)
             return .failure(error: .invalidItemFilter)
         }
         
@@ -96,7 +96,7 @@ extension DefaultStorageController: StorageAPI {
         }
         
         guard let _ = itemFilter.itemId else {
-            logger?.log(.error, message: Constants.Logger.itemFilterError, className: className)
+            logger?.log(.error, message: Constants.StorageLogger.itemFilterError, className: className)
             return .failure(error: .invalidItemFilter)
         }
         
@@ -148,7 +148,7 @@ extension DefaultStorageController: StorageAPI {
         }
         
         guard let _ = itemFilter.itemId else {
-            logger?.log(.error, message: Constants.Logger.itemFilterError, className: className)
+            logger?.log(.error, message: Constants.StorageLogger.itemFilterError, className: className)
             return .failure(error: .invalidItemFilter)
         }
         
