@@ -10,7 +10,7 @@
 		D9F4F3C4232BECD300D18C53 /* SmartCredentialsStorageFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F4F3C3232BECD300D18C53 /* SmartCredentialsStorageFactory.swift */; };
 		D9F8015322F06C1600B17E2B /* Storage.h in Headers */ = {isa = PBXBuildFile; fileRef = D9F8015122F06C1600B17E2B /* Storage.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D9F8015F22F06C6900B17E2B /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9F8015E22F06C6900B17E2B /* Core.framework */; };
-		D9F8018122F06DBF00B17E2B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F8018022F06DBF00B17E2B /* Constants.swift */; };
+		D9F8018122F06DBF00B17E2B /* StorageConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F8018022F06DBF00B17E2B /* StorageConstants.swift */; };
 		D9F8019622F06FC300B17E2B /* NonSensitiveStorageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F8018322F06FC200B17E2B /* NonSensitiveStorageController.swift */; };
 		D9F8019722F06FC300B17E2B /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F8018422F06FC200B17E2B /* CoreDataHelper.swift */; };
 		D9F8019822F06FC300B17E2B /* CredentialsModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D9F8018522F06FC200B17E2B /* CredentialsModel.xcdatamodeld */; };
@@ -32,7 +32,7 @@
 		D9F8015122F06C1600B17E2B /* Storage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Storage.h; sourceTree = "<group>"; };
 		D9F8015222F06C1600B17E2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D9F8015E22F06C6900B17E2B /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D9F8018022F06DBF00B17E2B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		D9F8018022F06DBF00B17E2B /* StorageConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageConstants.swift; sourceTree = "<group>"; };
 		D9F8018322F06FC200B17E2B /* NonSensitiveStorageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NonSensitiveStorageController.swift; sourceTree = "<group>"; };
 		D9F8018422F06FC200B17E2B /* CoreDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
 		D9F8018622F06FC200B17E2B /* CredentialsModel 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "CredentialsModel 2.xcdatamodel"; sourceTree = "<group>"; };
@@ -122,7 +122,7 @@
 		D9F8017F22F06DB500B17E2B /* Constants */ = {
 			isa = PBXGroup;
 			children = (
-				D9F8018022F06DBF00B17E2B /* Constants.swift */,
+				D9F8018022F06DBF00B17E2B /* StorageConstants.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -268,7 +268,7 @@
 				D9F8019E22F06FC300B17E2B /* SensitiveStorageController.swift in Sources */,
 				D9F801A322F0725400B17E2B /* StorageProtocol.swift in Sources */,
 				D9F4F3C4232BECD300D18C53 /* SmartCredentialsStorageFactory.swift in Sources */,
-				D9F8018122F06DBF00B17E2B /* Constants.swift in Sources */,
+				D9F8018122F06DBF00B17E2B /* StorageConstants.swift in Sources */,
 				D9F8019822F06FC300B17E2B /* CredentialsModel.xcdatamodeld in Sources */,
 				D9F801A522F072DF00B17E2B /* DefaultStorageController.swift in Sources */,
 				D9F8019B22F06FC300B17E2B /* KeychainHelper.swift in Sources */,
