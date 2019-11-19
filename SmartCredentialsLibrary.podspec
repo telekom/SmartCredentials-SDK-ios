@@ -5,8 +5,8 @@
 Pod::Spec.new do |s|
 
   s.name         = 'SmartCredentialsLibrary'
-  s.version      = "5.3.0"
-  s.summary      = "Smart Credentials is a library with multiple generic functionalities, like secure storage, authentication, authorization, camera scanners and many more."
+  s.version      = "5.3.1"
+  s.summary      = "Smart Credentials is a library with multiple generic functionalities, like secure storage, authorization, camera scanners and more."
 
   s.description  = <<-DESC
 Smart Credentials is a library with multiple generic functionalities. The focus is on having components that are not application-specific, so that they can be easily integrated into multiple applications.
@@ -25,12 +25,12 @@ Other features include QR-based login, barcode reader, OCR reader/parser, OTP ge
 
   s.source       = { :git => "https://github.com/kreincke/SmartCredentials-SDK-ios.git", :tag => "#{s.version}" }
 
-  s.source_files  = "SmartCredentials/**/*.{swift,h,m}"
-  s.exclude_files = "SmartCredentials/**/*.plist"
+  # s.source_files  = "SmartCredentials/**/*.{swift,h,m}"
+  # s.exclude_files = "SmartCredentials/**/*.plist"
 
   # Core
   s.subspec 'Core' do |sp|
-    sp.source_files  = 'SmartCredentials/Core/Core/**/*.{h, swift}'
+    sp.source_files  = 'SmartCredentials/Core/Core/**/*.{h,swift}'
   end
 
   # # Authentication
