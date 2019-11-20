@@ -24,17 +24,17 @@ Other features include QR-based login, barcode reader, OCR reader/parser, OTP ge
   s.swift_version = "5.0"
 
   s.source       = { :git => "https://github.com/telekom/SmartCredentials-SDK-ios.git", :tag => "#{s.version}" }
-  s.source_files  = ['SmartCredentials/Core/Core/**/*.{h,swift}', 
-    'SmartCredentials/Storage/**/*.{h,swift}', 
-    'SmartCredentials/Encryption/**/*.{h,swift}',
-    'SmartCredentials/Authorization/**/*.{h,swift}',
-    'SmartCredentials/CameraScanner/**/*.{h,swift,framework}',
-    'SmartCredentials/Networking/**/*.{h,m,swift}',
-    'SmartCredentials/QRLogin/**/*.{h,swift}',
-    'SmartCredentials/OTP/**/*.{swift}',
-    'SmartCredentials/Authentication/Authentication/**/*.{h,swift}',
-    'SmartCredentials/DocumentScanner/',
-  ]
+  # s.source_files  = ['SmartCredentials/Core/Core/**/*.{h,swift}', 
+  #   'SmartCredentials/Storage/**/*.{h,swift}', 
+  #   'SmartCredentials/Encryption/**/*.{h,swift}',
+  #   'SmartCredentials/Authorization/**/*.{h,swift}',
+  #   'SmartCredentials/CameraScanner/**/*.{h,swift,framework}',
+  #   'SmartCredentials/Networking/**/*.{h,m,swift}',
+  #   'SmartCredentials/QRLogin/**/*.{h,swift}',
+  #   'SmartCredentials/OTP/**/*.{swift}',
+  #   'SmartCredentials/Authentication/Authentication/**/*.{h,swift}',
+  #   'SmartCredentials/DocumentScanner/',
+  # ]
   s.exclude_files = ['SmartCredentials/Authentication/AppAuth/']
 
   # Core
@@ -63,12 +63,12 @@ Other features include QR-based login, barcode reader, OCR reader/parser, OTP ge
   end
 
   # DocumentScanner
-  s.subspec 'DocumentScanner' do |sp|
-    sp.source_files  = 'SmartCredentials/DocumentScanner/**/*.{h,swift}'
-    sp.dependency 'SmartCredentialsLibrary/Core'
-    sp.vendored_framework = 'MicroBlink.framework'
-    sp.resources = "MicroBlink.bundle"
-  end
+  # s.subspec 'DocumentScanner' do |sp|
+  #   sp.source_files  = 'SmartCredentials/DocumentScanner/**/*.{h,swift}'
+  #   sp.dependency 'SmartCredentialsLibrary/Core'
+  #   sp.vendored_framework = 'MicroBlink.framework'
+  #   sp.resources = "MicroBlink.bundle"
+  # end
 
   # Encryption
   s.subspec 'Encryption' do |sp|
