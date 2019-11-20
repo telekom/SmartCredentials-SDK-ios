@@ -17,7 +17,7 @@
 		D9474BD422FDA82C00D64D9D /* OIDScopeKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9474BD022FDA82C00D64D9D /* OIDScopeKeys.swift */; };
 		D9474BD822FDA8FB00D64D9D /* DefaultAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9474BD622FDA8FB00D64D9D /* DefaultAuthService.swift */; };
 		D9474BD922FDA8FB00D64D9D /* DefaultAuthState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9474BD722FDA8FB00D64D9D /* DefaultAuthState.swift */; };
-		D9474BDC22FDA92E00D64D9D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9474BDB22FDA92E00D64D9D /* Constants.swift */; };
+		D9474BDC22FDA92E00D64D9D /* AuthenticationConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9474BDB22FDA92E00D64D9D /* AuthenticationConstants.swift */; };
 		D9474DD722FDB23A00D64D9D /* libAppAuth-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D9474DB822FDB22300D64D9D /* libAppAuth-iOS.a */; };
 		D9474DD822FDB28F00D64D9D /* AppAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9474DC622FDB22300D64D9D /* AppAuth.framework */; };
 		D9F4F3CD232BF43000D18C53 /* SmartCredentialsAuthenticationFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F4F3CC232BF43000D18C53 /* SmartCredentialsAuthenticationFactory.swift */; };
@@ -151,7 +151,7 @@
 		D9474BD022FDA82C00D64D9D /* OIDScopeKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OIDScopeKeys.swift; sourceTree = "<group>"; };
 		D9474BD622FDA8FB00D64D9D /* DefaultAuthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultAuthService.swift; sourceTree = "<group>"; };
 		D9474BD722FDA8FB00D64D9D /* DefaultAuthState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultAuthState.swift; sourceTree = "<group>"; };
-		D9474BDB22FDA92E00D64D9D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		D9474BDB22FDA92E00D64D9D /* AuthenticationConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationConstants.swift; sourceTree = "<group>"; };
 		D9474DA422FDB22300D64D9D /* AppAuth.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AppAuth.xcodeproj; path = AppAuth/AppAuth.xcodeproj; sourceTree = "<group>"; };
 		D9F4F3CC232BF43000D18C53 /* SmartCredentialsAuthenticationFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartCredentialsAuthenticationFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -250,7 +250,7 @@
 		D9474BDA22FDA91600D64D9D /* Constants */ = {
 			isa = PBXGroup;
 			children = (
-				D9474BDB22FDA92E00D64D9D /* Constants.swift */,
+				D9474BDB22FDA92E00D64D9D /* AuthenticationConstants.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -484,7 +484,7 @@
 				D9474BD122FDA82C00D64D9D /* AuthServiceProtocol.swift in Sources */,
 				D9474BD822FDA8FB00D64D9D /* DefaultAuthService.swift in Sources */,
 				D9474BD222FDA82C00D64D9D /* AuthServiceConfigurationKeys.swift in Sources */,
-				D9474BDC22FDA92E00D64D9D /* Constants.swift in Sources */,
+				D9474BDC22FDA92E00D64D9D /* AuthenticationConstants.swift in Sources */,
 				D9474BD922FDA8FB00D64D9D /* DefaultAuthState.swift in Sources */,
 				D9474BC822FDA75F00D64D9D /* AuthenticationController.swift in Sources */,
 				D9474BD422FDA82C00D64D9D /* OIDScopeKeys.swift in Sources */,

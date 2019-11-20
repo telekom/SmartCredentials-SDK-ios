@@ -15,8 +15,14 @@
 */
 
 import Foundation
+
+#if canImport(Core)
 import Core
+#endif
+
+#if canImport(Authorization)
 import Authorization
+#endif
 
 class QRLoginController {
     

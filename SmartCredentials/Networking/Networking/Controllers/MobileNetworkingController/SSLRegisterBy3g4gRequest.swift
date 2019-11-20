@@ -15,7 +15,10 @@
 */
 
 import Security
+
+#if canImport(Core)
 import Core
+#endif
 
 protocol SSLRegisterBy3g4gRequestDelegate {
     func secureSocketRequestFinished(with response: String)

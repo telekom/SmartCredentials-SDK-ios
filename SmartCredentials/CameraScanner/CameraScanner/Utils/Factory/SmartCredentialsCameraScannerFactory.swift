@@ -15,7 +15,10 @@
 */
 
 import Foundation
+
+#if canImport(Core)
 import Core
+#endif
 
 public struct SmartCredentialsCameraScannerFactory {
     

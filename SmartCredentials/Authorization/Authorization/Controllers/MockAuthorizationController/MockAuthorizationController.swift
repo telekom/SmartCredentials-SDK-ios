@@ -14,7 +14,9 @@
 * limitations under the License.
 */
 
+#if canImport(Core)
 import Core
+#endif
 
 class MockAuthorization: AuthorizationAPI {
     func authorize(with completionHandler: @escaping AuthorizationCompletionHandler) {

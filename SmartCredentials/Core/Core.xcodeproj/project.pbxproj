@@ -23,6 +23,7 @@
 		66DD3C4822CCDEFB0003E2B8 /* LogAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66DD3C4722CCDEFB0003E2B8 /* LogAPI.swift */; };
 		66DD3C4B22CCDF1B0003E2B8 /* LoggerProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66DD3C4A22CCDF1A0003E2B8 /* LoggerProvider.swift */; };
 		66DD3C4E22CCDFE20003E2B8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66DD3C4D22CCDFE20003E2B8 /* Constants.swift */; };
+		D90FC47F238540CB008C1741 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90FC47E238540CB008C1741 /* StringExtension.swift */; };
 		D928EE5322DF48D600F8176F /* SmartCredentialsAPIResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = D928EE5222DF48D600F8176F /* SmartCredentialsAPIResult.swift */; };
 		D9C65848231D5C130077C441 /* SmartCredentialsAPIErrorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C65847231D5C130077C441 /* SmartCredentialsAPIErrorExtension.swift */; };
 		D9C6584A231E90640077C441 /* NetworkingAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C65849231E90640077C441 /* NetworkingAPI.swift */; };
@@ -107,6 +108,7 @@
 		66DD3C4722CCDEFB0003E2B8 /* LogAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogAPI.swift; sourceTree = "<group>"; };
 		66DD3C4A22CCDF1A0003E2B8 /* LoggerProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggerProvider.swift; sourceTree = "<group>"; };
 		66DD3C4D22CCDFE20003E2B8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		D90FC47E238540CB008C1741 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		D928EE5222DF48D600F8176F /* SmartCredentialsAPIResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmartCredentialsAPIResult.swift; sourceTree = "<group>"; };
 		D9C65847231D5C130077C441 /* SmartCredentialsAPIErrorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmartCredentialsAPIErrorExtension.swift; sourceTree = "<group>"; };
 		D9C65849231E90640077C441 /* NetworkingAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingAPI.swift; sourceTree = "<group>"; };
@@ -195,6 +197,7 @@
 			children = (
 				D9C65847231D5C130077C441 /* SmartCredentialsAPIErrorExtension.swift */,
 				663D2E9222D48A31001A12AD /* UIDeviceExtension.swift */,
+				D90FC47E238540CB008C1741 /* StringExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -697,6 +700,7 @@
 				66DD3C3822CCDB390003E2B8 /* ItemEnvelope.swift in Sources */,
 				D9F4F384232B946B00D18C53 /* EIDCameraSettings.swift in Sources */,
 				D9C65860232796FA0077C441 /* ItemContext.swift in Sources */,
+				D90FC47F238540CB008C1741 /* StringExtension.swift in Sources */,
 				D9C65855232796BA0077C441 /* StorageAPI.swift in Sources */,
 				66DD3C3B22CCDB390003E2B8 /* Channel.swift in Sources */,
 				66DD3C3922CCDB390003E2B8 /* ItemEnvelopeFactory.swift in Sources */,

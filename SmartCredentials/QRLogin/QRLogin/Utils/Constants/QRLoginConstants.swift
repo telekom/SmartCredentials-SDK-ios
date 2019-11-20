@@ -15,20 +15,15 @@
 */
 
 import Foundation
+
+#if canImport(Core)
 import Core
+#endif
 
 extension Constants {
     
-    // MARK: - Authorization
-    enum Authorization {
-        // Reason string for authorization
-        static let reasonString = "To access the sensitive data"
-    }
-    
-    enum Logger {
-        static let authAppCancel = "App cancel authorization"
-        static let authSystemCancel = "System cancel authorization"
-        static let authUserCancel = "User cancel authorization"
-        static let authFailed = "Authorization failed"
+    // MARK: - QR Code Login
+    enum QRCodeLogin {
+        static let responseDataKey = "data"
     }
 }

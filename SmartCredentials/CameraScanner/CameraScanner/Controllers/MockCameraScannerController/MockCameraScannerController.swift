@@ -15,7 +15,10 @@
 */
 
 import Foundation
+
+#if canImport(Core)
 import Core
+#endif
 
 class MockCameraScannerController: CameraScannerAPI {
     func startQRReader(in containerView: UIView, with completionHandler: @escaping QRCodeCompletionHandler) {

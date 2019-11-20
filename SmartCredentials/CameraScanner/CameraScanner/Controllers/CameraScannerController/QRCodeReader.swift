@@ -16,7 +16,10 @@
 
 import AVFoundation
 import UIKit
+
+#if canImport(Core)
 import Core
+#endif
 
 protocol QRCodeReaderProtocol: class {
     func qrCodeReader(_ qrCodeReader: QRCodeReader, didFind qrCode: String)
@@ -79,7 +82,7 @@ class QRCodeReader: NSObject {
     // MARK: - Private initializers
     private func initializeCaptureSession() {
         guard let captureDevice = AVCaptureDevice.default(for: .video) else {
-            logger?.log(.error, message: Constants.Logger.createCaptureDeviceForMediaError, className: className)
+            logger?.log(.error, message: Constants.CameraScannerLogger.createCaptureDeviceForMediaError, className: className)
             return
         }
         
@@ -87,14 +90,14 @@ class QRCodeReader: NSObject {
         do {
             deviceInput = try AVCaptureDeviceInput(device: captureDevice)
         } catch {
-            logger?.log(.error, message: Constants.Logger.createCaptureDeviceInputError, className: className)
+            logger?.log(.error, message: Constants.CameraScannerLogger.createCaptureDeviceInputError, className: className)
             return
         }
         
         if captureSession.canAddInput(deviceInput) {
             captureSession.addInput(deviceInput)
         } else {
-            logger?.log(.error, message: Constants.Logger.addVideoInputCaptureSessionError, className: className)
+            logger?.log(.error, message: Constants.CameraScannerLogger.addVideoInputCaptureSessionError, className: className)
         }
     }
     
@@ -107,7 +110,7 @@ class QRCodeReader: NSObject {
             metadataOutput.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
             metadataOutput.metadataObjectTypes = [.qr]
         } else {
-            logger?.log(.error, message: Constants.Logger.addMetadataOutputError, className: className)
+            logger?.log(.error, message: Constants.CameraScannerLogger.addMetadataOutputError, className: className)
 
             return
         }
@@ -116,7 +119,7 @@ class QRCodeReader: NSObject {
     private func initializeVideoPreviewLayer() {
         videoPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
         guard let videoPreviewLayer = videoPreviewLayer else {
-            logger?.log(.error, message: Constants.Logger.createVideoPreviewLayerError, className: className)
+            logger?.log(.error, message: Constants.CameraScannerLogger.createVideoPreviewLayerError, className: className)
             return
         }
         

@@ -15,7 +15,10 @@
 */
 
 import Starscream
+
+#if canImport(Core)
 import Core
+#endif
 
 typealias GetRefreshTokenCompletionHandler = (SmartCredentialsAPIResult<[String: Any]>) -> ()
 

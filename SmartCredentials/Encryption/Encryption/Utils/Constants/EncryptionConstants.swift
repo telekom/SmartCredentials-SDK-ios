@@ -15,12 +15,15 @@
 */
 
 import Foundation
+
+#if canImport(Core)
 import Core
+#endif
 
 extension Constants {
     
-    // MARK: - QR Code Login
-    enum QRCodeLogin {
-        static let responseDataKey = "data"
+    // MARK: - Cryptographic Keys generation
+    enum CryptographicKeys {
+        static let keySizeInBits = 2048
     }
 }

@@ -14,7 +14,9 @@
 * limitations under the License.
 */
 
+#if canImport(Core)
 import Core
+#endif
 
 class DefaultOCRScanner {
 

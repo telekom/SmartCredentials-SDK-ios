@@ -15,7 +15,10 @@
 */
 
 import LocalAuthentication
+
+#if canImport(Core)
 import Core
+#endif
 
 class AuthorizationController {
     
@@ -61,22 +64,22 @@ extension AuthorizationController: AuthorizationAPI {
                     
                     switch error {
                     case LAError.appCancel:
-                        logger?.log(.error, message: Constants.Logger.authAppCancel, className: self.className)
+                        logger?.log(.error, message: Constants.AuthorizationLogger.authAppCancel, className: self.className)
                         completionHandler(.failure(error: .authAppCancel))
                     case LAError.systemCancel:
-                        logger?.log(.error, message: Constants.Logger.authSystemCancel, className: self.className)
+                        logger?.log(.error, message: Constants.AuthorizationLogger.authSystemCancel, className: self.className)
                         completionHandler(.failure(error: .authSystemCancel))
                     case LAError.userCancel:
-                        logger?.log(.error, message: Constants.Logger.authUserCancel, className: self.className)
+                        logger?.log(.error, message: Constants.AuthorizationLogger.authUserCancel, className: self.className)
                         completionHandler(.failure(error: .authUserCancel))
                     default:
-                        logger?.log(.error, message: Constants.Logger.authFailed, className: self.className)
+                        logger?.log(.error, message: Constants.AuthorizationLogger.authFailed, className: self.className)
                         completionHandler(.failure(error: .authFailed))
                     }
                 }
             }
         } else {
-            logger?.log(.error, message: Constants.Logger.authFailed, className: self.className)
+            logger?.log(.error, message: Constants.AuthorizationLogger.authFailed, className: self.className)
             completionHandler(.failure(error: .authFailed))
         }
     }

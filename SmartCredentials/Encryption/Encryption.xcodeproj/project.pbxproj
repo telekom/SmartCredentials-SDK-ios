@@ -12,7 +12,7 @@
 		D9F800F322F053FF00B17E2B /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9F800F222F053FF00B17E2B /* Core.framework */; };
 		D9F800FB22F054A900B17E2B /* EncryptionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F800F822F054A900B17E2B /* EncryptionController.swift */; };
 		D9F800FC22F054A900B17E2B /* MockEncryptionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F800FA22F054A900B17E2B /* MockEncryptionController.swift */; };
-		D9F8010022F0555700B17E2B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F800FF22F0555700B17E2B /* Constants.swift */; };
+		D9F8010022F0555700B17E2B /* EncryptionConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F800FF22F0555700B17E2B /* EncryptionConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,7 +23,7 @@
 		D9F800F222F053FF00B17E2B /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9F800F822F054A900B17E2B /* EncryptionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncryptionController.swift; sourceTree = "<group>"; };
 		D9F800FA22F054A900B17E2B /* MockEncryptionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockEncryptionController.swift; sourceTree = "<group>"; };
-		D9F800FF22F0555700B17E2B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		D9F800FF22F0555700B17E2B /* EncryptionConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncryptionConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,7 +119,7 @@
 		D9F800FE22F0554D00B17E2B /* Constants */ = {
 			isa = PBXGroup;
 			children = (
-				D9F800FF22F0555700B17E2B /* Constants.swift */,
+				D9F800FF22F0555700B17E2B /* EncryptionConstants.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -206,7 +206,7 @@
 				D9F800FB22F054A900B17E2B /* EncryptionController.swift in Sources */,
 				D9F800FC22F054A900B17E2B /* MockEncryptionController.swift in Sources */,
 				D9F4F3B9232BD15900D18C53 /* SmartCredentialsEncryptionFactory.swift in Sources */,
-				D9F8010022F0555700B17E2B /* Constants.swift in Sources */,
+				D9F8010022F0555700B17E2B /* EncryptionConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -16,8 +16,7 @@
 		D9C6580F231D33CC0077C441 /* QRLoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C6580E231D33CC0077C441 /* QRLoginService.swift */; };
 		D9C65819231D35030077C441 /* QRSocketData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C65817231D35030077C441 /* QRSocketData.swift */; };
 		D9C6581A231D35030077C441 /* WebSocketMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C65818231D35030077C441 /* WebSocketMessage.swift */; };
-		D9C6581E231D355E0077C441 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C6581D231D355E0077C441 /* StringExtension.swift */; };
-		D9C65821231D35A70077C441 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C65820231D35A70077C441 /* Constants.swift */; };
+		D9C65821231D35A70077C441 /* QRLoginConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C65820231D35A70077C441 /* QRLoginConstants.swift */; };
 		D9C65846231D5B1A0077C441 /* QRLoginAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C65845231D5B1A0077C441 /* QRLoginAction.swift */; };
 		D9F4F3D0232BF5EF00D18C53 /* SmartCredentialsQRLoginFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F4F3CF232BF5EF00D18C53 /* SmartCredentialsQRLoginFactory.swift */; };
 /* End PBXBuildFile section */
@@ -34,8 +33,7 @@
 		D9C6580E231D33CC0077C441 /* QRLoginService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRLoginService.swift; sourceTree = "<group>"; };
 		D9C65817231D35030077C441 /* QRSocketData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRSocketData.swift; sourceTree = "<group>"; };
 		D9C65818231D35030077C441 /* WebSocketMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebSocketMessage.swift; sourceTree = "<group>"; };
-		D9C6581D231D355E0077C441 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
-		D9C65820231D35A70077C441 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		D9C65820231D35A70077C441 /* QRLoginConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRLoginConstants.swift; sourceTree = "<group>"; };
 		D9C65845231D5B1A0077C441 /* QRLoginAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRLoginAction.swift; sourceTree = "<group>"; };
 		D9F4F3CF232BF5EF00D18C53 /* SmartCredentialsQRLoginFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartCredentialsQRLoginFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -126,23 +124,14 @@
 			children = (
 				D9F4F3CE232BF5DB00D18C53 /* Factory */,
 				D9C6581F231D35700077C441 /* Constants */,
-				D9C6581C231D35420077C441 /* Extensions */,
 			);
 			path = Utils;
-			sourceTree = "<group>";
-		};
-		D9C6581C231D35420077C441 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				D9C6581D231D355E0077C441 /* StringExtension.swift */,
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 		D9C6581F231D35700077C441 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
-				D9C65820231D35A70077C441 /* Constants.swift */,
+				D9C65820231D35A70077C441 /* QRLoginConstants.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -244,12 +233,11 @@
 			files = (
 				D9C65846231D5B1A0077C441 /* QRLoginAction.swift in Sources */,
 				D9C6580F231D33CC0077C441 /* QRLoginService.swift in Sources */,
-				D9C6581E231D355E0077C441 /* StringExtension.swift in Sources */,
 				D9C65808231D30630077C441 /* QRLoginController.swift in Sources */,
 				D9C6580D231D33050077C441 /* QRLoginKeys.swift in Sources */,
 				D9C65819231D35030077C441 /* QRSocketData.swift in Sources */,
 				D9C6581A231D35030077C441 /* WebSocketMessage.swift in Sources */,
-				D9C65821231D35A70077C441 /* Constants.swift in Sources */,
+				D9C65821231D35A70077C441 /* QRLoginConstants.swift in Sources */,
 				D9F4F3D0232BF5EF00D18C53 /* SmartCredentialsQRLoginFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -406,7 +394,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = de.telekom.smartcredentials.QRLogin;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_INCLUDE_PATHS = "\"$(SRCROOT)/../OTP/OTP/zlib\"";
+				SWIFT_INCLUDE_PATHS = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -440,7 +428,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = de.telekom.smartcredentials.QRLogin;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_INCLUDE_PATHS = "\"$(SRCROOT)/../OTP/OTP/zlib\"";
+				SWIFT_INCLUDE_PATHS = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

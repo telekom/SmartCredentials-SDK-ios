@@ -12,10 +12,10 @@
 		D9474B7822FD9B1E00D64D9D /* DefaultQRCodeReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9474B7422FD9B1E00D64D9D /* DefaultQRCodeReader.swift */; };
 		D9474B7922FD9B1E00D64D9D /* QRCodeReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9474B7522FD9B1E00D64D9D /* QRCodeReader.swift */; };
 		D9474B7A22FD9B1E00D64D9D /* OCRScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9474B7622FD9B1E00D64D9D /* OCRScanner.swift */; };
-		D9474B8722FD9DB300D64D9D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9474B8622FD9DB300D64D9D /* Constants.swift */; };
+		D9474B8722FD9DB300D64D9D /* CameraScannerConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9474B8622FD9DB300D64D9D /* CameraScannerConstants.swift */; };
 		D9474B8922FD9DD200D64D9D /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9474B8822FD9DD200D64D9D /* Core.framework */; };
 		D9474B9D22FD9F1700D64D9D /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9474B9B22FD9F1700D64D9D /* UIImageExtension.swift */; };
-		D9474B9E22FD9F1700D64D9D /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9474B9C22FD9F1700D64D9D /* StringExtension.swift */; };
+		D9474B9E22FD9F1700D64D9D /* CameraScannerStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9474B9C22FD9F1700D64D9D /* CameraScannerStringExtension.swift */; };
 		D9474BA022FDA0CE00D64D9D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9474B9F22FDA0CD00D64D9D /* AVFoundation.framework */; };
 		D9474BA522FDA19A00D64D9D /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D9474BA422FDA19A00D64D9D /* libc++.tbd */; };
 		D9474BA722FDA1CA00D64D9D /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D9474BA622FDA1C900D64D9D /* libz.tbd */; };
@@ -31,10 +31,10 @@
 		D9474B7522FD9B1E00D64D9D /* QRCodeReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeReader.swift; sourceTree = "<group>"; };
 		D9474B7622FD9B1E00D64D9D /* OCRScanner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OCRScanner.swift; sourceTree = "<group>"; };
 		D9474B7E22FD9BFA00D64D9D /* TesseractOCR.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TesseractOCR.framework; sourceTree = "<group>"; };
-		D9474B8622FD9DB300D64D9D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		D9474B8622FD9DB300D64D9D /* CameraScannerConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraScannerConstants.swift; sourceTree = "<group>"; };
 		D9474B8822FD9DD200D64D9D /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9474B9B22FD9F1700D64D9D /* UIImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
-		D9474B9C22FD9F1700D64D9D /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		D9474B9C22FD9F1700D64D9D /* CameraScannerStringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraScannerStringExtension.swift; sourceTree = "<group>"; };
 		D9474B9F22FDA0CD00D64D9D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		D9474BA222FDA15500D64D9D /* libc.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libc.tbd; path = usr/lib/libc.tbd; sourceTree = SDKROOT; };
 		D9474BA422FDA19A00D64D9D /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
@@ -116,7 +116,7 @@
 		D9474B8522FD9DA700D64D9D /* Constants */ = {
 			isa = PBXGroup;
 			children = (
-				D9474B8622FD9DB300D64D9D /* Constants.swift */,
+				D9474B8622FD9DB300D64D9D /* CameraScannerConstants.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -124,7 +124,7 @@
 		D9474B8A22FD9EF500D64D9D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				D9474B9C22FD9F1700D64D9D /* StringExtension.swift */,
+				D9474B9C22FD9F1700D64D9D /* CameraScannerStringExtension.swift */,
 				D9474B9B22FD9F1700D64D9D /* UIImageExtension.swift */,
 			);
 			path = Extensions;
@@ -246,7 +246,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9474B7722FD9B1E00D64D9D /* DefaultOCRScanner.swift in Sources */,
-				D9474B9E22FD9F1700D64D9D /* StringExtension.swift in Sources */,
+				D9474B9E22FD9F1700D64D9D /* CameraScannerStringExtension.swift in Sources */,
 				D9474B7922FD9B1E00D64D9D /* QRCodeReader.swift in Sources */,
 				D9474B7822FD9B1E00D64D9D /* DefaultQRCodeReader.swift in Sources */,
 				D9474B9D22FD9F1700D64D9D /* UIImageExtension.swift in Sources */,
@@ -254,7 +254,7 @@
 				D9474B7222FD99E500D64D9D /* CameraScannerController.swift in Sources */,
 				D9474B7A22FD9B1E00D64D9D /* OCRScanner.swift in Sources */,
 				D9474BA922FDA44800D64D9D /* MockCameraScannerController.swift in Sources */,
-				D9474B8722FD9DB300D64D9D /* Constants.swift in Sources */,
+				D9474B8722FD9DB300D64D9D /* CameraScannerConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,7 +12,7 @@
 		D9F8012B22F0592000B17E2B /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9F8012A22F0592000B17E2B /* Core.framework */; };
 		D9F8013122F059EE00B17E2B /* AuthorizationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F8012E22F059EE00B17E2B /* AuthorizationController.swift */; };
 		D9F8013222F059EE00B17E2B /* MockAuthorizationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F8013022F059EE00B17E2B /* MockAuthorizationController.swift */; };
-		D9F8013622F05A4100B17E2B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F8013522F05A4100B17E2B /* Constants.swift */; };
+		D9F8013622F05A4100B17E2B /* AuthorizationConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F8013522F05A4100B17E2B /* AuthorizationConstants.swift */; };
 		D9F8013E22F05FE400B17E2B /* ConfirmationAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F8013D22F05FE400B17E2B /* ConfirmationAction.swift */; };
 		D9F8014022F060D400B17E2B /* UserConfirmationKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F8013F22F060D400B17E2B /* UserConfirmationKeys.swift */; };
 /* End PBXBuildFile section */
@@ -25,7 +25,7 @@
 		D9F8012A22F0592000B17E2B /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9F8012E22F059EE00B17E2B /* AuthorizationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizationController.swift; sourceTree = "<group>"; };
 		D9F8013022F059EE00B17E2B /* MockAuthorizationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockAuthorizationController.swift; sourceTree = "<group>"; };
-		D9F8013522F05A4100B17E2B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		D9F8013522F05A4100B17E2B /* AuthorizationConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationConstants.swift; sourceTree = "<group>"; };
 		D9F8013D22F05FE400B17E2B /* ConfirmationAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmationAction.swift; sourceTree = "<group>"; };
 		D9F8013F22F060D400B17E2B /* UserConfirmationKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserConfirmationKeys.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -124,7 +124,7 @@
 		D9F8013422F05A3700B17E2B /* Constants */ = {
 			isa = PBXGroup;
 			children = (
-				D9F8013522F05A4100B17E2B /* Constants.swift */,
+				D9F8013522F05A4100B17E2B /* AuthorizationConstants.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -221,7 +221,7 @@
 				D9F8013222F059EE00B17E2B /* MockAuthorizationController.swift in Sources */,
 				D9F8014022F060D400B17E2B /* UserConfirmationKeys.swift in Sources */,
 				D9F8013E22F05FE400B17E2B /* ConfirmationAction.swift in Sources */,
-				D9F8013622F05A4100B17E2B /* Constants.swift in Sources */,
+				D9F8013622F05A4100B17E2B /* AuthorizationConstants.swift in Sources */,
 				D9F4F3C2232BDF5E00D18C53 /* SmartCredentialsAuthorizationFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

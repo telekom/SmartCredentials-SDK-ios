@@ -15,7 +15,10 @@
 */
 
 import AppAuth
+
+#if canImport(Core)
 import Core
+#endif
 
 typealias PostRegistrationCallback = (_ configuration: OIDServiceConfiguration?, _ registrationResponse: OIDRegistrationResponse?, _ error: SmartCredentialsAPIError?) -> ()
 

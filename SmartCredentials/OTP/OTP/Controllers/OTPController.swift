@@ -15,9 +15,18 @@
 */
 
 import Foundation
+
+#if canImport(Core)
 import Core
+#endif
+
+#if canImport(Storage)
 import Storage
+#endif
+
+#if canImport(CameraScanner)
 import CameraScanner
+#endif
 
 class OTPController {
 

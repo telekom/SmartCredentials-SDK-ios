@@ -24,30 +24,42 @@ Other features include QR-based login, barcode reader, OCR reader/parser, OTP ge
   s.swift_version = "5.0"
 
   s.source       = { :git => "https://github.com/kreincke/SmartCredentials-SDK-ios.git", :tag => "#{s.version}" }
+  # s.source_files  = ['SmartCredentials/Core/Core/**/*.{h,swift}', 
+  #   'SmartCredentials/Storage/**/*.{h,swift}', 
+  #   'SmartCredentials/Encryption/**/*.{h,swift}',
+  #   'SmartCredentials/Authorization/**/*.{h,swift}',
+  #   'SmartCredentials/CameraScanner/**/*.{h,swift,framework}',
+  #   'SmartCredentials/Networking/**/*.{h,m,swift}',
+  #   'SmartCredentials/QRLogin/**/*.{h,swift}',
+  #   'SmartCredentials/OTP/**/*.{swift}',
+  #   'SmartCredentials/Authentication/Authentication/**/*.{h,swift}',
+  ]
+  s.exclude_files = 'SmartCredentials/Authentication/AppAuth/'
 
   # Core
   s.subspec 'Core' do |sp|
     sp.source_files  = 'SmartCredentials/Core/Core/**/*.{h,swift}'
   end
 
-  # # Authentication
-  # s.subspec 'Authentication' do |sp|
-  #   sp.source_files  = 'SmartCredentials/Authentication/**/*.swift'
-  #   sp.framework = 'AppAuth'
-  #   sp.libraries = 'libAppAuth-iOS'
-  # end
+  # Authentication
+  s.subspec 'Authentication' do |sp|
+    sp.source_files  = 'SmartCredentials/Authentication/Authentication/**/*.{h,swift}'
+    sp.dependency 'SmartCredentialsLibrary/Core'
+    sp.dependency 'AppAuth'
+  end
 
-  # # Authorization
-  # s.subspec 'Authorization' do |sp|
-  #   sp.source_files  = 'SmartCredentials/Authorization/**/*.swift'
-  #   sp.dependency 'SmartCredentialsLibrary/Core'
-  # end
+  # Authorization
+  s.subspec 'Authorization' do |sp|
+    sp.source_files  = 'SmartCredentials/Authorization/**/*.{h,swift}'
+    sp.dependency 'SmartCredentialsLibrary/Core'
+  end
 
-  # # CameraScanner
-  # s.subspec 'CameraScanner' do |sp|
-  #   sp.source_files  = 'SmartCredentials/CameraScanner/**/*.swift'
-  #   sp.dependency 'SmartCredentialsLibrary/Core'
-  # end
+  # CameraScanner
+  s.subspec 'CameraScanner' do |sp|
+    sp.source_files  = 'SmartCredentials/CameraScanner/**/*.{h,swift,framework}'
+    sp.dependency 'SmartCredentialsLibrary/Core'
+    sp.dependency 'TesseractOCRiOS'
+  end
 
   # # DocumentScanner
   # s.subspec 'DocumentScanner' do |sp|
@@ -56,30 +68,33 @@ Other features include QR-based login, barcode reader, OCR reader/parser, OTP ge
   #   sp.framework = 'MicroBlink.framework'
   # end
 
-  # # Encryption
-  # s.subspec 'Encryption' do |sp|
-  #   sp.source_files  = 'SmartCredentials/Encryption/**/*.swift'
-  #   sp.dependency 'SmartCredentialsLibrary/Core'
-  # end
+  # Encryption
+  s.subspec 'Encryption' do |sp|
+    sp.source_files  = 'SmartCredentials/Encryption/**/*.{h,swift}'
+    sp.dependency 'SmartCredentialsLibrary/Core'
+  end
 
-  # # Networking
-  # s.subspec 'Networking' do |sp|
-  #   sp.source_files  = 'SmartCredentials/Networking/**/*.swift'
-  #   sp.dependency 'SmartCredentialsLibrary/Core'
-  # end
+  # Networking
+  s.subspec 'Networking' do |sp|
+    sp.source_files  = 'SmartCredentials/Networking/**/*.{h,m,swift}'
+    sp.dependency 'SmartCredentialsLibrary/Core'
+  end
 
-  # # OTP
-  # s.subspec 'OTP' do |sp|
-  #   sp.source_files  = 'SmartCredentials/OTP/**/*.swift'
-  #   sp.dependency 'SmartCredentialsLibrary/Core', 'SmartCredentialsLibrary/CameraScanner', 'SmartCredentialsLibrary/Storage' 
-  # end
+  # OTP
+  s.subspec 'OTP' do |sp|
+    sp.source_files  = 'SmartCredentials/OTP/**/*.swift'
+    sp.dependency 'SmartCredentialsLibrary/Core'
+    sp.dependency 'SmartCredentialsLibrary/CameraScanner'
+    sp.dependency 'SmartCredentialsLibrary/Storage' 
+  end
 
-  # # QRLogin
-  # s.subspec 'QRLogin' do |sp|
-  #   sp.source_files  = 'SmartCredentials/QRLogin/**/*.swift'
-  #   sp.dependency 'SmartCredentialsLibrary/Core', 'SmartCredentialsLibrary/Authorization'
-  #   sp.framework = 'Starscream.framework'
-  # end
+  # QRLogin
+  s.subspec 'QRLogin' do |sp|
+    sp.source_files  = 'SmartCredentials/QRLogin/**/*.{h,swift,framework}'
+    sp.dependency 'SmartCredentialsLibrary/Core'
+    sp.dependency 'SmartCredentialsLibrary/Authorization'
+    sp.dependency 'Starscream'
+  end
 
   # Storage
   s.subspec 'Storage' do |sp|

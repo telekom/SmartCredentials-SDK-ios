@@ -16,7 +16,10 @@
 
 import AVFoundation
 import TesseractOCR
+
+#if canImport(Core)
 import Core
+#endif
 
 enum OCRScannerStatus {
     case started
@@ -51,7 +54,7 @@ class OCRScanner: NSObject {
                 if granted {
                     self.initializeCaptureSession()
                 } else {
-                    self.logger?.log(.error, message: Constants.Logger.cameraAccess, className: self.className)
+                    self.logger?.log(.error, message: Constants.CameraScannerLogger.cameraAccess, className: self.className)
                     self.getPreviewCompletionHandler?(.failure(error: .openCameraAccessDenied))
                 }
             })
@@ -60,7 +63,7 @@ class OCRScanner: NSObject {
     
     func initializeCaptureSession() {
         guard let captureDevice = AVCaptureDevice.default(for: .video) else {
-            logger?.log(.error, message: Constants.Logger.createCaptureDeviceForMediaError, className: className)
+            logger?.log(.error, message: Constants.CameraScannerLogger.createCaptureDeviceForMediaError, className: className)
             getPreviewCompletionHandler?(.failure(error: .createCaptureDeviceError))
             return
         }
@@ -69,7 +72,7 @@ class OCRScanner: NSObject {
         do {
             deviceInput = try AVCaptureDeviceInput(device: captureDevice)
         } catch {
-            logger?.log(.error, message: Constants.Logger.createCaptureDeviceInputError, className: className)
+            logger?.log(.error, message: Constants.CameraScannerLogger.createCaptureDeviceInputError, className: className)
             getPreviewCompletionHandler?(.failure(error: .createCaptureDeviceInputError))
             return
         }
@@ -77,7 +80,7 @@ class OCRScanner: NSObject {
         if captureSession.canAddInput(deviceInput) {
             captureSession.addInput(deviceInput)
         } else {
-            logger?.log(.error, message: Constants.Logger.addVideoInputCaptureSessionError, className: className)
+            logger?.log(.error, message: Constants.CameraScannerLogger.addVideoInputCaptureSessionError, className: className)
             getPreviewCompletionHandler?(.failure(error: .addDeviceInputError))
             return
         }
@@ -94,7 +97,7 @@ class OCRScanner: NSObject {
             
             videoOutput.setSampleBufferDelegate(self, queue: DispatchQueue.main)
         } else {
-            logger?.log(.error, message: Constants.Logger.addVideoDataOutputError, className: className)
+            logger?.log(.error, message: Constants.CameraScannerLogger.addVideoDataOutputError, className: className)
             getPreviewCompletionHandler?(.failure(error: .addVideoDataOutputError))
             return
         }

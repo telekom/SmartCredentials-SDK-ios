@@ -15,7 +15,10 @@
 */
 
 import Foundation
+
+#if canImport(Core)
 import Core
+#endif
 
 extension Constants {
     
@@ -30,7 +33,7 @@ extension Constants {
         static let tesseractLanguageName = "eng"
     }
     
-    enum Logger {
+    enum CameraScannerLogger {
         // OCR & QR error messages
         static let cameraAccess = "Camera access denied"
         static let createCaptureDeviceForMediaError = "Error creating capture device for video media type"

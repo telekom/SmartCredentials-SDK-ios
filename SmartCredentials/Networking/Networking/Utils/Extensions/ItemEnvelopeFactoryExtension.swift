@@ -15,7 +15,10 @@
 */
 
 import Foundation
+
+#if canImport(Core)
 import Core
+#endif
 
 extension ItemEnvelopeFactory {
     public static func itemEnvelopeForRESTAPICall(with id: String,

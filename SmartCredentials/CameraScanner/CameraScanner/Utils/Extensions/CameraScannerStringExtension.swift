@@ -14,17 +14,18 @@
 * limitations under the License.
 */
 
-
 extension String {
-
-    func toDictionary() -> [String: Any]? {
-        if let data = self.data(using: .utf8) {
-            do {
-                return try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
-            } catch {
-                print(error)
+    func matches(for regex: String) -> [String] {
+        do {
+            let regex = try NSRegularExpression(pattern: regex)
+            let results = regex.matches(in: self,
+                                        range: NSRange(self.startIndex..., in: self))
+            return results.map {
+                String(self[Range($0.range, in: self)!])
             }
+        } catch let error {
+            print(error)
+            return []
         }
-        return nil
     }
 }

@@ -15,7 +15,10 @@
 */
 
 import Foundation
+
+#if canImport(Core)
 import Core
+#endif
 
 /// Completion handler which receives two optional strings as parameters and an optional error in case of a failure
 /// First string representing the access token

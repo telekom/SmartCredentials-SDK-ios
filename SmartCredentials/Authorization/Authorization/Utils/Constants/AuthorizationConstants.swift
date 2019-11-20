@@ -15,12 +15,23 @@
 */
 
 import Foundation
+
+#if canImport(Core)
 import Core
+#endif
 
 extension Constants {
     
-    // MARK: - Cryptographic Keys generation
-    enum CryptographicKeys {
-        static let keySizeInBits = 2048
+    // MARK: - Authorization
+    enum Authorization {
+        // Reason string for authorization
+        static let reasonString = "To access the sensitive data"
+    }
+    
+    enum AuthorizationLogger {
+        static let authAppCancel = "App cancel authorization"
+        static let authSystemCancel = "System cancel authorization"
+        static let authUserCancel = "User cancel authorization"
+        static let authFailed = "Authorization failed"
     }
 }
