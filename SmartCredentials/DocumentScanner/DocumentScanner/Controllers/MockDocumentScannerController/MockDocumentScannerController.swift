@@ -14,7 +14,9 @@
 * limitations under the License.
 */
 
+#if canImport(Core)
 import Core
+#endif
 
 class MockDocumentScannerController: DocumentScannerAPI {
     func startDocumentScanning(scannerRecognizer: ScannerRecognizer, cameraSettings: EIDCameraSettings, scannerDelegate: EIDScannerDelegate) {

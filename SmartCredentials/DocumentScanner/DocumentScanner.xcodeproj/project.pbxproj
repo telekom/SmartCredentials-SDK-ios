@@ -7,9 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D90FC49B238583D8008C1741 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9F801C422F07FD300B17E2B /* Core.framework */; };
+		D90FC49C238583D8008C1741 /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D9F801C422F07FD300B17E2B /* Core.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D90FC4A123858414008C1741 /* MicroBlink.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D90FC49F23858414008C1741 /* MicroBlink.bundle */; };
+		D90FC4A323858422008C1741 /* MicroBlink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D90FC4A023858414008C1741 /* MicroBlink.framework */; };
+		D90FC4A423858422008C1741 /* MicroBlink.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D90FC4A023858414008C1741 /* MicroBlink.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D90FC4A523858456008C1741 /* MicroBlink.bundle in Embed PlugIns */ = {isa = PBXBuildFile; fileRef = D90FC49F23858414008C1741 /* MicroBlink.bundle */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D9F4F3C8232BEEB600D18C53 /* SmartCredentialsDocumentScannerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F4F3C7232BEEB600D18C53 /* SmartCredentialsDocumentScannerFactory.swift */; };
 		D9F801BA22F07FA200B17E2B /* DocumentScanner.h in Headers */ = {isa = PBXBuildFile; fileRef = D9F801B822F07FA200B17E2B /* DocumentScanner.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D9F801C522F07FD300B17E2B /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9F801C422F07FD300B17E2B /* Core.framework */; };
 		D9F8021822F0816C00B17E2B /* OverlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F801CA22F0816C00B17E2B /* OverlayViewController.swift */; };
 		D9F8021922F0816C00B17E2B /* MicroblinkScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F801CB22F0816C00B17E2B /* MicroblinkScanner.swift */; };
 		D9F8021A22F0816C00B17E2B /* ScannerRecognizerMicroblinkExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F801CC22F0816C00B17E2B /* ScannerRecognizerMicroblinkExtension.swift */; };
@@ -78,12 +83,37 @@
 		D9F8025B22F0816C00B17E2B /* CroatiaIDFrontCardResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F8021222F0816C00B17E2B /* CroatiaIDFrontCardResult.swift */; };
 		D9F8025C22F0816C00B17E2B /* ScannerResultFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F8021322F0816C00B17E2B /* ScannerResultFactory.swift */; };
 		D9F8025D22F0816C00B17E2B /* IDCardResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F8021522F0816C00B17E2B /* IDCardResult.swift */; };
-		D9F8026122F0838D00B17E2B /* MicroBlink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9F8025F22F0838D00B17E2B /* MicroBlink.framework */; };
-		D9F8026222F0838D00B17E2B /* MicroBlink.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D9F8026022F0838D00B17E2B /* MicroBlink.bundle */; };
-		D9F8026322F083B500B17E2B /* MicroBlink.bundle in Frameworks */ = {isa = PBXBuildFile; fileRef = D9F8026022F0838D00B17E2B /* MicroBlink.bundle */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		D90FC49523858391008C1741 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D90FC4A423858422008C1741 /* MicroBlink.framework in Embed Frameworks */,
+				D90FC49C238583D8008C1741 /* Core.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D90FC49623858391008C1741 /* Embed PlugIns */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				D90FC4A523858456008C1741 /* MicroBlink.bundle in Embed PlugIns */,
+			);
+			name = "Embed PlugIns";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		D90FC49F23858414008C1741 /* MicroBlink.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = MicroBlink.bundle; path = ../../MicroBlink.bundle; sourceTree = "<group>"; };
+		D90FC4A023858414008C1741 /* MicroBlink.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MicroBlink.framework; path = ../../MicroBlink.framework; sourceTree = "<group>"; };
 		D9F4F3C7232BEEB600D18C53 /* SmartCredentialsDocumentScannerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartCredentialsDocumentScannerFactory.swift; sourceTree = "<group>"; };
 		D9F801B522F07FA200B17E2B /* DocumentScanner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DocumentScanner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9F801B822F07FA200B17E2B /* DocumentScanner.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DocumentScanner.h; sourceTree = "<group>"; };
@@ -157,8 +187,6 @@
 		D9F8021222F0816C00B17E2B /* CroatiaIDFrontCardResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CroatiaIDFrontCardResult.swift; sourceTree = "<group>"; };
 		D9F8021322F0816C00B17E2B /* ScannerResultFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScannerResultFactory.swift; sourceTree = "<group>"; };
 		D9F8021522F0816C00B17E2B /* IDCardResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDCardResult.swift; sourceTree = "<group>"; };
-		D9F8025F22F0838D00B17E2B /* MicroBlink.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MicroBlink.framework; sourceTree = "<group>"; };
-		D9F8026022F0838D00B17E2B /* MicroBlink.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MicroBlink.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,9 +194,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D9F8026322F083B500B17E2B /* MicroBlink.bundle in Frameworks */,
-				D9F8026122F0838D00B17E2B /* MicroBlink.framework in Frameworks */,
-				D9F801C522F07FD300B17E2B /* Core.framework in Frameworks */,
+				D90FC4A323858422008C1741 /* MicroBlink.framework in Frameworks */,
+				D90FC49B238583D8008C1741 /* Core.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,8 +250,8 @@
 		D9F801C322F07FD300B17E2B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D9F8026022F0838D00B17E2B /* MicroBlink.bundle */,
-				D9F8025F22F0838D00B17E2B /* MicroBlink.framework */,
+				D90FC49F23858414008C1741 /* MicroBlink.bundle */,
+				D90FC4A023858414008C1741 /* MicroBlink.framework */,
 				D9F801C422F07FD300B17E2B /* Core.framework */,
 			);
 			name = Frameworks;
@@ -390,6 +417,8 @@
 				D9F801B122F07FA200B17E2B /* Sources */,
 				D9F801B222F07FA200B17E2B /* Frameworks */,
 				D9F801B322F07FA200B17E2B /* Resources */,
+				D90FC49523858391008C1741 /* Embed Frameworks */,
+				D90FC49623858391008C1741 /* Embed PlugIns */,
 			);
 			buildRules = (
 			);
@@ -437,7 +466,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D9F8026222F0838D00B17E2B /* MicroBlink.bundle in Resources */,
+				D90FC4A123858414008C1741 /* MicroBlink.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -15,7 +15,10 @@
 */
 
 import UIKit
+
+#if canImport(Core)
 import Core
+#endif
 
 public class PaymentCardResult: ScannerResult {
     public var documentImage: UIImage?

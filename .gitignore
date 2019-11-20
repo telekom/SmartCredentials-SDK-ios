@@ -30,7 +30,3 @@ xcuserdata/
 *.ipa
 *.dSYM.zip
 *.dSYM
-
-## MicroBlink
-SmartCredentials/DocumentScanner/MicroBlink.bundle
-SmartCredentials/DocumentScanner/MicroBlink.framework

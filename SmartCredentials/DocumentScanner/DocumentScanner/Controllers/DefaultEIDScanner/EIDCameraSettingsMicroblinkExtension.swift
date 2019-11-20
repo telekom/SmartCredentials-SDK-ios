@@ -15,7 +15,10 @@
 */
 
 import MicroBlink
+
+#if canImport(Core)
 import Core
+#endif
 
 extension CameraPreset {
     
