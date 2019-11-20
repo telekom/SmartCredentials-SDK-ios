@@ -5,7 +5,7 @@
 Pod::Spec.new do |s|
 
   s.name         = 'SmartCredentialsLibrary'
-  s.version      = "5.3.3"
+  s.version      = "5.3.4"
   s.summary      = "Smart Credentials is a library with multiple generic functionalities, like secure storage, authorization, camera scanners and more."
 
   s.description  = <<-DESC
@@ -23,7 +23,7 @@ Other features include QR-based login, barcode reader, OCR reader/parser, OTP ge
   s.ios.deployment_target = '9.0'
   s.swift_version = "5.0"
 
-  s.source       = { :git => "https://github.com/kreincke/SmartCredentials-SDK-ios.git", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/telekom/SmartCredentials-SDK-ios.git", :tag => "#{s.version}" }
   # s.source_files  = ['SmartCredentials/Core/Core/**/*.{h,swift}', 
   #   'SmartCredentials/Storage/**/*.{h,swift}', 
   #   'SmartCredentials/Encryption/**/*.{h,swift}',
@@ -33,7 +33,7 @@ Other features include QR-based login, barcode reader, OCR reader/parser, OTP ge
   #   'SmartCredentials/QRLogin/**/*.{h,swift}',
   #   'SmartCredentials/OTP/**/*.{swift}',
   #   'SmartCredentials/Authentication/Authentication/**/*.{h,swift}',
-  ]
+  # ]
   s.exclude_files = 'SmartCredentials/Authentication/AppAuth/'
 
   # Core
@@ -61,7 +61,7 @@ Other features include QR-based login, barcode reader, OCR reader/parser, OTP ge
     sp.dependency 'TesseractOCRiOS'
   end
 
-  # # DocumentScanner
+  # # # DocumentScanner
   # s.subspec 'DocumentScanner' do |sp|
   #   sp.source_files  = 'SmartCredentials/DocumentScanner/**/*.swift'
   #   sp.dependency 'SmartCredentialsLibrary/Core'
