@@ -22,13 +22,15 @@ struct StorageControllerProvider {
     ///
     /// - Parameter contentType: content type (sensitive / nonsenstive)
     /// - Returns: StorageController object
-    static func storageController(for contentType: ContentType, userId: String) -> StorageProtocol {
+    static func storageController(for contentType: ContentType,
+                                  sensitiveItemAccessibility: KeychainItemAccessibility,
+                                  userId: String) -> StorageProtocol {
 
         // Inject concrete item store based on item's content type (sensitive/nonsensitive)
         if contentType == .nonSensitive { // non sensitive storage
             return NonSensitiveStorageController(userId: userId)
         } else if contentType == .sensitive { // sensitive storage
-            return SensitiveStorageController(userId: userId)
+            return SensitiveStorageController(userId: userId, accessibilityAttribute: sensitiveItemAccessibility)
         }
         
         return MockStorage(userId: userId)

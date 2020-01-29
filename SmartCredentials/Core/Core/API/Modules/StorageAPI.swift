@@ -59,7 +59,7 @@ public protocol StorageAPI {
     ///   - genericPassword: string to be saved into the sensitive repository as Generic Password
     ///   - id: id of the genericPassword to be saved
     /// - Returns: Enum; success - void; failure - SmartCredentialsAPIError (enum)
-    func put(_ genericPassword: String, with id: String) -> SmartCredentialsAPIEmptyResult
+    func put(_ genericPassword: String, with id: String, sensitiveItemAccessibility: KeychainItemAccessibility) -> SmartCredentialsAPIEmptyResult
     
     /// Updates the item stored in sensitive/nonsensitive repository
     ///
