@@ -101,7 +101,11 @@ final class SSLRegisterBy3g4gRequest: NSObject {
             delegate?.secureSocketRequestFinished(with: response)
         case let .failure(error):
             delegate?.secureSocketRequestFinished(with: error)
+        @unknown default:
+            // Any future cases not recognized by the compiler yet
+            break
         }
+        
         delegate = nil
     }
 }

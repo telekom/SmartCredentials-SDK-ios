@@ -10,6 +10,7 @@
 		D9474E0022FDB79300D64D9D /* OTP.h in Headers */ = {isa = PBXBuildFile; fileRef = D9474DFE22FDB79300D64D9D /* OTP.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D9474E0E22FDB7C700D64D9D /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9474E0D22FDB7C700D64D9D /* Core.framework */; };
 		D9474E1022FDB7EF00D64D9D /* Storage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9474E0F22FDB7EF00D64D9D /* Storage.framework */; };
+		D9B8AAD22433381F008A2FE8 /* zlib in Resources */ = {isa = PBXBuildFile; fileRef = D9B8AAD12433381F008A2FE8 /* zlib */; };
 		D9C65824231D37000077C441 /* OTPController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C65823231D37000077C441 /* OTPController.swift */; };
 		D9C65826231D38BA0077C441 /* CameraScanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9C65825231D38BA0077C441 /* CameraScanner.framework */; };
 		D9C65828231D51800077C441 /* DefaultOTPItemBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C65827231D51800077C441 /* DefaultOTPItemBuilder.swift */; };
@@ -20,7 +21,6 @@
 		D9C65838231D526F0077C441 /* Base32.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C65830231D526F0077C441 /* Base32.swift */; };
 		D9C65839231D526F0077C441 /* OTPFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C65831231D526F0077C441 /* OTPFactory.swift */; };
 		D9C6583A231D526F0077C441 /* TOTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C65832231D526F0077C441 /* TOTP.swift */; };
-		D9C6583F231D540E0077C441 /* include.h in Headers */ = {isa = PBXBuildFile; fileRef = D9C6583D231D540E0077C441 /* include.h */; };
 		D9C65843231D55CD0077C441 /* DefaultOTPGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C65842231D55CD0077C441 /* DefaultOTPGenerator.swift */; };
 		D9F4F3D4232BF81C00D18C53 /* SmartCredentialsOTPFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F4F3D3232BF81C00D18C53 /* SmartCredentialsOTPFactory.swift */; };
 /* End PBXBuildFile section */
@@ -31,6 +31,7 @@
 		D9474DFF22FDB79300D64D9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D9474E0D22FDB7C700D64D9D /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9474E0F22FDB7EF00D64D9D /* Storage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Storage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9B8AAD12433381F008A2FE8 /* zlib */ = {isa = PBXFileReference; lastKnownFileType = folder; path = zlib; sourceTree = "<group>"; };
 		D9C65823231D37000077C441 /* OTPController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPController.swift; sourceTree = "<group>"; };
 		D9C65825231D38BA0077C441 /* CameraScanner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CameraScanner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9C65827231D51800077C441 /* DefaultOTPItemBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultOTPItemBuilder.swift; sourceTree = "<group>"; };
@@ -41,8 +42,6 @@
 		D9C65830231D526F0077C441 /* Base32.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Base32.swift; sourceTree = "<group>"; };
 		D9C65831231D526F0077C441 /* OTPFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTPFactory.swift; sourceTree = "<group>"; };
 		D9C65832231D526F0077C441 /* TOTP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TOTP.swift; sourceTree = "<group>"; };
-		D9C6583D231D540E0077C441 /* include.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = include.h; sourceTree = "<group>"; };
-		D9C6583E231D540E0077C441 /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
 		D9C65842231D55CD0077C441 /* DefaultOTPGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultOTPGenerator.swift; sourceTree = "<group>"; };
 		D9F4F3D3232BF81C00D18C53 /* SmartCredentialsOTPFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartCredentialsOTPFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -93,7 +92,7 @@
 		D9474E0C22FDB7C700D64D9D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D9C6583C231D540E0077C441 /* zlib */,
+				D9B8AAD12433381F008A2FE8 /* zlib */,
 				D9C65825231D38BA0077C441 /* CameraScanner.framework */,
 				D9474E0F22FDB7EF00D64D9D /* Storage.framework */,
 				D9474E0D22FDB7C700D64D9D /* Core.framework */,
@@ -133,16 +132,6 @@
 			path = OTP;
 			sourceTree = "<group>";
 		};
-		D9C6583C231D540E0077C441 /* zlib */ = {
-			isa = PBXGroup;
-			children = (
-				D9C6583D231D540E0077C441 /* include.h */,
-				D9C6583E231D540E0077C441 /* module.modulemap */,
-			);
-			name = zlib;
-			path = OTP/zlib;
-			sourceTree = "<group>";
-		};
 		D9F4F3D1232BF7F900D18C53 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -167,7 +156,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9474E0022FDB79300D64D9D /* OTP.h in Headers */,
-				D9C6583F231D540E0077C441 /* include.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,6 +217,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9B8AAD22433381F008A2FE8 /* zlib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,9 +370,11 @@
 		D9474E0422FDB79300D64D9D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = LUZ9KLPXF2;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -397,11 +388,12 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 5.4.0;
+				MARKETING_VERSION = 5.4.1;
+				OTHER_SWIFT_FLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = de.telekom.smartcredentials.OTP;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_INCLUDE_PATHS = "\"$(SRCROOT)/OTP/zlib\"";
+				SWIFT_INCLUDE_PATHS = "\"$(SRCROOT)/zlib\"";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -411,6 +403,7 @@
 		D9474E0522FDB79300D64D9D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -427,11 +420,12 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 5.4.0;
+				MARKETING_VERSION = 5.4.1;
+				OTHER_SWIFT_FLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = de.telekom.smartcredentials.OTP;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_INCLUDE_PATHS = "\"$(SRCROOT)/OTP/zlib\"";
+				SWIFT_INCLUDE_PATHS = "\"$(SRCROOT)/zlib\"";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

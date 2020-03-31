@@ -68,6 +68,9 @@ class DefaultOTPItemBuilder {
             return .success(item: item, importOTPResult: result)
         case .failure(let error):
             return .failure(error: error)
+        @unknown default:
+            // Any future cases not recognized by the compiler yet
+            return .failure(error: .invalidItemForOTP)
         }
     }
 }

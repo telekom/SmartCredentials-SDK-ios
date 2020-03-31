@@ -108,6 +108,9 @@ public class CallServiceAction: IActionModule {
             default:
                 completionHandler(.failure(error: CallServiceActionError.callServiceFailed))
             }
+        @unknown default:
+            // Any future cases not recognized by the compiler yet
+            break
         }
     }
 }

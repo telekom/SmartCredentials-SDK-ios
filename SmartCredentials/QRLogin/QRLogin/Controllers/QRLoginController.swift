@@ -62,10 +62,16 @@ extension QRLoginController: QRLoginAPI {
                         completionHandler(.success(result: responseItem))
                     case .failure(let error):
                         completionHandler(.failure(error: error))
+                    @unknown default:
+                        // Any future cases not recognized by the compiler yet
+                        break
                     }
                 })
             case .failure(let error):
                 completionHandler(.failure(error: error))
+            @unknown default:
+                // Any future cases not recognized by the compiler yet
+                break
             }
         }
     }

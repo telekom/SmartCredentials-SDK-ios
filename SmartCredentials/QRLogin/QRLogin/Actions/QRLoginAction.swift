@@ -69,6 +69,9 @@ public class QRLoginAction: IActionModule {
             default:
                 completionHandler(.failure(error: QRLoginActionError.qrLoginFailed))
             }
+        @unknown default:
+            // Any future cases not recognized by the compiler yet
+            break
         }
     }
 }
