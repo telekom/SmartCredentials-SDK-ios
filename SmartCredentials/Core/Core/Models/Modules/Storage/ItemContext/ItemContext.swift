@@ -18,4 +18,5 @@
 public struct ItemContext {
     
     public var contentType: ContentType
+    public var sensitiveItemAccessibility: KeychainItemAccessibility
 }

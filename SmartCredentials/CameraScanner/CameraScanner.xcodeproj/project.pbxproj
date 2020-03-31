@@ -406,6 +406,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MARKETING_VERSION = 5.4.0;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = de.telekom.smartcredentials.CameraScanner;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -439,6 +440,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MARKETING_VERSION = 5.4.0;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = de.telekom.smartcredentials.CameraScanner;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";

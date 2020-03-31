@@ -19,6 +19,7 @@ import Core
 struct SensitiveStorageController: StorageProtocol {
 
     var userId: String
+    var accessibilityAttribute: KeychainItemAccessibility
     let logger = LoggerProvider.sharedInstance.logger
     var className: String {
         get {
@@ -32,7 +33,7 @@ struct SensitiveStorageController: StorageProtocol {
         newItem.itemId = "\(userId)_\(item.itemId)"
         
         let keychainItem = newItem.toKeychainItem()
-        if KeychainHelper.standard.set(keychainItem, forKey: newItem.itemId, withAccessibility: .whenUnlockedThisDeviceOnly) {
+        if KeychainHelper.standard.set(keychainItem, forKey: newItem.itemId, withAccessibility: accessibilityAttribute) {
             return .success
         }
         
@@ -43,7 +44,7 @@ struct SensitiveStorageController: StorageProtocol {
     func add(_ genericPassword: String, with id: String) -> SmartCredentialsAPIEmptyResult {
         let itemId = "\(userId)_\(id)"
         
-        if KeychainHelper.standard.set(genericPassword, forKey: itemId, withAccessibility: .whenUnlockedThisDeviceOnly) {
+        if KeychainHelper.standard.set(genericPassword, forKey: itemId, withAccessibility: accessibilityAttribute) {
             return .success
         }
 
@@ -55,12 +56,12 @@ struct SensitiveStorageController: StorageProtocol {
         var newItem = item
         newItem.itemId = "\(userId)_\(item.itemId)"
         
-        guard let _ = KeychainHelper.standard.object(forKey: newItem.itemId, withAccessibility: .whenUnlockedThisDeviceOnly) as? KeychainItemSummary else {
+        guard let _ = KeychainHelper.standard.object(forKey: newItem.itemId, withAccessibility: accessibilityAttribute) as? KeychainItemSummary else {
             return .failure(error: .itemNotFound)
         }
 
         let keychainItem = newItem.toKeychainItem()
-        if KeychainHelper.standard.set(keychainItem, forKey: newItem.itemId, withAccessibility: .whenUnlockedThisDeviceOnly) {
+        if KeychainHelper.standard.set(keychainItem, forKey: newItem.itemId, withAccessibility: accessibilityAttribute) {
             return .success
         }
         
@@ -70,7 +71,7 @@ struct SensitiveStorageController: StorageProtocol {
     func getSummary(for itemFilter: ItemFilter) -> SmartCredentialsAPIResult<ItemEnvelope> {
         let id = "\(userId)_\(itemFilter.itemId!)"
 
-        guard let keychainItemSummary = KeychainHelper.standard.object(forKey: id, withAccessibility: .whenUnlockedThisDeviceOnly) as? KeychainItemSummary else {
+        guard let keychainItemSummary = KeychainHelper.standard.object(forKey: id, withAccessibility: accessibilityAttribute) as? KeychainItemSummary else {
             logger?.log(.error, message: Constants.Logger.itemNotFound, className: className)
             return .failure(error: .itemNotFound)
         }
@@ -84,7 +85,7 @@ struct SensitiveStorageController: StorageProtocol {
     func getDetails(for itemFilter: ItemFilter) -> SmartCredentialsAPIResult<ItemEnvelope> {
         let id = "\(userId)_\(itemFilter.itemId!)"
 
-        guard let keychainItemSummary = KeychainHelper.standard.object(forKey: id, withAccessibility: .whenUnlockedThisDeviceOnly) as? KeychainItemSummary else {
+        guard let keychainItemSummary = KeychainHelper.standard.object(forKey: id, withAccessibility: accessibilityAttribute) as? KeychainItemSummary else {
             logger?.log(.error, message: Constants.Logger.itemNotFound, className: className)
             return .failure(error: .itemNotFound)
         }
@@ -98,9 +99,9 @@ struct SensitiveStorageController: StorageProtocol {
     func getAllItems() -> SmartCredentialsAPIResult<[ItemEnvelope]> {
         var itemEnvelopes: [ItemEnvelope] = []
         
-        let keys = KeychainHelper.standard.allKeys()
+        let keys = KeychainHelper.standard.allKeys(with: accessibilityAttribute)
         for key in keys {
-            guard let keychainItemSummary = KeychainHelper.standard.object(forKey: key, withAccessibility: .whenUnlockedThisDeviceOnly) as? KeychainItemSummary else {
+            guard let keychainItemSummary = KeychainHelper.standard.object(forKey: key, withAccessibility: accessibilityAttribute) as? KeychainItemSummary else {
                 continue
             }
             
@@ -123,7 +124,7 @@ struct SensitiveStorageController: StorageProtocol {
     func getPasswordReference(for itemFilter: ItemFilter) -> SmartCredentialsAPIResult<Data> {
         let id = "\(userId)_\(itemFilter.itemId!)"
         
-        guard let referenceData = KeychainHelper.standard.dataRef(forKey: id, withAccessibility: .whenUnlockedThisDeviceOnly) else {
+        guard let referenceData = KeychainHelper.standard.dataRef(forKey: id, withAccessibility: accessibilityAttribute) else {
             logger?.log(.error, message: Constants.Logger.itemNotFound, className: className)
             return .failure(error: .itemNotFound)
         }
@@ -134,15 +135,15 @@ struct SensitiveStorageController: StorageProtocol {
     func removeItem(for itemFilter: ItemFilter) -> SmartCredentialsAPIEmptyResult {
         let id = "\(userId)_\(itemFilter.itemId!)"
         
-        let item = KeychainHelper.standard.object(forKey: id, withAccessibility: .whenUnlockedThisDeviceOnly)
-        let password = KeychainHelper.standard.string(forKey: id, withAccessibility: .whenUnlockedThisDeviceOnly)
+        let item = KeychainHelper.standard.object(forKey: id, withAccessibility: accessibilityAttribute)
+        let password = KeychainHelper.standard.string(forKey: id, withAccessibility: accessibilityAttribute)
         
         if item == nil && password == nil {
             logger?.log(.error, message: Constants.Logger.itemNotFound, className: className)
             return .failure(error: .itemNotFound)
         }
 
-        if KeychainHelper.standard.removeObject(forKey: id, withAccessibility: .whenUnlockedThisDeviceOnly) {
+        if KeychainHelper.standard.removeObject(forKey: id, withAccessibility: accessibilityAttribute) {
             return .success
         }
         
@@ -151,10 +152,10 @@ struct SensitiveStorageController: StorageProtocol {
     }
     
     func removeAllItems() -> SmartCredentialsAPIEmptyResult {
-        let keys = KeychainHelper.standard.allKeys()
+        let keys = KeychainHelper.standard.allKeys(with: accessibilityAttribute)
         for key in keys {
-            let keychainItemSummary = KeychainHelper.standard.object(forKey: key, withAccessibility: .whenUnlockedThisDeviceOnly) as? KeychainItemSummary
-            let genericPassword = KeychainHelper.standard.string(forKey: key, withAccessibility: .whenUnlockedThisDeviceOnly)
+            let keychainItemSummary = KeychainHelper.standard.object(forKey: key, withAccessibility: accessibilityAttribute) as? KeychainItemSummary
+            let genericPassword = KeychainHelper.standard.string(forKey: key, withAccessibility: accessibilityAttribute)
             
             if keychainItemSummary == nil && genericPassword == nil {
                 continue
@@ -165,7 +166,7 @@ struct SensitiveStorageController: StorageProtocol {
             }
             
             if userIdRange.lowerBound == key.startIndex {
-                KeychainHelper.standard.removeObject(forKey: key, withAccessibility: .whenUnlockedThisDeviceOnly)
+                KeychainHelper.standard.removeObject(forKey: key, withAccessibility: accessibilityAttribute)
             }
         }
 

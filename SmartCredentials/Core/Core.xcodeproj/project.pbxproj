@@ -24,6 +24,7 @@
 		66DD3C4B22CCDF1B0003E2B8 /* LoggerProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66DD3C4A22CCDF1A0003E2B8 /* LoggerProvider.swift */; };
 		66DD3C4E22CCDFE20003E2B8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66DD3C4D22CCDFE20003E2B8 /* Constants.swift */; };
 		D928EE5322DF48D600F8176F /* SmartCredentialsAPIResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = D928EE5222DF48D600F8176F /* SmartCredentialsAPIResult.swift */; };
+		D969415B23D875A3003F3300 /* KeychainItemAccessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = D969415A23D875A3003F3300 /* KeychainItemAccessibility.swift */; };
 		D9C65848231D5C130077C441 /* SmartCredentialsAPIErrorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C65847231D5C130077C441 /* SmartCredentialsAPIErrorExtension.swift */; };
 		D9C6584A231E90640077C441 /* NetworkingAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C65849231E90640077C441 /* NetworkingAPI.swift */; };
 		D9C6584F231E91160077C441 /* ConnectionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C6584C231E91160077C441 /* ConnectionType.swift */; };
@@ -108,6 +109,7 @@
 		66DD3C4A22CCDF1A0003E2B8 /* LoggerProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggerProvider.swift; sourceTree = "<group>"; };
 		66DD3C4D22CCDFE20003E2B8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D928EE5222DF48D600F8176F /* SmartCredentialsAPIResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmartCredentialsAPIResult.swift; sourceTree = "<group>"; };
+		D969415A23D875A3003F3300 /* KeychainItemAccessibility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainItemAccessibility.swift; sourceTree = "<group>"; };
 		D9C65847231D5C130077C441 /* SmartCredentialsAPIErrorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmartCredentialsAPIErrorExtension.swift; sourceTree = "<group>"; };
 		D9C65849231E90640077C441 /* NetworkingAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingAPI.swift; sourceTree = "<group>"; };
 		D9C6584C231E91160077C441 /* ConnectionType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionType.swift; sourceTree = "<group>"; };
@@ -304,6 +306,7 @@
 		D9C65856232796CF0077C441 /* Storage */ = {
 			isa = PBXGroup;
 			children = (
+				D969415A23D875A3003F3300 /* KeychainItemAccessibility.swift */,
 				D9C658612327971E0077C441 /* ContentType.swift */,
 				D9C6585A232796FA0077C441 /* ItemContext */,
 				D9C65857232796FA0077C441 /* ItemFilter */,
@@ -713,6 +716,7 @@
 				66DD3C4122CCDB8B0003E2B8 /* IActionModule.swift in Sources */,
 				D928EE5322DF48D600F8176F /* SmartCredentialsAPIResult.swift in Sources */,
 				D9C6585F232796FA0077C441 /* ItemContextFactory.swift in Sources */,
+				D969415B23D875A3003F3300 /* KeychainItemAccessibility.swift in Sources */,
 				D9F4F3A7232B9B9100D18C53 /* OTPCode.swift in Sources */,
 				D9F4F386232B947A00D18C53 /* EIDScannerDelegate.swift in Sources */,
 				D9C65851231E91160077C441 /* MethodType.swift in Sources */,
@@ -917,6 +921,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MARKETING_VERSION = 5.4.0;
 				PRODUCT_BUNDLE_IDENTIFIER = de.telekom.smartcredentials.core.Core;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -944,6 +949,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MARKETING_VERSION = 5.4.0;
 				PRODUCT_BUNDLE_IDENTIFIER = de.telekom.smartcredentials.core.Core;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;

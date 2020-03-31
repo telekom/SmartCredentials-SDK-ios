@@ -23,18 +23,23 @@ public struct ItemFilterFactory {
     /// - Parameters:
     ///   - itemId: voucher's/token's id
     ///   - contentType: content type of the item (sensitive / nonsensitive); sensitive by default;
+    ///   - itemAccessibility: attribute used in Keychain for sensitive items only
     /// - Returns: ItemFilter object
-    public static func itemFilter(with itemId: String, contentType: ContentType = .sensitive) -> ItemFilter {
+    public static func itemFilter(with itemId: String,
+                                  contentType: ContentType = .sensitive,
+                                  itemAccessibility: KeychainItemAccessibility = .whenUnlockedThisDeviceOnly) -> ItemFilter {
         LoggerProvider.sharedInstance.logger?.log(.objectCreated, message: Constants.Logger.itemFilterObjectCreated, className: String(describing: type(of: self)))
-        return ItemFilter(itemId: itemId, contentType: contentType)
+        return ItemFilter(itemId: itemId, contentType: contentType, sensitiveItemAccessibility: itemAccessibility)
     }
     
     /// Creates an ItemFilter object used for getting all tokens / vouchers
-    ///
-    /// - Parameter contentType: content type of the items (sensitive / nonsensitive); sensitive by default
+    /// - Parameters:
+    ///   - contentType: content type of the items (sensitive / nonsensitive); sensitive by default
+    ///   - itemAccessibility: attribute used in Keychain for sensitive items only
     /// - Returns: ItemFilter object
-    public static func itemFilter(with contentType: ContentType = .sensitive) -> ItemFilter {
+    public static func itemFilter(with contentType: ContentType = .sensitive,
+                                  itemAccessibility: KeychainItemAccessibility = .whenUnlockedThisDeviceOnly) -> ItemFilter {
         LoggerProvider.sharedInstance.logger?.log(.objectCreated, message: Constants.Logger.itemFilterObjectCreated, className: String(describing: type(of: self)))
-        return ItemFilter(itemId: nil, contentType: contentType)
+        return ItemFilter(itemId: nil, contentType: contentType, sensitiveItemAccessibility: itemAccessibility)
     }
 }
