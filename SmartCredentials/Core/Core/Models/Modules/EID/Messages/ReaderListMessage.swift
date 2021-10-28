@@ -1,0 +1,30 @@
+//
+//  ReaderListMessage.swift
+//  Core
+//
+//  Created by Camelia Ignat on 28.10.2021.
+//  Copyright © 2021 Andrei Moldovan. All rights reserved.
+//
+
+import Foundation
+
+class ReaderListMessage: Message {
+    let reader: [ReaderModel]
+    
+    private enum CodingKeys : String, CodingKey {
+        case reader
+    }
+    
+    required init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        
+        reader = try container.decode([ReaderModel].self, forKey: .reader)
+        try super.init(from: decoder)
+    }
+    
+    override func encode(to encoder: Encoder) throws {
+        try super.encode(to: encoder)
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(reader, forKey: .reader)
+    }
+}
