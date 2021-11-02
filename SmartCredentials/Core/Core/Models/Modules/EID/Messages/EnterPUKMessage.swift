@@ -8,9 +8,9 @@
 
 import Foundation
 
-class EnterPUKMessage: Message {
-    let error: String?
-    let reader: ReaderModel?
+public class EnterPUKMessage: Message {
+    public let error: String?
+    public let reader: ReaderModel?
     
     private enum CodingKeys : String, CodingKey {
         case error
@@ -25,7 +25,7 @@ class EnterPUKMessage: Message {
         try super.init(from: decoder)
     }
     
-    override func encode(to encoder: Encoder) throws {
+    public override func encode(to encoder: Encoder) throws {
         try super.encode(to: encoder)
         var container = encoder.container(keyedBy: CodingKeys.self)
         try container.encode(error, forKey: .error)

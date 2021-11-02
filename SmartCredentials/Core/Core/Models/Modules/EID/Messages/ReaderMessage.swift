@@ -8,11 +8,11 @@
 
 import Foundation
 
-class ReaderMessage: Message {
-    let name: String
-    let attached: Bool
-    let keypad: Bool
-    let card: CardMessage?
+public class ReaderMessage: Message {
+    public let name: String
+    public let attached: Bool
+    public let keypad: Bool
+    public let card: CardMessage?
     
     private enum CodingKeys : String, CodingKey {
         case name
@@ -30,7 +30,7 @@ class ReaderMessage: Message {
         try super.init(from: decoder)
     }
     
-    override func encode(to encoder: Encoder) throws {
+    public override func encode(to encoder: Encoder) throws {
         try super.encode(to: encoder)
         var container = encoder.container(keyedBy: CodingKeys.self)
         try container.encode(name, forKey: .name)
@@ -40,8 +40,8 @@ class ReaderMessage: Message {
     }
 }
 
-struct CardMessage: Codable {
-    let inoperative: Bool
-    let deactivated: Bool
-    let retryCounter: Int
+public struct CardMessage: Codable {
+    public let inoperative: Bool
+    public let deactivated: Bool
+    public let retryCounter: Int
 }

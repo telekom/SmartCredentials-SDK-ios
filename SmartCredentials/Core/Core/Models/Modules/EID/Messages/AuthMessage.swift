@@ -8,10 +8,10 @@
 
 import Foundation
 
-class AuthMessage: Message {
-    let error: String?
-    let result: AuthResult?
-    let url: String?
+public class AuthMessage: Message {
+    public let error: String?
+    public let result: AuthResult?
+    public let url: String?
     
     private enum CodingKeys : String, CodingKey {
         case error
@@ -28,7 +28,7 @@ class AuthMessage: Message {
         try super.init(from: decoder)
     }
     
-    override func encode(to encoder: Encoder) throws {
+    public override func encode(to encoder: Encoder) throws {
         try super.encode(to: encoder)
         var container = encoder.container(keyedBy: CodingKeys.self)
         try container.encode(error, forKey: .error)
@@ -37,10 +37,10 @@ class AuthMessage: Message {
     }
 }
 
-struct AuthResult: Codable {
-    let major: String?
-    let minor: String?
-    let language: String?
-    let description: String?
-    let message: String?
+public struct AuthResult: Codable {
+    public let major: String?
+    public let minor: String?
+    public let language: String?
+    public let description: String?
+    public let message: String?
 }

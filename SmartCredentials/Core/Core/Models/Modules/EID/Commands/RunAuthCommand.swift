@@ -8,15 +8,22 @@
 
 import Foundation
 
-class RunAuthCommand: Command {
-    let tcTokenURL: String
-    let handleInterrupt: Bool
-    let messages: CommandMessages?
+public class RunAuthCommand: Command {
+    public let tcTokenURL: String
+    public let handleInterrupt: Bool
+    public let messages: CommandMessages?
     
     private enum CodingKeys : String, CodingKey {
         case tcTokenURL
         case handleInterrupt
         case messages
+    }
+    
+    public init(cmd: String, tcTokenURL: String, handleInterrupt: Bool, messages: CommandMessages?) {
+        self.tcTokenURL = tcTokenURL
+        self.handleInterrupt = handleInterrupt
+        self.messages = messages
+        super.init(cmd: cmd)
     }
     
     required init(from decoder: Decoder) throws {
@@ -27,7 +34,7 @@ class RunAuthCommand: Command {
         try super.init(from: decoder)
     }
     
-    override func encode(to encoder: Encoder) throws {
+    public override func encode(to encoder: Encoder) throws {
         try super.encode(to: encoder)
         var container = encoder.container(keyedBy: CodingKeys.self)
         try container.encode(tcTokenURL, forKey: .tcTokenURL)
@@ -36,9 +43,16 @@ class RunAuthCommand: Command {
     }
 }
 
-struct CommandMessages: Codable {
-    let sessionStarted: String
-    let sessionFailed: String
-    let sessionSucceeded: String
-    let sessionInProgress: String
+public struct CommandMessages: Codable {
+    public let sessionStarted: String
+    public let sessionFailed: String
+    public let sessionSucceeded: String
+    public let sessionInProgress: String
+    
+    public init(sessionStarted: String, sessionFailed: String, sessionSucceeded: String, sessionInProgress: String) {
+        self.sessionStarted = sessionStarted
+        self.sessionFailed = sessionFailed
+        self.sessionSucceeded = sessionSucceeded
+        self.sessionInProgress = sessionInProgress
+    }
 }

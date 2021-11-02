@@ -8,5 +8,5 @@
 
 import Foundation
 
-class GetInfoCommand: Command {
+public class GetInfoCommand: Command {
 }

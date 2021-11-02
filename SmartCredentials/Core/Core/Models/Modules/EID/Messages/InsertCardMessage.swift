@@ -8,8 +8,8 @@
 
 import Foundation
 
-class InsertCardMessage: Message {
-    let error: String?
+public class InsertCardMessage: Message {
+    public let error: String?
     
     private enum CodingKeys : String, CodingKey {
         case error
@@ -21,7 +21,7 @@ class InsertCardMessage: Message {
         try super.init(from: decoder)
     }
     
-    override func encode(to encoder: Encoder) throws {
+    public override func encode(to encoder: Encoder) throws {
         try super.encode(to: encoder)
         var container = encoder.container(keyedBy: CodingKeys.self)
         try container.encode(error, forKey: .error)

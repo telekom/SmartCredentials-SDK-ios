@@ -8,8 +8,8 @@
 
 import Foundation
 
-class ChangePINMessage: Message {
-    let success: Bool
+public class ChangePINMessage: Message {
+    public let success: Bool
     
     private enum CodingKeys : String, CodingKey {
         case success
@@ -22,7 +22,7 @@ class ChangePINMessage: Message {
         try super.init(from: decoder)
     }
     
-    override func encode(to encoder: Encoder) throws {
+    public override func encode(to encoder: Encoder) throws {
         try super.encode(to: encoder)
         var container = encoder.container(keyedBy: CodingKeys.self)
         try container.encode(success, forKey: .success)

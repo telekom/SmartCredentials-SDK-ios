@@ -8,5 +8,5 @@
 
 import Foundation
 
-class GetReaderListCommand: Command {
+public class GetReaderListCommand: Command {
 }

@@ -8,5 +8,5 @@
 
 import Foundation
 
-class GetCertificateCommand: Command {
+public class GetCertificateCommand: Command {
 }

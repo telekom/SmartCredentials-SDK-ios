@@ -10,7 +10,7 @@ import Core
 
 public struct SmartCredentialsEIDFactory {
     
-    public static func smartCredentialsOTPAPI(configuration: SmartCredentialsConfiguration, storage: StorageAPI, cameraScanner: CameraScannerAPI) -> EIDAPI {
+    public static func smartCredentialEDIAPI(configuration: SmartCredentialsConfiguration) -> EIDAPI {
         return EIDController(configuration: configuration)
     }
 }

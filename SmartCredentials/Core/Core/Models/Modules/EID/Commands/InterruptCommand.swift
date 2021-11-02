@@ -8,5 +8,5 @@
 
 import Foundation
 
-class InterruptCommand: Command {
+public class InterruptCommand: Command {
 }

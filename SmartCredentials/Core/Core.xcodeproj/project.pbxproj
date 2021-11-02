@@ -110,6 +110,10 @@
 		FE00CB86272A93CC00205D3A /* EnterPUKMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE00CB85272A93CC00205D3A /* EnterPUKMessage.swift */; };
 		FE00CB88272A93E200205D3A /* ReaderListMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE00CB87272A93E200205D3A /* ReaderListMessage.swift */; };
 		FE00CB8A272A93FF00205D3A /* InfoMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE00CB89272A93FF00205D3A /* InfoMessage.swift */; };
+		FE3962CF272AFD1E00F44333 /* InternalErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3962CE272AFD1E00F44333 /* InternalErrorMessage.swift */; };
+		FE3962D1272AFD7500F44333 /* InvalidMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3962D0272AFD7500F44333 /* InvalidMessage.swift */; };
+		FE3962D3272AFD9C00F44333 /* BadStateMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3962D2272AFD9C00F44333 /* BadStateMessage.swift */; };
+		FE3962D5272AFDE100F44333 /* UnknowmCommandMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3962D4272AFDE100F44333 /* UnknowmCommandMessage.swift */; };
 		FED28DD2271D68B9004A6106 /* EIDAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED28DD1271D68B9004A6106 /* EIDAPI.swift */; };
 /* End PBXBuildFile section */
 
@@ -230,6 +234,10 @@
 		FE00CB85272A93CC00205D3A /* EnterPUKMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterPUKMessage.swift; sourceTree = "<group>"; };
 		FE00CB87272A93E200205D3A /* ReaderListMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaderListMessage.swift; sourceTree = "<group>"; };
 		FE00CB89272A93FF00205D3A /* InfoMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoMessage.swift; sourceTree = "<group>"; };
+		FE3962CE272AFD1E00F44333 /* InternalErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternalErrorMessage.swift; sourceTree = "<group>"; };
+		FE3962D0272AFD7500F44333 /* InvalidMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvalidMessage.swift; sourceTree = "<group>"; };
+		FE3962D2272AFD9C00F44333 /* BadStateMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadStateMessage.swift; sourceTree = "<group>"; };
+		FE3962D4272AFDE100F44333 /* UnknowmCommandMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnknowmCommandMessage.swift; sourceTree = "<group>"; };
 		FED28DD1271D68B9004A6106 /* EIDAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EIDAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -705,6 +713,10 @@
 				FE00CB85272A93CC00205D3A /* EnterPUKMessage.swift */,
 				FE00CB87272A93E200205D3A /* ReaderListMessage.swift */,
 				FE00CB89272A93FF00205D3A /* InfoMessage.swift */,
+				FE3962CE272AFD1E00F44333 /* InternalErrorMessage.swift */,
+				FE3962D0272AFD7500F44333 /* InvalidMessage.swift */,
+				FE3962D2272AFD9C00F44333 /* BadStateMessage.swift */,
+				FE3962D4272AFDE100F44333 /* UnknowmCommandMessage.swift */,
 			);
 			path = Messages;
 			sourceTree = "<group>";
@@ -839,6 +851,8 @@
 				663D2E9022D48934001A12AD /* JailbreakDetection.swift in Sources */,
 				D9F4F3A1232B979100D18C53 /* QRLoginAPI.swift in Sources */,
 				D9C6584F231E91160077C441 /* ConnectionType.swift in Sources */,
+				FE3962D3272AFD9C00F44333 /* BadStateMessage.swift in Sources */,
+				FE3962CF272AFD1E00F44333 /* InternalErrorMessage.swift in Sources */,
 				D9C6585D232796FA0077C441 /* ItemFilterFactory.swift in Sources */,
 				FE00CB6B272A8A4300205D3A /* SetPUKCommand.swift in Sources */,
 				D9F4F38F232B973600D18C53 /* AuthenticationAPI.swift in Sources */,
@@ -867,6 +881,7 @@
 				D9F4F3A7232B9B9100D18C53 /* OTPCode.swift in Sources */,
 				D9F4F386232B947A00D18C53 /* EIDScannerDelegate.swift in Sources */,
 				FE00CB4B272A883A00205D3A /* GetInfoCommand.swift in Sources */,
+				FE3962D5272AFDE100F44333 /* UnknowmCommandMessage.swift in Sources */,
 				FE00CB53272A88C600205D3A /* GetReaderListCommand.swift in Sources */,
 				D9C65851231E91160077C441 /* MethodType.swift in Sources */,
 				D9F4F3A3232B97D000D18C53 /* OTPAPI.swift in Sources */,
@@ -885,6 +900,7 @@
 				FE00CB78272A932800205D3A /* EnterCANMessage.swift in Sources */,
 				D9C65848231D5C130077C441 /* SmartCredentialsAPIErrorExtension.swift in Sources */,
 				D9F4F37B232B937B00D18C53 /* EncryptionAPI.swift in Sources */,
+				FE3962D1272AFD7500F44333 /* InvalidMessage.swift in Sources */,
 				D9C65850231E91160077C441 /* BodyParamsType.swift in Sources */,
 				D9F4F38D232B956300D18C53 /* OCRScannerResult.swift in Sources */,
 				66DD3C3622CCDB390003E2B8 /* ItemType.swift in Sources */,

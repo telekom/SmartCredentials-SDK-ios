@@ -8,5 +8,5 @@
 
 import Foundation
 
-class GetAPILevelCommand: Command {
+public class GetAPILevelCommand: Command {
 }

@@ -8,5 +8,5 @@
 
 import Foundation
 
-class CancelCommand: Command {
+public class CancelCommand: Command {
 }

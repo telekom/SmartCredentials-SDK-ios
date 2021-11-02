@@ -8,8 +8,8 @@
 
 import Foundation
 
-class InfoMessage: Message {
-    let versionInfo: VersionInfoModel
+public class InfoMessage: Message {
+    public let versionInfo: VersionInfoModel
     
     enum CodingKeys: String, CodingKey {
         case versionInfo = "VersionInfo"
@@ -22,21 +22,21 @@ class InfoMessage: Message {
         try super.init(from: decoder)
     }
     
-    override func encode(to encoder: Encoder) throws {
+    public override func encode(to encoder: Encoder) throws {
         try super.encode(to: encoder)
         var container = encoder.container(keyedBy: CodingKeys.self)
         try container.encode(versionInfo, forKey: .versionInfo)
     }
 }
 
-struct VersionInfoModel: Codable {
-    let name: String
-    let implementationTitle: String
-    let implementationVendor: String
-    let implementationVersion: String
-    let specificationTitle: String
-    let specificationVendor: String
-    let specificationVersion: String
+public struct VersionInfoModel: Codable {
+    public let name: String
+    public let implementationTitle: String
+    public let implementationVendor: String
+    public let implementationVersion: String
+    public let specificationTitle: String
+    public let specificationVendor: String
+    public let specificationVersion: String
     
     enum CodingKeys: String, CodingKey {
         case name = "Name"

@@ -8,11 +8,11 @@
 
 import Foundation
 
-class AccessRightsMessage: Message {
-    let error: String?
-    let aux: AuxInfo?
-    let chat: ChatInfo
-    let canAllowed: Bool?
+public class AccessRightsMessage: Message {
+    public let error: String?
+    public let aux: AuxInfo?
+    public let chat: ChatInfo
+    public let canAllowed: Bool?
     
     private enum CodingKeys : String, CodingKey {
         case error
@@ -30,7 +30,7 @@ class AccessRightsMessage: Message {
         try super.init(from: decoder)
     }
     
-    override func encode(to encoder: Encoder) throws {
+    public override func encode(to encoder: Encoder) throws {
         try super.encode(to: encoder)
         var container = encoder.container(keyedBy: CodingKeys.self)
         try container.encode(error, forKey: .error)
@@ -40,15 +40,15 @@ class AccessRightsMessage: Message {
     }
 }
 
-struct AuxInfo: Codable {
-    let ageVerificationDate: String?
-    let requiredAge: String?
-    let validityDate: String?
-    let communityId: String?
+public struct AuxInfo: Codable {
+    public let ageVerificationDate: String?
+    public let requiredAge: String?
+    public let validityDate: String?
+    public let communityId: String?
 }
 
-struct ChatInfo: Codable {
-    let effective: [String]
-    let optional: [String]
-    let required: [String]
+public struct ChatInfo: Codable {
+    public let effective: [String]
+    public let optional: [String]
+    public let required: [String]
 }

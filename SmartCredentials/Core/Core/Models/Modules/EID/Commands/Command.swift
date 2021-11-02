@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum Commands: String {
+public enum Commands: String {
     case getInfo = "GET_INFO"
     case getAPILevel = "GET_API_LEVEL"
     case setAPILevel = "SET_API_LEVEL"
@@ -28,19 +28,23 @@ enum Commands: String {
     case interrupt = "INTERRUPT"
 }
 
-class Command: Codable {
+public class Command: Codable {
     var cmd: String
     
     private enum CodingKeys : String, CodingKey {
         case cmd = "cmd"
     }
     
-    required init(from decoder: Decoder) throws {
+    public init(cmd: String) {
+        self.cmd = cmd
+    }
+    
+    required public init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         cmd = try container.decode(String.self, forKey: .cmd)
     }
     
-    func encode(to encoder: Encoder) throws {
+    public func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
         try container.encode(cmd, forKey: .cmd)
     }

@@ -8,9 +8,9 @@
 
 import Foundation
 
-class CertificateMessage: Message {
-    let description: CertificateDescription
-    let validity: CertificateValidity
+public class CertificateMessage: Message {
+    public let description: CertificateDescription
+    public let validity: CertificateValidity
     
     private enum CodingKeys : String, CodingKey {
         case description
@@ -24,7 +24,7 @@ class CertificateMessage: Message {
         try super.init(from: decoder)
     }
     
-    override func encode(to encoder: Encoder) throws {
+    public override func encode(to encoder: Encoder) throws {
         try super.encode(to: encoder)
         var container = encoder.container(keyedBy: CodingKeys.self)
         try container.encode(description, forKey: .description)
@@ -32,16 +32,16 @@ class CertificateMessage: Message {
     }
 }
 
-struct CertificateDescription: Codable {
-    let issuerName: String
-    let issuerUrl: String
-    let subjectName: String
-    let subjectUrl: String
-    let termsOfUsage: String
-    let purpose: String
+public struct CertificateDescription: Codable {
+    public let issuerName: String
+    public let issuerUrl: String
+    public let subjectName: String
+    public let subjectUrl: String
+    public let termsOfUsage: String
+    public let purpose: String
 }
 
-struct CertificateValidity: Codable {
-    let effectiveDate: String
-    let expirationDate: String
+public struct CertificateValidity: Codable {
+    public let effectiveDate: String
+    public let expirationDate: String
 }

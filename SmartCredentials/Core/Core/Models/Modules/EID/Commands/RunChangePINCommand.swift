@@ -8,13 +8,19 @@
 
 import Foundation
 
-class RunChangePINCommand: Command {
-    let handleInterrupt: Bool
-    let messages: CommandMessages?
+public class RunChangePINCommand: Command {
+    public let handleInterrupt: Bool
+    public let messages: CommandMessages?
     
     private enum CodingKeys : String, CodingKey {
         case handleInterrupt
         case messages
+    }
+    
+    public init(cmd: String, handleInterrupt: Bool, messages: CommandMessages?) {
+        self.handleInterrupt = handleInterrupt
+        self.messages = messages
+        super.init(cmd: cmd)
     }
     
     required init(from decoder: Decoder) throws {
@@ -24,7 +30,7 @@ class RunChangePINCommand: Command {
         try super.init(from: decoder)
     }
     
-    override func encode(to encoder: Encoder) throws {
+    public override func encode(to encoder: Encoder) throws {
         try super.encode(to: encoder)
         var container = encoder.container(keyedBy: CodingKeys.self)
         try container.encode(handleInterrupt, forKey: .handleInterrupt)

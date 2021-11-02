@@ -8,11 +8,16 @@
 
 import Foundation
 
-class SetAPILevelCommand: Command {
-    var level: Int
+public class SetAPILevelCommand: Command {
+    public var level: Int
     
     private enum CodingKeys : String, CodingKey {
         case level
+    }
+    
+    public init(cmd: String, level: Int) {
+        self.level = level
+        super.init(cmd: cmd)
     }
     
     required init(from decoder: Decoder) throws {
@@ -21,7 +26,7 @@ class SetAPILevelCommand: Command {
         try super.init(from: decoder)
     }
     
-    override func encode(to encoder: Encoder) throws {
+    public override func encode(to encoder: Encoder) throws {
         try super.encode(to: encoder)
         var container = encoder.container(keyedBy: CodingKeys.self)
         try container.encode(level, forKey: .level)

@@ -8,9 +8,9 @@
 
 import Foundation
 
-struct ReaderModel: Codable {
-    let name: String?
-    let attached: Bool?
-    let keypad: Bool?
-    let card: CardMessage?
+public struct ReaderModel: Codable {
+    public let name: String?
+    public let attached: Bool?
+    public let keypad: Bool?
+    public let card: CardMessage?
 }

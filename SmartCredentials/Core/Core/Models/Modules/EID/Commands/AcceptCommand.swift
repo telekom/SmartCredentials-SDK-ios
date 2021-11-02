@@ -8,5 +8,5 @@
 
 import Foundation
 
-class AcceptCommand: Command {
+public class AcceptCommand: Command {
 }

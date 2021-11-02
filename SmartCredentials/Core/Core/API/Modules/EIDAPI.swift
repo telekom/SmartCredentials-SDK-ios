@@ -15,7 +15,28 @@
 */
 
 import Foundation
+import UIKit
 
 public protocol EIDAPI {
+    /// Initialize the communication with AusweisApp
+    ///
+    func initialize(completionHandler: @escaping (Message?) -> ())
 
+    /// Shuts down the communication with Ausweis app
+    /// Is required everytime a legitimation is done
+    func shutdown()
+
+    /// Returns true if a communication with Ausweis app is in progress
+    func isRunning() -> Bool
+    
+    /// Returns information about all connected readers.
+    ///
+    /// - Parameters:
+    ///   - command: the command  that needs to be send
+    ///   - completionHandler: callback with error
+    func sendCommand(_ command: Command, completionHandler: @escaping (Error?) -> ())
+    
+    /// Sets the callback for messages received from Ausweis app
+    ///
+    func setMessageReceiverCallback()
 }

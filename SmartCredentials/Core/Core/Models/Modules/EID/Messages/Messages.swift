@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum Messages: String {
+public enum Messages: String {
     case auth = "AUTH"
     case accessRights = "ACCESS_RIGHTS"
     case apiLevel = "API_LEVEL"
@@ -24,22 +24,22 @@ enum Messages: String {
     case internalError = "INTERNAL_ERROR"
     case invalid = "INVALID"
     case badState = "BAD_STATE"
-    case unknown = "UNKNOWN_COMMAND"
+    case unknownCommand = "UNKNOWN_COMMAND"
 }
 
-class Message: Codable {
-    var msg: String
+public class Message: Codable {
+    public var msg: String
     
     private enum CodingKeys : String, CodingKey {
         case msg = "msg"
     }
     
-    required init(from decoder: Decoder) throws {
+    required public init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         msg = try container.decode(String.self, forKey: .msg)
     }
     
-    func encode(to encoder: Encoder) throws {
+    public func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
         try container.encode(msg, forKey: .msg)
     }
