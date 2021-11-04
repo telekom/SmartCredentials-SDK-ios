@@ -20,8 +20,8 @@ public class EnterCANMessage: Message {
     required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         
-        error = try container.decode(String.self, forKey: .error)
-        reader = try container.decode(ReaderModel.self, forKey: .reader)
+        error = try container.decodeIfPresent(String.self, forKey: .error)
+        reader = try container.decodeIfPresent(ReaderModel.self, forKey: .reader)
         try super.init(from: decoder)
     }
     

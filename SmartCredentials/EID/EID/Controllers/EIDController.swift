@@ -13,8 +13,9 @@ import UIKit
 class EIDController {
     var configuration: SmartCredentialsConfiguration
     
-    typealias MessageCompletionHandler = (Message?) -> ()
-    static var completionHandler: MessageCompletionHandler = (nil) -> ()
+    typealias MessageCompletionHandler = (Message?, Error?) -> ()
+    typealias AuthCompletionHandler = (AuthMessage?) -> ()
+    static var completionHandler: MessageCompletionHandler!
     
     init(configuration: SmartCredentialsConfiguration) {
         self.configuration = configuration
@@ -30,12 +31,12 @@ class EIDController {
 }
 
 extension EIDController: EIDAPI {
-    func initialize(completionHandler: @escaping (Message?) -> ()) {
+    func initialize(completionHandler: @escaping (Message?, Error?) -> ()) {
         EIDController.completionHandler = completionHandler
         ausweisapp2_init { response in
             guard let response = response else {
                 // communication initiated
-                EIDController.completionHandler(nil)
+                EIDController.completionHandler(nil, nil)
                 return
             }
             
@@ -44,64 +45,63 @@ extension EIDController: EIDAPI {
             do {
                 let message = try JSONDecoder().decode(Message.self, from: data)
                 guard let messageType = Messages(rawValue: message.msg) else { return }
-                
                 switch messageType {
                 case .auth:
                     let authMessage = try JSONDecoder().decode(AuthMessage.self, from: data)
-                    EIDController.completionHandler(authMessage)
+                    EIDController.completionHandler(authMessage, nil)
                 case .accessRights:
                     let accessRightsMessage = try JSONDecoder().decode(AccessRightsMessage.self, from: data)
-                    EIDController.completionHandler(accessRightsMessage)
+                    EIDController.completionHandler(accessRightsMessage, nil)
                 case .apiLevel:
                     let apiLevelMessage = try JSONDecoder().decode(APILevelMessage.self, from: data)
-                    EIDController.completionHandler(apiLevelMessage)
+                    EIDController.completionHandler(apiLevelMessage, nil)
                 case .certificate:
                     let certificateMessage = try JSONDecoder().decode(CertificateMessage.self, from: data)
-                    EIDController.completionHandler(certificateMessage)
+                    EIDController.completionHandler(certificateMessage, nil)
                 case .changePIN:
                     let changePINMessage = try JSONDecoder().decode(ChangePINMessage.self, from: data)
-                    EIDController.completionHandler(changePINMessage)
+                    EIDController.completionHandler(changePINMessage, nil)
                 case .enterPIN:
                     let enterPINMessage = try JSONDecoder().decode(EnterPINMessage.self, from: data)
-                    EIDController.completionHandler(enterPINMessage)
+                    EIDController.completionHandler(enterPINMessage, nil)
                 case .enterNewPIN:
                     let enterNewPINMessage = try JSONDecoder().decode(EnterNewPINMessage.self, from: data)
-                    EIDController.completionHandler(enterNewPINMessage)
+                    EIDController.completionHandler(enterNewPINMessage, nil)
                 case .enterPUK:
                     let enterPUKMessage = try JSONDecoder().decode(EnterPUKMessage.self, from: data)
-                    EIDController.completionHandler(enterPUKMessage)
+                    EIDController.completionHandler(enterPUKMessage, nil)
                 case .insertCard:
                     let insertCardMessage = try JSONDecoder().decode(InsertCardMessage.self, from: data)
-                    EIDController.completionHandler(insertCardMessage)
+                    EIDController.completionHandler(insertCardMessage, nil)
                 case .reader:
                     let readerMessage = try JSONDecoder().decode(ReaderMessage.self, from: data)
-                    EIDController.completionHandler(readerMessage)
+                    EIDController.completionHandler(readerMessage, nil)
                 case .readerList:
                     let readerListMessage = try JSONDecoder().decode(ReaderListMessage.self, from: data)
-                    EIDController.completionHandler(readerListMessage)
+                    EIDController.completionHandler(readerListMessage, nil)
                 case .enterCAN:
                     let enterCANMessage = try JSONDecoder().decode(EnterCANMessage.self, from: data)
-                    EIDController.completionHandler(enterCANMessage)
+                    EIDController.completionHandler(enterCANMessage, nil)
                 case .info:
                     let infoMessage = try JSONDecoder().decode(InfoMessage.self, from: data)
-                    EIDController.completionHandler(infoMessage)
+                    EIDController.completionHandler(infoMessage, nil)
                 case .internalError:
                     let internalErrorMessage = try JSONDecoder().decode(InternalErrorMessage.self, from: data)
-                    EIDController.completionHandler(internalErrorMessage)
+                    EIDController.completionHandler(internalErrorMessage, nil)
                 case .invalid:
                     let invalidMessage = try JSONDecoder().decode(InvalidMessage.self, from: data)
-                    EIDController.completionHandler(invalidMessage)
+                    EIDController.completionHandler(invalidMessage, nil)
                 case .badState:
                     let badStateMessage = try JSONDecoder().decode(BadStateMessage.self, from: data)
-                    EIDController.completionHandler(badStateMessage)
+                    EIDController.completionHandler(badStateMessage, nil)
                 case .unknownCommand:
                     let unknownCommandMessage = try JSONDecoder().decode(UnknownCommandMessage.self, from: data)
-                    EIDController.completionHandler(unknownCommandMessage)
+                    EIDController.completionHandler(unknownCommandMessage, nil)
                 @unknown default:
-                    print("Error")
+                    EIDController.completionHandler(nil, SmartError.unknownMessage)
                 }
             } catch {
-                // Completion with error message
+                EIDController.completionHandler(nil, error)
             }
         }
     }
@@ -120,6 +120,7 @@ extension EIDController: EIDAPI {
                 let data = try JSONEncoder().encode(command)
                 if let json = String(data: data, encoding: .utf8) {
                     ausweisapp2_send(json)
+                    completionHandler(nil)
                 }
             } else {
                 completionHandler(SmartError.lostConnection)
@@ -129,13 +130,14 @@ extension EIDController: EIDAPI {
         }
     }
     
-    func setMessageReceiverCallback() {
-        
+    func setMessageReceiverCallback(completionHandler: @escaping (Message?, Error?) -> ()) {
+        EIDController.completionHandler = completionHandler
     }
 }
 
 enum SmartError: Error {
     case lostConnection
+    case unknownMessage
 }
 
 extension SmartError: CustomStringConvertible {
@@ -143,6 +145,8 @@ extension SmartError: CustomStringConvertible {
         switch self {
         case .lostConnection:
             return "Service connection was lost."
+        case .unknownMessage:
+            return "Unknown message received."
         }
     }
 }

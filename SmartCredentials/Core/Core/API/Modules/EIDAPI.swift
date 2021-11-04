@@ -20,7 +20,7 @@ import UIKit
 public protocol EIDAPI {
     /// Initialize the communication with AusweisApp
     ///
-    func initialize(completionHandler: @escaping (Message?) -> ())
+    func initialize(completionHandler: @escaping (Message?, Error?) -> ())
 
     /// Shuts down the communication with Ausweis app
     /// Is required everytime a legitimation is done
@@ -38,5 +38,5 @@ public protocol EIDAPI {
     
     /// Sets the callback for messages received from Ausweis app
     ///
-    func setMessageReceiverCallback()
+    func setMessageReceiverCallback(completionHandler: @escaping (Message?, Error?) -> ())
 }

@@ -26,7 +26,7 @@ public class ReaderMessage: Message {
         name = try container.decode(String.self, forKey: .name)
         attached = try container.decode(Bool.self, forKey: .attached)
         keypad = try container.decode(Bool.self, forKey: .keypad)
-        card = try container.decode(CardMessage.self, forKey: .card)
+        card = try container.decodeIfPresent(CardMessage.self, forKey: .card)
         try super.init(from: decoder)
     }
     

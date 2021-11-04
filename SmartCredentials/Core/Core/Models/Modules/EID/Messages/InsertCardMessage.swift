@@ -17,7 +17,7 @@ public class InsertCardMessage: Message {
     
     required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        error = try container.decode(String.self, forKey: .error)
+        error = try container.decodeIfPresent(String.self, forKey: .error)
         try super.init(from: decoder)
     }
     

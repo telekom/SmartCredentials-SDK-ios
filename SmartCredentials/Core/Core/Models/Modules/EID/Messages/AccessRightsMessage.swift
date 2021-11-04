@@ -23,10 +23,10 @@ public class AccessRightsMessage: Message {
     
     required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        error = try container.decode(String.self, forKey: .error)
-        aux = try container.decode(AuxInfo.self, forKey: .aux)
+        error = try container.decodeIfPresent(String.self, forKey: .error)
+        aux = try container.decodeIfPresent(AuxInfo.self, forKey: .aux)
         chat = try container.decode(ChatInfo.self, forKey: .chat)
-        canAllowed = try container.decode(Bool.self, forKey: .canAllowed)
+        canAllowed = try container.decodeIfPresent(Bool.self, forKey: .canAllowed)
         try super.init(from: decoder)
     }
     
@@ -40,15 +40,58 @@ public class AccessRightsMessage: Message {
     }
 }
 
-public struct AuxInfo: Codable {
+public class AuxInfo: Codable {
     public let ageVerificationDate: String?
     public let requiredAge: String?
     public let validityDate: String?
     public let communityId: String?
+    
+    private enum CodingKeys : String, CodingKey {
+        case ageVerificationDate
+        case requiredAge
+        case validityDate
+        case communityId
+    }
+    
+    required public init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        ageVerificationDate = try container.decodeIfPresent(String.self, forKey: .ageVerificationDate)
+        requiredAge = try container.decodeIfPresent(String.self, forKey: .requiredAge)
+        validityDate = try container.decodeIfPresent(String.self, forKey: .validityDate)
+        communityId = try container.decodeIfPresent(String.self, forKey: .communityId)
+    }
+    
+    public func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(ageVerificationDate, forKey: .ageVerificationDate)
+        try container.encode(requiredAge, forKey: .requiredAge)
+        try container.encode(validityDate, forKey: .validityDate)
+        try container.encode(communityId, forKey: .communityId)
+    }
 }
 
-public struct ChatInfo: Codable {
+public class ChatInfo: Codable {
     public let effective: [String]
     public let optional: [String]
     public let required: [String]
+    
+    private enum CodingKeys : String, CodingKey {
+        case effective
+        case optional
+        case required
+    }
+    
+    required public init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        effective = try container.decode([String].self, forKey: .effective)
+        optional = try container.decode([String].self, forKey: .optional)
+        required = try container.decode([String].self, forKey: .required)
+    }
+    
+    public func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(effective, forKey: .effective)
+        try container.encode(optional, forKey: .optional)
+        try container.encode(required, forKey: .required)
+    }
 }
