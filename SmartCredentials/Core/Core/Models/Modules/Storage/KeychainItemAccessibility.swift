@@ -14,12 +14,12 @@
 * limitations under the License.
 */
 
-protocol KeychainAttributeRepresentable {
+public protocol KeychainAttributeRepresentable {
     var keychainAttributeValue: CFString { get }
 }
 
 // MARK: - KeychainItemAccessibility
-enum KeychainItemAccessibility {
+public enum KeychainItemAccessibility {
     /**
      The data in the keychain item cannot be accessed after a restart until the device has been unlocked once by the user.
      
@@ -71,7 +71,7 @@ enum KeychainItemAccessibility {
      */
     case whenUnlockedThisDeviceOnly
     
-    static func accessibility(for keychainAttributeValue: CFString) -> KeychainItemAccessibility? {
+    public static func accessibility(for keychainAttributeValue: CFString) -> KeychainItemAccessibility? {
         for (key, value) in keychainItemAccessibilityLookup {
             if value == keychainAttributeValue {
                 return key
@@ -98,7 +98,7 @@ private let keychainItemAccessibilityLookup: [KeychainItemAccessibility: CFStrin
 
 // MARK: - KeychainAttributeRepresentable
 extension KeychainItemAccessibility : KeychainAttributeRepresentable {
-    internal var keychainAttributeValue: CFString {
+    public var keychainAttributeValue: CFString {
         return keychainItemAccessibilityLookup[self]!
     }
 }

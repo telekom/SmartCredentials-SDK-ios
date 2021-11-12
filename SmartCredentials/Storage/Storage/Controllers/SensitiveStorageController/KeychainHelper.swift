@@ -92,16 +92,14 @@ class KeychainHelper {
     }
     
     /// Get the keys of all keychain entries matching the current ServiceName and AccessGroup if one is set.
-    func allKeys() -> Set<String> {
+    func allKeys(with accessibility: KeychainItemAccessibility) -> Set<String> {
         var keychainQueryDictionary: [String:Any] = [
             SecClass: kSecClassGenericPassword,
             SecAttrService: serviceName,
             SecReturnAttributes: kCFBooleanTrue ?? true,
             SecMatchLimit: kSecMatchLimitAll,
             ]
-        keychainQueryDictionary[SecAttrAccessible] = KeychainItemAccessibility.whenUnlockedThisDeviceOnly.keychainAttributeValue
-
-
+        keychainQueryDictionary[SecAttrAccessible] = accessibility.keychainAttributeValue
         
         var result: AnyObject?
         let status = SecItemCopyMatching(keychainQueryDictionary as CFDictionary, &result)

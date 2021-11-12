@@ -2,7 +2,7 @@
 .DS_Store
 
 # Xcode build files
-xcuserdata/
+**/xcuserdata/
 *.xcuserstate
 
 ## Build generated

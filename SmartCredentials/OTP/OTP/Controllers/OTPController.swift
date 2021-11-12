@@ -76,6 +76,9 @@ extension OTPController: OTPAPI {
                     completionHandler(.success(result: otpResult))
                 case .failure(let error):
                     completionHandler(.failure(error: error))
+                @unknown default:
+                    // Any future cases not recognized by the compiler yet
+                    break
                 }
                 
             case .failure(let error):
@@ -134,6 +137,9 @@ extension OTPController: OTPAPI {
             
         case .failure(let error):
             completionHandler(.failure(error: error))
+        @unknown default:
+            // Any future cases not recognized by the compiler yet
+            break
         }
     }
     

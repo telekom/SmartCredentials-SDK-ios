@@ -21,8 +21,9 @@ public struct ItemContextFactory {
     ///
     /// - Parameter contentType: content type of the item (sensitive / nonsensitive); sensitive by default
     /// - Returns: ItemContext object
-    public static func itemContext(with contentType: ContentType = .sensitive) -> ItemContext {
+    public static func itemContext(with contentType: ContentType = .sensitive,
+                                   itemAccessibility: KeychainItemAccessibility = .whenUnlockedThisDeviceOnly) -> ItemContext {
         LoggerProvider.sharedInstance.logger?.log(.objectCreated, message: Constants.Logger.itemContextObjectCreated, className: String(describing: type(of: self)))
-        return ItemContext(contentType: contentType)
+        return ItemContext(contentType: contentType, sensitiveItemAccessibility: itemAccessibility)
     }
 }

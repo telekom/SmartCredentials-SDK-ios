@@ -19,7 +19,6 @@
 		D9F8019C22F06FC300B17E2B /* KeychainItemSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F8018F22F06FC200B17E2B /* KeychainItemSummary.swift */; };
 		D9F8019D22F06FC300B17E2B /* KeychainItemDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F8019022F06FC200B17E2B /* KeychainItemDetails.swift */; };
 		D9F8019E22F06FC300B17E2B /* SensitiveStorageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F8019122F06FC200B17E2B /* SensitiveStorageController.swift */; };
-		D9F801A022F06FC300B17E2B /* KeychainItemAccessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F8019322F06FC200B17E2B /* KeychainItemAccessibility.swift */; };
 		D9F801A122F06FC300B17E2B /* MockStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F8019522F06FC200B17E2B /* MockStorage.swift */; };
 		D9F801A322F0725400B17E2B /* StorageProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F801A222F0725400B17E2B /* StorageProtocol.swift */; };
 		D9F801A522F072DF00B17E2B /* DefaultStorageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F801A422F072DF00B17E2B /* DefaultStorageController.swift */; };
@@ -43,7 +42,6 @@
 		D9F8018F22F06FC200B17E2B /* KeychainItemSummary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainItemSummary.swift; sourceTree = "<group>"; };
 		D9F8019022F06FC200B17E2B /* KeychainItemDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainItemDetails.swift; sourceTree = "<group>"; };
 		D9F8019122F06FC200B17E2B /* SensitiveStorageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SensitiveStorageController.swift; sourceTree = "<group>"; };
-		D9F8019322F06FC200B17E2B /* KeychainItemAccessibility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainItemAccessibility.swift; sourceTree = "<group>"; };
 		D9F8019522F06FC200B17E2B /* MockStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockStorage.swift; sourceTree = "<group>"; };
 		D9F801A222F0725400B17E2B /* StorageProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageProtocol.swift; sourceTree = "<group>"; };
 		D9F801A422F072DF00B17E2B /* DefaultStorageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultStorageController.swift; sourceTree = "<group>"; };
@@ -152,7 +150,6 @@
 				D9F8019122F06FC200B17E2B /* SensitiveStorageController.swift */,
 				D9F8018D22F06FC200B17E2B /* KeychainHelper.swift */,
 				D9F8018E22F06FC200B17E2B /* KeychainItem */,
-				D9F8019322F06FC200B17E2B /* KeychainItemAccessibility.swift */,
 			);
 			path = SensitiveStorageController;
 			sourceTree = "<group>";
@@ -221,7 +218,7 @@
 		D9F8014522F06C1600B17E2B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1030;
+				LastUpgradeCheck = 1300;
 				ORGANIZATIONNAME = "Deutsche Telekom";
 				TargetAttributes = {
 					D9F8014D22F06C1600B17E2B = {
@@ -236,6 +233,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = D9F8014422F06C1600B17E2B;
 			productRefGroup = D9F8014F22F06C1600B17E2B /* Products */;
@@ -275,7 +273,6 @@
 				D9F8019D22F06FC300B17E2B /* KeychainItemDetails.swift in Sources */,
 				D9F8019722F06FC300B17E2B /* CoreDataHelper.swift in Sources */,
 				D9F8019922F06FC300B17E2B /* CoreDataItemSummaryExtension.swift in Sources */,
-				D9F801A022F06FC300B17E2B /* KeychainItemAccessibility.swift in Sources */,
 				D9F8019622F06FC300B17E2B /* NonSensitiveStorageController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -309,6 +306,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -335,7 +333,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -373,6 +371,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -393,7 +392,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -408,9 +407,11 @@
 		D9F8015722F06C1600B17E2B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = LUZ9KLPXF2;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -423,18 +424,22 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MARKETING_VERSION = 5.4.1;
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = de.telekom.smartcredentials.Storage;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "arm64 arm64e armv7 armv7s x86_64 i386";
 			};
 			name = Debug;
 		};
 		D9F8015822F06C1600B17E2B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -450,11 +455,13 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MARKETING_VERSION = 5.4.1;
 				PRODUCT_BUNDLE_IDENTIFIER = de.telekom.smartcredentials.Storage;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "arm64 arm64e armv7 armv7s x86_64 i386";
 			};
 			name = Release;
 		};

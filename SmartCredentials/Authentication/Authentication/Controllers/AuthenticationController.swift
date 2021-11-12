@@ -52,6 +52,9 @@ extension AuthenticationController: AuthenticationAPI {
                 completionHandler(.success(result: authModule))
             case .failure(let error):
                 completionHandler(.failure(error: error))
+            @unknown default:
+                // Any future cases not recognized by the compiler yet
+                break
             }
         }
     }

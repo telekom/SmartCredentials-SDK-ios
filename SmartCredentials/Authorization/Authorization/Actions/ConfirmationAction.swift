@@ -62,6 +62,9 @@ public class ConfirmationAction: IActionModule {
             default:
                 completionHandler(.failure(error: ConfirmationActionError.authFailed))
             }
+        @unknown default:
+            // Any future cases not recognized by the compiler yet
+            break
         }
     }
     

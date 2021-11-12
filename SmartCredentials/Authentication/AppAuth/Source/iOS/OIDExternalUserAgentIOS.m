@@ -16,7 +16,6 @@
         limitations under the License.
  */
 
-#import "OIDExternalUserAgentIOS.h"
 
 #import <SafariServices/SafariServices.h>
 #import <AuthenticationServices/AuthenticationServices.h>
@@ -24,6 +23,8 @@
 #import "OIDErrorUtilities.h"
 #import "OIDExternalUserAgentSession.h"
 #import "OIDExternalUserAgentRequest.h"
+
+#import "OIDExternalUserAgentIOS.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -38,7 +39,7 @@ NS_ASSUME_NONNULL_BEGIN
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wpartial-availability"
   __weak SFSafariViewController *_safariVC;
-  SFAuthenticationSession *_authenticationVC;
+  ASWebAuthenticationSession *_authenticationVC;
   ASWebAuthenticationSession *_webAuthenticationVC;
 #pragma clang diagnostic pop
 }
@@ -94,8 +95,8 @@ NS_ASSUME_NONNULL_BEGIN
   } else if (@available(iOS 11.0, *)) {
     __weak OIDExternalUserAgentIOS *weakSelf = self;
     NSString *redirectScheme = request.redirectScheme;
-    SFAuthenticationSession *authenticationVC =
-        [[SFAuthenticationSession alloc] initWithURL:requestURL
+    ASWebAuthenticationSession *authenticationVC =
+    [[ASWebAuthenticationSession alloc] initWithURL:requestURL
                                    callbackURLScheme:redirectScheme
                                    completionHandler:^(NSURL * _Nullable callbackURL,
                                                        NSError * _Nullable error) {
@@ -126,7 +127,8 @@ NS_ASSUME_NONNULL_BEGIN
     openedSafari = YES;
   // iOS 8 and earlier, use mobile Safari
   } else {
-    openedSafari = [[UIApplication sharedApplication] openURL:requestURL];
+    openedSafari = [[UIApplication sharedApplication] canOpenURL:requestURL];
+    [[UIApplication sharedApplication] openURL:requestURL options:@{} completionHandler:nil];
   }
 
   if (!openedSafari) {
@@ -148,7 +150,7 @@ NS_ASSUME_NONNULL_BEGIN
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wpartial-availability"
   SFSafariViewController *safariVC = _safariVC;
-  SFAuthenticationSession *authenticationVC = _authenticationVC;
+  ASWebAuthenticationSession *authenticationVC = _authenticationVC;
   ASWebAuthenticationSession *webAuthenticationVC = _webAuthenticationVC;
 #pragma clang diagnostic pop
   

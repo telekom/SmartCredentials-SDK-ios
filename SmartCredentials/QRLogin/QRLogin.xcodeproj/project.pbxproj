@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D91418BA234E16FA008863D9 /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D91418B8234E16F2008863D9 /* Starscream.framework */; };
 		D9474DE822FDB49500D64D9D /* QRLogin.h in Headers */ = {isa = PBXBuildFile; fileRef = D9474DE622FDB49500D64D9D /* QRLogin.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D9474E0B22FDB7BD00D64D9D /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9474E0A22FDB7BD00D64D9D /* Core.framework */; };
+		D9B8AACE24333686008A2FE8 /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9B8AACD24333686008A2FE8 /* Starscream.framework */; };
 		D9C65808231D30630077C441 /* QRLoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C65807231D30630077C441 /* QRLoginController.swift */; };
 		D9C6580A231D30C80077C441 /* Authorization.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9C65809231D30C80077C441 /* Authorization.framework */; };
 		D9C6580D231D33050077C441 /* QRLoginKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C6580C231D33050077C441 /* QRLoginKeys.swift */; };
@@ -23,11 +23,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		D91418B8234E16F2008863D9 /* Starscream.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Starscream.framework; sourceTree = "<group>"; };
 		D9474DE322FDB49500D64D9D /* QRLogin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = QRLogin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9474DE622FDB49500D64D9D /* QRLogin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QRLogin.h; sourceTree = "<group>"; };
 		D9474DE722FDB49500D64D9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D9474E0A22FDB7BD00D64D9D /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9B8AACD24333686008A2FE8 /* Starscream.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Starscream.framework; sourceTree = "<group>"; };
 		D9C65807231D30630077C441 /* QRLoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRLoginController.swift; sourceTree = "<group>"; };
 		D9C65809231D30C80077C441 /* Authorization.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Authorization.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9C6580C231D33050077C441 /* QRLoginKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRLoginKeys.swift; sourceTree = "<group>"; };
@@ -46,7 +46,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9C6580A231D30C80077C441 /* Authorization.framework in Frameworks */,
-				D91418BA234E16FA008863D9 /* Starscream.framework in Frameworks */,
+				D9B8AACE24333686008A2FE8 /* Starscream.framework in Frameworks */,
 				D9474E0B22FDB7BD00D64D9D /* Core.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -87,7 +87,7 @@
 		D9474E0922FDB7BD00D64D9D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D91418B8234E16F2008863D9 /* Starscream.framework */,
+				D9B8AACD24333686008A2FE8 /* Starscream.framework */,
 				D9C65809231D30C80077C441 /* Authorization.framework */,
 				D9474E0A22FDB7BD00D64D9D /* Core.framework */,
 			);
@@ -201,7 +201,7 @@
 		D9474DDA22FDB49500D64D9D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1030;
+				LastUpgradeCheck = 1300;
 				ORGANIZATIONNAME = "Deutsche Telekom";
 				TargetAttributes = {
 					D9474DE222FDB49500D64D9D = {
@@ -216,6 +216,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = D9474DD922FDB49500D64D9D;
 			productRefGroup = D9474DE422FDB49500D64D9D /* Products */;
@@ -283,6 +284,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -347,6 +349,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -382,9 +385,11 @@
 		D9474DEC22FDB49500D64D9D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = LUZ9KLPXF2;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -397,12 +402,13 @@
 				);
 				INFOPLIST_FILE = QRLogin/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MARKETING_VERSION = 5.4.1;
 				PRODUCT_BUNDLE_IDENTIFIER = de.telekom.smartcredentials.QRLogin;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -416,6 +422,7 @@
 		D9474DED22FDB49500D64D9D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -431,12 +438,13 @@
 				);
 				INFOPLIST_FILE = QRLogin/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MARKETING_VERSION = 5.4.1;
 				PRODUCT_BUNDLE_IDENTIFIER = de.telekom.smartcredentials.QRLogin;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;

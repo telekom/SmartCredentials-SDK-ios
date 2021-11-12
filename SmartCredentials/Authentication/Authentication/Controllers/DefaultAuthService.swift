@@ -96,6 +96,9 @@ extension DefaultAuthService {
                     completionHandler(.success)
                 case .failure(_):
                     completionHandler(.failure(error: .authorizationError))
+                @unknown default:
+                    // Any future cases not recognized by the compiler yet
+                    break
                 }
             })
         } else {
@@ -123,6 +126,9 @@ extension DefaultAuthService {
                         completionHandler(.success)
                     case .failure(_):
                         completionHandler(.failure(error: .authorizationError))
+                    @unknown default:
+                        // Any future cases not recognized by the compiler yet
+                        break
                     }
                 })
             }

@@ -79,6 +79,9 @@ extension WiFiNetworkingController: NetworkingAPI {
                 }
             case .text:
                 request.httpBody = bodyParams?.data(using: .utf8)
+            @unknown default:
+                // Any future cases not recognized by the compiler yet
+                break
             }
         }
         

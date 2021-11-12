@@ -19,5 +19,6 @@ public struct ItemFilter {
   
     public var itemId: String?
     public var contentType: ContentType
+    public var sensitiveItemAccessibility: KeychainItemAccessibility
 }
 
