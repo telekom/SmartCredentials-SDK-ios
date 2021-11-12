@@ -5,7 +5,7 @@
 Pod::Spec.new do |s|
 
   s.name         = 'SmartCredentialsLibrary'
-  s.version      = "5.4.0"
+  s.version      = "5.5.0"
   s.summary      = "Smart Credentials is a library with multiple generic functionalities, like secure storage, authorization, camera scanners and more."
 
   s.description  = <<-DESC
