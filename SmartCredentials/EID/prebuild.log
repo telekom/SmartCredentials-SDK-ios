@@ -1,0 +1,56 @@
+__________mkdir + alias universaloutputfolder
+2021-11-18 17:50:25.258 xcodebuild[84072:11403773] [MT] DVTDeveloperPaths: WARNING: Environment variable XCODE_DEVELOPER_DIR_PATH is set, but is not an absolute path. The variable will be ignored. ()
+2021-11-18 17:50:26.018 xcodebuild[84072:11403773] [MT] DVTDeveloperPaths: WARNING: Environment variable XCODE_DEVELOPER_DIR_PATH is set, but is not an absolute path. The variable will be ignored. ()
+2021-11-18 17:50:26.036 xcodebuild[84072:11403773] [MT] DVTDeveloperPaths: WARNING: Environment variable XCODE_DEVELOPER_DIR_PATH is set, but is not an absolute path. The variable will be ignored. ()
+2021-11-18 17:50:26.038 xcodebuild[84072:11403773] [MT] DVTDeveloperPaths: WARNING: Environment variable XCODE_DEVELOPER_DIR_PATH is set, but is not an absolute path. The variable will be ignored. ()
+2021-11-18 17:50:26.041 xcodebuild[84072:11403773] [MT] DVTDeveloperPaths: WARNING: Environment variable XCODE_DEVELOPER_DIR_PATH is set, but is not an absolute path. The variable will be ignored. ()
+2021-11-18 17:50:26.044 xcodebuild[84072:11403773] [MT] DVTDeveloperPaths: WARNING: Environment variable XCODE_DEVELOPER_DIR_PATH is set, but is not an absolute path. The variable will be ignored. ()
+2021-11-18 17:50:26.047 xcodebuild[84072:11403773] [MT] DVTDeveloperPaths: WARNING: Environment variable XCODE_DEVELOPER_DIR_PATH is set, but is not an absolute path. The variable will be ignored. ()
+2021-11-18 17:50:26.049 xcodebuild[84072:11403773] [MT] DVTDeveloperPaths: WARNING: Environment variable XCODE_DEVELOPER_DIR_PATH is set, but is not an absolute path. The variable will be ignored. ()
+Command line invocation:
+    /Users/cameliaignat/Downloads/Xcode.app/Contents/Developer/usr/bin/xcodebuild -target EID -configuration Release -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO BUILD_DIR=/Users/cameliaignat/Library/Developer/Xcode/DerivedData/SmartCredentials-ajipgxnabudtricyfriaeescjdtl/Build/Intermediates.noindex/ArchiveIntermediates/EID/BuildProductsPath BUILD_ROOT=/Users/cameliaignat/Library/Developer/Xcode/DerivedData/SmartCredentials-ajipgxnabudtricyfriaeescjdtl/Build/Intermediates.noindex/ArchiveIntermediates/EID/BuildProductsPath clean build
+
+User defaults from command line:
+    IDEPackageSupportUseBuiltinSCM = YES
+
+Build settings from command line:
+    BUILD_DIR = /Users/cameliaignat/Library/Developer/Xcode/DerivedData/SmartCredentials-ajipgxnabudtricyfriaeescjdtl/Build/Intermediates.noindex/ArchiveIntermediates/EID/BuildProductsPath
+    BUILD_ROOT = /Users/cameliaignat/Library/Developer/Xcode/DerivedData/SmartCredentials-ajipgxnabudtricyfriaeescjdtl/Build/Intermediates.noindex/ArchiveIntermediates/EID/BuildProductsPath
+    ONLY_ACTIVE_ARCH = NO
+    SDKROOT = iphonesimulator15.0
+    TOOLCHAINS = 
+
+xcodebuild: error: The directory /private/var/folders/06/bqgt2myj1_z_69fph4v335j00000gp/T contains 19 projects, all of which are legacy projects. Specify the project to use with the -project option.
+
+2021-11-18 17:50:26.223 xcodebuild[84077:11404272] [MT] DVTDeveloperPaths: WARNING: Environment variable XCODE_DEVELOPER_DIR_PATH is set, but is not an absolute path. The variable will be ignored. ()
+2021-11-18 17:50:26.619 xcodebuild[84077:11404272] [MT] DVTDeveloperPaths: WARNING: Environment variable XCODE_DEVELOPER_DIR_PATH is set, but is not an absolute path. The variable will be ignored. ()
+2021-11-18 17:50:26.635 xcodebuild[84077:11404272] [MT] DVTDeveloperPaths: WARNING: Environment variable XCODE_DEVELOPER_DIR_PATH is set, but is not an absolute path. The variable will be ignored. ()
+2021-11-18 17:50:26.637 xcodebuild[84077:11404272] [MT] DVTDeveloperPaths: WARNING: Environment variable XCODE_DEVELOPER_DIR_PATH is set, but is not an absolute path. The variable will be ignored. ()
+2021-11-18 17:50:26.640 xcodebuild[84077:11404272] [MT] DVTDeveloperPaths: WARNING: Environment variable XCODE_DEVELOPER_DIR_PATH is set, but is not an absolute path. The variable will be ignored. ()
+2021-11-18 17:50:26.642 xcodebuild[84077:11404272] [MT] DVTDeveloperPaths: WARNING: Environment variable XCODE_DEVELOPER_DIR_PATH is set, but is not an absolute path. The variable will be ignored. ()
+2021-11-18 17:50:26.645 xcodebuild[84077:11404272] [MT] DVTDeveloperPaths: WARNING: Environment variable XCODE_DEVELOPER_DIR_PATH is set, but is not an absolute path. The variable will be ignored. ()
+2021-11-18 17:50:26.647 xcodebuild[84077:11404272] [MT] DVTDeveloperPaths: WARNING: Environment variable XCODE_DEVELOPER_DIR_PATH is set, but is not an absolute path. The variable will be ignored. ()
+Command line invocation:
+    /Users/cameliaignat/Downloads/Xcode.app/Contents/Developer/usr/bin/xcodebuild -target EID ONLY_ACTIVE_ARCH=NO -configuration Release -sdk iphoneos BUILD_DIR=/Users/cameliaignat/Library/Developer/Xcode/DerivedData/SmartCredentials-ajipgxnabudtricyfriaeescjdtl/Build/Intermediates.noindex/ArchiveIntermediates/EID/BuildProductsPath BUILD_ROOT=/Users/cameliaignat/Library/Developer/Xcode/DerivedData/SmartCredentials-ajipgxnabudtricyfriaeescjdtl/Build/Intermediates.noindex/ArchiveIntermediates/EID/BuildProductsPath clean build
+
+User defaults from command line:
+    IDEPackageSupportUseBuiltinSCM = YES
+
+Build settings from command line:
+    BUILD_DIR = /Users/cameliaignat/Library/Developer/Xcode/DerivedData/SmartCredentials-ajipgxnabudtricyfriaeescjdtl/Build/Intermediates.noindex/ArchiveIntermediates/EID/BuildProductsPath
+    BUILD_ROOT = /Users/cameliaignat/Library/Developer/Xcode/DerivedData/SmartCredentials-ajipgxnabudtricyfriaeescjdtl/Build/Intermediates.noindex/ArchiveIntermediates/EID/BuildProductsPath
+    ONLY_ACTIVE_ARCH = NO
+    SDKROOT = iphoneos15.0
+    TOOLCHAINS = 
+
+xcodebuild: error: The directory /private/var/folders/06/bqgt2myj1_z_69fph4v335j00000gp/T contains 19 projects, all of which are legacy projects. Specify the project to use with the -project option.
+
+__________xcodebuilds
+__________first copy
+cp: /Users/cameliaignat/Library/Developer/Xcode/DerivedData/SmartCredentials-ajipgxnabudtricyfriaeescjdtl/Build/Intermediates.noindex/ArchiveIntermediates/EID/BuildProductsPath/../../../../Products/Release-iphonesimulator/EID.framework/Modules/EID.swiftmodule/.: No such file or directory
+__________second copy
+fatal error: /Users/cameliaignat/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo: can't open input file: /Users/cameliaignat/Library/Developer/Xcode/DerivedData/SmartCredentials-ajipgxnabudtricyfriaeescjdtl/Build/Intermediates.noindex/ArchiveIntermediates/EID/BuildProductsPath/../../../../Products/Release-iphonesimulator/EID.framework/EID (No such file or directory)
+__________create universal file with lipo
+cp: cannot overwrite directory /Users/cameliaignat/SmartCredentials-SDK-ios/SmartCredentials/EID/EID.framework with non-directory /Users/cameliaignat/Library/Developer/Xcode/DerivedData/SmartCredentials-ajipgxnabudtricyfriaeescjdtl/Build/Intermediates.noindex/ArchiveIntermediates/EID/BuildProductsPath/EID-universal/EID.framework
+__________copy framework to project's directory
+__________open project directory
