@@ -9,7 +9,7 @@
 import Foundation
 
 public class ChangePINMessage: Message {
-    public let success: Bool
+    public let success: Bool?
     
     private enum CodingKeys : String, CodingKey {
         case success
@@ -18,7 +18,7 @@ public class ChangePINMessage: Message {
     required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         
-        success = try container.decode(Bool.self, forKey: .success)
+        success = try container.decodeIfPresent(Bool.self, forKey: .success)
         try super.init(from: decoder)
     }
     
