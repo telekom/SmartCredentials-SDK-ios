@@ -10,18 +10,21 @@ import Foundation
 
 public class RunAuthCommand: Command {
     public let tcTokenURL: String
-    public let handleInterrupt: Bool
+    public let developerMode: Bool
+    public let status: Bool
     public let messages: CommandMessages?
     
     private enum CodingKeys : String, CodingKey {
         case tcTokenURL
-        case handleInterrupt
+        case developerMode
+        case status
         case messages
     }
     
-    public init(cmd: String, tcTokenURL: String, handleInterrupt: Bool, messages: CommandMessages?) {
+    public init(cmd: String, developerMode: Bool, tcTokenURL: String, status: Bool, messages: CommandMessages?) {
         self.tcTokenURL = tcTokenURL
-        self.handleInterrupt = handleInterrupt
+        self.developerMode = developerMode
+        self.status = status
         self.messages = messages
         super.init(cmd: cmd)
     }
@@ -29,7 +32,8 @@ public class RunAuthCommand: Command {
     required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         tcTokenURL = try container.decode(String.self, forKey: .tcTokenURL)
-        handleInterrupt = try container.decode(Bool.self, forKey: .handleInterrupt)
+        developerMode = try container.decode(Bool.self, forKey: .developerMode)
+        status = try container.decode(Bool.self, forKey: .status)
         messages = try container.decode(CommandMessages.self, forKey: .messages)
         try super.init(from: decoder)
     }
@@ -38,7 +42,8 @@ public class RunAuthCommand: Command {
         try super.encode(to: encoder)
         var container = encoder.container(keyedBy: CodingKeys.self)
         try container.encode(tcTokenURL, forKey: .tcTokenURL)
-        try container.encode(handleInterrupt, forKey: .handleInterrupt)
+        try container.encode(developerMode, forKey: .developerMode)
+        try container.encode(status, forKey: .status)
         try container.encode(messages, forKey: .messages)
     }
 }

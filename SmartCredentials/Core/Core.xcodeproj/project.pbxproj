@@ -114,6 +114,9 @@
 		FE3962D1272AFD7500F44333 /* InvalidMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3962D0272AFD7500F44333 /* InvalidMessage.swift */; };
 		FE3962D3272AFD9C00F44333 /* BadStateMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3962D2272AFD9C00F44333 /* BadStateMessage.swift */; };
 		FE3962D5272AFDE100F44333 /* UnknowmCommandMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3962D4272AFDE100F44333 /* UnknowmCommandMessage.swift */; };
+		FE92ED9528C0D43700F4B0BF /* StatusMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE92ED9428C0D43700F4B0BF /* StatusMessage.swift */; };
+		FE92ED9728C0D85100F4B0BF /* GetStatusCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE92ED9628C0D85100F4B0BF /* GetStatusCommand.swift */; };
+		FE92EDC328C2414500F4B0BF /* SetCardCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE92EDC228C2414500F4B0BF /* SetCardCommand.swift */; };
 		FED28DD2271D68B9004A6106 /* EIDAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED28DD1271D68B9004A6106 /* EIDAPI.swift */; };
 /* End PBXBuildFile section */
 
@@ -238,6 +241,9 @@
 		FE3962D0272AFD7500F44333 /* InvalidMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvalidMessage.swift; sourceTree = "<group>"; };
 		FE3962D2272AFD9C00F44333 /* BadStateMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadStateMessage.swift; sourceTree = "<group>"; };
 		FE3962D4272AFDE100F44333 /* UnknowmCommandMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnknowmCommandMessage.swift; sourceTree = "<group>"; };
+		FE92ED9428C0D43700F4B0BF /* StatusMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusMessage.swift; sourceTree = "<group>"; };
+		FE92ED9628C0D85100F4B0BF /* GetStatusCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStatusCommand.swift; sourceTree = "<group>"; };
+		FE92EDC228C2414500F4B0BF /* SetCardCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetCardCommand.swift; sourceTree = "<group>"; };
 		FED28DD1271D68B9004A6106 /* EIDAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EIDAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -675,6 +681,7 @@
 			children = (
 				FE00CB48272A879800205D3A /* Command.swift */,
 				FE00CB4A272A883A00205D3A /* GetInfoCommand.swift */,
+				FE92ED9628C0D85100F4B0BF /* GetStatusCommand.swift */,
 				FE00CB4C272A887300205D3A /* GetAPILevelCommand.swift */,
 				FE00CB4E272A889200205D3A /* SetAPILevelCommand.swift */,
 				FE00CB50272A88AA00205D3A /* GetReaderCommand.swift */,
@@ -683,6 +690,7 @@
 				FE00CB56272A893500205D3A /* RunChangePINCommand.swift */,
 				FE00CB58272A895200205D3A /* GetAccessRightsCommand.swift */,
 				FE00CB5A272A896B00205D3A /* SetAccessRightsCommand.swift */,
+				FE92EDC228C2414500F4B0BF /* SetCardCommand.swift */,
 				FE00CB5C272A898800205D3A /* GetCertificateCommand.swift */,
 				FE00CB5E272A89A100205D3A /* CancelCommand.swift */,
 				FE00CB60272A89B700205D3A /* AcceptCommand.swift */,
@@ -716,6 +724,7 @@
 				FE3962CE272AFD1E00F44333 /* InternalErrorMessage.swift */,
 				FE3962D0272AFD7500F44333 /* InvalidMessage.swift */,
 				FE3962D2272AFD9C00F44333 /* BadStateMessage.swift */,
+				FE92ED9428C0D43700F4B0BF /* StatusMessage.swift */,
 				FE3962D4272AFDE100F44333 /* UnknowmCommandMessage.swift */,
 			);
 			path = Messages;
@@ -838,6 +847,7 @@
 				663D2E9322D48A31001A12AD /* UIDeviceExtension.swift in Sources */,
 				FE00CB5D272A898800205D3A /* GetCertificateCommand.swift in Sources */,
 				D9F4F3B2232BCD8B00D18C53 /* SmartCredentialsCoreFactory.swift in Sources */,
+				FE92EDC328C2414500F4B0BF /* SetCardCommand.swift in Sources */,
 				66DD3C3822CCDB390003E2B8 /* ItemEnvelope.swift in Sources */,
 				D9F4F384232B946B00D18C53 /* EIDCameraSettings.swift in Sources */,
 				D9C65860232796FA0077C441 /* ItemContext.swift in Sources */,
@@ -891,6 +901,7 @@
 				FE00CB76272A901500205D3A /* ReaderMessage.swift in Sources */,
 				D9F4F37D232B93B600D18C53 /* AuthorizationAPI.swift in Sources */,
 				D9C6584A231E90640077C441 /* NetworkingAPI.swift in Sources */,
+				FE92ED9528C0D43700F4B0BF /* StatusMessage.swift in Sources */,
 				D9F4F3AE232BBC4000D18C53 /* CoreController.swift in Sources */,
 				D9F4F383232B946B00D18C53 /* ScannerRecognizer.swift in Sources */,
 				FE00CB67272A89FE00205D3A /* SetNewPINCommand.swift in Sources */,
@@ -906,6 +917,7 @@
 				66DD3C3622CCDB390003E2B8 /* ItemType.swift in Sources */,
 				D9F4F37F232B93EE00D18C53 /* DocumentScannerAPI.swift in Sources */,
 				D9F4F388232B949700D18C53 /* ScannerResult.swift in Sources */,
+				FE92ED9728C0D85100F4B0BF /* GetStatusCommand.swift in Sources */,
 				FE00CB80272A938E00205D3A /* ChangePINMessage.swift in Sources */,
 				FE00CB7E272A937400205D3A /* APILevelMessage.swift in Sources */,
 				66DD3C3C22CCDB390003E2B8 /* ItemMetadata.swift in Sources */,

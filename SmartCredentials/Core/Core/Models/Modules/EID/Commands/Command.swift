@@ -10,6 +10,7 @@ import Foundation
 
 public enum Commands: String {
     case getInfo = "GET_INFO"
+    case getStatus = "GET_STATUS"
     case getAPILevel = "GET_API_LEVEL"
     case setAPILevel = "SET_API_LEVEL"
     case getReader = "GET_READER"
@@ -18,6 +19,7 @@ public enum Commands: String {
     case runChangePIN = "RUN_CHANGE_PIN"
     case getAccessRights = "GET_ACCESS_RIGHTS"
     case setAccessRights = "SET_ACCESS_RIGHTS"
+    case setCard = "SET_CARD"
     case getCertificate = "GET_CERTIFICATE"
     case accept = "ACCEPT"
     case cancel = "CANCEL"

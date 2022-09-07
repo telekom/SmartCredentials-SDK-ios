@@ -10,12 +10,14 @@ import Foundation
 
 public class ReaderMessage: Message {
     public let name: String
+    public let insertable: Bool?
     public let attached: Bool
-    public let keypad: Bool
+    public let keypad: Bool?
     public let card: CardMessage?
     
     private enum CodingKeys : String, CodingKey {
         case name
+        case insertable
         case attached
         case keypad
         case card
@@ -24,8 +26,9 @@ public class ReaderMessage: Message {
     required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         name = try container.decode(String.self, forKey: .name)
+        insertable = try container.decodeIfPresent(Bool.self, forKey: .insertable)
         attached = try container.decode(Bool.self, forKey: .attached)
-        keypad = try container.decode(Bool.self, forKey: .keypad)
+        keypad = try container.decodeIfPresent(Bool.self, forKey: .keypad)
         card = try container.decodeIfPresent(CardMessage.self, forKey: .card)
         try super.init(from: decoder)
     }
@@ -34,8 +37,9 @@ public class ReaderMessage: Message {
         try super.encode(to: encoder)
         var container = encoder.container(keyedBy: CodingKeys.self)
         try container.encode(name, forKey: .name)
+        try container.encodeIfPresent(insertable, forKey: .insertable)
         try container.encode(attached, forKey: .attached)
-        try container.encode(keypad, forKey: .keypad)
+        try container.encodeIfPresent(keypad, forKey: .keypad)
         try container.encode(card, forKey: .card)
     }
 }

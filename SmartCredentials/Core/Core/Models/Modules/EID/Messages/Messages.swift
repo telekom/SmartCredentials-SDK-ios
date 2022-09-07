@@ -24,6 +24,7 @@ public enum Messages: String {
     case internalError = "INTERNAL_ERROR"
     case invalid = "INVALID"
     case badState = "BAD_STATE"
+    case status = "STATUS"
     case unknownCommand = "UNKNOWN_COMMAND"
 }
 
