@@ -15,8 +15,8 @@
 */
 
 import AVFoundation
-import TesseractOCR
 import Core
+import Vision
 
 enum OCRScannerStatus {
     case started
@@ -38,6 +38,8 @@ class OCRScanner: NSObject {
     var completionHandler: OCRScannerCompletionHandler?
     var getPreviewCompletionHandler: OCRScannerGetPreviewCompletionHandler?
     var counter = 0
+    
+    private var lastImage = UIImage()
     
     // MARK: - Initializations
     override init() {
@@ -142,48 +144,45 @@ class OCRScanner: NSObject {
         scannerStatus = .paused
         counter += 1
 
-        if let tesseract = G8Tesseract(language: Constants.OCRScanner.tesseractLanguageName) {
-            tesseract.engineMode = .tesseractOnly
-            tesseract.pageSegmentationMode = .auto
-            tesseract.image = image.blackAndWhite()
-            
-            if let videoPreviewLayer = videoPreviewLayer, detectionFrame != .zero  {
-                let ratio = tesseract.image.size.width / videoPreviewLayer.frame.size.width
-                let convertedFrame = CGRect(x: detectionFrame.origin.x * ratio,
-                                            y: detectionFrame.origin.y * ratio,
-                                            width: detectionFrame.size.width * ratio,
-                                            height: detectionFrame.size.height * ratio)
-                tesseract.rect = convertedFrame
-            }
-            
-            tesseract.recognize()
+        lastImage = image
+        // Get the CGImage on which to perform requests.
+        guard let cgImage = image.cgImage else { return }
 
-            scannerStatus = .started
-     
-            if regex != nil {
-                let found = tesseract.recognizedText.matches(for: regex!)
-                if found.count > 0 {
-                    var originalImage = image
-                    if let cgImage = image.cgImage {
-                        originalImage = UIImage(cgImage: cgImage, scale: 1, orientation: .right)
-                    }
-                    
-                    let ocrScannerResult = OCRScannerResult(recognizedText: found.first!, lastImage: originalImage)
-                    completionHandler?(.success(result: ocrScannerResult))
-                } else if counter > 20 {
-                    completionHandler?(.failure(error: .formatNotFoundError))
-                }
-            } else {
-                var originalImage = image
-                if let cgImage = image.cgImage {
-                    originalImage = UIImage(cgImage: cgImage, scale: 1, orientation: .right)
-                }
-                
-                let ocrScannerResult = OCRScannerResult(recognizedText: tesseract.recognizedText, lastImage: originalImage)
-                completionHandler?(.success(result: ocrScannerResult))
+        // Create a new image-request handler.
+        let requestHandler = VNImageRequestHandler(cgImage: cgImage)
+
+        // Create a new request to recognize text.
+        if #available(iOS 13.0, *) {
+            let request = VNRecognizeTextRequest(completionHandler: recognizeTextHandler)
+            
+            do {
+                // Perform the text-recognition request.
+                try requestHandler.perform([request])
+            } catch {
+                completionHandler?(.failure(error: .formatNotFoundError))
             }
         } else {
-            completionHandler?(.failure(error: .initTesseractError))
+            // Minimum iOS version needed is 13.0
+        }
+    }
+    
+    func recognizeTextHandler(request: VNRequest, error: Error?) {
+        if #available(iOS 13.0, *) {
+            guard let observations =
+                    request.results as? [VNRecognizedTextObservation] else {
+                return
+            }
+            
+            let recognizedStrings = observations.compactMap { observation in
+                // Return the string of the top VNRecognizedText instance.
+                return observation.topCandidates(1).first?.string
+            }
+            
+            // Process the recognized strings.
+            let ocrScannerResult = OCRScannerResult(recognizedText: recognizedStrings.joined(separator: " "), lastImage: lastImage)
+            completionHandler?(.success(result: ocrScannerResult))
+        } else {
+            // Minimum iOS version needed is 13.0
         }
     }
 }
