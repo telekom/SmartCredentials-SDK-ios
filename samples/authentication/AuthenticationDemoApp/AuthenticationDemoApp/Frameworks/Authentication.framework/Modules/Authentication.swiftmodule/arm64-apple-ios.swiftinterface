@@ -1,0 +1,51 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)
+// swift-module-flags: -target arm64-apple-ios12.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name Authentication
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import AppAuth
+@_exported import Authentication
+import Core
+import Foundation
+import Swift
+import _Concurrency
+import _StringProcessing
+public protocol AuthStateProtocol : AnyObject {
+  func getRefreshToken() -> Swift.String?
+  func getIDToken() -> Swift.String?
+  func getAccessToken() -> Swift.String?
+  func getAccessTokenExpirationDate() -> Foundation.Date?
+  func getUserInfoEndpoint() -> Foundation.URL?
+  func isAuthorized() -> Swift.Bool
+}
+public typealias AuthServicePerformActionCompletionHandler = (Swift.String?, Swift.String?, Swift.Error?) -> ()
+public typealias AuthServiceSettingsCompletionHandler = (Core.SmartCredentialsAPIEmptyResult) -> ()
+public protocol AuthServiceProtocol : AnyObject {
+  var issuer: Swift.String { get set }
+  var clientID: Swift.String? { get set }
+  var redirectURI: Swift.String { get set }
+  var authState: Authentication.AuthStateProtocol { get set }
+  var authStateKey: Swift.String { get set }
+  var scopes: [Swift.String] { get set }
+  func doLogin(with presentingViewController: UIKit.UIViewController, completionHandler: @escaping Authentication.AuthServiceSettingsCompletionHandler)
+  func doLogout()
+  func canResumeExternalUserAgentFlow(with URL: Foundation.URL) -> Swift.Bool
+  func performAction(completionHandler: @escaping Authentication.AuthServicePerformActionCompletionHandler)
+  func refreshAccessToken(completionHandler: @escaping Authentication.AuthServicePerformActionCompletionHandler)
+  func isAuthorized() -> Swift.Bool
+}
+public enum AuthServiceConfigurationKeys {
+  public static let issuer: Swift.String
+  public static let clientID: Swift.String
+  public static let redirectURI: Swift.String
+  public static let scopes: Swift.String
+}
+public enum OIDScopeKeys {
+  public static let openid: Swift.String
+  public static let profile: Swift.String
+  public static let email: Swift.String
+  public static let address: Swift.String
+  public static let phone: Swift.String
+}
+public struct SmartCredentialsAuthenticationFactory {
+  public static func smartCredentialsAuthenticationAPI(configuration: Core.SmartCredentialsConfiguration) -> Core.AuthenticationAPI
+}

@@ -1,0 +1,305 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "TopLevel",
+    "printedName": "TopLevel",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Core",
+        "printedName": "Core",
+        "declKind": "Import",
+        "moduleName": "CameraScanner",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "AVFoundation",
+        "printedName": "AVFoundation",
+        "declKind": "Import",
+        "moduleName": "CameraScanner",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "CameraScanner"
+      },
+      {
+        "kind": "Import",
+        "name": "Core",
+        "printedName": "Core",
+        "declKind": "Import",
+        "moduleName": "CameraScanner"
+      },
+      {
+        "kind": "Import",
+        "name": "Core",
+        "printedName": "Core",
+        "declKind": "Import",
+        "moduleName": "CameraScanner",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "AVFoundation",
+        "printedName": "AVFoundation",
+        "declKind": "Import",
+        "moduleName": "CameraScanner",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "CameraScanner"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "CameraScanner",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Core",
+        "printedName": "Core",
+        "declKind": "Import",
+        "moduleName": "CameraScanner"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "SmartCredentialsCameraScannerFactory",
+        "printedName": "SmartCredentialsCameraScannerFactory",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "smartCredentialsCameraScannerAPI",
+            "printedName": "smartCredentialsCameraScannerAPI(configuration:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CameraScannerAPI",
+                "printedName": "Core.CameraScannerAPI",
+                "usr": "s:4Core16CameraScannerAPIP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "SmartCredentialsConfiguration",
+                "printedName": "Core.SmartCredentialsConfiguration",
+                "usr": "s:4Core29SmartCredentialsConfigurationV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13CameraScanner016SmartCredentialsaB7FactoryV05smartdaB3API13configuration4Core0abG0_pAF0cD13ConfigurationV_tFZ",
+            "mangledName": "$s13CameraScanner016SmartCredentialsaB7FactoryV05smartdaB3API13configuration4Core0abG0_pAF0cD13ConfigurationV_tFZ",
+            "moduleName": "CameraScanner",
+            "static": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:13CameraScanner016SmartCredentialsaB7FactoryV",
+        "mangledName": "$s13CameraScanner016SmartCredentialsaB7FactoryV",
+        "moduleName": "CameraScanner",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "CameraScanner",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Core",
+        "printedName": "Core",
+        "declKind": "Import",
+        "moduleName": "CameraScanner"
+      },
+      {
+        "kind": "Import",
+        "name": "AVFoundation",
+        "printedName": "AVFoundation",
+        "declKind": "Import",
+        "moduleName": "CameraScanner",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Core",
+        "printedName": "Core",
+        "declKind": "Import",
+        "moduleName": "CameraScanner"
+      },
+      {
+        "kind": "Import",
+        "name": "Vision",
+        "printedName": "Vision",
+        "declKind": "Import",
+        "moduleName": "CameraScanner"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "CameraScanner",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Core",
+        "printedName": "Core",
+        "declKind": "Import",
+        "moduleName": "CameraScanner"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "CameraScanner",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Core",
+        "printedName": "Core",
+        "declKind": "Import",
+        "moduleName": "CameraScanner"
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/cameliaignat\/SmartCredentials-SDK-ios\/SmartCredentials\/CameraScanner\/CameraScanner\/Controllers\/CameraScannerController\/QRCodeReader.swift",
+      "kind": "StringLiteral",
+      "offset": 767,
+      "length": 12,
+      "value": "\"CameraScanner.QRCodeReader\""
+    },
+    {
+      "filePath": "\/Users\/cameliaignat\/SmartCredentials-SDK-ios\/SmartCredentials\/CameraScanner\/CameraScanner\/Controllers\/CameraScannerController\/OCRScanner.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1198,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/cameliaignat\/SmartCredentials-SDK-ios\/SmartCredentials\/CameraScanner\/CameraScanner\/Utils\/Constants\/Constants.swift",
+      "kind": "IntegerLiteral",
+      "offset": 756,
+      "length": 2,
+      "value": "20"
+    },
+    {
+      "filePath": "\/Users\/cameliaignat\/SmartCredentials-SDK-ios\/SmartCredentials\/CameraScanner\/CameraScanner\/Utils\/Constants\/Constants.swift",
+      "kind": "IntegerLiteral",
+      "offset": 803,
+      "length": 2,
+      "value": "40"
+    },
+    {
+      "filePath": "\/Users\/cameliaignat\/SmartCredentials-SDK-ios\/SmartCredentials\/CameraScanner\/CameraScanner\/Utils\/Constants\/Constants.swift",
+      "kind": "StringLiteral",
+      "offset": 909,
+      "length": 5,
+      "value": "\"eng\""
+    },
+    {
+      "filePath": "\/Users\/cameliaignat\/SmartCredentials-SDK-ios\/SmartCredentials\/CameraScanner\/CameraScanner\/Utils\/Constants\/Constants.swift",
+      "kind": "StringLiteral",
+      "offset": 1013,
+      "length": 22,
+      "value": "\"Camera access denied\""
+    },
+    {
+      "filePath": "\/Users\/cameliaignat\/SmartCredentials-SDK-ios\/SmartCredentials\/CameraScanner\/CameraScanner\/Utils\/Constants\/Constants.swift",
+      "kind": "StringLiteral",
+      "offset": 1090,
+      "length": 52,
+      "value": "\"Error creating capture device for video media type\""
+    },
+    {
+      "filePath": "\/Users\/cameliaignat\/SmartCredentials-SDK-ios\/SmartCredentials\/CameraScanner\/CameraScanner\/Utils\/Constants\/Constants.swift",
+      "kind": "StringLiteral",
+      "offset": 1194,
+      "length": 37,
+      "value": "\"Error creating capture device input\""
+    },
+    {
+      "filePath": "\/Users\/cameliaignat\/SmartCredentials-SDK-ios\/SmartCredentials\/CameraScanner\/CameraScanner\/Utils\/Constants\/Constants.swift",
+      "kind": "StringLiteral",
+      "offset": 1286,
+      "length": 45,
+      "value": "\"Error adding video input to capture session\""
+    },
+    {
+      "filePath": "\/Users\/cameliaignat\/SmartCredentials-SDK-ios\/SmartCredentials\/CameraScanner\/CameraScanner\/Utils\/Constants\/Constants.swift",
+      "kind": "StringLiteral",
+      "offset": 1377,
+      "length": 51,
+      "value": "\"Error adding video data output to capture session\""
+    },
+    {
+      "filePath": "\/Users\/cameliaignat\/SmartCredentials-SDK-ios\/SmartCredentials\/CameraScanner\/CameraScanner\/Utils\/Constants\/Constants.swift",
+      "kind": "StringLiteral",
+      "offset": 1479,
+      "length": 36,
+      "value": "\"Error creating video preview layer\""
+    },
+    {
+      "filePath": "\/Users\/cameliaignat\/SmartCredentials-SDK-ios\/SmartCredentials\/CameraScanner\/CameraScanner\/Utils\/Constants\/Constants.swift",
+      "kind": "StringLiteral",
+      "offset": 1562,
+      "length": 30,
+      "value": "\"Error initializing Tesseract\""
+    },
+    {
+      "filePath": "\/Users\/cameliaignat\/SmartCredentials-SDK-ios\/SmartCredentials\/CameraScanner\/CameraScanner\/Utils\/Constants\/Constants.swift",
+      "kind": "StringLiteral",
+      "offset": 1640,
+      "length": 40,
+      "value": "\"Error getting image from sample buffer\""
+    },
+    {
+      "filePath": "\/Users\/cameliaignat\/SmartCredentials-SDK-ios\/SmartCredentials\/CameraScanner\/CameraScanner\/Utils\/Constants\/Constants.swift",
+      "kind": "StringLiteral",
+      "offset": 1725,
+      "length": 49,
+      "value": "\"Error adding metadata output to capture session\""
+    }
+  ]
+}

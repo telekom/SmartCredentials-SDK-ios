@@ -1,0 +1,1839 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "TopLevel",
+    "printedName": "TopLevel",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Core",
+        "printedName": "Core",
+        "declKind": "Import",
+        "moduleName": "Authentication",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "AuthStateProtocol",
+        "printedName": "AuthStateProtocol",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "getRefreshToken",
+            "printedName": "getRefreshToken()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14Authentication17AuthStateProtocolP15getRefreshTokenSSSgyF",
+            "mangledName": "$s14Authentication17AuthStateProtocolP15getRefreshTokenSSSgyF",
+            "moduleName": "Authentication",
+            "genericSig": "<τ_0_0 where τ_0_0 : Authentication.AuthStateProtocol>",
+            "sugared_genericSig": "<Self where Self : Authentication.AuthStateProtocol>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getIDToken",
+            "printedName": "getIDToken()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14Authentication17AuthStateProtocolP10getIDTokenSSSgyF",
+            "mangledName": "$s14Authentication17AuthStateProtocolP10getIDTokenSSSgyF",
+            "moduleName": "Authentication",
+            "genericSig": "<τ_0_0 where τ_0_0 : Authentication.AuthStateProtocol>",
+            "sugared_genericSig": "<Self where Self : Authentication.AuthStateProtocol>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getAccessToken",
+            "printedName": "getAccessToken()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14Authentication17AuthStateProtocolP14getAccessTokenSSSgyF",
+            "mangledName": "$s14Authentication17AuthStateProtocolP14getAccessTokenSSSgyF",
+            "moduleName": "Authentication",
+            "genericSig": "<τ_0_0 where τ_0_0 : Authentication.AuthStateProtocol>",
+            "sugared_genericSig": "<Self where Self : Authentication.AuthStateProtocol>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getAccessTokenExpirationDate",
+            "printedName": "getAccessTokenExpirationDate()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Date?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Date",
+                    "printedName": "Foundation.Date",
+                    "usr": "s:10Foundation4DateV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14Authentication17AuthStateProtocolP28getAccessTokenExpirationDate10Foundation0I0VSgyF",
+            "mangledName": "$s14Authentication17AuthStateProtocolP28getAccessTokenExpirationDate10Foundation0I0VSgyF",
+            "moduleName": "Authentication",
+            "genericSig": "<τ_0_0 where τ_0_0 : Authentication.AuthStateProtocol>",
+            "sugared_genericSig": "<Self where Self : Authentication.AuthStateProtocol>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getUserInfoEndpoint",
+            "printedName": "getUserInfoEndpoint()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.URL?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "URL",
+                    "printedName": "Foundation.URL",
+                    "usr": "s:10Foundation3URLV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14Authentication17AuthStateProtocolP19getUserInfoEndpoint10Foundation3URLVSgyF",
+            "mangledName": "$s14Authentication17AuthStateProtocolP19getUserInfoEndpoint10Foundation3URLVSgyF",
+            "moduleName": "Authentication",
+            "genericSig": "<τ_0_0 where τ_0_0 : Authentication.AuthStateProtocol>",
+            "sugared_genericSig": "<Self where Self : Authentication.AuthStateProtocol>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "isAuthorized",
+            "printedName": "isAuthorized()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14Authentication17AuthStateProtocolP12isAuthorizedSbyF",
+            "mangledName": "$s14Authentication17AuthStateProtocolP12isAuthorizedSbyF",
+            "moduleName": "Authentication",
+            "genericSig": "<τ_0_0 where τ_0_0 : Authentication.AuthStateProtocol>",
+            "sugared_genericSig": "<Self where Self : Authentication.AuthStateProtocol>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:14Authentication17AuthStateProtocolP",
+        "mangledName": "$s14Authentication17AuthStateProtocolP",
+        "moduleName": "Authentication",
+        "genericSig": "<τ_0_0 : AnyObject>",
+        "sugared_genericSig": "<Self : AnyObject>",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "Authentication",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Core",
+        "printedName": "Core",
+        "declKind": "Import",
+        "moduleName": "Authentication"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "AuthServiceProtocol",
+        "printedName": "AuthServiceProtocol",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "issuer",
+            "printedName": "issuer",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14Authentication19AuthServiceProtocolP6issuerSSvp",
+            "mangledName": "$s14Authentication19AuthServiceProtocolP6issuerSSvp",
+            "moduleName": "Authentication",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14Authentication19AuthServiceProtocolP6issuerSSvg",
+                "mangledName": "$s14Authentication19AuthServiceProtocolP6issuerSSvg",
+                "moduleName": "Authentication",
+                "genericSig": "<τ_0_0 where τ_0_0 : Authentication.AuthServiceProtocol>",
+                "sugared_genericSig": "<Self where Self : Authentication.AuthServiceProtocol>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14Authentication19AuthServiceProtocolP6issuerSSvs",
+                "mangledName": "$s14Authentication19AuthServiceProtocolP6issuerSSvs",
+                "moduleName": "Authentication",
+                "genericSig": "<τ_0_0 where τ_0_0 : Authentication.AuthServiceProtocol>",
+                "sugared_genericSig": "<Self where Self : Authentication.AuthServiceProtocol>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14Authentication19AuthServiceProtocolP6issuerSSvM",
+                "mangledName": "$s14Authentication19AuthServiceProtocolP6issuerSSvM",
+                "moduleName": "Authentication",
+                "genericSig": "<τ_0_0 where τ_0_0 : Authentication.AuthServiceProtocol>",
+                "sugared_genericSig": "<Self where Self : Authentication.AuthServiceProtocol>",
+                "protocolReq": true,
+                "implicit": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "clientID",
+            "printedName": "clientID",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14Authentication19AuthServiceProtocolP8clientIDSSSgvp",
+            "mangledName": "$s14Authentication19AuthServiceProtocolP8clientIDSSSgvp",
+            "moduleName": "Authentication",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14Authentication19AuthServiceProtocolP8clientIDSSSgvg",
+                "mangledName": "$s14Authentication19AuthServiceProtocolP8clientIDSSSgvg",
+                "moduleName": "Authentication",
+                "genericSig": "<τ_0_0 where τ_0_0 : Authentication.AuthServiceProtocol>",
+                "sugared_genericSig": "<Self where Self : Authentication.AuthServiceProtocol>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14Authentication19AuthServiceProtocolP8clientIDSSSgvs",
+                "mangledName": "$s14Authentication19AuthServiceProtocolP8clientIDSSSgvs",
+                "moduleName": "Authentication",
+                "genericSig": "<τ_0_0 where τ_0_0 : Authentication.AuthServiceProtocol>",
+                "sugared_genericSig": "<Self where Self : Authentication.AuthServiceProtocol>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14Authentication19AuthServiceProtocolP8clientIDSSSgvM",
+                "mangledName": "$s14Authentication19AuthServiceProtocolP8clientIDSSSgvM",
+                "moduleName": "Authentication",
+                "genericSig": "<τ_0_0 where τ_0_0 : Authentication.AuthServiceProtocol>",
+                "sugared_genericSig": "<Self where Self : Authentication.AuthServiceProtocol>",
+                "protocolReq": true,
+                "implicit": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "redirectURI",
+            "printedName": "redirectURI",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14Authentication19AuthServiceProtocolP11redirectURISSvp",
+            "mangledName": "$s14Authentication19AuthServiceProtocolP11redirectURISSvp",
+            "moduleName": "Authentication",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14Authentication19AuthServiceProtocolP11redirectURISSvg",
+                "mangledName": "$s14Authentication19AuthServiceProtocolP11redirectURISSvg",
+                "moduleName": "Authentication",
+                "genericSig": "<τ_0_0 where τ_0_0 : Authentication.AuthServiceProtocol>",
+                "sugared_genericSig": "<Self where Self : Authentication.AuthServiceProtocol>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14Authentication19AuthServiceProtocolP11redirectURISSvs",
+                "mangledName": "$s14Authentication19AuthServiceProtocolP11redirectURISSvs",
+                "moduleName": "Authentication",
+                "genericSig": "<τ_0_0 where τ_0_0 : Authentication.AuthServiceProtocol>",
+                "sugared_genericSig": "<Self where Self : Authentication.AuthServiceProtocol>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14Authentication19AuthServiceProtocolP11redirectURISSvM",
+                "mangledName": "$s14Authentication19AuthServiceProtocolP11redirectURISSvM",
+                "moduleName": "Authentication",
+                "genericSig": "<τ_0_0 where τ_0_0 : Authentication.AuthServiceProtocol>",
+                "sugared_genericSig": "<Self where Self : Authentication.AuthServiceProtocol>",
+                "protocolReq": true,
+                "implicit": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "authState",
+            "printedName": "authState",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AuthStateProtocol",
+                "printedName": "Authentication.AuthStateProtocol",
+                "usr": "s:14Authentication17AuthStateProtocolP"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14Authentication19AuthServiceProtocolP9authStateAA0bfD0_pvp",
+            "mangledName": "$s14Authentication19AuthServiceProtocolP9authStateAA0bfD0_pvp",
+            "moduleName": "Authentication",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AuthStateProtocol",
+                    "printedName": "Authentication.AuthStateProtocol",
+                    "usr": "s:14Authentication17AuthStateProtocolP"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14Authentication19AuthServiceProtocolP9authStateAA0bfD0_pvg",
+                "mangledName": "$s14Authentication19AuthServiceProtocolP9authStateAA0bfD0_pvg",
+                "moduleName": "Authentication",
+                "genericSig": "<τ_0_0 where τ_0_0 : Authentication.AuthServiceProtocol>",
+                "sugared_genericSig": "<Self where Self : Authentication.AuthServiceProtocol>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AuthStateProtocol",
+                    "printedName": "Authentication.AuthStateProtocol",
+                    "usr": "s:14Authentication17AuthStateProtocolP"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14Authentication19AuthServiceProtocolP9authStateAA0bfD0_pvs",
+                "mangledName": "$s14Authentication19AuthServiceProtocolP9authStateAA0bfD0_pvs",
+                "moduleName": "Authentication",
+                "genericSig": "<τ_0_0 where τ_0_0 : Authentication.AuthServiceProtocol>",
+                "sugared_genericSig": "<Self where Self : Authentication.AuthServiceProtocol>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14Authentication19AuthServiceProtocolP9authStateAA0bfD0_pvM",
+                "mangledName": "$s14Authentication19AuthServiceProtocolP9authStateAA0bfD0_pvM",
+                "moduleName": "Authentication",
+                "genericSig": "<τ_0_0 where τ_0_0 : Authentication.AuthServiceProtocol>",
+                "sugared_genericSig": "<Self where Self : Authentication.AuthServiceProtocol>",
+                "protocolReq": true,
+                "implicit": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "authStateKey",
+            "printedName": "authStateKey",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14Authentication19AuthServiceProtocolP12authStateKeySSvp",
+            "mangledName": "$s14Authentication19AuthServiceProtocolP12authStateKeySSvp",
+            "moduleName": "Authentication",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14Authentication19AuthServiceProtocolP12authStateKeySSvg",
+                "mangledName": "$s14Authentication19AuthServiceProtocolP12authStateKeySSvg",
+                "moduleName": "Authentication",
+                "genericSig": "<τ_0_0 where τ_0_0 : Authentication.AuthServiceProtocol>",
+                "sugared_genericSig": "<Self where Self : Authentication.AuthServiceProtocol>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14Authentication19AuthServiceProtocolP12authStateKeySSvs",
+                "mangledName": "$s14Authentication19AuthServiceProtocolP12authStateKeySSvs",
+                "moduleName": "Authentication",
+                "genericSig": "<τ_0_0 where τ_0_0 : Authentication.AuthServiceProtocol>",
+                "sugared_genericSig": "<Self where Self : Authentication.AuthServiceProtocol>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14Authentication19AuthServiceProtocolP12authStateKeySSvM",
+                "mangledName": "$s14Authentication19AuthServiceProtocolP12authStateKeySSvM",
+                "moduleName": "Authentication",
+                "genericSig": "<τ_0_0 where τ_0_0 : Authentication.AuthServiceProtocol>",
+                "sugared_genericSig": "<Self where Self : Authentication.AuthServiceProtocol>",
+                "protocolReq": true,
+                "implicit": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "scopes",
+            "printedName": "scopes",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14Authentication19AuthServiceProtocolP6scopesSaySSGvp",
+            "mangledName": "$s14Authentication19AuthServiceProtocolP6scopesSaySSGvp",
+            "moduleName": "Authentication",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Swift.String]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14Authentication19AuthServiceProtocolP6scopesSaySSGvg",
+                "mangledName": "$s14Authentication19AuthServiceProtocolP6scopesSaySSGvg",
+                "moduleName": "Authentication",
+                "genericSig": "<τ_0_0 where τ_0_0 : Authentication.AuthServiceProtocol>",
+                "sugared_genericSig": "<Self where Self : Authentication.AuthServiceProtocol>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Swift.String]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14Authentication19AuthServiceProtocolP6scopesSaySSGvs",
+                "mangledName": "$s14Authentication19AuthServiceProtocolP6scopesSaySSGvs",
+                "moduleName": "Authentication",
+                "genericSig": "<τ_0_0 where τ_0_0 : Authentication.AuthServiceProtocol>",
+                "sugared_genericSig": "<Self where Self : Authentication.AuthServiceProtocol>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14Authentication19AuthServiceProtocolP6scopesSaySSGvM",
+                "mangledName": "$s14Authentication19AuthServiceProtocolP6scopesSaySSGvM",
+                "moduleName": "Authentication",
+                "genericSig": "<τ_0_0 where τ_0_0 : Authentication.AuthServiceProtocol>",
+                "sugared_genericSig": "<Self where Self : Authentication.AuthServiceProtocol>",
+                "protocolReq": true,
+                "implicit": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "doLogin",
+            "printedName": "doLogin(with:completionHandler:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIViewController",
+                "printedName": "UIKit.UIViewController",
+                "usr": "c:objc(cs)UIViewController"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Core.SmartCredentialsAPIEmptyResult) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SmartCredentialsAPIEmptyResult",
+                    "printedName": "Core.SmartCredentialsAPIEmptyResult",
+                    "usr": "s:4Core30SmartCredentialsAPIEmptyResultO"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14Authentication19AuthServiceProtocolP7doLogin4with17completionHandlerySo16UIViewControllerC_y4Core30SmartCredentialsAPIEmptyResultOctF",
+            "mangledName": "$s14Authentication19AuthServiceProtocolP7doLogin4with17completionHandlerySo16UIViewControllerC_y4Core30SmartCredentialsAPIEmptyResultOctF",
+            "moduleName": "Authentication",
+            "genericSig": "<τ_0_0 where τ_0_0 : Authentication.AuthServiceProtocol>",
+            "sugared_genericSig": "<Self where Self : Authentication.AuthServiceProtocol>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "doLogout",
+            "printedName": "doLogout()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14Authentication19AuthServiceProtocolP8doLogoutyyF",
+            "mangledName": "$s14Authentication19AuthServiceProtocolP8doLogoutyyF",
+            "moduleName": "Authentication",
+            "genericSig": "<τ_0_0 where τ_0_0 : Authentication.AuthServiceProtocol>",
+            "sugared_genericSig": "<Self where Self : Authentication.AuthServiceProtocol>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "canResumeExternalUserAgentFlow",
+            "printedName": "canResumeExternalUserAgentFlow(with:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "URL",
+                "printedName": "Foundation.URL",
+                "usr": "s:10Foundation3URLV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14Authentication19AuthServiceProtocolP30canResumeExternalUserAgentFlow4withSb10Foundation3URLV_tF",
+            "mangledName": "$s14Authentication19AuthServiceProtocolP30canResumeExternalUserAgentFlow4withSb10Foundation3URLV_tF",
+            "moduleName": "Authentication",
+            "genericSig": "<τ_0_0 where τ_0_0 : Authentication.AuthServiceProtocol>",
+            "sugared_genericSig": "<Self where Self : Authentication.AuthServiceProtocol>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "performAction",
+            "printedName": "performAction(completionHandler:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Swift.String?, Swift.String?, Swift.Error?) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(Swift.String?, Swift.String?, Swift.Error?)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "Swift.String?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "Swift.String?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "Swift.Error?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Error",
+                            "printedName": "Swift.Error",
+                            "usr": "s:s5ErrorP"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14Authentication19AuthServiceProtocolP13performAction17completionHandleryySSSg_AFs5Error_pSgtc_tF",
+            "mangledName": "$s14Authentication19AuthServiceProtocolP13performAction17completionHandleryySSSg_AFs5Error_pSgtc_tF",
+            "moduleName": "Authentication",
+            "genericSig": "<τ_0_0 where τ_0_0 : Authentication.AuthServiceProtocol>",
+            "sugared_genericSig": "<Self where Self : Authentication.AuthServiceProtocol>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "refreshAccessToken",
+            "printedName": "refreshAccessToken(completionHandler:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Swift.String?, Swift.String?, Swift.Error?) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(Swift.String?, Swift.String?, Swift.Error?)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "Swift.String?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "Swift.String?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "Swift.Error?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Error",
+                            "printedName": "Swift.Error",
+                            "usr": "s:s5ErrorP"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14Authentication19AuthServiceProtocolP18refreshAccessToken17completionHandleryySSSg_AFs5Error_pSgtc_tF",
+            "mangledName": "$s14Authentication19AuthServiceProtocolP18refreshAccessToken17completionHandleryySSSg_AFs5Error_pSgtc_tF",
+            "moduleName": "Authentication",
+            "genericSig": "<τ_0_0 where τ_0_0 : Authentication.AuthServiceProtocol>",
+            "sugared_genericSig": "<Self where Self : Authentication.AuthServiceProtocol>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "isAuthorized",
+            "printedName": "isAuthorized()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14Authentication19AuthServiceProtocolP12isAuthorizedSbyF",
+            "mangledName": "$s14Authentication19AuthServiceProtocolP12isAuthorizedSbyF",
+            "moduleName": "Authentication",
+            "genericSig": "<τ_0_0 where τ_0_0 : Authentication.AuthServiceProtocol>",
+            "sugared_genericSig": "<Self where Self : Authentication.AuthServiceProtocol>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:14Authentication19AuthServiceProtocolP",
+        "mangledName": "$s14Authentication19AuthServiceProtocolP",
+        "moduleName": "Authentication",
+        "genericSig": "<τ_0_0 : AnyObject>",
+        "sugared_genericSig": "<Self : AnyObject>",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "AppAuth",
+        "printedName": "AppAuth",
+        "declKind": "Import",
+        "moduleName": "Authentication",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Core",
+        "printedName": "Core",
+        "declKind": "Import",
+        "moduleName": "Authentication"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "AuthServiceConfigurationKeys",
+        "printedName": "AuthServiceConfigurationKeys",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "issuer",
+            "printedName": "issuer",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14Authentication28AuthServiceConfigurationKeysO6issuerSSvpZ",
+            "mangledName": "$s14Authentication28AuthServiceConfigurationKeysO6issuerSSvpZ",
+            "moduleName": "Authentication",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14Authentication28AuthServiceConfigurationKeysO6issuerSSvgZ",
+                "mangledName": "$s14Authentication28AuthServiceConfigurationKeysO6issuerSSvgZ",
+                "moduleName": "Authentication",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "clientID",
+            "printedName": "clientID",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14Authentication28AuthServiceConfigurationKeysO8clientIDSSvpZ",
+            "mangledName": "$s14Authentication28AuthServiceConfigurationKeysO8clientIDSSvpZ",
+            "moduleName": "Authentication",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14Authentication28AuthServiceConfigurationKeysO8clientIDSSvgZ",
+                "mangledName": "$s14Authentication28AuthServiceConfigurationKeysO8clientIDSSvgZ",
+                "moduleName": "Authentication",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "redirectURI",
+            "printedName": "redirectURI",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14Authentication28AuthServiceConfigurationKeysO11redirectURISSvpZ",
+            "mangledName": "$s14Authentication28AuthServiceConfigurationKeysO11redirectURISSvpZ",
+            "moduleName": "Authentication",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14Authentication28AuthServiceConfigurationKeysO11redirectURISSvgZ",
+                "mangledName": "$s14Authentication28AuthServiceConfigurationKeysO11redirectURISSvgZ",
+                "moduleName": "Authentication",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "scopes",
+            "printedName": "scopes",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14Authentication28AuthServiceConfigurationKeysO6scopesSSvpZ",
+            "mangledName": "$s14Authentication28AuthServiceConfigurationKeysO6scopesSSvpZ",
+            "moduleName": "Authentication",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14Authentication28AuthServiceConfigurationKeysO6scopesSSvgZ",
+                "mangledName": "$s14Authentication28AuthServiceConfigurationKeysO6scopesSSvgZ",
+                "moduleName": "Authentication",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:14Authentication28AuthServiceConfigurationKeysO",
+        "mangledName": "$s14Authentication28AuthServiceConfigurationKeysO",
+        "moduleName": "Authentication",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "Authentication",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Core",
+        "printedName": "Core",
+        "declKind": "Import",
+        "moduleName": "Authentication"
+      },
+      {
+        "kind": "Import",
+        "name": "AppAuth",
+        "printedName": "AppAuth",
+        "declKind": "Import",
+        "moduleName": "Authentication",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "Authentication",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Core",
+        "printedName": "Core",
+        "declKind": "Import",
+        "moduleName": "Authentication"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "OIDScopeKeys",
+        "printedName": "OIDScopeKeys",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "openid",
+            "printedName": "openid",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14Authentication12OIDScopeKeysO6openidSSvpZ",
+            "mangledName": "$s14Authentication12OIDScopeKeysO6openidSSvpZ",
+            "moduleName": "Authentication",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14Authentication12OIDScopeKeysO6openidSSvgZ",
+                "mangledName": "$s14Authentication12OIDScopeKeysO6openidSSvgZ",
+                "moduleName": "Authentication",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "profile",
+            "printedName": "profile",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14Authentication12OIDScopeKeysO7profileSSvpZ",
+            "mangledName": "$s14Authentication12OIDScopeKeysO7profileSSvpZ",
+            "moduleName": "Authentication",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14Authentication12OIDScopeKeysO7profileSSvgZ",
+                "mangledName": "$s14Authentication12OIDScopeKeysO7profileSSvgZ",
+                "moduleName": "Authentication",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "email",
+            "printedName": "email",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14Authentication12OIDScopeKeysO5emailSSvpZ",
+            "mangledName": "$s14Authentication12OIDScopeKeysO5emailSSvpZ",
+            "moduleName": "Authentication",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14Authentication12OIDScopeKeysO5emailSSvgZ",
+                "mangledName": "$s14Authentication12OIDScopeKeysO5emailSSvgZ",
+                "moduleName": "Authentication",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "address",
+            "printedName": "address",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14Authentication12OIDScopeKeysO7addressSSvpZ",
+            "mangledName": "$s14Authentication12OIDScopeKeysO7addressSSvpZ",
+            "moduleName": "Authentication",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14Authentication12OIDScopeKeysO7addressSSvgZ",
+                "mangledName": "$s14Authentication12OIDScopeKeysO7addressSSvgZ",
+                "moduleName": "Authentication",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "phone",
+            "printedName": "phone",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14Authentication12OIDScopeKeysO5phoneSSvpZ",
+            "mangledName": "$s14Authentication12OIDScopeKeysO5phoneSSvpZ",
+            "moduleName": "Authentication",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14Authentication12OIDScopeKeysO5phoneSSvgZ",
+                "mangledName": "$s14Authentication12OIDScopeKeysO5phoneSSvgZ",
+                "moduleName": "Authentication",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:14Authentication12OIDScopeKeysO",
+        "mangledName": "$s14Authentication12OIDScopeKeysO",
+        "moduleName": "Authentication",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "Authentication",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Core",
+        "printedName": "Core",
+        "declKind": "Import",
+        "moduleName": "Authentication"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "SmartCredentialsAuthenticationFactory",
+        "printedName": "SmartCredentialsAuthenticationFactory",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "smartCredentialsAuthenticationAPI",
+            "printedName": "smartCredentialsAuthenticationAPI(configuration:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AuthenticationAPI",
+                "printedName": "Core.AuthenticationAPI",
+                "usr": "s:4Core17AuthenticationAPIP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "SmartCredentialsConfiguration",
+                "printedName": "Core.SmartCredentialsConfiguration",
+                "usr": "s:4Core29SmartCredentialsConfigurationV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14Authentication016SmartCredentialsA7FactoryV05smartcA3API13configuration4Core0aF0_pAF0bC13ConfigurationV_tFZ",
+            "mangledName": "$s14Authentication016SmartCredentialsA7FactoryV05smartcA3API13configuration4Core0aF0_pAF0bC13ConfigurationV_tFZ",
+            "moduleName": "Authentication",
+            "static": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:14Authentication016SmartCredentialsA7FactoryV",
+        "mangledName": "$s14Authentication016SmartCredentialsA7FactoryV",
+        "moduleName": "Authentication",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/cameliaignat\/SmartCredentials-SDK-ios\/SmartCredentials\/Authentication\/Authentication\/Controllers\/DefaultAuthService.swift",
+      "kind": "StringLiteral",
+      "offset": 805,
+      "length": 18,
+      "value": "\"Authentication.DefaultAuthService\""
+    },
+    {
+      "filePath": "\/Users\/cameliaignat\/SmartCredentials-SDK-ios\/SmartCredentials\/Authentication\/Authentication\/Utils\/Keys\/AuthServiceConfigurationKeys.swift",
+      "kind": "StringLiteral",
+      "offset": 838,
+      "length": 8,
+      "value": "\"issuer\""
+    },
+    {
+      "filePath": "\/Users\/cameliaignat\/SmartCredentials-SDK-ios\/SmartCredentials\/Authentication\/Authentication\/Utils\/Keys\/AuthServiceConfigurationKeys.swift",
+      "kind": "StringLiteral",
+      "offset": 936,
+      "length": 10,
+      "value": "\"clientID\""
+    },
+    {
+      "filePath": "\/Users\/cameliaignat\/SmartCredentials-SDK-ios\/SmartCredentials\/Authentication\/Authentication\/Utils\/Keys\/AuthServiceConfigurationKeys.swift",
+      "kind": "StringLiteral",
+      "offset": 1055,
+      "length": 13,
+      "value": "\"redirectURI\""
+    },
+    {
+      "filePath": "\/Users\/cameliaignat\/SmartCredentials-SDK-ios\/SmartCredentials\/Authentication\/Authentication\/Utils\/Keys\/AuthServiceConfigurationKeys.swift",
+      "kind": "StringLiteral",
+      "offset": 1176,
+      "length": 8,
+      "value": "\"scopes\""
+    },
+    {
+      "filePath": "\/Users\/cameliaignat\/SmartCredentials-SDK-ios\/SmartCredentials\/Authentication\/Authentication\/Utils\/Constants\/Constants.swift",
+      "kind": "StringLiteral",
+      "offset": 743,
+      "length": 20,
+      "value": "\"client_secret_post\""
+    },
+    {
+      "filePath": "\/Users\/cameliaignat\/SmartCredentials-SDK-ios\/SmartCredentials\/Authentication\/Authentication\/Controllers\/DefaultAuthState.swift",
+      "kind": "StringLiteral",
+      "offset": 619,
+      "length": 16,
+      "value": "\"Authentication.DefaultAuthState\""
+    },
+    {
+      "filePath": "\/Users\/cameliaignat\/SmartCredentials-SDK-ios\/SmartCredentials\/Authentication\/Authentication\/Utils\/Keys\/OIDScopeKeys.swift",
+      "kind": "StringLiteral",
+      "offset": 774,
+      "length": 8,
+      "value": "\"openid\""
+    },
+    {
+      "filePath": "\/Users\/cameliaignat\/SmartCredentials-SDK-ios\/SmartCredentials\/Authentication\/Authentication\/Utils\/Keys\/OIDScopeKeys.swift",
+      "kind": "StringLiteral",
+      "offset": 861,
+      "length": 9,
+      "value": "\"profile\""
+    },
+    {
+      "filePath": "\/Users\/cameliaignat\/SmartCredentials-SDK-ios\/SmartCredentials\/Authentication\/Authentication\/Utils\/Keys\/OIDScopeKeys.swift",
+      "kind": "StringLiteral",
+      "offset": 945,
+      "length": 7,
+      "value": "\"email\""
+    },
+    {
+      "filePath": "\/Users\/cameliaignat\/SmartCredentials-SDK-ios\/SmartCredentials\/Authentication\/Authentication\/Utils\/Keys\/OIDScopeKeys.swift",
+      "kind": "StringLiteral",
+      "offset": 1031,
+      "length": 9,
+      "value": "\"address\""
+    },
+    {
+      "filePath": "\/Users\/cameliaignat\/SmartCredentials-SDK-ios\/SmartCredentials\/Authentication\/Authentication\/Utils\/Keys\/OIDScopeKeys.swift",
+      "kind": "StringLiteral",
+      "offset": 1115,
+      "length": 7,
+      "value": "\"phone\""
+    }
+  ]
+}

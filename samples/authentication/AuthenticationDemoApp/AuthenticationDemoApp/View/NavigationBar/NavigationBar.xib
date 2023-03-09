@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NavigationBar" customModule="AuthenticationDemoApp" customModuleProvider="target">
+            <connections>
+                <outlet property="leftButton" destination="sBY-mF-KoJ" id="xBg-7g-2Kd"/>
+                <outlet property="rightButton" destination="vlr-nR-2yk" id="cYV-Il-TT7"/>
+                <outlet property="titleLabel" destination="0cL-jj-J13" id="bee-7Z-TQw"/>
+                <outlet property="view" destination="iN0-l3-epB" id="GYi-3I-uOt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Navigation Bar Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0cL-jj-J13">
+                    <rect key="frame" x="60" y="775" width="185" height="27"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vlr-nR-2yk">
+                    <rect key="frame" x="313" y="758.66666666666663" width="60" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="4CB-Wp-a6L"/>
+                        <constraint firstAttribute="width" constant="60" id="Vyd-MQ-XTD"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="ellipsis" catalog="system">
+                        <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="didPressRightButton:" destination="-1" eventType="touchUpInside" id="E3S-Z1-quE"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sBY-mF-KoJ">
+                    <rect key="frame" x="0.0" y="777.66666666666663" width="60" height="22"/>
+                    <accessibility key="accessibilityConfiguration" identifier="topBarNavigation_backBtn"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="7cx-Kv-Rgw"/>
+                    </constraints>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" image="arrow.left" catalog="system"/>
+                    <connections>
+                        <action selector="didPressOnLeftButton:" destination="-1" eventType="touchUpInside" id="ijk-ls-krv"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" red="0.88627451658248901" green="0.0" blue="0.45490196347236633" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vlr-nR-2yk" firstAttribute="centerY" secondItem="0cL-jj-J13" secondAttribute="centerY" id="9jX-bs-hAn"/>
+                <constraint firstItem="sBY-mF-KoJ" firstAttribute="centerY" secondItem="0cL-jj-J13" secondAttribute="centerY" id="Hry-ci-mlN"/>
+                <constraint firstItem="0cL-jj-J13" firstAttribute="leading" secondItem="sBY-mF-KoJ" secondAttribute="trailing" id="ZR1-B5-tO5"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="leading" secondItem="sBY-mF-KoJ" secondAttribute="leading" id="gvq-Co-6gC"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="vlr-nR-2yk" secondAttribute="trailing" constant="20" id="o2f-u6-qoc"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="0cL-jj-J13" secondAttribute="bottom" constant="16" id="z6y-4s-uvg"/>
+            </constraints>
+            <point key="canvasLocation" x="36" y="20"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="arrow.left" catalog="system" width="128" height="95"/>
+        <image name="ellipsis" catalog="system" width="128" height="37"/>
+    </resources>
+</document>

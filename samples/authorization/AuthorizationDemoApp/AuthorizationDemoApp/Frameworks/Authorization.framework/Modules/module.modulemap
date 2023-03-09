@@ -1,0 +1,11 @@
+framework module Authorization {
+  umbrella header "Authorization.h"
+
+  export *
+  module * { export * }
+}
+
+module Authorization.Swift {
+  header "Authorization-Swift.h"
+  requires objc
+}

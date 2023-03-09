@@ -1,0 +1,872 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FE532341296C090900081DB4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE532340296C090900081DB4 /* AppDelegate.swift */; };
+		FE532343296C090900081DB4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE532342296C090900081DB4 /* SceneDelegate.swift */; };
+		FE53234A296C091000081DB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE532349296C091000081DB4 /* Assets.xcassets */; };
+		FE53234D296C091000081DB4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE53234B296C091000081DB4 /* LaunchScreen.storyboard */; };
+		FE532358296C091000081DB4 /* AuthenticationDemoAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE532357296C091000081DB4 /* AuthenticationDemoAppTests.swift */; };
+		FE532362296C091000081DB4 /* AuthenticationDemoAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE532361296C091000081DB4 /* AuthenticationDemoAppUITests.swift */; };
+		FE532364296C091000081DB4 /* AuthenticationDemoAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE532363296C091000081DB4 /* AuthenticationDemoAppUITestsLaunchTests.swift */; };
+		FE532378296C1BCA00081DB4 /* AuthenticationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE532377296C1BCA00081DB4 /* AuthenticationPresenter.swift */; };
+		FE5323D22975413100081DB4 /* Authentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE5323CF297540DC00081DB4 /* Authentication.framework */; };
+		FE5323D32975413200081DB4 /* Authentication.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FE5323CF297540DC00081DB4 /* Authentication.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FE5323D42975413300081DB4 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE5323CE297540DC00081DB4 /* Core.framework */; };
+		FE5323D52975413300081DB4 /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FE5323CE297540DC00081DB4 /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FE5323D72977F4A600081DB4 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5323D62977F4A600081DB4 /* Token.swift */; };
+		FE5323DB297935C400081DB4 /* TokensViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5323D9297935C400081DB4 /* TokensViewController.swift */; };
+		FE5323DC297935C400081DB4 /* TokensViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE5323DA297935C400081DB4 /* TokensViewController.xib */; };
+		FE5323E02979364E00081DB4 /* TokenTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5323DE2979364E00081DB4 /* TokenTableViewCell.swift */; };
+		FE5323E12979364E00081DB4 /* TokenTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE5323DF2979364E00081DB4 /* TokenTableViewCell.xib */; };
+		FE53241F2979E27600081DB4 /* TokenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE53241E2979E27600081DB4 /* TokenPresenter.swift */; };
+		FE532422297AD54900081DB4 /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE532421297AD54900081DB4 /* NavigationBar.swift */; };
+		FE532424297AD55A00081DB4 /* NavigationBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE532423297AD55A00081DB4 /* NavigationBar.xib */; };
+		FE53242E29923BAF00081DB4 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE53242C29923BAF00081DB4 /* MenuViewController.swift */; };
+		FE53242F29923BAF00081DB4 /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE53242D29923BAF00081DB4 /* MenuViewController.xib */; };
+		FE53243329923CBF00081DB4 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE53243129923CBF00081DB4 /* MenuTableViewCell.swift */; };
+		FE53243429923CBF00081DB4 /* MenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE53243229923CBF00081DB4 /* MenuTableViewCell.xib */; };
+		FE532438299270EA00081DB4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE532436299270EA00081DB4 /* ProfileViewController.swift */; };
+		FE532439299270EA00081DB4 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE532437299270EA00081DB4 /* ProfileViewController.xib */; };
+		FE53243B299394C500081DB4 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE53243A299394C500081DB4 /* ProfilePresenter.swift */; };
+		FE53243E2993CCF100081DB4 /* MenuPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE53243D2993CCF100081DB4 /* MenuPresenter.swift */; };
+		FE5324402994E0BE00081DB4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE53243F2994E0BE00081DB4 /* User.swift */; };
+		FE532488299D1B3300081DB4 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = FE532487299D1B3300081DB4 /* GoogleSignIn */; };
+		FE82C999299FCFFC000B0707 /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE82C998299FCFFC000B0707 /* AuthenticationManager.swift */; };
+		FE82C99D29A3B632000B0707 /* ToastLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE82C99C29A3B632000B0707 /* ToastLabel.swift */; };
+		FE82C9A029A3B665000B0707 /* ViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE82C99F29A3B665000B0707 /* ViewControllerExtension.swift */; };
+		FEB9C45D29A8AD5A00FF33E9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB9C45B29A8AD5A00FF33E9 /* LoginViewController.swift */; };
+		FED71B4829A8D2A50041E8BC /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FED71B4729A8D2A50041E8BC /* LoginViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FE532354296C091000081DB4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FE532335296C090900081DB4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FE53233C296C090900081DB4;
+			remoteInfo = AuthenticationDemoApp;
+		};
+		FE53235E296C091000081DB4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FE532335296C090900081DB4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FE53233C296C090900081DB4;
+			remoteInfo = AuthenticationDemoApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FE532380296C4C7F00081DB4 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				FE5323D32975413200081DB4 /* Authentication.framework in Embed Frameworks */,
+				FE5323D52975413300081DB4 /* Core.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		FE53233D296C090900081DB4 /* AuthenticationDemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AuthenticationDemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE532340296C090900081DB4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FE532342296C090900081DB4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		FE532349296C091000081DB4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FE53234C296C091000081DB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FE53234E296C091000081DB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FE532353296C091000081DB4 /* AuthenticationDemoAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AuthenticationDemoAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE532357296C091000081DB4 /* AuthenticationDemoAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationDemoAppTests.swift; sourceTree = "<group>"; };
+		FE53235D296C091000081DB4 /* AuthenticationDemoAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AuthenticationDemoAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE532361296C091000081DB4 /* AuthenticationDemoAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationDemoAppUITests.swift; sourceTree = "<group>"; };
+		FE532363296C091000081DB4 /* AuthenticationDemoAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationDemoAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		FE532377296C1BCA00081DB4 /* AuthenticationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationPresenter.swift; sourceTree = "<group>"; };
+		FE5323CE297540DC00081DB4 /* Core.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Core.framework; sourceTree = "<group>"; };
+		FE5323CF297540DC00081DB4 /* Authentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Authentication.framework; sourceTree = "<group>"; };
+		FE5323D62977F4A600081DB4 /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
+		FE5323D9297935C400081DB4 /* TokensViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokensViewController.swift; sourceTree = "<group>"; };
+		FE5323DA297935C400081DB4 /* TokensViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TokensViewController.xib; sourceTree = "<group>"; };
+		FE5323DE2979364E00081DB4 /* TokenTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenTableViewCell.swift; sourceTree = "<group>"; };
+		FE5323DF2979364E00081DB4 /* TokenTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TokenTableViewCell.xib; sourceTree = "<group>"; };
+		FE53241E2979E27600081DB4 /* TokenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenPresenter.swift; sourceTree = "<group>"; };
+		FE532421297AD54900081DB4 /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
+		FE532423297AD55A00081DB4 /* NavigationBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NavigationBar.xib; sourceTree = "<group>"; };
+		FE53242C29923BAF00081DB4 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		FE53242D29923BAF00081DB4 /* MenuViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
+		FE53243129923CBF00081DB4 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
+		FE53243229923CBF00081DB4 /* MenuTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuTableViewCell.xib; sourceTree = "<group>"; };
+		FE532436299270EA00081DB4 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		FE532437299270EA00081DB4 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
+		FE53243A299394C500081DB4 /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
+		FE53243D2993CCF100081DB4 /* MenuPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuPresenter.swift; sourceTree = "<group>"; };
+		FE53243F2994E0BE00081DB4 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		FE82C998299FCFFC000B0707 /* AuthenticationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
+		FE82C99C29A3B632000B0707 /* ToastLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastLabel.swift; sourceTree = "<group>"; };
+		FE82C99F29A3B665000B0707 /* ViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtension.swift; sourceTree = "<group>"; };
+		FEB9C45B29A8AD5A00FF33E9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		FED71B4729A8D2A50041E8BC /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LoginViewController.xib; path = AuthenticationDemoApp/View/LoginController/LoginViewController.xib; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FE53233A296C090900081DB4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE5323D22975413100081DB4 /* Authentication.framework in Frameworks */,
+				FE5323D42975413300081DB4 /* Core.framework in Frameworks */,
+				FE532488299D1B3300081DB4 /* GoogleSignIn in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE532350296C091000081DB4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE53235A296C091000081DB4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FE532334296C090900081DB4 = {
+			isa = PBXGroup;
+			children = (
+				FE53233F296C090900081DB4 /* AuthenticationDemoApp */,
+				FE532356296C091000081DB4 /* AuthenticationDemoAppTests */,
+				FE532360296C091000081DB4 /* AuthenticationDemoAppUITests */,
+				FE53233E296C090900081DB4 /* Products */,
+				FE532480299D172100081DB4 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		FE53233E296C090900081DB4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FE53233D296C090900081DB4 /* AuthenticationDemoApp.app */,
+				FE532353296C091000081DB4 /* AuthenticationDemoAppTests.xctest */,
+				FE53235D296C091000081DB4 /* AuthenticationDemoAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FE53233F296C090900081DB4 /* AuthenticationDemoApp */ = {
+			isa = PBXGroup;
+			children = (
+				FE532370296C1A7B00081DB4 /* App */,
+				FE532371296C1A8300081DB4 /* Model */,
+				FE532372296C1A8E00081DB4 /* View */,
+				FE532373296C1A9A00081DB4 /* Presenter */,
+				FE82C997299FCFAA000B0707 /* Helpers */,
+				FE532374296C1AA400081DB4 /* Frameworks */,
+				FE532375296C1AD800081DB4 /* Supporting files */,
+				FE53234E296C091000081DB4 /* Info.plist */,
+			);
+			path = AuthenticationDemoApp;
+			sourceTree = "<group>";
+		};
+		FE532356296C091000081DB4 /* AuthenticationDemoAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				FE532357296C091000081DB4 /* AuthenticationDemoAppTests.swift */,
+			);
+			path = AuthenticationDemoAppTests;
+			sourceTree = "<group>";
+		};
+		FE532360296C091000081DB4 /* AuthenticationDemoAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FE532361296C091000081DB4 /* AuthenticationDemoAppUITests.swift */,
+				FE532363296C091000081DB4 /* AuthenticationDemoAppUITestsLaunchTests.swift */,
+			);
+			path = AuthenticationDemoAppUITests;
+			sourceTree = "<group>";
+		};
+		FE532370296C1A7B00081DB4 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				FE532340296C090900081DB4 /* AppDelegate.swift */,
+				FE532342296C090900081DB4 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		FE532371296C1A8300081DB4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FE5323D62977F4A600081DB4 /* Token.swift */,
+				FE53243F2994E0BE00081DB4 /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FE532372296C1A8E00081DB4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FE532420297AD4DD00081DB4 /* NavigationBar */,
+				FE532376296C1B8800081DB4 /* LoginController */,
+				FE53242B29923B8800081DB4 /* Menu */,
+				FE53243529926F1A00081DB4 /* UserProfile */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FE532373296C1A9A00081DB4 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				FE532377296C1BCA00081DB4 /* AuthenticationPresenter.swift */,
+				FE53243D2993CCF100081DB4 /* MenuPresenter.swift */,
+				FE53241E2979E27600081DB4 /* TokenPresenter.swift */,
+				FE53243A299394C500081DB4 /* ProfilePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		FE532374296C1AA400081DB4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FE5323CF297540DC00081DB4 /* Authentication.framework */,
+				FE5323CE297540DC00081DB4 /* Core.framework */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		FE532375296C1AD800081DB4 /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				FE532349296C091000081DB4 /* Assets.xcassets */,
+				FE53234B296C091000081DB4 /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting files";
+			sourceTree = "<group>";
+		};
+		FE532376296C1B8800081DB4 /* LoginController */ = {
+			isa = PBXGroup;
+			children = (
+				FEB9C45B29A8AD5A00FF33E9 /* LoginViewController.swift */,
+				FED71B4729A8D2A50041E8BC /* LoginViewController.xib */,
+				FE5323D82979356B00081DB4 /* Tokens */,
+			);
+			path = LoginController;
+			sourceTree = "<group>";
+		};
+		FE5323D82979356B00081DB4 /* Tokens */ = {
+			isa = PBXGroup;
+			children = (
+				FE5323DD2979362E00081DB4 /* Cell */,
+				FE5323D9297935C400081DB4 /* TokensViewController.swift */,
+				FE5323DA297935C400081DB4 /* TokensViewController.xib */,
+			);
+			path = Tokens;
+			sourceTree = "<group>";
+		};
+		FE5323DD2979362E00081DB4 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				FE5323DE2979364E00081DB4 /* TokenTableViewCell.swift */,
+				FE5323DF2979364E00081DB4 /* TokenTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		FE532420297AD4DD00081DB4 /* NavigationBar */ = {
+			isa = PBXGroup;
+			children = (
+				FE532421297AD54900081DB4 /* NavigationBar.swift */,
+				FE532423297AD55A00081DB4 /* NavigationBar.xib */,
+			);
+			path = NavigationBar;
+			sourceTree = "<group>";
+		};
+		FE53242B29923B8800081DB4 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				FE53243029923C9E00081DB4 /* Cell */,
+				FE53242C29923BAF00081DB4 /* MenuViewController.swift */,
+				FE53242D29923BAF00081DB4 /* MenuViewController.xib */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		FE53243029923C9E00081DB4 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				FE53243129923CBF00081DB4 /* MenuTableViewCell.swift */,
+				FE53243229923CBF00081DB4 /* MenuTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		FE53243529926F1A00081DB4 /* UserProfile */ = {
+			isa = PBXGroup;
+			children = (
+				FE532436299270EA00081DB4 /* ProfileViewController.swift */,
+				FE532437299270EA00081DB4 /* ProfileViewController.xib */,
+			);
+			path = UserProfile;
+			sourceTree = "<group>";
+		};
+		FE532480299D172100081DB4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FE82C997299FCFAA000B0707 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				FE82C99E29A3B654000B0707 /* Extensions */,
+				FE82C998299FCFFC000B0707 /* AuthenticationManager.swift */,
+				FE82C99C29A3B632000B0707 /* ToastLabel.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		FE82C99E29A3B654000B0707 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FE82C99F29A3B665000B0707 /* ViewControllerExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FE53233C296C090900081DB4 /* AuthenticationDemoApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FE532367296C091000081DB4 /* Build configuration list for PBXNativeTarget "AuthenticationDemoApp" */;
+			buildPhases = (
+				FE532339296C090900081DB4 /* Sources */,
+				FE53233A296C090900081DB4 /* Frameworks */,
+				FE53233B296C090900081DB4 /* Resources */,
+				FE532380296C4C7F00081DB4 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AuthenticationDemoApp;
+			packageProductDependencies = (
+				FE532487299D1B3300081DB4 /* GoogleSignIn */,
+			);
+			productName = AuthenticationDemoApp;
+			productReference = FE53233D296C090900081DB4 /* AuthenticationDemoApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FE532352296C091000081DB4 /* AuthenticationDemoAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FE53236A296C091000081DB4 /* Build configuration list for PBXNativeTarget "AuthenticationDemoAppTests" */;
+			buildPhases = (
+				FE53234F296C091000081DB4 /* Sources */,
+				FE532350296C091000081DB4 /* Frameworks */,
+				FE532351296C091000081DB4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FE532355296C091000081DB4 /* PBXTargetDependency */,
+			);
+			name = AuthenticationDemoAppTests;
+			productName = AuthenticationDemoAppTests;
+			productReference = FE532353296C091000081DB4 /* AuthenticationDemoAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FE53235C296C091000081DB4 /* AuthenticationDemoAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FE53236D296C091000081DB4 /* Build configuration list for PBXNativeTarget "AuthenticationDemoAppUITests" */;
+			buildPhases = (
+				FE532359296C091000081DB4 /* Sources */,
+				FE53235A296C091000081DB4 /* Frameworks */,
+				FE53235B296C091000081DB4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FE53235F296C091000081DB4 /* PBXTargetDependency */,
+			);
+			name = AuthenticationDemoAppUITests;
+			productName = AuthenticationDemoAppUITests;
+			productReference = FE53235D296C091000081DB4 /* AuthenticationDemoAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FE532335296C090900081DB4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					FE53233C296C090900081DB4 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					FE532352296C091000081DB4 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = FE53233C296C090900081DB4;
+					};
+					FE53235C296C091000081DB4 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = FE53233C296C090900081DB4;
+					};
+				};
+			};
+			buildConfigurationList = FE532338296C090900081DB4 /* Build configuration list for PBXProject "AuthenticationDemoApp" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FE532334296C090900081DB4;
+			packageReferences = (
+				FE532486299D1B3300081DB4 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+			);
+			productRefGroup = FE53233E296C090900081DB4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FE53233C296C090900081DB4 /* AuthenticationDemoApp */,
+				FE532352296C091000081DB4 /* AuthenticationDemoAppTests */,
+				FE53235C296C091000081DB4 /* AuthenticationDemoAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FE53233B296C090900081DB4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FED71B4829A8D2A50041E8BC /* LoginViewController.xib in Resources */,
+				FE532439299270EA00081DB4 /* ProfileViewController.xib in Resources */,
+				FE5323DC297935C400081DB4 /* TokensViewController.xib in Resources */,
+				FE53234D296C091000081DB4 /* LaunchScreen.storyboard in Resources */,
+				FE5323E12979364E00081DB4 /* TokenTableViewCell.xib in Resources */,
+				FE532424297AD55A00081DB4 /* NavigationBar.xib in Resources */,
+				FE53234A296C091000081DB4 /* Assets.xcassets in Resources */,
+				FE53242F29923BAF00081DB4 /* MenuViewController.xib in Resources */,
+				FE53243429923CBF00081DB4 /* MenuTableViewCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE532351296C091000081DB4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE53235B296C091000081DB4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FE532339296C090900081DB4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE53241F2979E27600081DB4 /* TokenPresenter.swift in Sources */,
+				FE82C99D29A3B632000B0707 /* ToastLabel.swift in Sources */,
+				FE82C9A029A3B665000B0707 /* ViewControllerExtension.swift in Sources */,
+				FE82C999299FCFFC000B0707 /* AuthenticationManager.swift in Sources */,
+				FEB9C45D29A8AD5A00FF33E9 /* LoginViewController.swift in Sources */,
+				FE53242E29923BAF00081DB4 /* MenuViewController.swift in Sources */,
+				FE532378296C1BCA00081DB4 /* AuthenticationPresenter.swift in Sources */,
+				FE5323D72977F4A600081DB4 /* Token.swift in Sources */,
+				FE5323DB297935C400081DB4 /* TokensViewController.swift in Sources */,
+				FE5323E02979364E00081DB4 /* TokenTableViewCell.swift in Sources */,
+				FE532438299270EA00081DB4 /* ProfileViewController.swift in Sources */,
+				FE532422297AD54900081DB4 /* NavigationBar.swift in Sources */,
+				FE5324402994E0BE00081DB4 /* User.swift in Sources */,
+				FE532341296C090900081DB4 /* AppDelegate.swift in Sources */,
+				FE532343296C090900081DB4 /* SceneDelegate.swift in Sources */,
+				FE53243329923CBF00081DB4 /* MenuTableViewCell.swift in Sources */,
+				FE53243B299394C500081DB4 /* ProfilePresenter.swift in Sources */,
+				FE53243E2993CCF100081DB4 /* MenuPresenter.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE53234F296C091000081DB4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE532358296C091000081DB4 /* AuthenticationDemoAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE532359296C091000081DB4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE532362296C091000081DB4 /* AuthenticationDemoAppUITests.swift in Sources */,
+				FE532364296C091000081DB4 /* AuthenticationDemoAppUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FE532355296C091000081DB4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FE53233C296C090900081DB4 /* AuthenticationDemoApp */;
+			targetProxy = FE532354296C091000081DB4 /* PBXContainerItemProxy */;
+		};
+		FE53235F296C091000081DB4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FE53233C296C090900081DB4 /* AuthenticationDemoApp */;
+			targetProxy = FE53235E296C091000081DB4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FE53234B296C091000081DB4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FE53234C296C091000081DB4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FE532365296C091000081DB4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FE532366296C091000081DB4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FE532368296C091000081DB4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
+				DEVELOPMENT_TEAM = 8GJN68M5RA;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/AuthenticationDemoApp/Frameworks",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AuthenticationDemoApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.endava.AuthenticationDemoApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FE532369296C091000081DB4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
+				DEVELOPMENT_TEAM = 8GJN68M5RA;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/AuthenticationDemoApp/Frameworks",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AuthenticationDemoApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.endava.AuthenticationDemoApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FE53236B296C091000081DB4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8GJN68M5RA;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.endava.AuthenticationDemoAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AuthenticationDemoApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/AuthenticationDemoApp";
+			};
+			name = Debug;
+		};
+		FE53236C296C091000081DB4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8GJN68M5RA;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.endava.AuthenticationDemoAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AuthenticationDemoApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/AuthenticationDemoApp";
+			};
+			name = Release;
+		};
+		FE53236E296C091000081DB4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8GJN68M5RA;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.endava.AuthenticationDemoAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = AuthenticationDemoApp;
+			};
+			name = Debug;
+		};
+		FE53236F296C091000081DB4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8GJN68M5RA;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.endava.AuthenticationDemoAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = AuthenticationDemoApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FE532338296C090900081DB4 /* Build configuration list for PBXProject "AuthenticationDemoApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE532365296C091000081DB4 /* Debug */,
+				FE532366296C091000081DB4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FE532367296C091000081DB4 /* Build configuration list for PBXNativeTarget "AuthenticationDemoApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE532368296C091000081DB4 /* Debug */,
+				FE532369296C091000081DB4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FE53236A296C091000081DB4 /* Build configuration list for PBXNativeTarget "AuthenticationDemoAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE53236B296C091000081DB4 /* Debug */,
+				FE53236C296C091000081DB4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FE53236D296C091000081DB4 /* Build configuration list for PBXNativeTarget "AuthenticationDemoAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE53236E296C091000081DB4 /* Debug */,
+				FE53236F296C091000081DB4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FE532486299D1B3300081DB4 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FE532487299D1B3300081DB4 /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FE532486299D1B3300081DB4 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = FE532335296C090900081DB4 /* Project object */;
+}

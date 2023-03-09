@@ -1,0 +1,11 @@
+framework module CameraScanner {
+  umbrella header "CameraScanner.h"
+
+  export *
+  module * { export * }
+}
+
+module CameraScanner.Swift {
+  header "CameraScanner-Swift.h"
+  requires objc
+}

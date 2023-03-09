@@ -1,0 +1,586 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "TopLevel",
+    "printedName": "TopLevel",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "LocalAuthentication",
+        "printedName": "LocalAuthentication",
+        "declKind": "Import",
+        "moduleName": "Authorization",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Core",
+        "printedName": "Core",
+        "declKind": "Import",
+        "moduleName": "Authorization"
+      },
+      {
+        "kind": "Import",
+        "name": "Core",
+        "printedName": "Core",
+        "declKind": "Import",
+        "moduleName": "Authorization",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "UserConfirmationKeys",
+        "printedName": "UserConfirmationKeys",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "type",
+            "printedName": "type",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13Authorization20UserConfirmationKeysO4typeSSvpZ",
+            "mangledName": "$s13Authorization20UserConfirmationKeysO4typeSSvpZ",
+            "moduleName": "Authorization",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13Authorization20UserConfirmationKeysO4typeSSvgZ",
+                "mangledName": "$s13Authorization20UserConfirmationKeysO4typeSSvgZ",
+                "moduleName": "Authorization",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:13Authorization20UserConfirmationKeysO",
+        "mangledName": "$s13Authorization20UserConfirmationKeysO",
+        "moduleName": "Authorization",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Core",
+        "printedName": "Core",
+        "declKind": "Import",
+        "moduleName": "Authorization",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ConfirmationAction",
+        "printedName": "ConfirmationAction",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(actionId:moduleName:data:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ConfirmationAction",
+                "printedName": "Authorization.ConfirmationAction",
+                "usr": "s:13Authorization18ConfirmationActionC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Any]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:SD"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:13Authorization18ConfirmationActionC8actionId10moduleName4dataACSS_SSSDySSypGtcfc",
+            "mangledName": "$s13Authorization18ConfirmationActionC8actionId10moduleName4dataACSS_SSSDySSypGtcfc",
+            "moduleName": "Authorization",
+            "overriding": true,
+            "declAttributes": [
+              "Required",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "execute",
+            "printedName": "execute(with:completionHandler:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ItemEnvelope",
+                "printedName": "Core.ItemEnvelope",
+                "usr": "s:4Core12ItemEnvelopeV"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Core.ExecCallAPIResult<Any?>) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ExecCallAPIResult",
+                    "printedName": "Core.ExecCallAPIResult<Any?>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "Any?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ProtocolComposition",
+                            "printedName": "Any"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ],
+                    "usr": "s:4Core17ExecCallAPIResultO"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13Authorization18ConfirmationActionC7execute4with17completionHandlery4Core12ItemEnvelopeV_yAG17ExecCallAPIResultOyypSgGctF",
+            "mangledName": "$s13Authorization18ConfirmationActionC7execute4with17completionHandlery4Core12ItemEnvelopeV_yAG17ExecCallAPIResultOyypSgGctF",
+            "moduleName": "Authorization",
+            "overriding": true,
+            "declAttributes": [
+              "Override",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:13Authorization18ConfirmationActionC",
+        "mangledName": "$s13Authorization18ConfirmationActionC",
+        "moduleName": "Authorization",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "superclassUsr": "c:@M@Core@objc(cs)IActionModule",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "Core.IActionModule",
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Nameable",
+            "printedName": "Nameable",
+            "usr": "s:4Core8NameableP",
+            "mangledName": "$s4Core8NameableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ConfirmationType",
+        "printedName": "ConfirmationType",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "osDefault",
+            "printedName": "osDefault",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Authorization.ConfirmationType.Type) -> Authorization.ConfirmationType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ConfirmationType",
+                    "printedName": "Authorization.ConfirmationType",
+                    "usr": "s:13Authorization16ConfirmationTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "Authorization.ConfirmationType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ConfirmationType",
+                        "printedName": "Authorization.ConfirmationType",
+                        "usr": "s:13Authorization16ConfirmationTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:13Authorization16ConfirmationTypeO9osDefaultyA2CmF",
+            "mangledName": "$s13Authorization16ConfirmationTypeO9osDefaultyA2CmF",
+            "moduleName": "Authorization"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Authorization.ConfirmationType?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ConfirmationType",
+                    "printedName": "Authorization.ConfirmationType",
+                    "usr": "s:13Authorization16ConfirmationTypeO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:13Authorization16ConfirmationTypeO8rawValueACSgSS_tcfc",
+            "mangledName": "$s13Authorization16ConfirmationTypeO8rawValueACSgSS_tcfc",
+            "moduleName": "Authorization",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13Authorization16ConfirmationTypeO8rawValueSSvp",
+            "mangledName": "$s13Authorization16ConfirmationTypeO8rawValueSSvp",
+            "moduleName": "Authorization",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13Authorization16ConfirmationTypeO8rawValueSSvg",
+                "mangledName": "$s13Authorization16ConfirmationTypeO8rawValueSSvg",
+                "moduleName": "Authorization",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:13Authorization16ConfirmationTypeO",
+        "mangledName": "$s13Authorization16ConfirmationTypeO",
+        "moduleName": "Authorization",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "enumRawTypeName": "String",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "Authorization",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Core",
+        "printedName": "Core",
+        "declKind": "Import",
+        "moduleName": "Authorization"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "Authorization",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Core",
+        "printedName": "Core",
+        "declKind": "Import",
+        "moduleName": "Authorization"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "SmartCredentialsAuthorizationFactory",
+        "printedName": "SmartCredentialsAuthorizationFactory",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "smartCredentialsAuthorizationAPI",
+            "printedName": "smartCredentialsAuthorizationAPI(configuration:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AuthorizationAPI",
+                "printedName": "Core.AuthorizationAPI",
+                "usr": "s:4Core16AuthorizationAPIP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "SmartCredentialsConfiguration",
+                "printedName": "Core.SmartCredentialsConfiguration",
+                "usr": "s:4Core29SmartCredentialsConfigurationV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13Authorization016SmartCredentialsA7FactoryV05smartcA3API13configuration4Core0aF0_pAF0bC13ConfigurationV_tFZ",
+            "mangledName": "$s13Authorization016SmartCredentialsA7FactoryV05smartcA3API13configuration4Core0aF0_pAF0bC13ConfigurationV_tFZ",
+            "moduleName": "Authorization",
+            "static": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:13Authorization016SmartCredentialsA7FactoryV",
+        "mangledName": "$s13Authorization016SmartCredentialsA7FactoryV",
+        "moduleName": "Authorization",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/cameliaignat\/SmartCredentials-SDK-ios\/SmartCredentials\/Authorization\/Authorization\/Actions\/UserConfirmationKeys.swift",
+      "kind": "StringLiteral",
+      "offset": 797,
+      "length": 19,
+      "value": "\"confirmation_type\""
+    },
+    {
+      "filePath": "\/Users\/cameliaignat\/SmartCredentials-SDK-ios\/SmartCredentials\/Authorization\/Authorization\/Utils\/Constants\/Constants.swift",
+      "kind": "StringLiteral",
+      "offset": 786,
+      "length": 30,
+      "value": "\"To access the sensitive data\""
+    },
+    {
+      "filePath": "\/Users\/cameliaignat\/SmartCredentials-SDK-ios\/SmartCredentials\/Authorization\/Authorization\/Utils\/Constants\/Constants.swift",
+      "kind": "StringLiteral",
+      "offset": 881,
+      "length": 26,
+      "value": "\"App cancel authorization\""
+    },
+    {
+      "filePath": "\/Users\/cameliaignat\/SmartCredentials-SDK-ios\/SmartCredentials\/Authorization\/Authorization\/Utils\/Constants\/Constants.swift",
+      "kind": "StringLiteral",
+      "offset": 946,
+      "length": 29,
+      "value": "\"System cancel authorization\""
+    },
+    {
+      "filePath": "\/Users\/cameliaignat\/SmartCredentials-SDK-ios\/SmartCredentials\/Authorization\/Authorization\/Utils\/Constants\/Constants.swift",
+      "kind": "StringLiteral",
+      "offset": 1012,
+      "length": 27,
+      "value": "\"User cancel authorization\""
+    },
+    {
+      "filePath": "\/Users\/cameliaignat\/SmartCredentials-SDK-ios\/SmartCredentials\/Authorization\/Authorization\/Utils\/Constants\/Constants.swift",
+      "kind": "StringLiteral",
+      "offset": 1072,
+      "length": 22,
+      "value": "\"Authorization failed\""
+    }
+  ]
+}

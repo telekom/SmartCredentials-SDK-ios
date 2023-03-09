@@ -1,0 +1,917 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)
+// swift-module-flags: -target arm64-apple-ios12.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name Core
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import AVFoundation
+@_exported import Core
+import CoreData
+import CoreGraphics
+import Foundation
+import Swift
+import UIKit
+import _Concurrency
+import _StringProcessing
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class CertificateMessage : Core.Message {
+  final public let description: Core.CertificateDescription
+  final public let validity: Core.CertificateValidity
+  override public func encode(to encoder: Swift.Encoder) throws
+  @objc deinit
+}
+public struct CertificateDescription : Swift.Codable {
+  public let issuerName: Swift.String
+  public let issuerUrl: Swift.String
+  public let subjectName: Swift.String
+  public let subjectUrl: Swift.String
+  public let termsOfUsage: Swift.String
+  public let purpose: Swift.String
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct CertificateValidity : Swift.Codable {
+  public let effectiveDate: Swift.String
+  public let expirationDate: Swift.String
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+@_inheritsConvenienceInitializers public class GetCertificateCommand : Core.Command {
+  override public init(cmd: Swift.String)
+  required public init(from decoder: Swift.Decoder) throws
+  @objc deinit
+}
+public struct SmartCredentialsCoreFactory {
+  public static func smartCredentialsCoreAPI(configuration: Core.SmartCredentialsConfiguration) -> Core.CoreAPI
+}
+@_hasMissingDesignatedInitializers public class SetCardCommand : Core.Command {
+  public var name: Swift.String
+  public var simulator: Core.SimulatorModel?
+  public init(cmd: Swift.String, name: Swift.String, simulator: Core.SimulatorModel?)
+  override public func encode(to encoder: Swift.Encoder) throws
+  @objc deinit
+}
+public struct SimulatorModel : Swift.Codable {
+  public let files: [Core.FileModel?]
+  public init(files: [Core.FileModel?])
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct FileModel : Swift.Codable {
+  public let fileId: Swift.String
+  public let shortFileId: Swift.String
+  public let content: Swift.String
+  public init(fileId: Swift.String, shortFileId: Swift.String, content: Swift.String)
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct ItemEnvelope {
+  public var identifier: [Swift.String : Any]
+  public var itemId: Swift.String
+  public var itemType: Core.ItemType
+  public var itemMetadata: Core.ItemMetadata
+  public init(identifier: [Swift.String : Any], itemId: Swift.String, itemType: Core.ItemType, itemMetadata: Core.ItemMetadata)
+}
+public struct EIDCameraSettings {
+  public var scanningRegion: CoreFoundation.CGRect
+  public var showStatusBar: Swift.Bool
+  public var cameraPreset: Core.CameraPreset
+  public var cameraType: Core.CameraType
+  public init(scanningRegion: CoreFoundation.CGRect)
+}
+public enum CameraPreset {
+  case video480p
+  case video720p
+  case optimal
+  case max
+  case photo
+  public static func == (a: Core.CameraPreset, b: Core.CameraPreset) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum CameraType {
+  case back
+  case front
+  public static func == (a: Core.CameraType, b: Core.CameraType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public struct ItemContext {
+  public var contentType: Core.ContentType
+  public var sensitiveItemAccessibility: Core.KeychainItemAccessibility
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class EnterPINMessage : Core.Message {
+  final public let error: Swift.String?
+  final public let reader: Core.ReaderModel?
+  override public func encode(to encoder: Swift.Encoder) throws
+  @objc deinit
+}
+public protocol StorageAPI {
+  func getItemSummary(for itemFilter: Core.ItemFilter) -> Core.SmartCredentialsAPIResult<Core.ItemEnvelope>
+  func getItemDetails(for itemFilter: Core.ItemFilter) -> Core.SmartCredentialsAPIResult<Core.ItemEnvelope>
+  func getAllItems(for itemFilter: Core.ItemFilter) -> Core.SmartCredentialsAPIResult<[Core.ItemEnvelope]>
+  func getPasswordReference(for itemFilter: Core.ItemFilter) -> Core.SmartCredentialsAPIResult<Foundation.Data>
+  func put(_ item: Core.ItemEnvelope, with itemContext: Core.ItemContext) -> Core.SmartCredentialsAPIEmptyResult
+  func put(_ genericPassword: Swift.String, with id: Swift.String, sensitiveItemAccessibility: Core.KeychainItemAccessibility) -> Core.SmartCredentialsAPIEmptyResult
+  func update(_ item: Core.ItemEnvelope, with itemContext: Core.ItemContext) -> Core.SmartCredentialsAPIEmptyResult
+  func removeItem(for itemFilter: Core.ItemFilter) -> Core.SmartCredentialsAPIEmptyResult
+  func removeAllItems(for itemFilter: Core.ItemFilter) -> Core.SmartCredentialsAPIEmptyResult
+}
+public enum Messages : Swift.String {
+  case auth
+  case accessRights
+  case apiLevel
+  case certificate
+  case changePIN
+  case enterPIN
+  case enterNewPIN
+  case enterPUK
+  case insertCard
+  case reader
+  case readerList
+  case enterCAN
+  case info
+  case internalError
+  case invalid
+  case badState
+  case status
+  case unknownCommand
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public class Message : Swift.Codable {
+  public var msg: Swift.String
+  required public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+  @objc deinit
+}
+@_inheritsConvenienceInitializers public class CancelCommand : Core.Command {
+  override public init(cmd: Swift.String)
+  required public init(from decoder: Swift.Decoder) throws
+  @objc deinit
+}
+public enum Channel : Swift.String {
+  case type1D
+  case type2D
+  case typeUnknown
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct ItemEnvelopeFactory {
+  public static func itemEnvelope(with id: Swift.String, type itemType: Core.ItemType, identifier: [Swift.String : Any], privateData: [Swift.String : Any]) -> Core.ItemEnvelope
+  public static func itemEnvelope(with id: Swift.String, type itemType: Core.ItemType, identifier: [Swift.String : Any], privateData: [Swift.String : Any], actionList: [Core.IActionModule], isLocked: Swift.Bool, autoLocked: Swift.Bool) -> Core.ItemEnvelope
+  public static func itemEnvelope(with id: Swift.String, type itemType: Core.ItemType, identifier: [Swift.String : Any], privateData: [Swift.String : Any], actionList: [Core.IActionModule]) -> Core.ItemEnvelope
+  public static func itemEnvelope(from dictionary: [Swift.String : Any]) -> Core.ItemEnvelope?
+  public static func itemEnvelope(fromJSONAt path: Foundation.URL) -> Core.ItemEnvelope?
+}
+@_hasMissingDesignatedInitializers public class SetCANCommand : Core.Command {
+  final public let value: Swift.String
+  public init(cmd: Swift.String, value: Swift.String)
+  override public func encode(to encoder: Swift.Encoder) throws
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class JailbreakDetection {
+  public static func isJailbroken() -> Swift.Bool
+  @objc deinit
+}
+public typealias UserLoginAuthorizationCompletionHandler = (Core.SmartCredentialsAPIResult<Core.ItemEnvelope>) -> ()
+public protocol QRLoginAPI {
+  func authorizeUserLogin(with item: Core.ItemEnvelope, completionHandler: @escaping Core.UserLoginAuthorizationCompletionHandler)
+}
+public enum ConnectionType : Swift.String {
+  case overWiFi
+  case overMobile
+  case any
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class BadStateMessage : Core.Message {
+  final public let error: Swift.String?
+  override public func encode(to encoder: Swift.Encoder) throws
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class InternalErrorMessage : Core.Message {
+  final public let error: Swift.String?
+  override public func encode(to encoder: Swift.Encoder) throws
+  @objc deinit
+}
+public struct ItemFilterFactory {
+  public static func itemFilter(with itemId: Swift.String, contentType: Core.ContentType = .sensitive, itemAccessibility: Core.KeychainItemAccessibility = .whenUnlockedThisDeviceOnly) -> Core.ItemFilter
+  public static func itemFilter(with contentType: Core.ContentType = .sensitive, itemAccessibility: Core.KeychainItemAccessibility = .whenUnlockedThisDeviceOnly) -> Core.ItemFilter
+}
+@_hasMissingDesignatedInitializers public class SetPUKCommand : Core.Command {
+  final public let value: Swift.String
+  public init(cmd: Swift.String, value: Swift.String)
+  override public func encode(to encoder: Swift.Encoder) throws
+  @objc deinit
+}
+public typealias AuthServiceCompletionHandler = (Core.SmartCredentialsAPIResult<Any>) -> ()
+public protocol AuthenticationAPI {
+  func getAuthService(with configuration: [Swift.String : Any], authStateKey: Swift.String, completionHandler: @escaping Core.AuthServiceCompletionHandler)
+}
+@objc @_inheritsConvenienceInitializers public class ItemToJsonAction : Core.IActionModule {
+  public var shareChannel: Core.ShareChannel
+  required public init(actionId: Swift.String, moduleName: Swift.String, data: [Swift.String : Any], shareChannel: Core.ShareChannel)
+  required public init(actionId: Swift.String, moduleName: Swift.String, data: [Swift.String : Any])
+  override public func execute(with item: Core.ItemEnvelope, completionHandler: @escaping Core.ExecCallCompletionHandler)
+  @objc required convenience public init?(coder aDecoder: Foundation.NSCoder)
+  @objc override public func encode(with aCoder: Foundation.NSCoder)
+  override public func toDictionary() -> [Swift.String : Any]
+  @objc deinit
+}
+public enum ShareChannel : Swift.String {
+  case none
+  case osDefault
+  case copyToClipboard
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct ItemToJsonActionResult {
+  public let jsonRepresentation: Swift.String
+  public let shareViewController: UIKit.UIViewController?
+}
+public struct ItemFilter {
+  public var itemId: Swift.String?
+  public var contentType: Core.ContentType
+  public var sensitiveItemAccessibility: Core.KeychainItemAccessibility
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class ReaderListMessage : Core.Message {
+  final public let readers: [Core.ReaderModel]
+  override public func encode(to encoder: Swift.Encoder) throws
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class AccessRightsMessage : Core.Message {
+  final public let error: Swift.String?
+  final public let aux: Core.AuxInfo?
+  final public let chat: Core.ChatInfo
+  final public let canAllowed: Swift.Bool?
+  override public func encode(to encoder: Swift.Encoder) throws
+  @objc deinit
+}
+public class AuxInfo : Swift.Codable {
+  final public let ageVerificationDate: Swift.String?
+  final public let requiredAge: Swift.String?
+  final public let validityDate: Swift.String?
+  final public let communityId: Swift.String?
+  required public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+  @objc deinit
+}
+public class ChatInfo : Swift.Codable {
+  final public let effective: [Swift.String]
+  final public let optional: [Swift.String]
+  final public let required: [Swift.String]
+  required public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+  @objc deinit
+}
+public enum ItemKeys {
+  public enum ActionKeys {
+  }
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class AuthMessage : Core.Message {
+  final public let error: Swift.String?
+  final public let result: Core.AuthResult?
+  final public let url: Swift.String?
+  override public func encode(to encoder: Swift.Encoder) throws
+  @objc deinit
+}
+public class AuthResult : Swift.Codable {
+  final public let major: Swift.String?
+  final public let minor: Swift.String?
+  final public let language: Swift.String?
+  final public let description: Swift.String?
+  final public let message: Swift.String?
+  public init(major: Swift.String?, minor: Swift.String?, language: Swift.String?, description: Swift.String?, message: Swift.String?)
+  required public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+  @objc deinit
+}
+@_inheritsConvenienceInitializers public class GetAPILevelCommand : Core.Command {
+  override public init(cmd: Swift.String)
+  required public init(from decoder: Swift.Decoder) throws
+  @objc deinit
+}
+public typealias ExecCallCompletionHandler = (Core.ExecCallAPIResult<Any?>) -> ()
+public protocol CoreAPI {
+  func isDeviceJailbroken() -> Core.SmartCredentialsAPIResult<Swift.Bool>
+  func execute(with item: Core.ItemEnvelope, actionId: Swift.String, completionHandler: @escaping Core.ExecCallCompletionHandler)
+}
+public enum Commands : Swift.String {
+  case getInfo
+  case getStatus
+  case getAPILevel
+  case setAPILevel
+  case getReader
+  case getReaderList
+  case runAuth
+  case runChangePIN
+  case getAccessRights
+  case setAccessRights
+  case setCard
+  case getCertificate
+  case accept
+  case cancel
+  case setPIN
+  case setNewPIN
+  case setCAN
+  case setPUK
+  case interrupt
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public class Command : Swift.Codable {
+  public init(cmd: Swift.String)
+  required public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+  @objc deinit
+}
+public struct ImportOTPResult {
+  public var itemId: Swift.String
+  public var otpType: Core.OTPType
+  public init(itemId: Swift.String, otpType: Core.OTPType)
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class EnterNewPINMessage : Core.Message {
+  final public let error: Swift.String?
+  final public let reader: Core.ReaderModel?
+  override public func encode(to encoder: Swift.Encoder) throws
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class EnterPUKMessage : Core.Message {
+  final public let error: Swift.String?
+  final public let reader: Core.ReaderModel?
+  override public func encode(to encoder: Swift.Encoder) throws
+  @objc deinit
+}
+public enum ExecCallAPIResult<T> {
+  case success(result: T)
+  case failure(error: Swift.Error)
+}
+@objc open class IActionModule : ObjectiveC.NSObject, Foundation.NSCoding {
+  open var actionId: Swift.String
+  open var moduleName: Swift.String
+  open var data: [Swift.String : Any]
+  required public init(actionId: Swift.String, moduleName: Swift.String, data: [Swift.String : Any])
+  open func execute(with item: Core.ItemEnvelope, completionHandler: @escaping Core.ExecCallCompletionHandler)
+  @objc required convenience public init?(coder aDecoder: Foundation.NSCoder)
+  @objc public func encode(with aCoder: Foundation.NSCoder)
+  open func toDictionary() -> [Swift.String : Any]
+  required convenience public init?(from dictionary: [Swift.String : Any])
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class RunChangePINCommand : Core.Command {
+  final public let handleInterrupt: Swift.Bool
+  final public let status: Swift.Bool
+  final public let messages: Core.CommandMessages?
+  public init(cmd: Swift.String, handleInterrupt: Swift.Bool, status: Swift.Bool, messages: Core.CommandMessages?)
+  override public func encode(to encoder: Swift.Encoder) throws
+  @objc deinit
+}
+@_inheritsConvenienceInitializers public class GetAccessRightsCommand : Core.Command {
+  override public init(cmd: Swift.String)
+  required public init(from decoder: Swift.Decoder) throws
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class SetPINCommand : Core.Command {
+  final public let value: Swift.String
+  public init(cmd: Swift.String, value: Swift.String)
+  override public func encode(to encoder: Swift.Encoder) throws
+  @objc deinit
+}
+public protocol EIDAPI {
+  func initialize(completionHandler: @escaping (Core.Message?, Swift.Error?) -> ())
+  func shutdown()
+  func isRunning() -> Swift.Bool
+  func sendCommand(_ command: Core.Command, completionHandler: @escaping (Swift.Error?) -> ())
+  func setMessageReceiverCallback(completionHandler: @escaping (Core.Message?, Swift.Error?) -> ())
+}
+@_inheritsConvenienceInitializers public class AcceptCommand : Core.Command {
+  override public init(cmd: Swift.String)
+  required public init(from decoder: Swift.Decoder) throws
+  @objc deinit
+}
+public enum SmartCredentialsAPIResult<T> {
+  case success(result: T)
+  case failure(error: Core.SmartCredentialsAPIError)
+}
+public enum SmartCredentialsAPIEmptyResult {
+  case success
+  case failure(error: Core.SmartCredentialsAPIError)
+}
+public enum SmartCredentialsAPIError : Swift.Error {
+  case saveError
+  case itemNotFound
+  case invalidItemFilter
+  case jailbreakDetected
+  case authFailed
+  case authUserCancel
+  case authAppCancel
+  case authSystemCancel
+  case initTesseractError
+  case openCameraAccessDenied
+  case createCaptureDeviceError
+  case createCaptureDeviceInputError
+  case addDeviceInputError
+  case addVideoDataOutputError
+  case formatNotFoundError
+  case invalidJSONError
+  case invalidMessageError
+  case invalidQRCodeReceived
+  case invalidWebSocketURLReceived
+  case invalidAccessTokenError
+  case qrLoginFail
+  case invalidItemForOTP
+  case invalidQRForOTP
+  case noTOTPRunning
+  case invalidItemForCallService
+  case invalidURLForCallService
+  case callServiceFailed
+  case callServiceUnableToConnectSocket
+  case callServiceError(error: Swift.Error)
+  case generatingKeysFailed(osStatus: Darwin.OSStatus)
+  case encryptingTextFailed(osStatus: Darwin.OSStatus)
+  case scanNotSupported
+  case invalidMicroBlinkLicense
+  case moduleNotAvailable
+  case actionNotFound
+  case noConfirmationActionFound
+  case confirmationActionExecution
+  case retrievingConfiguration
+  case invalidIssuer
+  case invalidRedirectURI
+  case invalidClientID
+  case authRegistrationFailed
+  case authorizationError
+  case invalidRegistrationResponse
+  case invalidAuthServiceURL
+  case invalidScope
+  case moduleNotInitialized
+}
+public struct ItemContextFactory {
+  public static func itemContext(with contentType: Core.ContentType = .sensitive, itemAccessibility: Core.KeychainItemAccessibility = .whenUnlockedThisDeviceOnly) -> Core.ItemContext
+}
+@_hasMissingDesignatedInitializers public class SetAPILevelCommand : Core.Command {
+  public var level: Swift.Int
+  public init(cmd: Swift.String, level: Swift.Int)
+  override public func encode(to encoder: Swift.Encoder) throws
+  @objc deinit
+}
+public protocol KeychainAttributeRepresentable {
+  var keychainAttributeValue: CoreFoundation.CFString { get }
+}
+public enum KeychainItemAccessibility {
+  case afterFirstUnlock
+  case afterFirstUnlockThisDeviceOnly
+  case always
+  case whenPasscodeSetThisDeviceOnly
+  case alwaysThisDeviceOnly
+  case whenUnlocked
+  case whenUnlockedThisDeviceOnly
+  public static func accessibility(for keychainAttributeValue: CoreFoundation.CFString) -> Core.KeychainItemAccessibility?
+  public static func == (a: Core.KeychainItemAccessibility, b: Core.KeychainItemAccessibility) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension Core.KeychainItemAccessibility : Core.KeychainAttributeRepresentable {
+  public var keychainAttributeValue: CoreFoundation.CFString {
+    get
+  }
+}
+public enum OTPType {
+  case HOTP
+  case TOTP
+  public static func == (a: Core.OTPType, b: Core.OTPType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public struct OTPCode {
+  public let code: Swift.String
+  public let type: Core.OTPType
+  public var remainingSeconds: Swift.Int?
+  public var counter: Swift.Int?
+  public init(hotpCode: Swift.String, counter: Swift.Int)
+  public init(totpCode: Swift.String, remainingSeconds: Swift.Int)
+}
+public protocol EIDScannerDelegate {
+  func documentScanner(didStartIn controller: UIKit.UIViewController)
+  func documentScanner(didFind error: Core.SmartCredentialsAPIError)
+  func documentScanner(didFind fullResult: Core.ScannerResult)
+  func documentScannerDidClose()
+  func documentScannerDidFinishRecognitionFirstSide()
+}
+@_inheritsConvenienceInitializers public class GetInfoCommand : Core.Command {
+  override public init(cmd: Swift.String)
+  required public init(from decoder: Swift.Decoder) throws
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class UnknownCommandMessage : Core.Message {
+  final public let error: Swift.String?
+  override public func encode(to encoder: Swift.Encoder) throws
+  @objc deinit
+}
+@_inheritsConvenienceInitializers public class GetReaderListCommand : Core.Command {
+  override public init(cmd: Swift.String)
+  required public init(from decoder: Swift.Decoder) throws
+  @objc deinit
+}
+public enum MethodType : Swift.String {
+  case get
+  case post
+  case put
+  case patch
+  case delete
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public typealias GETOTPCompletionHandler = (Core.SmartCredentialsAPIResult<Core.OTPCode>) -> ()
+public typealias ImportOTPItemCompletionHandler = (Core.SmartCredentialsAPIResult<Core.ImportOTPResult>) -> ()
+public protocol OTPAPI {
+  func addOTPItemAccount(_ item: Core.ItemEnvelope) -> Core.SmartCredentialsAPIEmptyResult
+  func importOTPItemViaQR(in containerView: UIKit.UIView, for itemId: Swift.String, completionHandler: @escaping Core.ImportOTPItemCompletionHandler)
+  func getHOTPCode(for itemFilter: Core.ItemFilter) -> Core.SmartCredentialsAPIResult<Swift.String>
+  func startTOTPGenereration(for itemFilter: Core.ItemFilter, completionHandler: @escaping Core.GETOTPCompletionHandler)
+  func stopTOTPGeneration(for itemFilter: Core.ItemFilter) -> Core.SmartCredentialsAPIEmptyResult
+}
+@_hasMissingDesignatedInitializers public class GetReaderCommand : Core.Command {
+  public var name: Swift.String
+  public init(cmd: Swift.String, name: Swift.String)
+  override public func encode(to encoder: Swift.Encoder) throws
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class LoggerProvider {
+  public static let sharedInstance: Core.LoggerProvider
+  public var logger: Core.LogAPI?
+  @objc deinit
+}
+public enum Constants {
+  public enum Logger {
+    public static let itemEnvelopeObjectCreated: Swift.String
+    public static let itemEnvelopeRestAPIObjectCreated: Swift.String
+    public static let jailbreakError: Swift.String
+  }
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class ReaderMessage : Core.Message {
+  final public let name: Swift.String
+  final public let insertable: Swift.Bool?
+  final public let attached: Swift.Bool
+  final public let keypad: Swift.Bool?
+  final public let card: Core.CardMessage?
+  override public func encode(to encoder: Swift.Encoder) throws
+  @objc deinit
+}
+public struct CardMessage : Swift.Codable {
+  public let inoperative: Swift.Bool
+  public let deactivated: Swift.Bool
+  public let retryCounter: Swift.Int
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public typealias AuthorizationCompletionHandler = (Core.SmartCredentialsAPIEmptyResult) -> ()
+public protocol AuthorizationAPI {
+  func authorize(with completionHandler: @escaping Core.AuthorizationCompletionHandler)
+}
+public typealias CallServiceCompletionHandler = (Core.SmartCredentialsAPIResult<Any?>) -> ()
+public protocol NetworkingAPI {
+  func callService(with hostURL: Foundation.URL, endPoint: Swift.String, methodType: Core.MethodType, headers: [Swift.String : Swift.String], queryParams: [Swift.String : Any], bodyParams: Swift.String?, bodyParamsType: Core.BodyParamsType?, certificateData: Foundation.Data?, completionHandler: @escaping Core.CallServiceCompletionHandler)
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class StatusMessage : Core.Message {
+  final public let workflow: Swift.String?
+  final public let progress: Swift.Int?
+  final public let state: Swift.String?
+  override public func encode(to encoder: Swift.Encoder) throws
+  @objc deinit
+}
+public enum ScannerRecognizer {
+  case austriaIDFront
+  case austriaIDBack
+  case austriaIDCombined
+  case cyprusIDFront
+  case cyprusIDBack
+  case colombiaIDFront
+  case colombiaIDBack
+  case croatiaIDFront
+  case croatiaIDBack
+  case croatiaIDCombined
+  case czechIDFront
+  case czechIDBack
+  case czechIDCombined
+  case egyptIDFront
+  case germanyIDFront
+  case germanyIDBack
+  case germanyIDCombined
+  case germanyIDOld
+  case hongkongIDFront
+  case ikadIDFront
+  case indonesiaIDFront
+  case jordanIDFront
+  case jordanIDBack
+  case jordanIDCombined
+  case kuwaitIDFront
+  case kuwaitIDBack
+  case mrtd
+  case mrtdCombined
+  case myKadIDFront
+  case myKadIDBack
+  case malaysiaMyTenteraIDFront
+  case moroccoIDFront
+  case moroccoIDBack
+  case polandIDFront
+  case polandIDBack
+  case polandIDCombined
+  case romaniaIDFront
+  case serbiaIDFront
+  case serbiaIDBack
+  case serbiaIDCombined
+  case singaporeIDFront
+  case singaporeIDBack
+  case singaporeIDCombined
+  case slovakiaIDFront
+  case slovakiaIDBack
+  case slovakiaIDCombined
+  case sloveniaIDFront
+  case sloveniaIDBack
+  case sloveniaIDCombined
+  case switzerlandIDFront
+  case switzerlandIDBack
+  case unitedArabEmiratesIDFront
+  case unitedArabEmiratesIDBack
+  case paymentCardFront
+  case paymentCardBack
+  case paymentCardCombined
+  case elitePaymentCardFront
+  case elitePaymentCardBack
+  case elitePaymentCardCombined
+  public static func == (a: Core.ScannerRecognizer, b: Core.ScannerRecognizer) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers public class SetNewPINCommand : Core.Command {
+  final public let value: Swift.String
+  public init(cmd: Swift.String, value: Swift.String)
+  override public func encode(to encoder: Swift.Encoder) throws
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class InfoMessage : Core.Message {
+  final public let versionInfo: Core.VersionInfoModel
+  override public func encode(to encoder: Swift.Encoder) throws
+  @objc deinit
+}
+public struct VersionInfoModel : Swift.Codable {
+  public let name: Swift.String
+  public let implementationTitle: Swift.String
+  public let implementationVendor: Swift.String
+  public let implementationVersion: Swift.String
+  public let specificationTitle: Swift.String
+  public let specificationVendor: Swift.String
+  public let specificationVersion: Swift.String
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public protocol IdentifiableEntity {
+}
+extension Core.IdentifiableEntity where Self : CoreData.NSManagedObject {
+  public static var entityName: Swift.String {
+    get
+  }
+}
+extension CoreData.NSManagedObject : Core.IdentifiableEntity {
+}
+public protocol Nameable {
+}
+extension Core.Nameable {
+  public var className: Swift.String {
+    get
+  }
+}
+extension ObjectiveC.NSObject : Core.Nameable {
+}
+public struct ReaderModel : Swift.Codable {
+  public let name: Swift.String?
+  public let attached: Swift.Bool?
+  public let keypad: Swift.Bool?
+  public let card: Core.CardMessage?
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class EnterCANMessage : Core.Message {
+  final public let error: Swift.String?
+  final public let reader: Core.ReaderModel?
+  override public func encode(to encoder: Swift.Encoder) throws
+  @objc deinit
+}
+extension Core.SmartCredentialsAPIError : Swift.Equatable {
+  public static func == (lhs: Core.SmartCredentialsAPIError, rhs: Core.SmartCredentialsAPIError) -> Swift.Bool
+}
+public protocol EncryptionAPI {
+  func getPublicKey(for tag: Swift.String) -> Core.SmartCredentialsAPIResult<Swift.String>
+  func encrypt(_ text: Swift.String, with keyTag: Swift.String) -> Core.SmartCredentialsAPIResult<Swift.String>
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class InvalidMessage : Core.Message {
+  final public let error: Swift.String?
+  override public func encode(to encoder: Swift.Encoder) throws
+  @objc deinit
+}
+public enum BodyParamsType : Swift.String {
+  case json
+  case text
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct OCRScannerResult {
+  public var recognizedText: Swift.String
+  public var lastImage: UIKit.UIImage
+  public init(recognizedText: Swift.String, lastImage: UIKit.UIImage)
+}
+public enum ItemType : Swift.Int {
+  case voucher
+  case token
+  case other
+  case totp
+  case hotp
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public protocol DocumentScannerAPI {
+  func startDocumentScanning(scannerRecognizer: Core.ScannerRecognizer, cameraSettings: Core.EIDCameraSettings, scannerDelegate: Core.EIDScannerDelegate)
+  func pauseDocumentScanning()
+  func resumeDocumentScanning()
+}
+open class ScannerResult {
+  public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers public class GetStatusCommand : Core.Command {
+  override public init(cmd: Swift.String)
+  required public init(from decoder: Swift.Decoder) throws
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class ChangePINMessage : Core.Message {
+  final public let success: Swift.Bool?
+  override public func encode(to encoder: Swift.Encoder) throws
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class APILevelMessage : Core.Message {
+  final public let error: Swift.String?
+  final public let available: [Swift.Int]
+  final public let current: Swift.Int
+  override public func encode(to encoder: Swift.Encoder) throws
+  @objc deinit
+}
+public struct ItemMetadata {
+  public var channel: Core.Channel
+  public var itemPrivateData: Core.ItemPrivateData
+  public var actionList: [Core.IActionModule]
+  public var isLocked: Swift.Bool
+  public var autoLocked: Swift.Bool
+  public init(channel: Core.Channel, actionList: [Core.IActionModule], itemPrivateData: Core.ItemPrivateData, isLocked: Swift.Bool, autoLocked: Swift.Bool)
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class InsertCardMessage : Core.Message {
+  final public let error: Swift.String?
+  override public func encode(to encoder: Swift.Encoder) throws
+  @objc deinit
+}
+public struct ActionSelector {
+  public init()
+  public func select(with actionId: Swift.String, actionsList: [Core.IActionModule]) -> Core.IActionModule?
+}
+public enum ContentType : Swift.Int {
+  case sensitive
+  case nonSensitive
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public struct ItemPrivateData {
+  public var privateData: [Swift.String : Any]
+  public init(privateData: [Swift.String : Any])
+}
+public typealias QRCodeCompletionHandler = (Core.SmartCredentialsAPIResult<Swift.String>) -> ()
+public typealias OCRScannerCompletionHandler = (Core.SmartCredentialsAPIResult<Core.OCRScannerResult>) -> ()
+public typealias OCRScannerGetPreviewCompletionHandler = (Core.SmartCredentialsAPIResult<AVFoundation.AVCaptureVideoPreviewLayer>) -> ()
+public protocol CameraScannerAPI {
+  func startQRReader(in containerView: UIKit.UIView, with completionHandler: @escaping Core.QRCodeCompletionHandler)
+  func getOCRCameraPreviewLayer(with completionHandler: @escaping Core.OCRScannerGetPreviewCompletionHandler)
+  func startOCRScanning(in frame: CoreFoundation.CGRect, with regex: Swift.String?, completionHandler: @escaping Core.OCRScannerCompletionHandler)
+  func stopOCRScanning()
+  func pauseOCRScanning()
+  func resumeOCRScanning()
+}
+public protocol LogAPI {
+  func log(_ event: Core.LogEvent, message: Swift.String, className: Swift.String)
+}
+public enum LogEvent {
+  case methodCall
+  case objectCreated
+  case error
+  case warning
+  public static func == (a: Core.LogEvent, b: Core.LogEvent) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers public class SetAccessRightsCommand : Core.Command {
+  public init(cmd: Swift.String, chat: [Swift.String])
+  override public func encode(to encoder: Swift.Encoder) throws
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class RunAuthCommand : Core.Command {
+  final public let tcTokenURL: Swift.String
+  final public let developerMode: Swift.Bool
+  final public let status: Swift.Bool
+  final public let messages: Core.CommandMessages?
+  public init(cmd: Swift.String, developerMode: Swift.Bool, tcTokenURL: Swift.String, status: Swift.Bool, messages: Core.CommandMessages?)
+  override public func encode(to encoder: Swift.Encoder) throws
+  @objc deinit
+}
+public struct CommandMessages : Swift.Codable {
+  public let sessionStarted: Swift.String
+  public let sessionFailed: Swift.String
+  public let sessionSucceeded: Swift.String
+  public let sessionInProgress: Swift.String
+  public init(sessionStarted: Swift.String, sessionFailed: Swift.String, sessionSucceeded: Swift.String, sessionInProgress: Swift.String)
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct SmartCredentialsConfiguration {
+  public var userId: Swift.String
+  public var jailbreakCheckEnabled: Swift.Bool
+  public init(userId: Swift.String, logger: Core.LogAPI? = nil, jailbreakCheckEnabled: Swift.Bool = true)
+}
+@_inheritsConvenienceInitializers public class InterruptCommand : Core.Command {
+  override public init(cmd: Swift.String)
+  required public init(from decoder: Swift.Decoder) throws
+  @objc deinit
+}
+extension Core.CameraPreset : Swift.Equatable {}
+extension Core.CameraPreset : Swift.Hashable {}
+extension Core.CameraType : Swift.Equatable {}
+extension Core.CameraType : Swift.Hashable {}
+extension Core.Messages : Swift.Equatable {}
+extension Core.Messages : Swift.Hashable {}
+extension Core.Messages : Swift.RawRepresentable {}
+extension Core.Channel : Swift.Equatable {}
+extension Core.Channel : Swift.Hashable {}
+extension Core.Channel : Swift.RawRepresentable {}
+extension Core.ConnectionType : Swift.Equatable {}
+extension Core.ConnectionType : Swift.Hashable {}
+extension Core.ConnectionType : Swift.RawRepresentable {}
+extension Core.ShareChannel : Swift.Equatable {}
+extension Core.ShareChannel : Swift.Hashable {}
+extension Core.ShareChannel : Swift.RawRepresentable {}
+extension Core.Commands : Swift.Equatable {}
+extension Core.Commands : Swift.Hashable {}
+extension Core.Commands : Swift.RawRepresentable {}
+extension Core.KeychainItemAccessibility : Swift.Equatable {}
+extension Core.KeychainItemAccessibility : Swift.Hashable {}
+extension Core.OTPType : Swift.Equatable {}
+extension Core.OTPType : Swift.Hashable {}
+extension Core.MethodType : Swift.Equatable {}
+extension Core.MethodType : Swift.Hashable {}
+extension Core.MethodType : Swift.RawRepresentable {}
+extension Core.ScannerRecognizer : Swift.Equatable {}
+extension Core.ScannerRecognizer : Swift.Hashable {}
+extension Core.BodyParamsType : Swift.Equatable {}
+extension Core.BodyParamsType : Swift.Hashable {}
+extension Core.BodyParamsType : Swift.RawRepresentable {}
+extension Core.ItemType : Swift.Equatable {}
+extension Core.ItemType : Swift.Hashable {}
+extension Core.ItemType : Swift.RawRepresentable {}
+extension Core.ContentType : Swift.Equatable {}
+extension Core.ContentType : Swift.Hashable {}
+extension Core.ContentType : Swift.RawRepresentable {}
+extension Core.LogEvent : Swift.Equatable {}
+extension Core.LogEvent : Swift.Hashable {}

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AuthorizationDemoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dtQ-4V-oPt">
+                                <rect key="frame" x="60" y="730" width="270" height="50"/>
+                                <color key="backgroundColor" name="mainColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="lXj-Yo-ktw"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="AUTHORIZE">
+                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="16"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="authorizeButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5s4-5x-s2R"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Authorization Status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p2K-lV-KJ3">
+                                <rect key="frame" x="109.33333333333333" y="374" width="171.33333333333337" height="23"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aLO-3Z-AG1">
+                                <rect key="frame" x="155" y="254" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="i4G-dY-gC6"/>
+                                    <constraint firstAttribute="width" constant="80" id="kIq-nT-o3z"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hNy-Ap-TIM" customClass="NavigationBar" customModule="AuthorizationDemoApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="104"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="104" id="wxW-hD-Xif"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="p2K-lV-KJ3" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="5sv-pU-Si3"/>
+                            <constraint firstItem="aLO-3Z-AG1" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="8JE-g8-Mj3"/>
+                            <constraint firstItem="p2K-lV-KJ3" firstAttribute="top" secondItem="aLO-3Z-AG1" secondAttribute="bottom" constant="40" id="Chh-CK-6kG"/>
+                            <constraint firstItem="p2K-lV-KJ3" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="0.9" id="Ngi-p6-oBz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dtQ-4V-oPt" secondAttribute="trailing" constant="60" id="YFm-Fn-jJK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="dtQ-4V-oPt" secondAttribute="bottom" constant="30" id="aqr-4U-dlP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hNy-Ap-TIM" secondAttribute="trailing" id="dkg-TC-DM5"/>
+                            <constraint firstItem="hNy-Ap-TIM" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="jUJ-OD-ggv"/>
+                            <constraint firstItem="dtQ-4V-oPt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="lS3-bV-c0E"/>
+                            <constraint firstItem="dtQ-4V-oPt" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="mph-8i-7RW"/>
+                            <constraint firstItem="hNy-Ap-TIM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="okP-co-Zrd"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Duf-34-3v0"/>
+                    <connections>
+                        <outlet property="authorizationImageView" destination="aLO-3Z-AG1" id="Ay7-Jt-ns3"/>
+                        <outlet property="authorizationLabel" destination="p2K-lV-KJ3" id="0bF-0N-LAc"/>
+                        <outlet property="authorizeButton" destination="dtQ-4V-oPt" id="BSo-KD-Niu"/>
+                        <outlet property="navigationBar" destination="hNy-Ap-TIM" id="H0i-79-pta"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="950.76923076923072" y="3.5545023696682461"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="mainColor">
+            <color red="0.88599997758865356" green="0.0" blue="0.45500001311302185" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
