@@ -33,7 +33,7 @@ class EIDController {
 extension EIDController: EIDAPI {
     func initialize(completionHandler: @escaping (Message?, Error?) -> ()) {
         EIDController.completionHandler = completionHandler
-        ausweisapp2_init { response in
+        ausweisapp2_init( { response in
             guard let response = response else {
                 // communication initiated
                 EIDController.completionHandler(nil, nil)
@@ -91,6 +91,9 @@ extension EIDController: EIDAPI {
                 case .invalid:
                     let invalidMessage = try JSONDecoder().decode(InvalidMessage.self, from: data)
                     EIDController.completionHandler(invalidMessage, nil)
+                case .status:
+                    let statusMessage = try JSONDecoder().decode(StatusMessage.self, from: data)
+                    EIDController.completionHandler(statusMessage, nil)
                 case .badState:
                     let badStateMessage = try JSONDecoder().decode(BadStateMessage.self, from: data)
                     EIDController.completionHandler(badStateMessage, nil)
@@ -103,7 +106,7 @@ extension EIDController: EIDAPI {
             } catch {
                 EIDController.completionHandler(nil, error)
             }
-        }
+        }, nil)
     }
     
     func shutdown() {

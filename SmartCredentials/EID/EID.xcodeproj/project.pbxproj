@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FE00CB372721655E00205D3A /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE00CB362721655E00205D3A /* Core.framework */; };
-		FE00CB3C2721679500205D3A /* AusweisApp2 in Frameworks */ = {isa = PBXBuildFile; productRef = FE00CB3B2721679500205D3A /* AusweisApp2 */; };
+		FE02AA052746AAA2004709B8 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE00CB362721655E00205D3A /* Core.framework */; };
+		FE53241129797CD600081DB4 /* AusweisApp2.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE53241029797CD600081DB4 /* AusweisApp2.xcframework */; };
 		FED28D7127170C60004A6106 /* EID.docc in Sources */ = {isa = PBXBuildFile; fileRef = FED28D7027170C60004A6106 /* EID.docc */; };
 		FED28D7727170C60004A6106 /* EID.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FED28D6C27170C60004A6106 /* EID.framework */; };
 		FED28D7C27170C60004A6106 /* EIDTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED28D7B27170C60004A6106 /* EIDTests.swift */; };
@@ -30,6 +30,7 @@
 /* Begin PBXFileReference section */
 		FE00CB362721655E00205D3A /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE00CB412729278000205D3A /* EID.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EID.entitlements; sourceTree = "<group>"; };
+		FE53241029797CD600081DB4 /* AusweisApp2.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = AusweisApp2.xcframework; sourceTree = "<group>"; };
 		FED28D6C27170C60004A6106 /* EID.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EID.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FED28D6F27170C60004A6106 /* EID.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EID.h; sourceTree = "<group>"; };
 		FED28D7027170C60004A6106 /* EID.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = EID.docc; sourceTree = "<group>"; };
@@ -44,8 +45,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE00CB372721655E00205D3A /* Core.framework in Frameworks */,
-				FE00CB3C2721679500205D3A /* AusweisApp2 in Frameworks */,
+				FE53241129797CD600081DB4 /* AusweisApp2.xcframework in Frameworks */,
+				FE02AA052746AAA2004709B8 /* Core.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +64,7 @@
 		FE00CB352720238900205D3A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FE53241029797CD600081DB4 /* AusweisApp2.xcframework */,
 				FE00CB362721655E00205D3A /* Core.framework */,
 			);
 			path = Frameworks;
@@ -160,7 +162,6 @@
 			);
 			name = EID;
 			packageProductDependencies = (
-				FE00CB3B2721679500205D3A /* AusweisApp2 */,
 			);
 			productName = EID;
 			productReference = FED28D6C27170C60004A6106 /* EID.framework */;
@@ -215,7 +216,6 @@
 			);
 			mainGroup = FED28D6227170C60004A6106;
 			packageReferences = (
-				FE00CB3A2721679500205D3A /* XCRemoteSwiftPackageReference "AusweisApp2-SDK-iOS" */,
 			);
 			productRefGroup = FED28D6D27170C60004A6106 /* Products */;
 			projectDirPath = "";
@@ -406,6 +406,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = EID/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
@@ -439,6 +440,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = EID/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
@@ -537,25 +539,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		FE00CB3A2721679500205D3A /* XCRemoteSwiftPackageReference "AusweisApp2-SDK-iOS" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Governikus/AusweisApp2-SDK-iOS";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		FE00CB3B2721679500205D3A /* AusweisApp2 */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = FE00CB3A2721679500205D3A /* XCRemoteSwiftPackageReference "AusweisApp2-SDK-iOS" */;
-			productName = AusweisApp2;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FED28D6327170C60004A6106 /* Project object */;
 }

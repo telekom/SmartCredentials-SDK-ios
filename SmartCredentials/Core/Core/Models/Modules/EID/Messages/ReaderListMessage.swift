@@ -9,22 +9,22 @@
 import Foundation
 
 public class ReaderListMessage: Message {
-    public let reader: [ReaderModel]
+    public let readers: [ReaderModel]
     
     private enum CodingKeys : String, CodingKey {
-        case reader
+        case readers
     }
     
     required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         
-        reader = try container.decode([ReaderModel].self, forKey: .reader)
+        readers = try container.decode([ReaderModel].self, forKey: .readers)
         try super.init(from: decoder)
     }
     
     public override func encode(to encoder: Encoder) throws {
         try super.encode(to: encoder)
         var container = encoder.container(keyedBy: CodingKeys.self)
-        try container.encode(reader, forKey: .reader)
+        try container.encode(readers, forKey: .readers)
     }
 }
