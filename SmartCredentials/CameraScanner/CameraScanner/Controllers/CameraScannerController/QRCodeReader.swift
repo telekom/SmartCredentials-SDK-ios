@@ -18,7 +18,7 @@ import AVFoundation
 import UIKit
 import Core
 
-protocol QRCodeReaderProtocol: class {
+protocol QRCodeReaderProtocol: AnyObject {
     func qrCodeReader(_ qrCodeReader: QRCodeReader, didFind qrCode: String)
 }
 

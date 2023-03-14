@@ -206,14 +206,14 @@
     {
       "filePath": "\/Users\/cameliaignat\/SmartCredentials-SDK-ios\/SmartCredentials\/CameraScanner\/CameraScanner\/Controllers\/CameraScannerController\/QRCodeReader.swift",
       "kind": "StringLiteral",
-      "offset": 767,
+      "offset": 771,
       "length": 12,
       "value": "\"CameraScanner.QRCodeReader\""
     },
     {
       "filePath": "\/Users\/cameliaignat\/SmartCredentials-SDK-ios\/SmartCredentials\/CameraScanner\/CameraScanner\/Controllers\/CameraScannerController\/OCRScanner.swift",
       "kind": "IntegerLiteral",
-      "offset": 1198,
+      "offset": 1175,
       "length": 1,
       "value": "0"
     },

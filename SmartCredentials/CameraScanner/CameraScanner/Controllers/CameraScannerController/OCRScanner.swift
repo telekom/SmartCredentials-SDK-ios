@@ -33,7 +33,6 @@ class OCRScanner: NSObject {
     var videoPreviewLayer: AVCaptureVideoPreviewLayer?
     var scannerStatus: OCRScannerStatus = .stopped
 
-    var regex: String?
     var detectionFrame: CGRect = .zero
     var completionHandler: OCRScannerCompletionHandler?
     var getPreviewCompletionHandler: OCRScannerGetPreviewCompletionHandler?
@@ -119,8 +118,7 @@ class OCRScanner: NSObject {
         captureSession.stopRunning()
     }
 
-    func startScanning(in frame: CGRect, regex: String?, completionHandler: @escaping OCRScannerCompletionHandler) {
-        self.regex = regex
+    func startScanning(in frame: CGRect, completionHandler: @escaping OCRScannerCompletionHandler) {
         self.detectionFrame = frame
         self.completionHandler = completionHandler
         

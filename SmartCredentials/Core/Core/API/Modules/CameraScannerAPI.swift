@@ -43,7 +43,7 @@ public protocol CameraScannerAPI {
     ///   - regex: regex used for searching the detected text
     ///   - completionHandler: completion handler with result as parameter (.success with detected text or .failure with associated error)
     /// - Returns: void
-    func startOCRScanning(in frame: CGRect, with regex: String?, completionHandler: @escaping OCRScannerCompletionHandler)
+    func startOCRScanning(in frame: CGRect, completionHandler: @escaping OCRScannerCompletionHandler)
     
     /// Stops the OCR Scanner Camera and detection
     ///

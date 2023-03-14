@@ -856,6 +856,803 @@
         ]
       },
       {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "Core",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "SetCardCommand",
+        "printedName": "SetCardCommand",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "name",
+            "printedName": "name",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:4Core14SetCardCommandC4nameSSvp",
+            "mangledName": "$s4Core14SetCardCommandC4nameSSvp",
+            "moduleName": "Core",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:4Core14SetCardCommandC4nameSSvg",
+                "mangledName": "$s4Core14SetCardCommandC4nameSSvg",
+                "moduleName": "Core",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:4Core14SetCardCommandC4nameSSvs",
+                "mangledName": "$s4Core14SetCardCommandC4nameSSvs",
+                "moduleName": "Core",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:4Core14SetCardCommandC4nameSSvM",
+                "mangledName": "$s4Core14SetCardCommandC4nameSSvM",
+                "moduleName": "Core",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "simulator",
+            "printedName": "simulator",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Core.SimulatorModel?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SimulatorModel",
+                    "printedName": "Core.SimulatorModel",
+                    "usr": "s:4Core14SimulatorModelV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:4Core14SetCardCommandC9simulatorAA14SimulatorModelVSgvp",
+            "mangledName": "$s4Core14SetCardCommandC9simulatorAA14SimulatorModelVSgvp",
+            "moduleName": "Core",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Core.SimulatorModel?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SimulatorModel",
+                        "printedName": "Core.SimulatorModel",
+                        "usr": "s:4Core14SimulatorModelV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:4Core14SetCardCommandC9simulatorAA14SimulatorModelVSgvg",
+                "mangledName": "$s4Core14SetCardCommandC9simulatorAA14SimulatorModelVSgvg",
+                "moduleName": "Core",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Core.SimulatorModel?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SimulatorModel",
+                        "printedName": "Core.SimulatorModel",
+                        "usr": "s:4Core14SimulatorModelV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:4Core14SetCardCommandC9simulatorAA14SimulatorModelVSgvs",
+                "mangledName": "$s4Core14SetCardCommandC9simulatorAA14SimulatorModelVSgvs",
+                "moduleName": "Core",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:4Core14SetCardCommandC9simulatorAA14SimulatorModelVSgvM",
+                "mangledName": "$s4Core14SetCardCommandC9simulatorAA14SimulatorModelVSgvM",
+                "moduleName": "Core",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(cmd:name:simulator:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SetCardCommand",
+                "printedName": "Core.SetCardCommand",
+                "usr": "s:4Core14SetCardCommandC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Core.SimulatorModel?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SimulatorModel",
+                    "printedName": "Core.SimulatorModel",
+                    "usr": "s:4Core14SimulatorModelV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:4Core14SetCardCommandC3cmd4name9simulatorACSS_SSAA14SimulatorModelVSgtcfc",
+            "mangledName": "$s4Core14SetCardCommandC3cmd4name9simulatorACSS_SSAA14SimulatorModelVSgtcfc",
+            "moduleName": "Core",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:4Core14SetCardCommandC6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s4Core14SetCardCommandC6encode2toys7Encoder_p_tKF",
+            "moduleName": "Core",
+            "overriding": true,
+            "declAttributes": [
+              "Override",
+              "AccessControl"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(cmd:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SetCardCommand",
+                "printedName": "Core.SetCardCommand",
+                "usr": "s:4Core14SetCardCommandC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:4Core14SetCardCommandC3cmdACSS_tcfc",
+            "mangledName": "$s4Core14SetCardCommandC3cmdACSS_tcfc",
+            "moduleName": "Core",
+            "overriding": true,
+            "implicit": true,
+            "declAttributes": [
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:4Core14SetCardCommandC",
+        "mangledName": "$s4Core14SetCardCommandC",
+        "moduleName": "Core",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "superclassUsr": "s:4Core7CommandC",
+        "hasMissingDesignatedInitializers": true,
+        "superclassNames": [
+          "Core.Command"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "SimulatorModel",
+        "printedName": "SimulatorModel",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "files",
+            "printedName": "files",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Core.FileModel?]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Core.FileModel?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FileModel",
+                        "printedName": "Core.FileModel",
+                        "usr": "s:4Core9FileModelV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:4Core14SimulatorModelV5filesSayAA04FileC0VSgGvp",
+            "mangledName": "$s4Core14SimulatorModelV5filesSayAA04FileC0VSgGvp",
+            "moduleName": "Core",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Core.FileModel?]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "Core.FileModel?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "FileModel",
+                            "printedName": "Core.FileModel",
+                            "usr": "s:4Core9FileModelV"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:4Core14SimulatorModelV5filesSayAA04FileC0VSgGvg",
+                "mangledName": "$s4Core14SimulatorModelV5filesSayAA04FileC0VSgGvg",
+                "moduleName": "Core",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(files:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SimulatorModel",
+                "printedName": "Core.SimulatorModel",
+                "usr": "s:4Core14SimulatorModelV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Core.FileModel?]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Core.FileModel?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FileModel",
+                        "printedName": "Core.FileModel",
+                        "usr": "s:4Core9FileModelV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:4Core14SimulatorModelV5filesACSayAA04FileC0VSgG_tcfc",
+            "mangledName": "$s4Core14SimulatorModelV5filesACSayAA04FileC0VSgG_tcfc",
+            "moduleName": "Core",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SimulatorModel",
+                "printedName": "Core.SimulatorModel",
+                "usr": "s:4Core14SimulatorModelV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:4Core14SimulatorModelV4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s4Core14SimulatorModelV4fromACs7Decoder_p_tKcfc",
+            "moduleName": "Core",
+            "implicit": true,
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:4Core14SimulatorModelV6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s4Core14SimulatorModelV6encode2toys7Encoder_p_tKF",
+            "moduleName": "Core",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:4Core14SimulatorModelV",
+        "mangledName": "$s4Core14SimulatorModelV",
+        "moduleName": "Core",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "FileModel",
+        "printedName": "FileModel",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "fileId",
+            "printedName": "fileId",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:4Core9FileModelV6fileIdSSvp",
+            "mangledName": "$s4Core9FileModelV6fileIdSSvp",
+            "moduleName": "Core",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:4Core9FileModelV6fileIdSSvg",
+                "mangledName": "$s4Core9FileModelV6fileIdSSvg",
+                "moduleName": "Core",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "shortFileId",
+            "printedName": "shortFileId",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:4Core9FileModelV05shortB2IdSSvp",
+            "mangledName": "$s4Core9FileModelV05shortB2IdSSvp",
+            "moduleName": "Core",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:4Core9FileModelV05shortB2IdSSvg",
+                "mangledName": "$s4Core9FileModelV05shortB2IdSSvg",
+                "moduleName": "Core",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "content",
+            "printedName": "content",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:4Core9FileModelV7contentSSvp",
+            "mangledName": "$s4Core9FileModelV7contentSSvp",
+            "moduleName": "Core",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:4Core9FileModelV7contentSSvg",
+                "mangledName": "$s4Core9FileModelV7contentSSvg",
+                "moduleName": "Core",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(fileId:shortFileId:content:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "FileModel",
+                "printedName": "Core.FileModel",
+                "usr": "s:4Core9FileModelV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:4Core9FileModelV6fileId05shortbE07contentACSS_S2Stcfc",
+            "mangledName": "$s4Core9FileModelV6fileId05shortbE07contentACSS_S2Stcfc",
+            "moduleName": "Core",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "FileModel",
+                "printedName": "Core.FileModel",
+                "usr": "s:4Core9FileModelV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:4Core9FileModelV4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s4Core9FileModelV4fromACs7Decoder_p_tKcfc",
+            "moduleName": "Core",
+            "implicit": true,
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:4Core9FileModelV6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s4Core9FileModelV6encode2toys7Encoder_p_tKF",
+            "moduleName": "Core",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:4Core9FileModelV",
+        "mangledName": "$s4Core9FileModelV",
+        "moduleName": "Core",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          }
+        ]
+      },
+      {
         "kind": "TypeDecl",
         "name": "ItemEnvelope",
         "printedName": "ItemEnvelope",
@@ -3598,6 +4395,43 @@
             "declKind": "EnumElement",
             "usr": "s:4Core8MessagesO8badStateyA2CmF",
             "mangledName": "$s4Core8MessagesO8badStateyA2CmF",
+            "moduleName": "Core"
+          },
+          {
+            "kind": "Var",
+            "name": "status",
+            "printedName": "status",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Core.Messages.Type) -> Core.Messages",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Messages",
+                    "printedName": "Core.Messages",
+                    "usr": "s:4Core8MessagesO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "Core.Messages.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Messages",
+                        "printedName": "Core.Messages",
+                        "usr": "s:4Core8MessagesO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:4Core8MessagesO6statusyA2CmF",
+            "mangledName": "$s4Core8MessagesO6statusyA2CmF",
             "moduleName": "Core"
           },
           {
@@ -6959,8 +7793,8 @@
         "children": [
           {
             "kind": "Var",
-            "name": "reader",
-            "printedName": "reader",
+            "name": "readers",
+            "printedName": "readers",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -6978,8 +7812,8 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:4Core17ReaderListMessageC6readerSayAA0B5ModelVGvp",
-            "mangledName": "$s4Core17ReaderListMessageC6readerSayAA0B5ModelVGvp",
+            "usr": "s:4Core17ReaderListMessageC7readersSayAA0B5ModelVGvp",
+            "mangledName": "$s4Core17ReaderListMessageC7readersSayAA0B5ModelVGvp",
             "moduleName": "Core",
             "declAttributes": [
               "Final",
@@ -7010,8 +7844,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:4Core17ReaderListMessageC6readerSayAA0B5ModelVGvg",
-                "mangledName": "$s4Core17ReaderListMessageC6readerSayAA0B5ModelVGvg",
+                "usr": "s:4Core17ReaderListMessageC7readersSayAA0B5ModelVGvg",
+                "mangledName": "$s4Core17ReaderListMessageC7readersSayAA0B5ModelVGvg",
                 "moduleName": "Core",
                 "implicit": true,
                 "declAttributes": [
@@ -9091,6 +9925,43 @@
           },
           {
             "kind": "Var",
+            "name": "getStatus",
+            "printedName": "getStatus",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Core.Commands.Type) -> Core.Commands",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Commands",
+                    "printedName": "Core.Commands",
+                    "usr": "s:4Core8CommandsO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "Core.Commands.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Commands",
+                        "printedName": "Core.Commands",
+                        "usr": "s:4Core8CommandsO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:4Core8CommandsO9getStatusyA2CmF",
+            "mangledName": "$s4Core8CommandsO9getStatusyA2CmF",
+            "moduleName": "Core"
+          },
+          {
+            "kind": "Var",
             "name": "getAPILevel",
             "printedName": "getAPILevel",
             "children": [
@@ -9383,6 +10254,43 @@
             "declKind": "EnumElement",
             "usr": "s:4Core8CommandsO15setAccessRightsyA2CmF",
             "mangledName": "$s4Core8CommandsO15setAccessRightsyA2CmF",
+            "moduleName": "Core"
+          },
+          {
+            "kind": "Var",
+            "name": "setCard",
+            "printedName": "setCard",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Core.Commands.Type) -> Core.Commands",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Commands",
+                    "printedName": "Core.Commands",
+                    "usr": "s:4Core8CommandsO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "Core.Commands.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Commands",
+                        "printedName": "Core.Commands",
+                        "usr": "s:4Core8CommandsO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:4Core8CommandsO7setCardyA2CmF",
+            "mangledName": "$s4Core8CommandsO7setCardyA2CmF",
             "moduleName": "Core"
           },
           {
@@ -11440,6 +12348,54 @@
           },
           {
             "kind": "Var",
+            "name": "status",
+            "printedName": "status",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:4Core19RunChangePINCommandC6statusSbvp",
+            "mangledName": "$s4Core19RunChangePINCommandC6statusSbvp",
+            "moduleName": "Core",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:4Core19RunChangePINCommandC6statusSbvg",
+                "mangledName": "$s4Core19RunChangePINCommandC6statusSbvg",
+                "moduleName": "Core",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
             "name": "messages",
             "printedName": "messages",
             "children": [
@@ -11505,7 +12461,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(cmd:handleInterrupt:messages:)",
+            "printedName": "init(cmd:handleInterrupt:status:messages:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -11518,6 +12474,12 @@
                 "name": "String",
                 "printedName": "Swift.String",
                 "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
               },
               {
                 "kind": "TypeNominal",
@@ -11541,8 +12503,8 @@
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:4Core19RunChangePINCommandC3cmd15handleInterrupt8messagesACSS_SbAA15CommandMessagesVSgtcfc",
-            "mangledName": "$s4Core19RunChangePINCommandC3cmd15handleInterrupt8messagesACSS_SbAA15CommandMessagesVSgtcfc",
+            "usr": "s:4Core19RunChangePINCommandC3cmd15handleInterrupt6status8messagesACSS_S2bAA15CommandMessagesVSgtcfc",
+            "mangledName": "$s4Core19RunChangePINCommandC3cmd15handleInterrupt6status8messagesACSS_S2bAA15CommandMessagesVSgtcfc",
             "moduleName": "Core",
             "declAttributes": [
               "AccessControl"
@@ -17678,6 +18640,70 @@
           },
           {
             "kind": "Var",
+            "name": "insertable",
+            "printedName": "insertable",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Bool?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:4Core13ReaderMessageC10insertableSbSgvp",
+            "mangledName": "$s4Core13ReaderMessageC10insertableSbSgvp",
+            "moduleName": "Core",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Bool?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Bool",
+                        "printedName": "Swift.Bool",
+                        "usr": "s:Sb"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:4Core13ReaderMessageC10insertableSbSgvg",
+                "mangledName": "$s4Core13ReaderMessageC10insertableSbSgvg",
+                "moduleName": "Core",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
             "name": "attached",
             "printedName": "attached",
             "children": [
@@ -17731,14 +18757,22 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "usr": "s:Sb"
+                "name": "Optional",
+                "printedName": "Swift.Bool?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Var",
-            "usr": "s:4Core13ReaderMessageC6keypadSbvp",
-            "mangledName": "$s4Core13ReaderMessageC6keypadSbvp",
+            "usr": "s:4Core13ReaderMessageC6keypadSbSgvp",
+            "mangledName": "$s4Core13ReaderMessageC6keypadSbSgvp",
             "moduleName": "Core",
             "declAttributes": [
               "Final",
@@ -17755,14 +18789,22 @@
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "Bool",
-                    "printedName": "Swift.Bool",
-                    "usr": "s:Sb"
+                    "name": "Optional",
+                    "printedName": "Swift.Bool?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Bool",
+                        "printedName": "Swift.Bool",
+                        "usr": "s:Sb"
+                      }
+                    ],
+                    "usr": "s:Sq"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:4Core13ReaderMessageC6keypadSbvg",
-                "mangledName": "$s4Core13ReaderMessageC6keypadSbvg",
+                "usr": "s:4Core13ReaderMessageC6keypadSbSgvg",
+                "mangledName": "$s4Core13ReaderMessageC6keypadSbSgvg",
                 "moduleName": "Core",
                 "implicit": true,
                 "declAttributes": [
@@ -18350,6 +19392,273 @@
         "moduleName": "Core",
         "declAttributes": [
           "AccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "Core",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "StatusMessage",
+        "printedName": "StatusMessage",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "workflow",
+            "printedName": "workflow",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:4Core13StatusMessageC8workflowSSSgvp",
+            "mangledName": "$s4Core13StatusMessageC8workflowSSSgvp",
+            "moduleName": "Core",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:4Core13StatusMessageC8workflowSSSgvg",
+                "mangledName": "$s4Core13StatusMessageC8workflowSSSgvg",
+                "moduleName": "Core",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "progress",
+            "printedName": "progress",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Int?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:4Core13StatusMessageC8progressSiSgvp",
+            "mangledName": "$s4Core13StatusMessageC8progressSiSgvp",
+            "moduleName": "Core",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Int?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:4Core13StatusMessageC8progressSiSgvg",
+                "mangledName": "$s4Core13StatusMessageC8progressSiSgvg",
+                "moduleName": "Core",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "state",
+            "printedName": "state",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:4Core13StatusMessageC5stateSSSgvp",
+            "mangledName": "$s4Core13StatusMessageC5stateSSSgvp",
+            "moduleName": "Core",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:4Core13StatusMessageC5stateSSSgvg",
+                "mangledName": "$s4Core13StatusMessageC5stateSSSgvg",
+                "moduleName": "Core",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:4Core13StatusMessageC6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s4Core13StatusMessageC6encode2toys7Encoder_p_tKF",
+            "moduleName": "Core",
+            "overriding": true,
+            "declAttributes": [
+              "Override",
+              "AccessControl"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:4Core13StatusMessageC",
+        "mangledName": "$s4Core13StatusMessageC",
+        "moduleName": "Core",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "superclassUsr": "s:4Core7MessageC",
+        "hasMissingDesignatedInitializers": true,
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "Core.Message"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          }
         ]
       },
       {
@@ -23188,6 +24497,110 @@
       },
       {
         "kind": "TypeDecl",
+        "name": "GetStatusCommand",
+        "printedName": "GetStatusCommand",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(cmd:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GetStatusCommand",
+                "printedName": "Core.GetStatusCommand",
+                "usr": "s:4Core16GetStatusCommandC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:4Core16GetStatusCommandC3cmdACSS_tcfc",
+            "mangledName": "$s4Core16GetStatusCommandC3cmdACSS_tcfc",
+            "moduleName": "Core",
+            "overriding": true,
+            "implicit": true,
+            "declAttributes": [
+              "Override"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GetStatusCommand",
+                "printedName": "Core.GetStatusCommand",
+                "usr": "s:4Core16GetStatusCommandC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:4Core16GetStatusCommandC4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s4Core16GetStatusCommandC4fromACs7Decoder_p_tKcfc",
+            "moduleName": "Core",
+            "overriding": true,
+            "implicit": true,
+            "declAttributes": [
+              "Required"
+            ],
+            "throwing": true,
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:4Core16GetStatusCommandC",
+        "mangledName": "$s4Core16GetStatusCommandC",
+        "moduleName": "Core",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "superclassUsr": "s:4Core7CommandC",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "Core.Command"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "Core",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
         "name": "ChangePINMessage",
         "printedName": "ChangePINMessage",
         "children": [
@@ -23198,14 +24611,22 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "usr": "s:Sb"
+                "name": "Optional",
+                "printedName": "Swift.Bool?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Var",
-            "usr": "s:4Core16ChangePINMessageC7successSbvp",
-            "mangledName": "$s4Core16ChangePINMessageC7successSbvp",
+            "usr": "s:4Core16ChangePINMessageC7successSbSgvp",
+            "mangledName": "$s4Core16ChangePINMessageC7successSbSgvp",
             "moduleName": "Core",
             "declAttributes": [
               "Final",
@@ -23222,14 +24643,22 @@
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "Bool",
-                    "printedName": "Swift.Bool",
-                    "usr": "s:Sb"
+                    "name": "Optional",
+                    "printedName": "Swift.Bool?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Bool",
+                        "printedName": "Swift.Bool",
+                        "usr": "s:Sb"
+                      }
+                    ],
+                    "usr": "s:Sq"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:4Core16ChangePINMessageC7successSbvg",
-                "mangledName": "$s4Core16ChangePINMessageC7successSbvg",
+                "usr": "s:4Core16ChangePINMessageC7successSbSgvg",
+                "mangledName": "$s4Core16ChangePINMessageC7successSbSgvg",
                 "moduleName": "Core",
                 "implicit": true,
                 "declAttributes": [
@@ -24807,7 +26236,7 @@
           {
             "kind": "Function",
             "name": "startOCRScanning",
-            "printedName": "startOCRScanning(in:with:completionHandler:)",
+            "printedName": "startOCRScanning(in:completionHandler:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -24819,20 +26248,6 @@
                 "name": "CGRect",
                 "printedName": "CoreFoundation.CGRect",
                 "usr": "c:@S@CGRect"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "usr": "s:Sq"
               },
               {
                 "kind": "TypeFunc",
@@ -24862,8 +26277,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:4Core16CameraScannerAPIP16startOCRScanning2in4with17completionHandlerySo6CGRectV_SSSgyAA25SmartCredentialsAPIResultOyAA16OCRScannerResultVGctF",
-            "mangledName": "$s4Core16CameraScannerAPIP16startOCRScanning2in4with17completionHandlerySo6CGRectV_SSSgyAA25SmartCredentialsAPIResultOyAA16OCRScannerResultVGctF",
+            "usr": "s:4Core16CameraScannerAPIP16startOCRScanning2in17completionHandlerySo6CGRectV_yAA25SmartCredentialsAPIResultOyAA16OCRScannerResultVGctF",
+            "mangledName": "$s4Core16CameraScannerAPIP16startOCRScanning2in17completionHandlerySo6CGRectV_yAA25SmartCredentialsAPIResultOyAA16OCRScannerResultVGctF",
             "moduleName": "Core",
             "genericSig": "<τ_0_0 where τ_0_0 : Core.CameraScannerAPI>",
             "sugared_genericSig": "<Self where Self : Core.CameraScannerAPI>",
@@ -25492,8 +26907,8 @@
           },
           {
             "kind": "Var",
-            "name": "handleInterrupt",
-            "printedName": "handleInterrupt",
+            "name": "developerMode",
+            "printedName": "developerMode",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -25503,8 +26918,8 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:4Core14RunAuthCommandC15handleInterruptSbvp",
-            "mangledName": "$s4Core14RunAuthCommandC15handleInterruptSbvp",
+            "usr": "s:4Core14RunAuthCommandC13developerModeSbvp",
+            "mangledName": "$s4Core14RunAuthCommandC13developerModeSbvp",
             "moduleName": "Core",
             "declAttributes": [
               "Final",
@@ -25527,8 +26942,56 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:4Core14RunAuthCommandC15handleInterruptSbvg",
-                "mangledName": "$s4Core14RunAuthCommandC15handleInterruptSbvg",
+                "usr": "s:4Core14RunAuthCommandC13developerModeSbvg",
+                "mangledName": "$s4Core14RunAuthCommandC13developerModeSbvg",
+                "moduleName": "Core",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "status",
+            "printedName": "status",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:4Core14RunAuthCommandC6statusSbvp",
+            "mangledName": "$s4Core14RunAuthCommandC6statusSbvp",
+            "moduleName": "Core",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:4Core14RunAuthCommandC6statusSbvg",
+                "mangledName": "$s4Core14RunAuthCommandC6statusSbvg",
                 "moduleName": "Core",
                 "implicit": true,
                 "declAttributes": [
@@ -25605,7 +27068,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(cmd:tcTokenURL:handleInterrupt:messages:)",
+            "printedName": "init(cmd:developerMode:tcTokenURL:status:messages:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -25618,6 +27081,12 @@
                 "name": "String",
                 "printedName": "Swift.String",
                 "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
               },
               {
                 "kind": "TypeNominal",
@@ -25647,8 +27116,8 @@
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:4Core14RunAuthCommandC3cmd10tcTokenURL15handleInterrupt8messagesACSS_SSSbAA0D8MessagesVSgtcfc",
-            "mangledName": "$s4Core14RunAuthCommandC3cmd10tcTokenURL15handleInterrupt8messagesACSS_SSSbAA0D8MessagesVSgtcfc",
+            "usr": "s:4Core14RunAuthCommandC3cmd13developerMode10tcTokenURL6status8messagesACSS_SbSSSbAA0D8MessagesVSgtcfc",
+            "mangledName": "$s4Core14RunAuthCommandC3cmd13developerMode10tcTokenURL6status8messagesACSS_SbSSSbAA0D8MessagesVSgtcfc",
             "moduleName": "Core",
             "declAttributes": [
               "AccessControl"
@@ -26583,6 +28052,13 @@
   },
   "ConstValues": [
     {
+      "filePath": "\/Users\/cameliaignat\/SmartCredentials-SDK-ios\/SmartCredentials\/Core\/Core\/Models\/Modules\/EID\/Commands\/SetCardCommand.swift",
+      "kind": "StringLiteral",
+      "offset": 180,
+      "length": 14,
+      "value": "\"Core.SetCardCommand\""
+    },
+    {
       "filePath": "\/Users\/cameliaignat\/SmartCredentials-SDK-ios\/SmartCredentials\/Core\/Core\/Models\/Modules\/DocumentScanner\/EIDCameraSettings.swift",
       "kind": "BooleanLiteral",
       "offset": 1428,
@@ -26704,7 +28180,14 @@
     {
       "filePath": "\/Users\/cameliaignat\/SmartCredentials-SDK-ios\/SmartCredentials\/Core\/Core\/Models\/Modules\/EID\/Messages\/Messages.swift",
       "kind": "StringLiteral",
-      "offset": 683,
+      "offset": 675,
+      "length": 8,
+      "value": "\"STATUS\""
+    },
+    {
+      "filePath": "\/Users\/cameliaignat\/SmartCredentials-SDK-ios\/SmartCredentials\/Core\/Core\/Models\/Modules\/EID\/Messages\/Messages.swift",
+      "kind": "StringLiteral",
+      "offset": 710,
       "length": 17,
       "value": "\"UNKNOWN_COMMAND\""
     },
@@ -26823,21 +28306,28 @@
     {
       "filePath": "\/Users\/cameliaignat\/SmartCredentials-SDK-ios\/SmartCredentials\/Core\/Core\/Models\/Modules\/EID\/Messages\/Messages.swift",
       "kind": "StringLiteral",
-      "offset": 683,
+      "offset": 675,
+      "length": 8,
+      "value": "\"STATUS\""
+    },
+    {
+      "filePath": "\/Users\/cameliaignat\/SmartCredentials-SDK-ios\/SmartCredentials\/Core\/Core\/Models\/Modules\/EID\/Messages\/Messages.swift",
+      "kind": "StringLiteral",
+      "offset": 710,
       "length": 17,
       "value": "\"UNKNOWN_COMMAND\""
     },
     {
       "filePath": "\/Users\/cameliaignat\/SmartCredentials-SDK-ios\/SmartCredentials\/Core\/Core\/Models\/Modules\/EID\/Messages\/Messages.swift",
       "kind": "StringLiteral",
-      "offset": 837,
+      "offset": 864,
       "length": 5,
       "value": "\"msg\""
     },
     {
       "filePath": "\/Users\/cameliaignat\/SmartCredentials-SDK-ios\/SmartCredentials\/Core\/Core\/Models\/Modules\/EID\/Messages\/Messages.swift",
       "kind": "StringLiteral",
-      "offset": 837,
+      "offset": 864,
       "length": 5,
       "value": "\"msg\""
     },
@@ -26949,112 +28439,126 @@
     {
       "filePath": "\/Users\/cameliaignat\/SmartCredentials-SDK-ios\/SmartCredentials\/Core\/Core\/Models\/Modules\/EID\/Commands\/Command.swift",
       "kind": "StringLiteral",
-      "offset": 244,
+      "offset": 242,
+      "length": 12,
+      "value": "\"GET_STATUS\""
+    },
+    {
+      "filePath": "\/Users\/cameliaignat\/SmartCredentials-SDK-ios\/SmartCredentials\/Core\/Core\/Models\/Modules\/EID\/Commands\/Command.swift",
+      "kind": "StringLiteral",
+      "offset": 278,
       "length": 15,
       "value": "\"GET_API_LEVEL\""
     },
     {
       "filePath": "\/Users\/cameliaignat\/SmartCredentials-SDK-ios\/SmartCredentials\/Core\/Core\/Models\/Modules\/EID\/Commands\/Command.swift",
       "kind": "StringLiteral",
-      "offset": 283,
+      "offset": 317,
       "length": 15,
       "value": "\"SET_API_LEVEL\""
     },
     {
       "filePath": "\/Users\/cameliaignat\/SmartCredentials-SDK-ios\/SmartCredentials\/Core\/Core\/Models\/Modules\/EID\/Commands\/Command.swift",
       "kind": "StringLiteral",
-      "offset": 320,
+      "offset": 354,
       "length": 12,
       "value": "\"GET_READER\""
     },
     {
       "filePath": "\/Users\/cameliaignat\/SmartCredentials-SDK-ios\/SmartCredentials\/Core\/Core\/Models\/Modules\/EID\/Commands\/Command.swift",
       "kind": "StringLiteral",
-      "offset": 358,
+      "offset": 392,
       "length": 17,
       "value": "\"GET_READER_LIST\""
     },
     {
       "filePath": "\/Users\/cameliaignat\/SmartCredentials-SDK-ios\/SmartCredentials\/Core\/Core\/Models\/Modules\/EID\/Commands\/Command.swift",
       "kind": "StringLiteral",
-      "offset": 395,
+      "offset": 429,
       "length": 10,
       "value": "\"RUN_AUTH\""
     },
     {
       "filePath": "\/Users\/cameliaignat\/SmartCredentials-SDK-ios\/SmartCredentials\/Core\/Core\/Models\/Modules\/EID\/Commands\/Command.swift",
       "kind": "StringLiteral",
-      "offset": 430,
+      "offset": 464,
       "length": 16,
       "value": "\"RUN_CHANGE_PIN\""
     },
     {
       "filePath": "\/Users\/cameliaignat\/SmartCredentials-SDK-ios\/SmartCredentials\/Core\/Core\/Models\/Modules\/EID\/Commands\/Command.swift",
       "kind": "StringLiteral",
-      "offset": 474,
+      "offset": 508,
       "length": 19,
       "value": "\"GET_ACCESS_RIGHTS\""
     },
     {
       "filePath": "\/Users\/cameliaignat\/SmartCredentials-SDK-ios\/SmartCredentials\/Core\/Core\/Models\/Modules\/EID\/Commands\/Command.swift",
       "kind": "StringLiteral",
-      "offset": 521,
+      "offset": 555,
       "length": 19,
       "value": "\"SET_ACCESS_RIGHTS\""
     },
     {
       "filePath": "\/Users\/cameliaignat\/SmartCredentials-SDK-ios\/SmartCredentials\/Core\/Core\/Models\/Modules\/EID\/Commands\/Command.swift",
       "kind": "StringLiteral",
-      "offset": 567,
+      "offset": 594,
+      "length": 10,
+      "value": "\"SET_CARD\""
+    },
+    {
+      "filePath": "\/Users\/cameliaignat\/SmartCredentials-SDK-ios\/SmartCredentials\/Core\/Core\/Models\/Modules\/EID\/Commands\/Command.swift",
+      "kind": "StringLiteral",
+      "offset": 631,
       "length": 17,
       "value": "\"GET_CERTIFICATE\""
     },
     {
       "filePath": "\/Users\/cameliaignat\/SmartCredentials-SDK-ios\/SmartCredentials\/Core\/Core\/Models\/Modules\/EID\/Commands\/Command.swift",
       "kind": "StringLiteral",
-      "offset": 603,
+      "offset": 667,
       "length": 8,
       "value": "\"ACCEPT\""
     },
     {
       "filePath": "\/Users\/cameliaignat\/SmartCredentials-SDK-ios\/SmartCredentials\/Core\/Core\/Models\/Modules\/EID\/Commands\/Command.swift",
       "kind": "StringLiteral",
-      "offset": 630,
+      "offset": 694,
       "length": 8,
       "value": "\"CANCEL\""
     },
     {
       "filePath": "\/Users\/cameliaignat\/SmartCredentials-SDK-ios\/SmartCredentials\/Core\/Core\/Models\/Modules\/EID\/Commands\/Command.swift",
       "kind": "StringLiteral",
-      "offset": 657,
+      "offset": 721,
       "length": 9,
       "value": "\"SET_PIN\""
     },
     {
       "filePath": "\/Users\/cameliaignat\/SmartCredentials-SDK-ios\/SmartCredentials\/Core\/Core\/Models\/Modules\/EID\/Commands\/Command.swift",
       "kind": "StringLiteral",
-      "offset": 688,
+      "offset": 752,
       "length": 13,
       "value": "\"SET_NEW_PIN\""
     },
     {
       "filePath": "\/Users\/cameliaignat\/SmartCredentials-SDK-ios\/SmartCredentials\/Core\/Core\/Models\/Modules\/EID\/Commands\/Command.swift",
       "kind": "StringLiteral",
-      "offset": 720,
+      "offset": 784,
       "length": 9,
       "value": "\"SET_CAN\""
     },
     {
       "filePath": "\/Users\/cameliaignat\/SmartCredentials-SDK-ios\/SmartCredentials\/Core\/Core\/Models\/Modules\/EID\/Commands\/Command.swift",
       "kind": "StringLiteral",
-      "offset": 748,
+      "offset": 812,
       "length": 9,
       "value": "\"SET_PUK\""
     },
     {
       "filePath": "\/Users\/cameliaignat\/SmartCredentials-SDK-ios\/SmartCredentials\/Core\/Core\/Models\/Modules\/EID\/Commands\/Command.swift",
       "kind": "StringLiteral",
-      "offset": 779,
+      "offset": 843,
       "length": 11,
       "value": "\"INTERRUPT\""
     },
@@ -27068,126 +28572,140 @@
     {
       "filePath": "\/Users\/cameliaignat\/SmartCredentials-SDK-ios\/SmartCredentials\/Core\/Core\/Models\/Modules\/EID\/Commands\/Command.swift",
       "kind": "StringLiteral",
-      "offset": 244,
+      "offset": 242,
+      "length": 12,
+      "value": "\"GET_STATUS\""
+    },
+    {
+      "filePath": "\/Users\/cameliaignat\/SmartCredentials-SDK-ios\/SmartCredentials\/Core\/Core\/Models\/Modules\/EID\/Commands\/Command.swift",
+      "kind": "StringLiteral",
+      "offset": 278,
       "length": 15,
       "value": "\"GET_API_LEVEL\""
     },
     {
       "filePath": "\/Users\/cameliaignat\/SmartCredentials-SDK-ios\/SmartCredentials\/Core\/Core\/Models\/Modules\/EID\/Commands\/Command.swift",
       "kind": "StringLiteral",
-      "offset": 283,
+      "offset": 317,
       "length": 15,
       "value": "\"SET_API_LEVEL\""
     },
     {
       "filePath": "\/Users\/cameliaignat\/SmartCredentials-SDK-ios\/SmartCredentials\/Core\/Core\/Models\/Modules\/EID\/Commands\/Command.swift",
       "kind": "StringLiteral",
-      "offset": 320,
+      "offset": 354,
       "length": 12,
       "value": "\"GET_READER\""
     },
     {
       "filePath": "\/Users\/cameliaignat\/SmartCredentials-SDK-ios\/SmartCredentials\/Core\/Core\/Models\/Modules\/EID\/Commands\/Command.swift",
       "kind": "StringLiteral",
-      "offset": 358,
+      "offset": 392,
       "length": 17,
       "value": "\"GET_READER_LIST\""
     },
     {
       "filePath": "\/Users\/cameliaignat\/SmartCredentials-SDK-ios\/SmartCredentials\/Core\/Core\/Models\/Modules\/EID\/Commands\/Command.swift",
       "kind": "StringLiteral",
-      "offset": 395,
+      "offset": 429,
       "length": 10,
       "value": "\"RUN_AUTH\""
     },
     {
       "filePath": "\/Users\/cameliaignat\/SmartCredentials-SDK-ios\/SmartCredentials\/Core\/Core\/Models\/Modules\/EID\/Commands\/Command.swift",
       "kind": "StringLiteral",
-      "offset": 430,
+      "offset": 464,
       "length": 16,
       "value": "\"RUN_CHANGE_PIN\""
     },
     {
       "filePath": "\/Users\/cameliaignat\/SmartCredentials-SDK-ios\/SmartCredentials\/Core\/Core\/Models\/Modules\/EID\/Commands\/Command.swift",
       "kind": "StringLiteral",
-      "offset": 474,
+      "offset": 508,
       "length": 19,
       "value": "\"GET_ACCESS_RIGHTS\""
     },
     {
       "filePath": "\/Users\/cameliaignat\/SmartCredentials-SDK-ios\/SmartCredentials\/Core\/Core\/Models\/Modules\/EID\/Commands\/Command.swift",
       "kind": "StringLiteral",
-      "offset": 521,
+      "offset": 555,
       "length": 19,
       "value": "\"SET_ACCESS_RIGHTS\""
     },
     {
       "filePath": "\/Users\/cameliaignat\/SmartCredentials-SDK-ios\/SmartCredentials\/Core\/Core\/Models\/Modules\/EID\/Commands\/Command.swift",
       "kind": "StringLiteral",
-      "offset": 567,
+      "offset": 594,
+      "length": 10,
+      "value": "\"SET_CARD\""
+    },
+    {
+      "filePath": "\/Users\/cameliaignat\/SmartCredentials-SDK-ios\/SmartCredentials\/Core\/Core\/Models\/Modules\/EID\/Commands\/Command.swift",
+      "kind": "StringLiteral",
+      "offset": 631,
       "length": 17,
       "value": "\"GET_CERTIFICATE\""
     },
     {
       "filePath": "\/Users\/cameliaignat\/SmartCredentials-SDK-ios\/SmartCredentials\/Core\/Core\/Models\/Modules\/EID\/Commands\/Command.swift",
       "kind": "StringLiteral",
-      "offset": 603,
+      "offset": 667,
       "length": 8,
       "value": "\"ACCEPT\""
     },
     {
       "filePath": "\/Users\/cameliaignat\/SmartCredentials-SDK-ios\/SmartCredentials\/Core\/Core\/Models\/Modules\/EID\/Commands\/Command.swift",
       "kind": "StringLiteral",
-      "offset": 630,
+      "offset": 694,
       "length": 8,
       "value": "\"CANCEL\""
     },
     {
       "filePath": "\/Users\/cameliaignat\/SmartCredentials-SDK-ios\/SmartCredentials\/Core\/Core\/Models\/Modules\/EID\/Commands\/Command.swift",
       "kind": "StringLiteral",
-      "offset": 657,
+      "offset": 721,
       "length": 9,
       "value": "\"SET_PIN\""
     },
     {
       "filePath": "\/Users\/cameliaignat\/SmartCredentials-SDK-ios\/SmartCredentials\/Core\/Core\/Models\/Modules\/EID\/Commands\/Command.swift",
       "kind": "StringLiteral",
-      "offset": 688,
+      "offset": 752,
       "length": 13,
       "value": "\"SET_NEW_PIN\""
     },
     {
       "filePath": "\/Users\/cameliaignat\/SmartCredentials-SDK-ios\/SmartCredentials\/Core\/Core\/Models\/Modules\/EID\/Commands\/Command.swift",
       "kind": "StringLiteral",
-      "offset": 720,
+      "offset": 784,
       "length": 9,
       "value": "\"SET_CAN\""
     },
     {
       "filePath": "\/Users\/cameliaignat\/SmartCredentials-SDK-ios\/SmartCredentials\/Core\/Core\/Models\/Modules\/EID\/Commands\/Command.swift",
       "kind": "StringLiteral",
-      "offset": 748,
+      "offset": 812,
       "length": 9,
       "value": "\"SET_PUK\""
     },
     {
       "filePath": "\/Users\/cameliaignat\/SmartCredentials-SDK-ios\/SmartCredentials\/Core\/Core\/Models\/Modules\/EID\/Commands\/Command.swift",
       "kind": "StringLiteral",
-      "offset": 779,
+      "offset": 843,
       "length": 11,
       "value": "\"INTERRUPT\""
     },
     {
       "filePath": "\/Users\/cameliaignat\/SmartCredentials-SDK-ios\/SmartCredentials\/Core\/Core\/Models\/Modules\/EID\/Commands\/Command.swift",
       "kind": "StringLiteral",
-      "offset": 920,
+      "offset": 984,
       "length": 5,
       "value": "\"cmd\""
     },
     {
       "filePath": "\/Users\/cameliaignat\/SmartCredentials-SDK-ios\/SmartCredentials\/Core\/Core\/Models\/Modules\/EID\/Commands\/Command.swift",
       "kind": "StringLiteral",
-      "offset": 920,
+      "offset": 984,
       "length": 5,
       "value": "\"cmd\""
     },
