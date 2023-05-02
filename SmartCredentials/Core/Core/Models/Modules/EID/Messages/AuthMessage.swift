@@ -43,6 +43,7 @@ public class AuthResult: Codable {
     public let language: String?
     public let description: String?
     public let message: String?
+    public let reason: String?
     
     private enum CodingKeys : String, CodingKey {
         case major
@@ -50,14 +51,16 @@ public class AuthResult: Codable {
         case language
         case description
         case message
+        case reason
     }
     
-    public init(major: String?, minor: String?, language: String?, description: String?, message: String?) {
+    public init(major: String?, minor: String?, language: String?, description: String?, message: String?, reason: String?) {
         self.major = major
         self.minor = minor
         self.language = language
         self.description = description
         self.message = message
+        self.reason = reason
     }
     
     required public init(from decoder: Decoder) throws {
@@ -67,6 +70,7 @@ public class AuthResult: Codable {
         language = try container.decodeIfPresent(String.self, forKey: .language)
         description = try container.decodeIfPresent(String.self, forKey: .description)
         message = try container.decodeIfPresent(String.self, forKey: .message)
+        reason = try container.decodeIfPresent(String.self, forKey: .reason)
     }
     
     public func encode(to encoder: Encoder) throws {
@@ -76,5 +80,6 @@ public class AuthResult: Codable {
         try container.encode(language, forKey: .language)
         try container.encode(description, forKey: .description)
         try container.encode(message, forKey: .message)
+        try container.encode(reason, forKey: .reason)
     }
 }
