@@ -32,6 +32,9 @@
       location = "group:EID/EID.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:IdentityProvider/IdentityProvider.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Core/Core.xcodeproj">
    </FileRef>
 </Workspace>
