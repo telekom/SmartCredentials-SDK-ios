@@ -18,9 +18,10 @@ public protocol IdentityProviderAPI {
     ///   - credentials:
     ///   - clientId:
     ///   - scope:
+    ///   - universalLink:
     /// - Returns:
     ///   -
-    func getOperatorToken(baseURL: String, credentials: String, clientId: String, scope: String, completionHandler: @escaping IdentityProviderCompletionHandler)
+    func getOperatorToken(baseURL: String, credentials: String, clientId: String, scope: String, universalLink: String, completionHandler: @escaping IdentityProviderCompletionHandler)
     
     /// Returns the operator token
     ///
@@ -28,7 +29,8 @@ public protocol IdentityProviderAPI {
     ///   - appToken:
     ///   - clientId:
     ///   - scope:
+    ///   - universalLink:
     /// - Returns:
     ///   -
-    func getOperatorToken(appToken: String, clientId: String, scope: String, completionHandler: @escaping IdentityProviderCompletionHandler)
+    func getOperatorToken(appToken: String, clientId: String, scope: String, universalLink: String, completionHandler: @escaping IdentityProviderCompletionHandler)
 }
