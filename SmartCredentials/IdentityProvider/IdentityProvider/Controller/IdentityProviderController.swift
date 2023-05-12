@@ -10,7 +10,7 @@ import Core
 
 class IdentityProviderController {
     var configuration: SmartCredentialsConfiguration
-    
+    let requests = Requests()
     init(configuration: SmartCredentialsConfiguration) {
         self.configuration = configuration
     }
@@ -27,13 +27,20 @@ class IdentityProviderController {
 extension IdentityProviderController: IdentityProviderAPI {
     func getOperatorToken(baseURL: String, credentials: String, clientId: String, scope: String, completionHandler: @escaping Core.IdentityProviderCompletionHandler) {
         if !isJailbroken() {
-            
+            requests.getAccessTokenRequest(url: baseURL, credentials: credentials) {result in
+                switch result {
+                case .success(let accessToken):
+                    break
+                case .failure(let error):
+                    break
+                }
+            }
         }
     }
     
     func getOperatorToken(appToken: String, clientId: String, scope: String, completionHandler: @escaping Core.IdentityProviderCompletionHandler) {
         if !isJailbroken() {
-            
+            requests.getBearerTokenRequest(accessToken: appToken, clientId: clientId, scope: scope)
         }
     }
 }

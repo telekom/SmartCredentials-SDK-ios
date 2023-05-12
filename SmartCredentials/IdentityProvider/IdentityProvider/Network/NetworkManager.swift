@@ -7,7 +7,7 @@
 
 import Foundation
 
-class NetworkManager:NetworkManagerProtocol{
+class NetworkManager: NetworkManagerProtocol {
     
     func getRequest(url: URL, completionHandler: @escaping (Result<Data, Error>) -> Void) {
         URLSession.shared.dataTask(with: url) { data, response, error in
@@ -49,7 +49,7 @@ protocol NetworkManagerProtocol {
     func postRequest(url: URL, body: Data, completion: @escaping (Result<Data,Error>) -> Void)
 }
     
-enum NetworkError:Error {
+enum NetworkError: Error {
     case noData
 }
 

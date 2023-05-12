@@ -7,44 +7,39 @@
 
 import Foundation
 
-class Requests{
+class Requests {
     let networkManager = NetworkManager()
     
-    public func getAccessTokenRequest() {
-        let url = URL(string: "https://lbl-partmgmr.superdtaglb.cf/access-token/" + "Odysee-45930b82-5f64-412f-9993-3456c4c61bbc")!
-        networkManager.getRequest(url: url ){ result in
+    public func getAccessTokenRequest(url: String, credentials: String, completion: @escaping (Result<String,Error>) -> Void) {
+        let url = URL(string: url)!
+        networkManager.getRequest(url: url) { result in
             switch result {
             case .success(let data):
-                print("Response data: \(data)")
                 let accessToken = String(decoding: data, as: UTF8.self)
-                self.getBearerTokenRequest(accessToken: accessToken)
+                completion(.success(accessToken))
             case .failure(let error):
-                print("Error: \(error)")
+                completion(.failure(error))
             }
         }
     }
     
-    public func getBearerTokenRequest(accessToken: String) {
-            
+    public func getBearerTokenRequest(accessToken: String, clientId: String, scope: String) {
         let url = URL(string: "https://lbl-partmgmr.superdtaglb.cf/bearer-token-hackathon")!
-        let requestBody = BearerTokenRequestBody(accessToken: accessToken, bundleId: Bundle.main.bundleIdentifier, packageName: nil, clientId: UserDefaults.standard.string(forKey: "silentPushClientId"))
-        do{
+        let requestBody = BearerTokenRequestBody(accessToken: accessToken, bundleId: Bundle.main.bundleIdentifier, packageName: nil, clientId: clientId,scope: scope)
+        do {
             let encoder = JSONEncoder()
             let data = try encoder.encode(requestBody)
             let jsonString = String(data: data, encoding: .utf8)
-            networkManager.postRequest(url: url , body: data){ result in
+            networkManager.postRequest(url: url , body: data ) { result in
                 switch result {
                 case .success(let data):
                     let bearerToken = String(decoding: data, as: UTF8.self)
-                    UserDefaults.standard.setValue(bearerToken, forKey: "pamBearerToken")
                 case .failure(let error):
-                    UserDefaults.standard.setValue(nil, forKey: "pamBearerToken")
                     print("Error: \(error)")
                 }
             }
         }
-        catch{
-            UserDefaults.standard.setValue(nil, forKey: "pamBearerToken")
+        catch {
             print(error)}
     }
 }
@@ -53,9 +48,16 @@ struct BearerTokenRequestBody: Codable {
     let accessToken: String
     let bundleId: String?
     let packageName: String?
-    let clientId: String?
+    let clientId: String
+    let scope: String
 }
 
-struct AccessToken: Codable {
-    let accessToken: String?
+enum Endpoint {
+    case baseURL(String)
+    var url: String {
+        switch self {
+        case .baseURL(let url):
+            return url
+        }
+    }
 }
