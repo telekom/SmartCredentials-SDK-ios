@@ -10,16 +10,15 @@ import Foundation
 class Requests {
     let networkManager = NetworkManager()
     
-    public func getAccessTokenRequest(url: String, credentials: String, completion: @escaping (Result<String, Error>) -> Void) {
+    public func getAccessToken(url: String, credentials: String, completion: @escaping (Result<String, Error>) -> Void) {
         guard let url = URL(string: url) else {
-            completion(.failure(NetworkError.endpointError))
+            completion(.failure(NetworkError.invalidURL))
             return
         }
         
-        networkManager.getRequest(url: url) { result in
+        networkManager.request(fromURL: url) {  (result: Result<String, Error>) in
             switch result {
-            case .success(let data):
-                let accessToken = String(decoding: data, as: UTF8.self)
+            case .success(let accessToken):
                 completion(.success(accessToken))
             case .failure(let error):
                 completion(.failure(error))
@@ -27,9 +26,9 @@ class Requests {
         }
     }
     
-    public func getBearerTokenRequest(accessToken: String, clientId: String, scope: String, completion: @escaping (Result<String, Error>) -> Void) {
+    public func getBearerToken(accessToken: String, clientId: String, scope: String, completion: @escaping (Result<String, Error>) -> Void) {
         guard let bearerTokenURL = URL(string: Endpoints.bearerToken.url) else {
-            completion(.failure(NetworkError.endpointError))
+            completion(.failure(NetworkError.invalidURL))
             return
         }
         
@@ -37,10 +36,9 @@ class Requests {
         do {
             let encoder = JSONEncoder()
             let data = try encoder.encode(requestBody)
-            networkManager.postRequest(url: bearerTokenURL , body: data) { result in
+            networkManager.request(fromURL: bearerTokenURL, body: data) {  (result: Result<String, Error>) in
                 switch result {
-                case .success(let data):
-                    let bearerToken = String(decoding: data, as: UTF8.self)
+                case .success(let bearerToken):
                     completion(.success(bearerToken))
                 case .failure(let error):
                     completion(.failure(error))

@@ -30,10 +30,10 @@ extension IdentityProviderController: IdentityProviderAPI {
     func getOperatorToken(baseURL: String, credentials: String, clientId: String, scope: String, universalLink: String, completionHandler: @escaping Core.IdentityProviderCompletionHandler) {
         if !isJailbroken() {
             self.completionHandler = completionHandler
-            requests.getAccessTokenRequest(url: baseURL, credentials: credentials) { [weak self] result in
+            requests.getAccessToken(url: baseURL, credentials: credentials) { [weak self] result in
                 switch result {
                 case .success(let accessToken):
-                    self?.requests.getBearerTokenRequest(accessToken: accessToken, clientId: clientId, scope: scope) { result in
+                    self?.requests.getBearerToken(accessToken: accessToken, clientId: clientId, scope: scope) { result in
                         switch result {
                         case .success(let bearerToken):
                             self?.getOperatorTokenFromSmartAgent(bearerToken: bearerToken, clientId: clientId, scope: scope, universalLink: universalLink)
