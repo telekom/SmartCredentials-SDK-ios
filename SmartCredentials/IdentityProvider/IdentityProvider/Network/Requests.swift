@@ -37,8 +37,7 @@ class Requests {
         do {
             let encoder = JSONEncoder()
             let data = try encoder.encode(requestBody)
-            let jsonString = String(data: data, encoding: .utf8)
-            networkManager.postRequest(url: bearerTokenURL , body: data ) { result in
+            networkManager.postRequest(url: bearerTokenURL , body: data) { result in
                 switch result {
                 case .success(let data):
                     let bearerToken = String(decoding: data, as: UTF8.self)
@@ -59,22 +58,4 @@ struct BearerTokenRequestBody: Codable {
     let packageName: String?
     let clientId: String
     let scope: String
-}
-
-enum Endpoints: String {
-    case accessToken
-    case bearerToken
-    
-    private var baseUrl: String {
-        return "https://lbl-partmgmr.superdtaglb.cf"
-    }
-    
-    var url: String {
-        switch self {
-        case .accessToken:
-            return baseUrl + "/access-token"
-        case .bearerToken:
-            return baseUrl + "/bearer-token-hackathon"
-        }
-    }
 }

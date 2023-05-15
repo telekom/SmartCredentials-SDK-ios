@@ -36,13 +36,13 @@ extension IdentityProviderController: IdentityProviderAPI {
                     self?.requests.getBearerTokenRequest(accessToken: accessToken, clientId: clientId, scope: scope) { result in
                         switch result {
                         case .success(let bearerToken):
-                            break
-                        case .failure(let error):
-                            completionHandler(.failure(error: error))
+                            self?.getOperatorTokenFromSmartAgent(bearerToken: bearerToken, clientId: clientId, scope: scope, universalLink: universalLink)
+                        case .failure(_):
+                            completionHandler(.failure(error: .bearerTokenCouldNotBeRetrieved))
                         }
                     }
-                case .failure(let error):
-                    completionHandler(.failure(error: error))
+                case .failure(_):
+                    completionHandler(.failure(error: .accessTokenCouldNotBeRetrieved))
                 }
             }
         }
@@ -51,14 +51,18 @@ extension IdentityProviderController: IdentityProviderAPI {
     func getOperatorToken(appToken: String, clientId: String, scope: String, universalLink: String, completionHandler: @escaping Core.IdentityProviderCompletionHandler) {
         if !isJailbroken() {
             self.completionHandler = completionHandler
-            if let link = URL(string: Endpoints.carrierAgentUL.rawValue)?
-                .appending(OperatorTokenURLComponents.bearerToken.rawValue, value: appToken)
-                .appending(OperatorTokenURLComponents.bundleId.rawValue, value: Bundle.main.bundleIdentifier!)
-                .appending(OperatorTokenURLComponents.clientId.rawValue, value: clientId)
-                .appending(OperatorTokenURLComponents.scope.rawValue, value: scope)
-                .appending(OperatorTokenURLComponents.universalLink.rawValue, value: universalLink) {
-                UIApplication.shared.open(link)
-            }
+            getOperatorTokenFromSmartAgent(bearerToken: appToken, clientId: clientId, scope: scope, universalLink: universalLink)
+        }
+    }
+    
+    private func getOperatorTokenFromSmartAgent(bearerToken: String, clientId: String, scope: String, universalLink: String) {
+        if let link = URL(string: Endpoints.carrierAgentUL.url)?
+            .appending(OperatorTokenURLComponents.bearerToken.rawValue, value: bearerToken)
+            .appending(OperatorTokenURLComponents.bundleId.rawValue, value: Bundle.main.bundleIdentifier!)
+            .appending(OperatorTokenURLComponents.clientId.rawValue, value: clientId)
+            .appending(OperatorTokenURLComponents.scope.rawValue, value: scope)
+            .appending(OperatorTokenURLComponents.universalLink.rawValue, value: universalLink) {
+            UIApplication.shared.open(link)
         }
     }
 }
