@@ -243,5 +243,15 @@ public enum SmartCredentialsAPIError: Error {
     
     
     case moduleNotInitialized
+    
+    /**
+     Error received if Smart Agent returns an empty operator token
+     */
+    case invalidOperatorToken
+    
+    /**
+     Error received if the user press cancel in Smart Agent when the operator token is received
+     */
+    case operatorTokenUserCancellation
 }
 

@@ -15,6 +15,9 @@
 		FEC089B12A01239A00242D8B /* IdentityProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = FEC089A32A01239A00242D8B /* IdentityProvider.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FEC089C02A01334F00242D8B /* SmartCredentialsIdentityProviderFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC089BF2A01334F00242D8B /* SmartCredentialsIdentityProviderFactory.swift */; };
 		FEC089C22A01338F00242D8B /* IdentityProviderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC089C12A01338F00242D8B /* IdentityProviderController.swift */; };
+		FEC08A102A0CD41D00242D8B /* URLExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC08A0F2A0CD41D00242D8B /* URLExtension.swift */; };
+		FEC08A122A0CF6D500242D8B /* URLComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC08A112A0CF6D500242D8B /* URLComponents.swift */; };
+		FEC08A142A0CF9B500242D8B /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC08A132A0CF9B500242D8B /* Endpoints.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +40,9 @@
 		FEC089AF2A01239A00242D8B /* IdentityProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentityProviderTests.swift; sourceTree = "<group>"; };
 		FEC089BF2A01334F00242D8B /* SmartCredentialsIdentityProviderFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartCredentialsIdentityProviderFactory.swift; sourceTree = "<group>"; };
 		FEC089C12A01338F00242D8B /* IdentityProviderController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentityProviderController.swift; sourceTree = "<group>"; };
+		FEC08A0F2A0CD41D00242D8B /* URLExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLExtension.swift; sourceTree = "<group>"; };
+		FEC08A112A0CF6D500242D8B /* URLComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLComponents.swift; sourceTree = "<group>"; };
+		FEC08A132A0CF9B500242D8B /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +122,9 @@
 		FEC089BD2A0132A200242D8B /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				FEC08A132A0CF9B500242D8B /* Endpoints.swift */,
+				FEC08A112A0CF6D500242D8B /* URLComponents.swift */,
+				FEC08A0E2A0CD40B00242D8B /* Extensions */,
 				FEC089BE2A0132AD00242D8B /* Factory */,
 			);
 			path = Utils;
@@ -127,6 +136,14 @@
 				FEC089BF2A01334F00242D8B /* SmartCredentialsIdentityProviderFactory.swift */,
 			);
 			path = Factory;
+			sourceTree = "<group>";
+		};
+		FEC08A0E2A0CD40B00242D8B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FEC08A0F2A0CD41D00242D8B /* URLExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,8 +257,11 @@
 			files = (
 				16F55A962A02881C005416C1 /* NetworkManager.swift in Sources */,
 				FEC089C22A01338F00242D8B /* IdentityProviderController.swift in Sources */,
+				FEC08A102A0CD41D00242D8B /* URLExtension.swift in Sources */,
+				FEC08A122A0CF6D500242D8B /* URLComponents.swift in Sources */,
 				FEC089C02A01334F00242D8B /* SmartCredentialsIdentityProviderFactory.swift in Sources */,
 				16F55A982A04EAD5005416C1 /* Requests.swift in Sources */,
+				FEC08A142A0CF9B500242D8B /* Endpoints.swift in Sources */,
 				FEC089A52A01239A00242D8B /* IdentityProvider.docc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
