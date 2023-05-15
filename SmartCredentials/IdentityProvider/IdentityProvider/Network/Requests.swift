@@ -10,8 +10,12 @@ import Foundation
 class Requests {
     let networkManager = NetworkManager()
     
-    public func getAccessTokenRequest(url: String, credentials: String, completion: @escaping (Result<String,Error>) -> Void) {
-        let url = URL(string: url)!
+    public func getAccessTokenRequest(url: String, credentials: String, completion: @escaping (Result<String, Error>) -> Void) {
+        guard let url = URL(string: url) else {
+            completion(.failure(NetworkError.endpointError))
+            return
+        }
+        
         networkManager.getRequest(url: url) { result in
             switch result {
             case .success(let data):
@@ -23,9 +27,13 @@ class Requests {
         }
     }
     
-    public func getBearerTokenRequest(accessToken: String, clientId: String, scope: String) {
-        let bearerTokenURL = Endpoints.getBearerTokenEndpoint.url!
-        let requestBody = BearerTokenRequestBody(accessToken: accessToken, bundleId: Bundle.main.bundleIdentifier, packageName: nil, clientId: clientId,scope: scope)
+    public func getBearerTokenRequest(accessToken: String, clientId: String, scope: String, completion: @escaping (Result<String, Error>) -> Void) {
+        guard let bearerTokenURL = URL(string: Endpoints.bearerToken.url) else {
+            completion(.failure(NetworkError.endpointError))
+            return
+        }
+        
+        let requestBody = BearerTokenRequestBody(accessToken: accessToken, bundleId: Bundle.main.bundleIdentifier, packageName: nil, clientId: clientId, scope: scope)
         do {
             let encoder = JSONEncoder()
             let data = try encoder.encode(requestBody)
@@ -34,13 +42,14 @@ class Requests {
                 switch result {
                 case .success(let data):
                     let bearerToken = String(decoding: data, as: UTF8.self)
+                    completion(.success(bearerToken))
                 case .failure(let error):
-                    print("Error: \(error)")
+                    completion(.failure(error))
                 }
             }
+        } catch {
+            completion(.failure(error))
         }
-        catch {
-            print(error)}
     }
 }
 
@@ -52,43 +61,20 @@ struct BearerTokenRequestBody: Codable {
     let scope: String
 }
 
-enum Endpoint {
-    case baseURL(String)
-    var url: String {
-        switch self {
-        case .baseURL(let url):
-            return url
-        }
-    }
-}
-
-enum Endpoints {
+enum Endpoints: String {
+    case accessToken
+    case bearerToken
     
-    case getAccessTokenEndpoint
-    case getBearerTokenEndpoint
-    case credentials
-    
-    var baseUrl: String {
+    private var baseUrl: String {
         return "https://lbl-partmgmr.superdtaglb.cf"
     }
-    var path:String {
-        switch self {
-        case .getAccessTokenEndpoint:
-            return "/access-token"
-        case .getBearerTokenEndpoint:
-            return "/bearer-token-hackathon"
-        case .credentials:
-            return "/Odysee-45930b82-5f64-412f-9993-3456c4c61bbc"
-        }
-    }
     
-    var endpoint: URL? {
-        return URL( string: path)
-    }
-    var url: URL? {
-        return URL( string: baseUrl+path)
-    }
-    var credentials: URL? {
-        return URL( string: path)
+    var url: String {
+        switch self {
+        case .accessToken:
+            return baseUrl + "/access-token"
+        case .bearerToken:
+            return baseUrl + "/bearer-token-hackathon"
+        }
     }
 }

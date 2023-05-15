@@ -8,7 +8,6 @@
 import Foundation
 
 class NetworkManager: NetworkManagerProtocol {
-    
     func getRequest(url: URL, completionHandler: @escaping (Result<Data, Error>) -> Void) {
         URLSession.shared.dataTask(with: url) { data, response, error in
             if let error = error {
@@ -51,5 +50,6 @@ protocol NetworkManagerProtocol {
     
 enum NetworkError: Error {
     case noData
+    case endpointError
 }
 

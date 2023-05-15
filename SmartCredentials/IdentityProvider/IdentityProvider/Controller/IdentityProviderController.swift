@@ -27,12 +27,19 @@ class IdentityProviderController {
 extension IdentityProviderController: IdentityProviderAPI {
     func getOperatorToken(baseURL: String, credentials: String, clientId: String, scope: String, completionHandler: @escaping Core.IdentityProviderCompletionHandler) {
         if !isJailbroken() {
-            requests.getAccessTokenRequest(url: baseURL, credentials: credentials) {result in
+            requests.getAccessTokenRequest(url: baseURL, credentials: credentials) { [weak self] result in
                 switch result {
                 case .success(let accessToken):
-                    break
+                    self?.requests.getBearerTokenRequest(accessToken: accessToken, clientId: clientId, scope: scope) { result in
+                        switch result {
+                        case .success(let bearerToken):
+                            break
+                        case .failure(let error):
+                            completionHandler(.failure(error: error))
+                        }
+                    }
                 case .failure(let error):
-                    break
+                    completionHandler(.failure(error: error))
                 }
             }
         }
@@ -40,7 +47,6 @@ extension IdentityProviderController: IdentityProviderAPI {
     
     func getOperatorToken(appToken: String, clientId: String, scope: String, completionHandler: @escaping Core.IdentityProviderCompletionHandler) {
         if !isJailbroken() {
-            requests.getBearerTokenRequest(accessToken: appToken, clientId: clientId, scope: scope)
         }
     }
 }
