@@ -15,7 +15,7 @@ enum HttpMethod: String {
 }
 
 class NetworkManager {
-    func request<T: Decodable>(fromURL url: URL, body: Data? = nil, httpMethod: HttpMethod = .get, completion: @escaping (Result<T, Error>) -> Void) {
+    func request<T: Decodable>(fromURL url: URL, httpMethod: HttpMethod = .get, body: Data? = nil, completion: @escaping (Result<T, Error>) -> Void) {
 
         let completionOnMain: (Result<T, Error>) -> Void = { result in
             DispatchQueue.main.async {

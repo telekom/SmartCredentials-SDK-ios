@@ -36,7 +36,7 @@ class Requests {
         do {
             let encoder = JSONEncoder()
             let data = try encoder.encode(requestBody)
-            networkManager.request(fromURL: bearerTokenURL, body: data) {  (result: Result<String, Error>) in
+            networkManager.request(fromURL: bearerTokenURL, httpMethod: .post, body: data) {  (result: Result<String, Error>) in
                 switch result {
                 case .success(let bearerToken):
                     completion(.success(bearerToken))
