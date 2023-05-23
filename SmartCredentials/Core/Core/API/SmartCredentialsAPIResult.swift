@@ -253,5 +253,15 @@ public enum SmartCredentialsAPIError: Error {
      Error received if the user press cancel in Smart Agent when the operator token is received
      */
     case operatorTokenUserCancellation
+    
+    /**
+     Error received if the access token could not be retrieved due to some errors
+     */
+    case accessTokenCouldNotBeRetrieved
+    
+    /**
+     Error received if the bearer token could not be retrieved due to some errors
+     */
+    case bearerTokenCouldNotBeRetrieved
 }
 
