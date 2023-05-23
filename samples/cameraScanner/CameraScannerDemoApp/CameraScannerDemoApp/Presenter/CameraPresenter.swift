@@ -60,7 +60,7 @@ class CameraPresenter {
     
     func startScanningOCR(in view: UIView) {
         DispatchQueue.main.async { [weak self] in
-            self?.cameraScanner.startOCRScanning(in: view.frame, with: "gs.*-.*", completionHandler: { result in
+            self?.cameraScanner.startOCRScanning(in: view.frame, completionHandler: { result in
                 switch result {
                 case .success(result: let ocrScannerResult):
                     self?.cameraScanner.stopOCRScanning()

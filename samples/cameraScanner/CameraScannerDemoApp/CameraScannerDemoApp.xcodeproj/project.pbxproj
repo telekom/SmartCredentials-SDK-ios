@@ -22,10 +22,10 @@
 		FE794FE6292625ED002F752B /* ScannerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE794FE5292625ED002F752B /* ScannerPresenter.swift */; };
 		FE794FE82926278C002F752B /* ScannerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE794FE72926278C002F752B /* ScannerType.swift */; };
 		FE794FEA29262A5A002F752B /* CameraPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE794FE929262A5A002F752B /* CameraPresenter.swift */; };
-		FE79FAD829363D790024E5D3 /* CameraScanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE79FAD529363D720024E5D3 /* CameraScanner.framework */; };
-		FE79FAD929363D790024E5D3 /* CameraScanner.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FE79FAD529363D720024E5D3 /* CameraScanner.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FE79FADA29363D7A0024E5D3 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE79FAD429363D720024E5D3 /* Core.framework */; };
-		FE79FADB29363D7A0024E5D3 /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FE79FAD429363D720024E5D3 /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FE94AB4729BF566200612AA2 /* CameraScanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE94AB4329BF560000612AA2 /* CameraScanner.framework */; };
+		FE94AB4829BF566200612AA2 /* CameraScanner.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FE94AB4329BF560000612AA2 /* CameraScanner.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FE94AB4929BF566300612AA2 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE94AB4429BF560000612AA2 /* Core.framework */; };
+		FE94AB4A29BF566300612AA2 /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FE94AB4429BF560000612AA2 /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FEFE0D542926D7FE0053FDCB /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = FEFE0D532926D7FE0053FDCB /* tessdata */; };
 /* End PBXBuildFile section */
 
@@ -53,8 +53,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				FE79FAD929363D790024E5D3 /* CameraScanner.framework in Embed Frameworks */,
-				FE79FADB29363D7A0024E5D3 /* Core.framework in Embed Frameworks */,
+				FE94AB4829BF566200612AA2 /* CameraScanner.framework in Embed Frameworks */,
+				FE94AB4A29BF566300612AA2 /* Core.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -81,8 +81,8 @@
 		FE794FE5292625ED002F752B /* ScannerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerPresenter.swift; sourceTree = "<group>"; };
 		FE794FE72926278C002F752B /* ScannerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerType.swift; sourceTree = "<group>"; };
 		FE794FE929262A5A002F752B /* CameraPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPresenter.swift; sourceTree = "<group>"; };
-		FE79FAD429363D720024E5D3 /* Core.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Core.framework; sourceTree = "<group>"; };
-		FE79FAD529363D720024E5D3 /* CameraScanner.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CameraScanner.framework; sourceTree = "<group>"; };
+		FE94AB4329BF560000612AA2 /* CameraScanner.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CameraScanner.framework; sourceTree = "<group>"; };
+		FE94AB4429BF560000612AA2 /* Core.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Core.framework; sourceTree = "<group>"; };
 		FEFE0D532926D7FE0053FDCB /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tessdata; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -91,8 +91,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE79FAD829363D790024E5D3 /* CameraScanner.framework in Frameworks */,
-				FE79FADA29363D7A0024E5D3 /* Core.framework in Frameworks */,
+				FE94AB4729BF566200612AA2 /* CameraScanner.framework in Frameworks */,
+				FE94AB4929BF566300612AA2 /* Core.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,8 +168,8 @@
 		FE794FC8292500C0002F752B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				FE79FAD529363D720024E5D3 /* CameraScanner.framework */,
-				FE79FAD429363D720024E5D3 /* Core.framework */,
+				FE94AB4329BF560000612AA2 /* CameraScanner.framework */,
+				FE94AB4429BF560000612AA2 /* Core.framework */,
 			);
 			path = Frameworks;
 			sourceTree = "<group>";
@@ -546,7 +546,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = 8GJN68M5RA;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -582,7 +582,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = 8GJN68M5RA;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

@@ -26,7 +26,7 @@ class MockCameraScannerController: CameraScannerAPI {
         completionHandler(.failure(error: .moduleNotAvailable))
     }
     
-    func startOCRScanning(in frame: CGRect, with regex: String?, completionHandler: @escaping OCRScannerCompletionHandler) {
+    func startOCRScanning(in frame: CGRect, completionHandler: @escaping OCRScannerCompletionHandler) {
         completionHandler(.failure(error: .moduleNotAvailable))
     }
     

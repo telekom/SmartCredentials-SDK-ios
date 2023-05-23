@@ -36,8 +36,8 @@ class DefaultOCRScanner {
         })
     }
     
-    func startOCRScanning(in frame: CGRect, with regex: String?, completionHandler: @escaping OCRScannerCompletionHandler) {
-        ocrScanner?.startScanning(in: frame, regex: regex, completionHandler: completionHandler)
+    func startOCRScanning(in frame: CGRect, completionHandler: @escaping OCRScannerCompletionHandler) {
+        ocrScanner?.startScanning(in: frame, completionHandler: completionHandler)
     }
     
     func pauseOCRScanning() {

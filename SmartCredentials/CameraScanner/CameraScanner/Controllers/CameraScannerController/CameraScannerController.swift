@@ -65,14 +65,14 @@ extension CameraScannerController: CameraScannerAPI {
         ocrScanner?.getOCRCameraPreviewLayer(with: completionHandler)
     }
     
-    func startOCRScanning(in frame: CGRect, with regex: String?, completionHandler: @escaping OCRScannerCompletionHandler) {
+    func startOCRScanning(in frame: CGRect, completionHandler: @escaping OCRScannerCompletionHandler) {
         guard isJailbroken() == false else {
             logger?.log(.error, message: Constants.Logger.jailbreakError, className: className)
             completionHandler(.failure(error: .jailbreakDetected))
             return
         }
         
-        ocrScanner?.startOCRScanning(in: frame, with: regex, completionHandler: completionHandler)
+        ocrScanner?.startOCRScanning(in: frame, completionHandler: completionHandler)
     }
     
     func stopOCRScanning() {
