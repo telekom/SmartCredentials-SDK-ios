@@ -23,7 +23,7 @@ enum Endpoints: String {
         case .bearerToken:
             return baseUrl + "/bearer-token-hackathon"
         case .carrierAgentUL:
-            return "https://carrier-agent-ul-server.onrender.com"
+            return "https://carrier-agent-ul-server.herokuapp.com"
         }
     }
 }

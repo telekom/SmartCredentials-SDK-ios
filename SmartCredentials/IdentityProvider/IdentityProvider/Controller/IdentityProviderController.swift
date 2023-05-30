@@ -11,10 +11,13 @@ import Core
 class IdentityProviderController {
     var configuration: SmartCredentialsConfiguration
     let requests = Requests()
-    private var completionHandler: Core.IdentityProviderCompletionHandler!
+    private static var completionHandler: Core.IdentityProviderCompletionHandler!
     
     init(configuration: SmartCredentialsConfiguration) {
         self.configuration = configuration
+        DispatchQueue.main.async {
+            self.swizzleContinueUserActivity()
+        }
     }
     
     // MARK: - Jailbreak Check
@@ -29,7 +32,7 @@ class IdentityProviderController {
 extension IdentityProviderController: IdentityProviderAPI {
     func getOperatorToken(baseURL: String, credentials: String, clientId: String, scope: String, universalLink: String, completionHandler: @escaping Core.IdentityProviderCompletionHandler) {
         if !isJailbroken() {
-            self.completionHandler = completionHandler
+            IdentityProviderController.completionHandler = completionHandler
             requests.getAccessToken(url: baseURL, credentials: credentials) { [weak self] result in
                 switch result {
                 case .success(let accessToken):
@@ -50,19 +53,21 @@ extension IdentityProviderController: IdentityProviderAPI {
     
     func getOperatorToken(appToken: String, clientId: String, scope: String, universalLink: String, completionHandler: @escaping Core.IdentityProviderCompletionHandler) {
         if !isJailbroken() {
-            self.completionHandler = completionHandler
+            IdentityProviderController.completionHandler = completionHandler
             getOperatorTokenFromSmartAgent(bearerToken: appToken, clientId: clientId, scope: scope, universalLink: universalLink)
         }
     }
     
     private func getOperatorTokenFromSmartAgent(bearerToken: String, clientId: String, scope: String, universalLink: String) {
-        if let link = URL(string: Endpoints.carrierAgentUL.url)?
-            .appending(OperatorTokenURLComponents.bearerToken.rawValue, value: bearerToken)
-            .appending(OperatorTokenURLComponents.bundleId.rawValue, value: Bundle.main.bundleIdentifier!)
-            .appending(OperatorTokenURLComponents.clientId.rawValue, value: clientId)
-            .appending(OperatorTokenURLComponents.scope.rawValue, value: scope)
-            .appending(OperatorTokenURLComponents.universalLink.rawValue, value: universalLink) {
-            UIApplication.shared.open(link)
+        DispatchQueue.main.async {
+            if let link = URL(string: Endpoints.carrierAgentUL.url)?
+                .appending(OperatorTokenURLComponents.bearerToken.rawValue, value: bearerToken)
+                .appending(OperatorTokenURLComponents.bundleId.rawValue, value: Bundle.main.bundleIdentifier!)
+                .appending(OperatorTokenURLComponents.clientId.rawValue, value: clientId)
+                .appending(OperatorTokenURLComponents.scope.rawValue, value: scope)
+                .appending(OperatorTokenURLComponents.universalLink.rawValue, value: universalLink) {
+                UIApplication.shared.open(link)
+            }
         }
     }
 }
@@ -70,7 +75,7 @@ extension IdentityProviderController: IdentityProviderAPI {
 // MARK: - Method swizzling on Scene Delegate
 extension IdentityProviderController {
     @objc
-    func scene(_ scene: UIScene, continue userActivity: NSUserActivity) {
+    dynamic func scene(_ scene: UIScene, continue userActivity: NSUserActivity) {
         if userActivity.activityType == "NSUserActivityTypeBrowsingWeb" {
             let url = userActivity.webpageURL ?? URL(fileURLWithPath: "")
             let urlComponents = NSURLComponents(url: url, resolvingAgainstBaseURL: false)
@@ -78,15 +83,15 @@ extension IdentityProviderController {
             for i in 0..<(urlComponents?.queryItems?.count ?? 0) {
                 if urlComponents?.queryItems?[i].name == "transactionToken" {
                     if urlComponents?.queryItems?[i].value == "" {
-                        completionHandler(.failure(error: .invalidOperatorToken))
+                        IdentityProviderController.completionHandler(.failure(error: .invalidOperatorToken))
                     } else {
                         if urlComponents?.queryItems?[i].value == "cancel" {
-                            completionHandler(.failure(error: .operatorTokenUserCancellation))
+                            IdentityProviderController.completionHandler(.failure(error: .operatorTokenUserCancellation))
                             return
                         }
                         let dictionary = NSDictionary(object: urlComponents?.queryItems?[i].value as Any, forKey: "transactionToken" as NSCopying)
                         let transactionToken = dictionary["transactionToken"]
-                        completionHandler(.success(result: transactionToken))
+                        IdentityProviderController.completionHandler(.success(result: transactionToken))
                     }
                 }
             }
@@ -94,22 +99,33 @@ extension IdentityProviderController {
     }
 
     private func swizzleContinueUserActivity() {
-        let appDelegate = UIApplication.shared.delegate
-        let appDelegateClass: AnyClass? = object_getClass(appDelegate)
+        let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate
+        let sceneDelegateClass: AnyClass? = object_getClass(sceneDelegate)
 
         let originalSelector = #selector(UIWindowSceneDelegate.scene(_:continue:))
         let swizzledSelector = #selector(IdentityProviderController.self.scene(_:continue:))
 
-        guard let swizzledMethod = class_getInstanceMethod(IdentityProviderController.self, swizzledSelector) else {
-            return
-        }
-
-        if let originalMethod = class_getInstanceMethod(appDelegateClass, originalSelector) {
-            // exchange implementation
-            method_exchangeImplementations(originalMethod, swizzledMethod)
-        } else {
-            // add implementation
-            class_addMethod(appDelegateClass, swizzledSelector, method_getImplementation(swizzledMethod), method_getTypeEncoding(swizzledMethod))
+        if let originalMethod = class_getInstanceMethod(sceneDelegateClass, originalSelector),
+           let swizzledMethod = class_getInstanceMethod(IdentityProviderController.self, swizzledSelector) {
+            
+            let didAddMethod = class_addMethod(sceneDelegateClass,
+                                               originalSelector,
+                                               method_getImplementation(swizzledMethod),
+                                               method_getTypeEncoding(swizzledMethod))
+            
+            if didAddMethod {
+                class_replaceMethod(sceneDelegateClass,
+                                    swizzledSelector,
+                                    method_getImplementation(originalMethod),
+                                    method_getTypeEncoding(originalMethod))
+            } else {
+                method_exchangeImplementations(originalMethod, swizzledMethod)
+            }
+        } else if let swizzledMethod = class_getInstanceMethod(IdentityProviderController.self, swizzledSelector) {
+            class_addMethod(sceneDelegateClass,
+                            originalSelector,
+                            method_getImplementation(swizzledMethod),
+                            method_getTypeEncoding(swizzledMethod))
         }
     }
 }
