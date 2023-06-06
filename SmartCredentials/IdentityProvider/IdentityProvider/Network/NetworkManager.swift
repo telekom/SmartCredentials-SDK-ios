@@ -27,12 +27,8 @@ class NetworkManager {
         var request = URLRequest(url: url)
         request.httpMethod = httpMethod.method
         if httpMethod == .post {
-            do {
-                let jsonData = try JSONEncoder().encode(body)
-                request.httpBody = jsonData
-            } catch {
-                completionOnMain(.failure(error))
-            }
+            request.httpBody = body
+            request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         }
 
         let urlSession = URLSession.shared.dataTask(with: request) { data, response, error in
@@ -46,7 +42,11 @@ class NetworkManager {
                 return completionOnMain(.failure(NetworkError.invalidStatusCode(urlResponse.statusCode)))
             }
 
-            guard let data = data else { return }
+            guard let data = data else {
+                completionOnMain(.failure(NetworkError.noData))
+                return
+            }
+            
             let string = String(decoding: data, as: UTF8.self)
 
             completionOnMain(.success(string))
@@ -60,5 +60,6 @@ enum NetworkError: Error {
     case invalidResponse
     case invalidStatusCode(Int)
     case invalidURL
+    case noData
 }
 
