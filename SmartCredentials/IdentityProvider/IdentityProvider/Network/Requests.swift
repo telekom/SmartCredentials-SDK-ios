@@ -10,8 +10,8 @@ import Foundation
 class Requests {
     let networkManager = NetworkManager()
     
-    public func getAccessToken(url: String, credentials: String, completion: @escaping (Result<String, Error>) -> Void) {
-        guard let url = URL(string: url) else {
+    func getAccessToken(url: String, credentials: String, completion: @escaping (Result<String, Error>) -> Void) {
+        guard let url = URL(string: url + Endpoints.accessToken.url + "/\(credentials)") else {
             completion(.failure(NetworkError.invalidURL))
             return
         }
@@ -26,7 +26,7 @@ class Requests {
         }
     }
     
-    public func getBearerToken(accessToken: String, clientId: String, scope: String, completion: @escaping (Result<String, Error>) -> Void) {
+    func getBearerToken(accessToken: String, clientId: String, scope: String, completion: @escaping (Result<String, Error>) -> Void) {
         guard let bearerTokenURL = URL(string: Endpoints.bearerToken.url) else {
             completion(.failure(NetworkError.invalidURL))
             return

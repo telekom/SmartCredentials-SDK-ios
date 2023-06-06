@@ -15,9 +15,10 @@ enum HttpMethod: String {
 }
 
 class NetworkManager {
-    func request<T: Decodable>(fromURL url: URL, httpMethod: HttpMethod = .get, body: Data? = nil, completion: @escaping (Result<T, Error>) -> Void) {
+    
+    func request(fromURL url: URL, httpMethod: HttpMethod = .get, body: Data? = nil, completion: @escaping (Result<String, Error>) -> Void) {
 
-        let completionOnMain: (Result<T, Error>) -> Void = { result in
+        let completionOnMain: (Result<String, Error>) -> Void = { result in
             DispatchQueue.main.async {
                 completion(result)
             }
@@ -26,10 +27,13 @@ class NetworkManager {
         var request = URLRequest(url: url)
         request.httpMethod = httpMethod.method
         if httpMethod == .post {
-            let jsonData = try? JSONSerialization.data(withJSONObject: body as Any)
-            request.httpBody = jsonData
+            do {
+                let jsonData = try JSONEncoder().encode(body)
+                request.httpBody = jsonData
+            } catch {
+                completionOnMain(.failure(error))
+            }
         }
-
 
         let urlSession = URLSession.shared.dataTask(with: request) { data, response, error in
             if let error = error {
@@ -43,13 +47,9 @@ class NetworkManager {
             }
 
             guard let data = data else { return }
-            do {
-                let users = try JSONDecoder().decode(T.self, from: data)
-                completionOnMain(.success(users))
-            } catch {
-                debugPrint("Could not translate the data to the requested type. Reason: \(error.localizedDescription)")
-                completionOnMain(.failure(error))
-            }
+            let string = String(decoding: data, as: UTF8.self)
+
+            completionOnMain(.success(string))
         }
 
         urlSession.resume()

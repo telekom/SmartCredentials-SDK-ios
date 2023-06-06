@@ -19,7 +19,7 @@ enum Endpoints: String {
     var url: String {
         switch self {
         case .accessToken:
-            return baseUrl + "/access-token"
+            return "/access-token"
         case .bearerToken:
             return baseUrl + "/bearer-token-hackathon"
         case .carrierAgentUL:
