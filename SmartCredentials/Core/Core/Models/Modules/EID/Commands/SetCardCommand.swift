@@ -40,9 +40,11 @@ public class SetCardCommand: Command {
 
 public struct SimulatorModel: Codable {
     public let files: [FileModel?]
+    public let keys: [KeysModel?]
     
-    public init(files: [FileModel?]) {
+    public init(files: [FileModel?], keys: [KeysModel?]) {
         self.files = files
+        self.keys = keys
     }
 }
 
@@ -55,5 +57,20 @@ public struct FileModel: Codable {
         self.fileId = fileId
         self.shortFileId = shortFileId
         self.content = content
+    }
+}
+
+public struct KeysModel: Codable {
+    public let id: String
+    public let privateKey: String
+    
+    public init(id: String, privateKey: String) {
+        self.id = id
+        self.privateKey = privateKey
+    }
+    
+    enum CodingKeys: String, CodingKey {
+        case id = "id"
+        case privateKey = "private"
     }
 }
