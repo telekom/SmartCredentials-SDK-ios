@@ -117,6 +117,8 @@
 		FE92ED9528C0D43700F4B0BF /* StatusMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE92ED9428C0D43700F4B0BF /* StatusMessage.swift */; };
 		FE92ED9728C0D85100F4B0BF /* GetStatusCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE92ED9628C0D85100F4B0BF /* GetStatusCommand.swift */; };
 		FE92EDC328C2414500F4B0BF /* SetCardCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE92EDC228C2414500F4B0BF /* SetCardCommand.swift */; };
+		FEA8312C2A70E64800A62EB9 /* OneClickBusinessClientAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA8312B2A70E64800A62EB9 /* OneClickBusinessClientAPI.swift */; };
+		FEA8312E2A70EC1B00A62EB9 /* SmartCredentialsOCBClientConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA8312D2A70EC1B00A62EB9 /* SmartCredentialsOCBClientConfiguration.swift */; };
 		FEC089BB2A012E5200242D8B /* IdentityProviderAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC089BA2A012E5200242D8B /* IdentityProviderAPI.swift */; };
 		FED28DD2271D68B9004A6106 /* EIDAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED28DD1271D68B9004A6106 /* EIDAPI.swift */; };
 /* End PBXBuildFile section */
@@ -245,6 +247,8 @@
 		FE92ED9428C0D43700F4B0BF /* StatusMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusMessage.swift; sourceTree = "<group>"; };
 		FE92ED9628C0D85100F4B0BF /* GetStatusCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStatusCommand.swift; sourceTree = "<group>"; };
 		FE92EDC228C2414500F4B0BF /* SetCardCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetCardCommand.swift; sourceTree = "<group>"; };
+		FEA8312B2A70E64800A62EB9 /* OneClickBusinessClientAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneClickBusinessClientAPI.swift; sourceTree = "<group>"; };
+		FEA8312D2A70EC1B00A62EB9 /* SmartCredentialsOCBClientConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartCredentialsOCBClientConfiguration.swift; sourceTree = "<group>"; };
 		FEC089BA2A012E5200242D8B /* IdentityProviderAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentityProviderAPI.swift; sourceTree = "<group>"; };
 		FED28DD1271D68B9004A6106 /* EIDAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EIDAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -488,6 +492,7 @@
 				D9C65849231E90640077C441 /* NetworkingAPI.swift */,
 				FED28DD1271D68B9004A6106 /* EIDAPI.swift */,
 				FEC089BA2A012E5200242D8B /* IdentityProviderAPI.swift */,
+				FEA8312B2A70E64800A62EB9 /* OneClickBusinessClientAPI.swift */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -525,6 +530,7 @@
 			isa = PBXGroup;
 			children = (
 				D9F4F3BB232BD6EA00D18C53 /* SmartCredentialsConfiguration.swift */,
+				FEA8312D2A70EC1B00A62EB9 /* SmartCredentialsOCBClientConfiguration.swift */,
 			);
 			path = Configurations;
 			sourceTree = "<group>";
@@ -851,6 +857,7 @@
 				FEC089BB2A012E5200242D8B /* IdentityProviderAPI.swift in Sources */,
 				FE00CB5D272A898800205D3A /* GetCertificateCommand.swift in Sources */,
 				D9F4F3B2232BCD8B00D18C53 /* SmartCredentialsCoreFactory.swift in Sources */,
+				FEA8312C2A70E64800A62EB9 /* OneClickBusinessClientAPI.swift in Sources */,
 				FE92EDC328C2414500F4B0BF /* SetCardCommand.swift in Sources */,
 				66DD3C3822CCDB390003E2B8 /* ItemEnvelope.swift in Sources */,
 				D9F4F384232B946B00D18C53 /* EIDCameraSettings.swift in Sources */,
@@ -907,6 +914,7 @@
 				D9C6584A231E90640077C441 /* NetworkingAPI.swift in Sources */,
 				FE92ED9528C0D43700F4B0BF /* StatusMessage.swift in Sources */,
 				D9F4F3AE232BBC4000D18C53 /* CoreController.swift in Sources */,
+				FEA8312E2A70EC1B00A62EB9 /* SmartCredentialsOCBClientConfiguration.swift in Sources */,
 				D9F4F383232B946B00D18C53 /* ScannerRecognizer.swift in Sources */,
 				FE00CB67272A89FE00205D3A /* SetNewPINCommand.swift in Sources */,
 				FE00CB8A272A93FF00205D3A /* InfoMessage.swift in Sources */,

@@ -263,5 +263,10 @@ public enum SmartCredentialsAPIError: Error {
      Error received if the bearer token could not be retrieved due to some errors
      */
     case bearerTokenCouldNotBeRetrieved
+    
+    /**
+     Error received if the recommendation request failed
+     */
+    case recommendationCouldNotBeSend
 }
 
