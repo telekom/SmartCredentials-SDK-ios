@@ -10,6 +10,7 @@ import IdentityProvider
 ````
 
 **Obtaining Operator Token**
+
 Initialize the module
 
 ```swift
