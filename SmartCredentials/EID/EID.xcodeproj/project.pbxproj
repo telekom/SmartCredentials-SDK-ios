@@ -31,6 +31,7 @@
 		FE00CB362721655E00205D3A /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE00CB412729278000205D3A /* EID.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EID.entitlements; sourceTree = "<group>"; };
 		FEA8313A2A73A15F00A62EB9 /* AusweisApp2.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = AusweisApp2.xcframework; sourceTree = "<group>"; };
+		FEA831482A78DC5300A62EB9 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		FED28D6C27170C60004A6106 /* EID.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EID.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FED28D6F27170C60004A6106 /* EID.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EID.h; sourceTree = "<group>"; };
 		FED28D7027170C60004A6106 /* EID.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = EID.docc; sourceTree = "<group>"; };
@@ -73,6 +74,7 @@
 		FED28D6227170C60004A6106 = {
 			isa = PBXGroup;
 			children = (
+				FEA831482A78DC5300A62EB9 /* README.md */,
 				FE00CB412729278000205D3A /* EID.entitlements */,
 				FED28D6E27170C60004A6106 /* EID */,
 				FE00CB352720238900205D3A /* Frameworks */,

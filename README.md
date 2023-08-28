@@ -56,12 +56,26 @@ let configuration = SmartCredentialsConfiguration(userId: "user_id", logger: Dem
 let documentScanner = SmartCredentialsDocumentScannerFactory.smartCredentialsDocumentScannerAPI(configuration: configuration, license: license, licensee: licensee)
 // Use the DocumentScanner API
 ````
+EID Module
+```swift
+let configuration = SmartCredentialsConfiguration(userId: "user_id", logger: DemoLogger(), jailbreakCheckEnabled: true)
+let eid = SmartCredentialsEIDFactory.smartCredentialsEIDAPI(configuration: configuration)
+// Use the EID API
+````
+
 Encryption Module
 ```swift
 let configuration = SmartCredentialsConfiguration(userId: "user_id", logger: DemoLogger(), jailbreakCheckEnabled: true)
 let encryption = SmartCredentialsEncryptionFactory.smartCredentialsEncryptionAPI(configuration: configuration)
 // Use the Encryption API
 ````
+Identity Provider Module
+```swift
+let configuration = SmartCredentialsConfiguration(userId: "user_id", logger: DemoLogger(), jailbreakCheckEnabled: true)
+let identityProvider = SmartCredentialsIdentityProviderFactory.smartCredentialsIdentityProviderAPI(configuration: configuration)
+// Use the Identity Provider API
+````
+
 Networking Module
 ```swift
 let configuration = SmartCredentialsConfiguration(userId: "user_id", logger: DemoLogger(), jailbreakCheckEnabled: true)
@@ -144,11 +158,13 @@ Currently, there are 9 extendable modules:
 2. Authorization
 3. Camera
 4. Document scanner
-5. Encryption
-6. Networking
-7. Otp
-8. QR login
-9. Storage
+5. EID
+6. Encryption
+7. Identity Provider
+8. Networking
+9. Otp
+10. QR login
+11. Storage
 
 In order to implement your own module you have to follow the next steps:
 

@@ -49,6 +49,7 @@
 /* Begin PBXFileReference section */
 		16F55A952A02881C005416C1 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		16F55A972A04EAD5005416C1 /* Requests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requests.swift; sourceTree = "<group>"; };
+		FEA831392A73030200A62EB9 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		FEC089A02A01239A00242D8B /* IdentityProvider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = IdentityProvider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEC089A32A01239A00242D8B /* IdentityProvider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IdentityProvider.h; sourceTree = "<group>"; };
 		FEC089A42A01239A00242D8B /* IdentityProvider.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = IdentityProvider.docc; sourceTree = "<group>"; };
@@ -94,6 +95,7 @@
 		FEC089962A01239A00242D8B = {
 			isa = PBXGroup;
 			children = (
+				FEA831392A73030200A62EB9 /* README.md */,
 				FEC089A22A01239A00242D8B /* IdentityProvider */,
 				FEC089AE2A01239A00242D8B /* IdentityProviderTests */,
 				FEC089A12A01239A00242D8B /* Products */,
