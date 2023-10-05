@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:../Authorization">
+   </FileRef>
+   <FileRef
+      location = "group:../Core">
+   </FileRef>
+   <FileRef
       location = "group:OTP/OTP.xcodeproj">
    </FileRef>
    <FileRef
