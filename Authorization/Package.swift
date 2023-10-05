@@ -12,7 +12,7 @@ let package = Package(
             targets: ["Authorization"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/telekom/SmartCredentials-SDK-ios/Core", from: "1.0.0")
+        .package(url: "https://github.com/telekom/SmartCredentials-SDK-ios/Core", from: "5.5.0")
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
