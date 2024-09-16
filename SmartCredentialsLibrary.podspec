@@ -14,7 +14,7 @@ The main feature of the library is the secure storage. The library itself is dat
 Other features include QR-based login, barcode reader, OCR reader/parser, OTP generator, fingerprint/pin/pattern/faceId authorization.
                    DESC
 
-  s.homepage     = "https://github.com/kreincke/SmartCredentials-SDK-ios"
+  s.homepage     = "https://github.com/telekom/SmartCredentials-SDK-ios"
   s.license      = { :type => "Apache License, Version 2.0", :file => "LICENSE" }
 
   s.author             = "Deutsche Telekom AG"
@@ -23,7 +23,7 @@ Other features include QR-based login, barcode reader, OCR reader/parser, OTP ge
   s.ios.deployment_target = '9.0'
   s.swift_version = "5.0"
 
-  s.source       = { :git => "https://github.com/kreincke/SmartCredentials-SDK-ios.git", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/telekom/SmartCredentials-SDK-ios.git", :tag => "#{s.version}" }
 
   # s.source_files  = "SmartCredentials/**/*.{swift,h,m}"
   # s.exclude_files = "SmartCredentials/**/*.plist"
